@@ -4,47 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مزرعة ريف عبس السياحية - تجربة استثنائية في أحضان الطبيعة</title>
+    
+    <!-- منع التخزين المؤقت -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="last-modified" content="<?php echo date('Y-m-d H:i:s'); ?>">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="مزرعة ريف عبس السياحية - وجهتك المثلى للاسترخاء في منطقة عسير مع أكواخ مجهزة ومرافق حديثة">
+    <meta name="keywords" content="مزرعة سياحية, عسير, أكواخ, استراحة, سياحة داخلية, طبيعة">
+    <meta name="author" content="مزرعة ريف عبس السياحية">
+    
+    <!-- Open Graph للمشاركة -->
+    <meta property="og:title" content="مزرعة ريف عبس السياحية">
+    <meta property="og:description" content="تجربة ريفية أصيلة في قلب منطقة عسير الساحرة">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/og-image.jpg">
+    
     <style>
+        /* إعدادات عامة محسنة */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-        }
-
         :root {
+            /* الألوان الأساسية */
             --primary-color: #4CAF50;
             --secondary-color: #2E7D32;
             --accent-color: #ff6b6b;
             --text-color: #333;
             --background-color: #ffffff;
+            --light-bg: #f8f9fa;
+            --border-color: #e1e5e9;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+            --info-color: #17a2b8;
+            
+            /* الخطوط */
             --main-font-size: 16px;
             --heading-font-size: 3rem;
             --subheading-font-size: 2rem;
+            --small-font-size: 0.9rem;
+            
+            /* المسافات */
+            --section-padding: 5rem 0;
+            --container-padding: 0 20px;
+            --border-radius: 15px;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+            
+            /* الانتقالات */
+            --transition: all 0.3s ease;
+            --transition-slow: all 0.5s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            font-size: var(--main-font-size);
+            overflow-x: hidden;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: var(--container-padding);
         }
 
-        /* Header */
+        /* تحسين الأداء والرسوم المتحركة */
+        .smooth-transition {
+            transition: var(--transition);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Header محسن */
         header {
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow);
+            border-bottom: 1px solid var(--border-color);
         }
 
         nav {
@@ -58,6 +110,11 @@
             font-weight: bold;
             color: var(--secondary-color);
             text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
         }
 
         .nav-links {
@@ -70,61 +127,75 @@
             text-decoration: none;
             color: var(--text-color);
             font-weight: 500;
-            transition: color 0.3s;
+            transition: var(--transition);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            position: relative;
         }
 
         .nav-links a:hover {
             color: var(--secondary-color);
+            background: rgba(46, 125, 50, 0.1);
         }
 
         .admin-btn {
-            background: var(--secondary-color);
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border: none;
-            border-radius: 25px;
+            border-radius: 30px;
             cursor: pointer;
             font-size: 14px;
-            transition: all 0.3s;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
         }
 
         .admin-btn:hover {
-            background: #1e3a21;
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
         }
 
-        /* WhatsApp Float Button */
+        /* WhatsApp Button محسن */
         .whatsapp-float {
             position: fixed;
             left: 30px;
             bottom: 30px;
-            background: #25d366;
+            background: linear-gradient(45deg, #25d366, #128c7e);
             color: white;
             border-radius: 50px;
-            padding: 15px;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            padding: 15px 20px;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
             cursor: pointer;
-            transition: all 0.3s;
+            transition: var(--transition);
             z-index: 1000;
             display: flex;
             align-items: center;
             gap: 10px;
             text-decoration: none;
+            font-weight: 600;
+            animation: pulse 2s infinite;
         }
 
         .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
         }
 
-        /* Hero Section */
+        @keyframes pulse {
+            0% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.8); }
+            100% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); }
+        }
+
+        /* Hero Section محسن */
         .hero {
-            height: 70vh;
+            height: 85vh;
             position: relative;
             margin-top: 70px;
             overflow: hidden;
             border-radius: 0 0 50px 50px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: var(--shadow);
         }
 
         .hero-slideshow {
@@ -142,9 +213,10 @@
             width: 100%;
             height: 100%;
             opacity: 0;
-            transition: opacity 1s ease-in-out;
+            transition: opacity 1.5s ease-in-out;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
 
         .hero-slide.active {
@@ -174,36 +246,64 @@
 
         .hero-content h1 {
             font-size: var(--heading-font-size);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-out;
         }
 
         .hero-content p {
             font-size: var(--subheading-font-size);
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-out 0.3s both;
         }
 
+        .cta-button {
+            background: linear-gradient(45deg, var(--accent-color), #ff5252);
+            color: white;
+            padding: 18px 45px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            animation: fadeInUp 1s ease-out 0.6s both;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 107, 107, 0.6);
+        }
+
+        /* Hero Navigation محسن */
         .hero-indicators {
             position: absolute;
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 10px;
+            gap: 12px;
             z-index: 15;
         }
 
         .hero-indicator {
-            width: 12px;
-            height: 12px;
+            width: 15px;
+            height: 15px;
             border-radius: 50%;
             background: rgba(255,255,255,0.5);
             cursor: pointer;
-            transition: all 0.3s;
+            transition: var(--transition);
+            border: 2px solid transparent;
         }
 
         .hero-indicator.active {
             background: white;
             transform: scale(1.2);
+            border-color: var(--accent-color);
         }
 
         .hero-nav {
@@ -213,13 +313,15 @@
             background: rgba(255,255,255,0.2);
             color: white;
             border: none;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             cursor: pointer;
-            font-size: 20px;
-            transition: all 0.3s;
+            font-size: 24px;
+            font-weight: bold;
+            transition: var(--transition);
             z-index: 15;
+            backdrop-filter: blur(10px);
         }
 
         .hero-nav:hover {
@@ -227,15 +329,91 @@
             transform: translateY(-50%) scale(1.1);
         }
 
-        .hero-nav.prev {
-            right: 20px;
+        .hero-nav.prev { right: 30px; }
+        .hero-nav.next { left: 30px; }
+
+        /* Sections محسنة */
+        section {
+            padding: var(--section-padding);
+            position: relative;
         }
 
-        .hero-nav.next {
-            left: 20px;
+        .section-white {
+            background: var(--background-color);
         }
 
-        /* Video Section */
+        .section-light {
+            background: var(--light-bg);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: var(--heading-font-size);
+            margin-bottom: 3rem;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* Features Grid محسن */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            background: var(--background-color);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .feature-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Video Section محسن */
         .video-hero-section {
             min-height: 100vh;
             background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
@@ -243,7 +421,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            padding: 2rem 0;
+            padding: 3rem 0;
         }
 
         .video-container {
@@ -251,7 +429,7 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: var(--container-padding);
         }
 
         .video-wrapper {
@@ -259,17 +437,26 @@
             width: 100%;
             max-width: 1000px;
             margin: 0 auto 3rem;
-            border-radius: 20px;
+            border-radius: 25px;
             overflow: hidden;
             box-shadow: 0 30px 80px rgba(0,0,0,0.3);
             background: #000;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
 
         .video-wrapper:hover {
             transform: translateY(-10px);
             box-shadow: 0 40px 100px rgba(0,0,0,0.4);
+        }
+
+        /* منع النقر عندما يكون الفيديو يعمل */
+        .video-wrapper.playing {
+            cursor: default;
+        }
+
+        .video-wrapper.playing:hover {
+            transform: none;
         }
 
         .video-thumbnail {
@@ -279,6 +466,9 @@
             padding-bottom: 56.25%;
             background-size: cover;
             background-position: center;
+            transition: all 0.3s ease;
+            opacity: 1;
+            transform: scale(1);
         }
 
         .video-play-button {
@@ -286,32 +476,38 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 100px;
-            height: 100px;
-            background: rgba(255, 107, 107, 0.9);
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(45deg, rgba(255, 107, 107, 0.9), rgba(255, 82, 82, 0.9));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.5);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.5);
+            animation: playButtonPulse 2s infinite;
+        }
+
+        @keyframes playButtonPulse {
+            0% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.1); }
+            100% { transform: translate(-50%, -50%) scale(1); }
         }
 
         .video-play-button:hover {
-            background: rgba(255, 107, 107, 1);
             transform: translate(-50%, -50%) scale(1.2);
-            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.7);
+            box-shadow: 0 20px 50px rgba(255, 107, 107, 0.7);
         }
 
         .video-play-button::after {
             content: '';
             width: 0;
             height: 0;
-            border-left: 30px solid white;
-            border-top: 18px solid transparent;
-            border-bottom: 18px solid transparent;
-            margin-left: 8px;
+            border-left: 35px solid white;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            margin-left: 10px;
         }
 
         .video-iframe {
@@ -336,20 +532,20 @@
             font-size: 1.4rem;
             color: rgba(255,255,255,0.9);
             margin-bottom: 3rem;
-            line-height: 1.6;
+            line-height: 1.8;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
         .youtube-button {
             background: linear-gradient(45deg, #ff0000, #cc0000);
             color: white;
-            padding: 18px 40px;
+            padding: 20px 45px;
             border: none;
             border-radius: 50px;
             font-size: 1.3rem;
             font-weight: bold;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             text-decoration: none;
             display: inline-flex;
             align-items: center;
@@ -363,157 +559,122 @@
             box-shadow: 0 20px 50px rgba(255, 0, 0, 0.5);
         }
 
-        /* Sections */
-        section {
-            padding: 5rem 0;
-        }
-
-        .section-white {
-            background: var(--background-color);
-        }
-
-        .section-light {
-            background: #f8f9fa;
-        }
-
-        h2 {
-            text-align: center;
-            font-size: var(--heading-font-size);
-            margin-bottom: 3rem;
-            color: var(--secondary-color);
-        }
-
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature-card {
-            background: var(--background-color);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Gallery */
+        /* Gallery محسن */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
         }
 
         .gallery-item {
             position: relative;
-            height: 250px;
-            border-radius: 15px;
+            height: 280px;
+            border-radius: var(--border-radius);
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
             cursor: pointer;
+            background: var(--background-color);
         }
 
         .gallery-item:hover {
-            transform: translateY(-10px);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
 
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: var(--transition);
         }
 
-        /* Booking Form */
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* Forms محسنة */
         .booking-form {
             background: var(--background-color);
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            max-width: 600px;
+            padding: 3.5rem;
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+            max-width: 650px;
             margin: 0 auto;
+            border: 1px solid var(--border-color);
         }
 
         .form-group {
             margin-bottom: 2rem;
+            position: relative;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
             font-weight: 600;
             color: var(--secondary-color);
+            font-size: 1.1rem;
         }
 
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 15px;
-            border: 2px solid #e1e5e9;
-            border-radius: 10px;
+            padding: 18px;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
             font-size: var(--main-font-size);
-            transition: border-color 0.3s;
+            transition: var(--transition);
+            font-family: inherit;
+            background: var(--background-color);
         }
 
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: var(--secondary-color);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
         }
 
         .submit-btn {
-            background: var(--secondary-color);
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
             color: white;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            width: 100%;
-            transition: all 0.3s;
-        }
-
-        .submit-btn:hover {
-            background: #1e3a21;
-            transform: translateY(-2px);
-        }
-
-        .cta-button {
-            background: var(--accent-color);
-            color: white;
-            padding: 15px 40px;
+            padding: 18px 45px;
             border: none;
             border-radius: 50px;
             font-size: 1.2rem;
+            font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-            animation: fadeInUp 1s ease-out 0.6s both;
+            width: 100%;
+            transition: var(--transition);
+            box-shadow: 0 8px 25px rgba(46, 125, 50, 0.3);
         }
 
-        .cta-button:hover {
-            background: #ee5a5a;
+        .submit-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+            box-shadow: 0 12px 35px rgba(46, 125, 50, 0.4);
         }
 
-        /* Comments */
+        /* Comments محسنة */
         .comments-section {
             max-width: 800px;
             margin: 0 auto;
@@ -521,25 +682,33 @@
 
         .comment {
             background: var(--background-color);
-            padding: 2rem;
-            margin-bottom: 1rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .comment:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
         .comment-author {
             font-weight: bold;
             color: var(--secondary-color);
             margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
 
         .comment-date {
-            font-size: 0.9rem;
+            font-size: var(--small-font-size);
             color: #666;
             margin-bottom: 1rem;
         }
 
-        /* Modal */
+        /* Modal محسن */
         .modal {
             display: none;
             position: fixed;
@@ -549,73 +718,157 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0,0,0,0.8);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s ease;
         }
 
         .modal-content {
             background-color: var(--background-color);
-            margin: 5% auto;
-            padding: 3rem;
-            border-radius: 20px;
-            width: 90%;
-            max-width: 1000px;
-            max-height: 80vh;
-            overflow-y: auto;
+            margin: 2% auto;
+            padding: 0;
+            border-radius: 25px;
+            width: 95%;
+            max-width: 1200px;
+            max-height: 90vh;
+            overflow: hidden;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.3);
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-header {
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            color: white;
+        }
+
+        .modal-header h2::after {
+            display: none;
         }
 
         .close {
-            color: #aaa;
+            color: white;
             float: left;
-            font-size: 28px;
+            font-size: 32px;
             font-weight: bold;
             cursor: pointer;
+            transition: var(--transition);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
         }
 
         .close:hover {
-            color: black;
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.1);
         }
 
-        /* Admin Panel */
-        .admin-panel {
-            background: var(--background-color);
-            border-radius: 15px;
+        .modal-body {
             padding: 2rem;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
+        /* Admin Panel محسن بشكل كبير */
+        .admin-status {
+            background: linear-gradient(45deg, #e8f5e8, #f0f8f0);
+            padding: 1.5rem;
+            border-radius: 15px;
             margin-bottom: 2rem;
+            text-align: center;
+            border: 2px solid var(--success-color);
         }
 
-        .admin-section {
-            margin-bottom: 3rem;
-        }
-
-        .admin-section h3 {
+        .admin-status p {
+            margin: 0 0 1rem 0;
             color: var(--secondary-color);
-            margin-bottom: 1rem;
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
         }
 
-        .admin-tabs {
+        .admin-buttons {
             display: flex;
             gap: 10px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #e1e5e9;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .admin-action-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .admin-action-btn.change-pass {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .admin-action-btn.logout {
+            background: var(--danger-color);
+            color: white;
+        }
+
+        .admin-action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Admin Tabs محسنة */
+        .admin-tabs {
+            display: flex;
+            gap: 0;
+            margin-bottom: 2rem;
+            background: var(--light-bg);
+            border-radius: 15px;
+            padding: 5px;
+            overflow-x: auto;
         }
 
         .admin-tab {
-            padding: 10px 20px;
+            padding: 15px 25px;
             border: none;
-            background: none;
+            background: transparent;
             cursor: pointer;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s;
-            font-weight: 500;
+            border-radius: 10px;
+            transition: var(--transition);
+            font-weight: 600;
+            white-space: nowrap;
+            font-size: 0.95rem;
+            color: var(--text-color);
         }
 
         .admin-tab.active {
-            border-bottom-color: var(--secondary-color);
-            color: var(--secondary-color);
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .admin-tab:hover:not(.active) {
+            background: rgba(76, 175, 80, 0.1);
         }
 
         .admin-tab-content {
@@ -624,38 +877,210 @@
 
         .admin-tab-content.active {
             display: block;
+            animation: fadeIn 0.3s ease;
         }
 
-        .card-manager {
-            border: 1px solid #e1e5e9;
+        /* Admin Sections محسنة */
+        .admin-section {
+            background: var(--background-color);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .admin-section h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* Text Editor محسن */
+        .text-editor {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .editor-field {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .editor-field:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
+        }
+
+        .editor-field label {
+            display: block;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .editor-field input,
+        .editor-field textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            resize: vertical;
+        }
+
+        .editor-field input:focus,
+        .editor-field textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+        }
+
+        .editor-field button {
+            background: var(--success-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .editor-field button:hover {
+            background: #218838;
+            transform: translateY(-1px);
+        }
+
+        /* Design Controls محسن */
+        .design-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .color-section,
+        .font-section {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+        }
+
+        .color-section h4,
+        .font-section h4 {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .color-input-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: var(--background-color);
             border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .color-input {
+            width: 60px;
+            height: 45px;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .color-input:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .color-label {
+            flex: 1;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .font-control {
+            margin-bottom: 20px;
             padding: 15px;
             background: var(--background-color);
-            transition: all 0.3s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .font-control label {
+            display: block;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .font-control input[type="range"] {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .font-value {
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Card Manager محسن */
+        .card-manager {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            background: var(--background-color);
+            transition: var(--transition);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 1rem;
         }
 
         .card-manager:hover {
-            border-color: var(--secondary-color);
-            box-shadow: 0 4px 15px rgba(44, 85, 48, 0.1);
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.1);
+            transform: translateY(-2px);
         }
 
         .card-header {
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
+            gap: 15px;
+            margin-bottom: 15px;
         }
 
         .card-icon {
-            font-size: 24px;
-            width: 40px;
-            height: 40px;
+            font-size: 28px;
+            width: 50px;
+            height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #f8f9fa;
-            border-radius: 8px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            color: white;
         }
 
         .card-content {
@@ -666,151 +1091,318 @@
             font-weight: bold;
             color: var(--secondary-color);
             margin-bottom: 5px;
+            font-size: 1.1rem;
         }
 
         .card-description {
             color: #666;
-            font-size: 14px;
+            font-size: 0.95rem;
             line-height: 1.4;
         }
 
         .card-controls {
             display: flex;
-            gap: 5px;
+            gap: 8px;
             flex-wrap: wrap;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         .card-btn {
             border: none;
-            padding: 8px 12px;
-            border-radius: 5px;
-            font-size: 12px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
             cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 500;
+            transition: var(--transition);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
         .card-btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
-
-        .card-btn.primary {
-            background: #007bff;
-            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .card-btn.success {
-            background: #28a745;
+            background: var(--success-color);
             color: white;
-            flex: 1;
         }
 
         .card-btn.danger {
-            background: #dc3545;
+            background: var(--danger-color);
             color: white;
-            flex: 1;
+        }
+
+        .card-btn.primary {
+            background: var(--info-color);
+            color: white;
         }
 
         .card-toggle {
             display: flex;
             align-items: center;
-            gap: 5px;
-            font-size: 12px;
+            gap: 8px;
+            font-size: 0.9rem;
             color: #666;
+            background: var(--light-bg);
+            padding: 8px 12px;
+            border-radius: 20px;
         }
 
-        .booking-item {
-            background: #f8f9fa;
-            padding: 1rem;
+        /* Media Upload محسن */
+        .upload-section {
+            background: var(--light-bg);
+            border: 2px dashed var(--border-color);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+            margin-bottom: 2rem;
+        }
+
+        .upload-section:hover {
+            border-color: var(--primary-color);
+            background: rgba(76, 175, 80, 0.05);
+        }
+
+        .upload-section input[type="file"] {
             margin-bottom: 1rem;
-            border-radius: 10px;
-            border-right: 4px solid var(--secondary-color);
         }
 
-        .status-pending {
-            border-right-color: #ffc107;
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
-        .status-confirmed {
-            border-right-color: #28a745;
+        .media-item {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--background-color);
+            transition: var(--transition);
         }
 
-        .status-cancelled {
-            border-right-color: #dc3545;
+        .media-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
-        .color-input-group {
+        .media-item img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .media-item-info {
+            padding: 1rem;
+        }
+
+        .media-item-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
+
+        .media-item button {
+            background: var(--danger-color);
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .media-item button:hover {
+            background: #c82333;
+            transform: translateY(-1px);
+        }
+
+        /* Bookings محسن */
+        .booking-item {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            border-right: 5px solid var(--secondary-color);
+            transition: var(--transition);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .booking-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .booking-item h4 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .booking-item p {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .status-pending { border-right-color: var(--warning-color); }
+        .status-confirmed { border-right-color: var(--success-color); }
+        .status-cancelled { border-right-color: var(--danger-color); }
+
+        .booking-item select {
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background: var(--background-color);
+            color: var(--text-color);
+        }
+
+        /* Footer محسن */
+        footer {
+            background: linear-gradient(45deg, var(--secondary-color), #1b5e20);
+            color: white;
+            padding: 4rem 0 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-section p {
+            line-height: 1.8;
+            color: #c8e6c9;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #4a7c59;
+            padding-top: 1.5rem;
+            text-align: center;
+            color: #c8e6c9;
+        }
+
+        /* Success Message محسن */
+        .success-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 3000;
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
         }
 
-        .color-input {
-            width: 50px;
-            height: 40px;
-            border: 2px solid #e1e5e9;
-            border-radius: 8px;
+        .success-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 450px;
+            margin: 20px;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.3);
+            animation: slideIn 0.3s ease;
+        }
+
+        .success-icon {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            animation: bounce 1s ease;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% { transform: translateY(0); }
+            40%, 43% { transform: translateY(-15px); }
+            70% { transform: translateY(-7px); }
+            90% { transform: translateY(-3px); }
+        }
+
+        .success-title {
+            color: var(--success-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .success-message {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .success-close-btn {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
             cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
         }
 
-        .text-editor {
-            display: grid;
-            gap: 15px;
-            grid-template-columns: 1fr 1fr;
+        .success-close-btn:hover {
+            background: #1e3a21;
+            transform: translateY(-2px);
         }
 
-        /* Responsive */
+        /* Responsive Design محسن */
         @media (max-width: 768px) {
+            :root {
+                --heading-font-size: 2.2rem;
+                --subheading-font-size: 1.4rem;
+                --section-padding: 3rem 0;
+                --container-padding: 0 15px;
+            }
+
             .nav-links {
                 display: none;
             }
 
             .hero {
-                height: 60vh;
+                height: 70vh;
             }
 
-            .hero-content h1 {
-                font-size: 2.5rem;
+            .hero-nav {
+                width: 50px;
+                height: 50px;
+                font-size: 18px;
             }
 
-            .hero-content p {
-                font-size: 1.2rem;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
+            .hero-nav.prev { right: 15px; }
+            .hero-nav.next { left: 15px; }
 
             .whatsapp-float {
                 left: 20px;
                 bottom: 20px;
-                padding: 12px;
-            }
-
-            .hero-nav {
-                width: 40px;
-                height: 40px;
-                font-size: 16px;
-            }
-
-            .hero-nav.prev {
-                right: 10px;
-            }
-
-            .hero-nav.next {
-                left: 10px;
-            }
-
-            .hero-indicators {
-                bottom: 20px;
+                padding: 12px 15px;
             }
 
             .video-hero-section {
-                min-height: 90vh;
-                padding: 1rem 0;
+                min-height: 80vh;
+                padding: 2rem 0;
             }
 
             .video-title {
@@ -818,35 +1410,85 @@
             }
 
             .video-description {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
                 margin-bottom: 2rem;
             }
 
             .video-play-button {
-                width: 80px;
-                height: 80px;
+                width: 90px;
+                height: 90px;
             }
 
             .video-play-button::after {
-                border-left: 22px solid white;
-                border-top: 13px solid transparent;
-                border-bottom: 13px solid transparent;
-                margin-left: 6px;
-            }
-
-            .youtube-button {
-                padding: 15px 25px;
-                font-size: 1.1rem;
-            }
-
-            .video-wrapper {
-                margin-bottom: 2rem;
+                border-left: 25px solid white;
+                border-top: 15px solid transparent;
+                border-bottom: 15px solid transparent;
             }
 
             .text-editor {
                 grid-template-columns: 1fr;
             }
+
+            .design-controls {
+                grid-template-columns: 1fr;
+            }
+
+            .admin-tabs {
+                overflow-x: auto;
+                padding: 3px;
+            }
+
+            .admin-tab {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+
+            .modal-content {
+                width: 98%;
+                margin: 1% auto;
+            }
+
+            .modal-body {
+                padding: 1rem;
+            }
+
+            .booking-form {
+                padding: 2rem;
+            }
+
+            .features-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .mb-1 { margin-bottom: 1rem; }
+        .mb-2 { margin-bottom: 2rem; }
+        .mt-1 { margin-top: 1rem; }
+        .mt-2 { margin-top: 2rem; }
 
         /* Animations */
         @keyframes fadeInUp {
@@ -862,6 +1504,16 @@
 
         .fade-in {
             animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Print Styles */
+        @media print {
+            .whatsapp-float,
+            .admin-btn,
+            .hero-nav,
+            .video-play-button {
+                display: none !important;
+            }
         }
     </style>
 </head>
@@ -922,14 +1574,32 @@
             <h2 class="video-title" id="videoTitle">استكشف مزرعة ريف عبس السياحية</h2>
             <p class="video-description" id="videoDescription">شاهد جولة شاملة في أجمل المناطق الطبيعية والأكواخ السياحية المجهزة بأحدث المرافق</p>
             
-            <div class="video-wrapper" onclick="playVideo()">
+            <div class="video-wrapper" onclick="if(!this.classList.contains('playing')) playVideo()">
                 <div class="video-thumbnail" id="videoThumbnail">
                     <div class="video-play-button"></div>
                 </div>
                 <iframe class="video-iframe" id="videoIframe" 
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0" 
-                        allowfullscreen style="display: none;">
+                        src="" 
+                        allowfullscreen 
+                        allow="autoplay; encrypted-media"
+                        style="display: none;">
                 </iframe>
+                <button onclick="event.stopPropagation(); stopVideo()" id="stopVideoBtn" style="
+                    display: none;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    background: rgba(0,0,0,0.7);
+                    color: white;
+                    border: none;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
+                    z-index: 20;
+                    font-size: 18px;
+                    transition: all 0.3s ease;
+                " onmouseover="this.style.background='rgba(0,0,0,0.9)'" onmouseout="this.style.background='rgba(0,0,0,0.7)'">✕</button>
             </div>
             
             <a href="#" target="_blank" class="youtube-button" id="youtubeBtn">
@@ -963,21 +1633,8 @@
                     <input type="tel" id="phone" name="phone" required>
                 </div>
                 <div class="form-group">
-                    <label for="email" id="labelEmail">البريد الإلكتروني</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
                     <label for="date" id="labelDate">تاريخ الزيارة</label>
                     <input type="date" id="date" name="date" required>
-                </div>
-                <div class="form-group">
-                    <label for="time" id="labelTime">وقت الزيارة</label>
-                    <select id="time" name="time" required>
-                        <option value="">اختر الوقت</option>
-                        <option value="morning">صباحاً (8:00 - 12:00)</option>
-                        <option value="afternoon">بعد الظهر (12:00 - 16:00)</option>
-                        <option value="evening">مساءً (16:00 - 20:00)</option>
-                    </select>
                 </div>
                 <div class="form-group">
                     <label for="guests" id="labelGuests">عدد الضيوف</label>
@@ -987,7 +1644,12 @@
                     <label for="notes" id="labelNotes">ملاحظات إضافية</label>
                     <textarea id="notes" name="notes" rows="4" placeholder="أي متطلبات خاصة..."></textarea>
                 </div>
-                <button type="submit" class="submit-btn" id="submitBookingBtn">تأكيد الحجز</button>
+                <button type="submit" class="submit-btn" id="submitBookingBtn">
+                    <span class="btn-text">تأكيد الحجز</span>
+                    <span class="btn-loading" style="display: none;">
+                        <span class="loading"></span> جاري الإرسال...
+                    </span>
+                </button>
             </form>
         </div>
     </section>
@@ -1006,7 +1668,12 @@
                         <label for="commentText" id="labelCommentText">التعليق</label>
                         <textarea id="commentText" name="commentText" rows="4" placeholder="شاركنا رأيك..." required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn" id="submitCommentBtn">إرسال التعليق</button>
+                    <button type="submit" class="submit-btn" id="submitCommentBtn">
+                        <span class="btn-text">إرسال التعليق</span>
+                        <span class="btn-loading" style="display: none;">
+                            <span class="loading"></span> جاري الإرسال...
+                        </span>
+                    </button>
                 </form>
                 
                 <div id="commentsContainer" style="margin-top: 3rem;">
@@ -1017,25 +1684,25 @@
     </section>
 
     <!-- Footer -->
-    <footer style="background: var(--secondary-color); color: white; padding: 3rem 0 1rem; margin-top: 2rem;">
+    <footer>
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-                <div>
-                    <h3 style="margin-bottom: 1rem;" id="footerTitle">🏞️ مزرعة ريف عبس السياحية</h3>
-                    <p style="line-height: 1.6; color: #c8e6c9;" id="footerDescription">وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 id="footerTitle">🏞️ مزرعة ريف عبس السياحية</h3>
+                    <p id="footerDescription">وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة</p>
                 </div>
-                <div>
-                    <h4 style="margin-bottom: 1rem;" id="footerContactTitle">📞 تواصل معنا</h4>
-                    <p style="line-height: 1.8; color: #c8e6c9;" id="footerContact">
+                <div class="footer-section">
+                    <h4 id="footerContactTitle">📞 تواصل معنا</h4>
+                    <p id="footerContact">
                         📍 <span id="footerLocation">منطقة عسير - محافظة المجاردة</span><br>
                         📱 <span id="footerPhone">+966 55 366 3992</span><br>
                         ⏰ <span id="footerHours">خدمة 24 ساعة</span><br>
                         🌐 <span id="footerWifi">WiFi مجاني</span>
                     </p>
                 </div>
-                <div>
-                    <h4 style="margin-bottom: 1rem;" id="footerServicesTitle">🎯 خدماتنا</h4>
-                    <p style="line-height: 1.8; color: #c8e6c9;" id="footerServices">
+                <div class="footer-section">
+                    <h4 id="footerServicesTitle">🎯 خدماتنا</h4>
+                    <p id="footerServices">
                         🏡 أكواخ مجهزة<br>
                         🏊‍♂️ مسابح وساونا<br>
                         🌿 مسطحات خضراء<br>
@@ -1043,7 +1710,7 @@
                     </p>
                 </div>
             </div>
-            <div style="border-top: 1px solid #4a7c59; padding-top: 1rem; text-align: center; color: #c8e6c9;">
+            <div class="footer-bottom">
                 <p id="footerCopyright">© 2024 مزرعة ريف عبس السياحية - جميع الحقوق محفوظة</p>
             </div>
         </div>
@@ -1052,73 +1719,77 @@
     <!-- Admin Modal -->
     <div id="adminModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeAdminPanel()">&times;</span>
-            <h2 style="text-align: right;">🔐 لوحة إدارة المزرعة الشاملة</h2>
-            
-            <div style="background: #e8f5e8; padding: 1rem; border-radius: 10px; margin-bottom: 2rem; text-align: center;">
-                <p style="margin: 0; color: #2c5530;">✅ تم تسجيل الدخول بنجاح - تحكم كامل 100%</p>
-                <button onclick="changeAdminPassword()" style="background: #ff6b6b; color: white; border: none; padding: 8px 15px; border-radius: 5px; margin-top: 10px; cursor: pointer;">
-                    🔑 تغيير كلمة المرور
-                </button>
-                <button onclick="logout()" style="background: #6c757d; color: white; border: none; padding: 8px 15px; border-radius: 5px; margin-top: 10px; margin-right: 10px; cursor: pointer;">
-                    🚪 تسجيل خروج
-                </button>
+            <div class="modal-header">
+                <span class="close" onclick="closeAdminPanel()">&times;</span>
+                <h2>🔐 لوحة إدارة المزرعة الشاملة - نسخة متطورة</h2>
             </div>
+            
+            <div class="modal-body">
+                <div class="admin-status">
+                    <p>✅ تم تسجيل الدخول بنجاح - تحكم كامل 100% محسن</p>
+                    <div class="admin-buttons">
+                        <button onclick="changeAdminPassword()" class="admin-action-btn change-pass">
+                            🔑 تغيير كلمة المرور
+                        </button>
+                        <button onclick="logout()" class="admin-action-btn logout">
+                            🚪 تسجيل خروج
+                        </button>
+                    </div>
+                </div>
 
-            <!-- Admin Tabs -->
-            <div class="admin-tabs">
-                <button class="admin-tab active" onclick="showAdminTab('content')">📝 المحتوى والنصوص</button>
-                <button class="admin-tab" onclick="showAdminTab('media')">🎬 الوسائط</button>
-                <button class="admin-tab" onclick="showAdminTab('design')">🎨 التصميم</button>
-                <button class="admin-tab" onclick="showAdminTab('bookings')">📋 الحجوزات</button>
-                <button class="admin-tab" onclick="showAdminTab('settings')">⚙️ الإعدادات</button>
-            </div>
-            
-            <div class="admin-panel">
+                <!-- Admin Tabs -->
+                <div class="admin-tabs">
+                    <button class="admin-tab active" onclick="showAdminTab('content')">📝 المحتوى والنصوص</button>
+                    <button class="admin-tab" onclick="showAdminTab('media')">🎬 الوسائط</button>
+                    <button class="admin-tab" onclick="showAdminTab('design')">🎨 التصميم</button>
+                    <button class="admin-tab" onclick="showAdminTab('bookings')">📋 الحجوزات</button>
+                    <button class="admin-tab" onclick="showAdminTab('settings')">⚙️ الإعدادات</button>
+                </div>
+                
                 <!-- Content Tab -->
                 <div id="contentTab" class="admin-tab-content active">
                     <div class="admin-section">
                         <h3>📝 إدارة النصوص الأساسية</h3>
                         <div class="text-editor">
-                            <div>
+                            <div class="editor-field">
                                 <label>عنوان الموقع:</label>
                                 <input type="text" id="siteTitle" placeholder="اسم المزرعة">
-                                <button onclick="updateSiteTitle()" class="card-btn success">تحديث</button>
+                                <button onclick="updateSiteTitle()">تحديث</button>
                             </div>
-                            <div>
+                            <div class="editor-field">
                                 <label>عنوان الصفحة الرئيسية:</label>
                                 <input type="text" id="heroTitleInput" placeholder="العنوان الرئيسي">
-                                <button onclick="updateHeroTitle()" class="card-btn success">تحديث</button>
+                                <button onclick="updateHeroTitle()">تحديث</button>
                             </div>
-                            <div>
+                            <div class="editor-field">
                                 <label>وصف الصفحة الرئيسية:</label>
                                 <input type="text" id="heroSubtitleInput" placeholder="الوصف التحتي">
-                                <button onclick="updateHeroSubtitle()" class="card-btn success">تحديث</button>
+                                <button onclick="updateHeroSubtitle()">تحديث</button>
                             </div>
-                            <div>
+                            <div class="editor-field">
                                 <label>نص زر الحجز:</label>
                                 <input type="text" id="ctaButtonInput" placeholder="نص الزر">
-                                <button onclick="updateCtaButton()" class="card-btn success">تحديث</button>
+                                <button onclick="updateCtaButton()">تحديث</button>
                             </div>
-                            <div>
+                            <div class="editor-field">
                                 <label>عنوان قسم المميزات:</label>
                                 <input type="text" id="featuresTitleInput" placeholder="عنوان المميزات">
-                                <button onclick="updateFeaturesTitle()" class="card-btn success">تحديث</button>
+                                <button onclick="updateFeaturesTitle()">تحديث</button>
                             </div>
-                            <div>
+                            <div class="editor-field">
                                 <label>عنوان المعرض:</label>
                                 <input type="text" id="galleryTitleInput" placeholder="عنوان المعرض">
-                                <button onclick="updateGalleryTitle()" class="card-btn success">تحديث</button>
+                                <button onclick="updateGalleryTitle()">تحديث</button>
                             </div>
-                            <div>
+                            <div class="editor-field">
                                 <label>عنوان قسم الحجز:</label>
                                 <input type="text" id="bookingTitleInput" placeholder="عنوان الحجز">
-                                <button onclick="updateBookingTitle()" class="card-btn success">تحديث</button>
+                                <button onclick="updateBookingTitle()">تحديث</button>
                             </div>
-                            <div>
+                            <div class="editor-field">
                                 <label>عنوان قسم التعليقات:</label>
                                 <input type="text" id="commentsTitleInput" placeholder="عنوان التعليقات">
-                                <button onclick="updateCommentsTitle()" class="card-btn success">تحديث</button>
+                                <button onclick="updateCommentsTitle()">تحديث</button>
                             </div>
                         </div>
                     </div>
@@ -1126,45 +1797,45 @@
                     <div class="admin-section">
                         <h3>🏢 إدارة معلومات الشركة</h3>
                         <div class="text-editor">
-                            <div>
+                            <div class="editor-field">
                                 <label>العنوان:</label>
                                 <input type="text" id="companyLocationInput" placeholder="الموقع الجغرافي">
-                                <button onclick="updateCompanyLocation()" class="card-btn success">تحديث</button>
+                                <button onclick="updateCompanyLocation()">تحديث</button>
                             </div>
-                            <div>
+                            <div class="editor-field">
                                 <label>ساعات العمل:</label>
                                 <input type="text" id="workingHoursInput" placeholder="ساعات العمل">
-                                <button onclick="updateWorkingHours()" class="card-btn success">تحديث</button>
+                                <button onclick="updateWorkingHours()">تحديث</button>
                             </div>
-                            <div>
+                            <div class="editor-field">
                                 <label>وصف الشركة:</label>
                                 <textarea id="companyDescInput" placeholder="وصف المزرعة" rows="3"></textarea>
-                                <button onclick="updateCompanyDescription()" class="card-btn success">تحديث</button>
+                                <button onclick="updateCompanyDescription()">تحديث</button>
                             </div>
-                            <div>
+                            <div class="editor-field">
                                 <label>الخدمات:</label>
                                 <textarea id="servicesListInput" placeholder="قائمة الخدمات" rows="3"></textarea>
-                                <button onclick="updateServicesList()" class="card-btn success">تحديث</button>
+                                <button onclick="updateServicesList()">تحديث</button>
                             </div>
-                            <div>
+                            <div class="editor-field">
                                 <label>نص حقوق الطبع:</label>
                                 <input type="text" id="copyrightInput" placeholder="حقوق الطبع والنشر">
-                                <button onclick="updateCopyright()" class="card-btn success">تحديث</button>
+                                <button onclick="updateCopyright()">تحديث</button>
                             </div>
-                            <div>
+                            <div class="editor-field">
                                 <label>رقم الواتساب/الجوال:</label>
                                 <input type="text" id="phoneNumberInput" placeholder="0553663992">
-                                <button onclick="updatePhoneNumber()" class="card-btn success">تحديث</button>
+                                <button onclick="updatePhoneNumber()">تحديث</button>
                             </div>
                         </div>
                     </div>
 
                     <div class="admin-section">
                         <h3>🎯 إدارة كروت المميزات</h3>
-                        <div style="margin-bottom: 1rem;">
-                            <button class="submit-btn" onclick="addNewFeatureCard()" style="background: #28a745; margin-bottom: 1rem;">+ إضافة ميزة جديدة</button>
+                        <div class="mb-2">
+                            <button class="submit-btn" onclick="addNewFeatureCard()" style="background: var(--success-color); width: auto; padding: 15px 30px;">+ إضافة ميزة جديدة</button>
                         </div>
-                        <div id="featuresCardsContainer" style="display: grid; gap: 1rem;">
+                        <div id="featuresCardsContainer">
                             <!-- Features cards management will be populated by JavaScript -->
                         </div>
                     </div>
@@ -1174,7 +1845,7 @@
                 <div id="mediaTab" class="admin-tab-content">
                     <div class="admin-section">
                         <h3>🎬 إدارة الفيديو</h3>
-                        <div class="card-manager" style="margin-bottom: 1rem;">
+                        <div class="card-manager">
                             <div class="card-header">
                                 <div class="card-icon">🎥</div>
                                 <div class="card-content">
@@ -1184,40 +1855,36 @@
                             </div>
                             <div class="card-controls">
                                 <button onclick="editVideoContent()" class="card-btn success">✏️ تعديل المحتوى</button>
-                                <button onclick="editVideoLinks()" class="card-btn" style="background: #17a2b8; color: white;">🔗 تعديل الروابط</button>
+                                <button onclick="editVideoLinks()" class="card-btn primary">🔗 تعديل الروابط</button>
                             </div>
                         </div>
                     </div>
 
                     <div class="admin-section">
                         <h3>🖼️ إدارة الصور الرئيسية</h3>
-                        <div class="form-group">
-                            <label for="heroMediaUpload">إضافة صورة أو فيديو جديد</label>
+                        <div class="upload-section">
+                            <h4>📁 إضافة صور وفيديوهات جديدة</h4>
                             <input type="file" id="heroMediaUpload" accept="image/*,video/*" multiple>
+                            <button class="submit-btn" onclick="uploadHeroMedia()" style="width: auto; padding: 12px 30px;">رفع الملفات</button>
                         </div>
-                        <button class="submit-btn" onclick="uploadHeroMedia()">إضافة الملفات</button>
                         
-                        <div style="margin-top: 2rem;">
-                            <h4>📸 الصور والفيديوهات الرئيسية الحالية:</h4>
-                            <div id="heroImagesContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                                <!-- Hero media will be populated by JavaScript -->
-                            </div>
+                        <h4>📸 الصور والفيديوهات الرئيسية الحالية:</h4>
+                        <div id="heroImagesContainer" class="media-grid">
+                            <!-- Hero media will be populated by JavaScript -->
                         </div>
                     </div>
 
                     <div class="admin-section">
-                        <h3>🖼️ إضافة صور ومقاطع للمعرض</h3>
-                        <div class="form-group">
-                            <label for="mediaUpload">رفع ملف للمعرض</label>
+                        <h3>🖼️ إدارة معرض الصور</h3>
+                        <div class="upload-section">
+                            <h4>📁 إضافة صور ومقاطع للمعرض</h4>
                             <input type="file" id="mediaUpload" accept="image/*,video/*" multiple>
+                            <button class="submit-btn" onclick="uploadMedia()" style="width: auto; padding: 12px 30px;">رفع الملفات</button>
                         </div>
-                        <button class="submit-btn" onclick="uploadMedia()">رفع الملفات</button>
                         
-                        <div style="margin-top: 2rem;">
-                            <h4>🖼️ صور المعرض الحالية:</h4>
-                            <div id="galleryImagesContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                                <!-- Gallery images will be populated by JavaScript -->
-                            </div>
+                        <h4>🖼️ صور المعرض الحالية:</h4>
+                        <div id="galleryImagesContainer" class="media-grid">
+                            <!-- Gallery images will be populated by JavaScript -->
                         </div>
                     </div>
                 </div>
@@ -1226,57 +1893,57 @@
                 <div id="designTab" class="admin-tab-content">
                     <div class="admin-section">
                         <h3>🎨 إدارة الألوان والمظهر</h3>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-                            <div>
+                        <div class="design-controls">
+                            <div class="color-section">
                                 <h4>🎨 الألوان الأساسية</h4>
                                 <div class="color-input-group">
-                                    <label>اللون الأساسي:</label>
+                                    <div class="color-label">اللون الأساسي:</div>
                                     <input type="color" class="color-input" id="primaryColor" value="#4CAF50">
-                                    <button onclick="updateColors()" class="card-btn primary">تطبيق</button>
                                 </div>
                                 <div class="color-input-group">
-                                    <label>اللون الثانوي:</label>
+                                    <div class="color-label">اللون الثانوي:</div>
                                     <input type="color" class="color-input" id="secondaryColor" value="#2E7D32">
                                 </div>
                                 <div class="color-input-group">
-                                    <label>لون التمييز:</label>
+                                    <div class="color-label">لون التمييز:</div>
                                     <input type="color" class="color-input" id="accentColor" value="#ff6b6b">
                                 </div>
                                 <div class="color-input-group">
-                                    <label>لون النص:</label>
+                                    <div class="color-label">لون النص:</div>
                                     <input type="color" class="color-input" id="textColor" value="#333333">
                                 </div>
                                 <div class="color-input-group">
-                                    <label>لون الخلفية:</label>
+                                    <div class="color-label">لون الخلفية:</div>
                                     <input type="color" class="color-input" id="backgroundColor" value="#ffffff">
                                 </div>
+                                <button onclick="updateColors()" class="submit-btn" style="width: 100%; margin-top: 1rem;">تطبيق الألوان</button>
                             </div>
                             
-                            <div>
+                            <div class="font-section">
                                 <h4>📏 أحجام الخطوط</h4>
-                                <div style="margin-bottom: 15px;">
+                                <div class="font-control">
                                     <label>حجم الخط الأساسي:</label>
                                     <input type="range" id="mainFontSize" min="14" max="20" value="16" step="1">
-                                    <span id="mainFontSizeValue">16px</span>
+                                    <span class="font-value" id="mainFontSizeValue">16px</span>
                                 </div>
-                                <div style="margin-bottom: 15px;">
+                                <div class="font-control">
                                     <label>حجم العناوين الرئيسية:</label>
                                     <input type="range" id="headingFontSize" min="2" max="5" value="3" step="0.5">
-                                    <span id="headingFontSizeValue">3rem</span>
+                                    <span class="font-value" id="headingFontSizeValue">3rem</span>
                                 </div>
-                                <div style="margin-bottom: 15px;">
+                                <div class="font-control">
                                     <label>حجم العناوين الفرعية:</label>
                                     <input type="range" id="subheadingFontSize" min="1.5" max="3" value="2" step="0.1">
-                                    <span id="subheadingFontSizeValue">2rem</span>
+                                    <span class="font-value" id="subheadingFontSizeValue">2rem</span>
                                 </div>
-                                <button onclick="updateFontSizes()" class="card-btn success">تطبيق أحجام الخطوط</button>
+                                <button onclick="updateFontSizes()" class="submit-btn" style="width: 100%; margin-top: 1rem;">تطبيق أحجام الخطوط</button>
                             </div>
                         </div>
                         
-                        <div style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 10px;">
-                            <h4>🔄 إعادة تعيين التصميم</h4>
-                            <p style="color: #666; margin-bottom: 10px;">إعادة تعيين جميع الألوان والخطوط للقيم الافتراضية</p>
-                            <button onclick="resetDesign()" class="card-btn danger">🔄 إعادة تعيين التصميم</button>
+                        <div class="admin-section" style="margin-top: 2rem; background: var(--light-bg); border: 2px dashed var(--warning-color);">
+                            <h4 style="color: var(--warning-color); margin-bottom: 1rem;">🔄 إعادة تعيين التصميم</h4>
+                            <p style="color: #666; margin-bottom: 1rem;">إعادة تعيين جميع الألوان والخطوط للقيم الافتراضية</p>
+                            <button onclick="resetDesign()" class="card-btn danger" style="padding: 12px 25px;">🔄 إعادة تعيين التصميم</button>
                         </div>
                     </div>
                 </div>
@@ -1302,23 +1969,50 @@
                 <div id="settingsTab" class="admin-tab-content">
                     <div class="admin-section">
                         <h3>📊 تصدير الموقع</h3>
-                        <div style="background: #e7f3ff; padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem;">
-                            <h4 style="color: #0066cc; margin-bottom: 1rem;">💾 تحميل الموقع كملف HTML</h4>
-                            <p style="color: #666; margin-bottom: 1rem;">يمكنك تحميل الموقع كملف HTML كامل ليعمل بدون اتصال بالإنترنت</p>
-                            <button onclick="exportWebsite()" class="submit-btn" style="background: #17a2b8;">📥 تحميل الموقع</button>
+                        <div style="background: linear-gradient(45deg, #e7f3ff, #f0f8ff); padding: 2rem; border-radius: 15px; margin-bottom: 2rem; border: 2px solid var(--info-color);">
+                            <h4 style="color: var(--info-color); margin-bottom: 1rem;">💾 تحميل الموقع كملف HTML</h4>
+                            <p style="color: #666; margin-bottom: 1.5rem; line-height: 1.6;">يمكنك تحميل الموقع كملف HTML كامل ليعمل بدون اتصال بالإنترنت مع جميع التحسينات والمميزات الجديدة</p>
+                            <button onclick="exportWebsite()" class="submit-btn" style="background: var(--info-color); width: auto; padding: 15px 30px;">📥 تحميل الموقع المحسن</button>
                         </div>
                     </div>
 
                     <div class="admin-section">
                         <h3>🔐 إعدادات الأمان</h3>
-                        <div style="background: #e7f3ff; padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem;">
-                            <h4 style="color: #0066cc; margin-bottom: 1rem;">📱 معلومات الأمان</h4>
-                            <div style="background: white; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                                <p style="margin: 0; color: #666; line-height: 1.6;">
+                        <div style="background: linear-gradient(45deg, #e8f5e8, #f0f8f0); padding: 2rem; border-radius: 15px; border: 2px solid var(--success-color);">
+                            <h4 style="color: var(--success-color); margin-bottom: 1rem;">📱 معلومات الأمان</h4>
+                            <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 1rem; border: 1px solid var(--border-color);">
+                                <p style="margin: 0; color: #666; line-height: 1.8;">
                                     <strong>📱 رقم الجوال المُسجل:</strong> <span id="registeredPhone">0553663992</span><br>
                                     <strong>🔑 آخر تغيير لكلمة المرور:</strong> اليوم<br>
-                                    <strong>⚡ الحالة:</strong> <span style="color: #28a745;">متصل ✅</span>
+                                    <strong>⚡ الحالة:</strong> <span style="color: var(--success-color); font-weight: 600;">متصل ✅</span><br>
+                                    <strong>🌐 الإصدار:</strong> <span style="color: var(--info-color); font-weight: 600;">النسخة المحسنة 2.0</span>
                                 </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="admin-section">
+                        <h3>📈 إحصائيات النظام</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                            <div style="background: var(--light-bg); padding: 1.5rem; border-radius: 12px; text-align: center; border: 1px solid var(--border-color);">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">📊</div>
+                                <div style="font-weight: 600; color: var(--secondary-color);" id="statsBookings">0 حجز</div>
+                                <div style="font-size: 0.9rem; color: #666;">إجمالي الحجوزات</div>
+                            </div>
+                            <div style="background: var(--light-bg); padding: 1.5rem; border-radius: 12px; text-align: center; border: 1px solid var(--border-color);">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">💬</div>
+                                <div style="font-weight: 600; color: var(--secondary-color);" id="statsComments">0 تعليق</div>
+                                <div style="font-size: 0.9rem; color: #666;">إجمالي التعليقات</div>
+                            </div>
+                            <div style="background: var(--light-bg); padding: 1.5rem; border-radius: 12px; text-align: center; border: 1px solid var(--border-color);">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🖼️</div>
+                                <div style="font-weight: 600; color: var(--secondary-color);" id="statsImages">0 صورة</div>
+                                <div style="font-size: 0.9rem; color: #666;">صور المعرض</div>
+                            </div>
+                            <div style="background: var(--light-bg); padding: 1.5rem; border-radius: 12px; text-align: center; border: 1px solid var(--border-color);">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎯</div>
+                                <div style="font-weight: 600; color: var(--secondary-color);" id="statsFeatures">0 ميزة</div>
+                                <div style="font-size: 0.9rem; color: #666;">المميزات النشطة</div>
                             </div>
                         </div>
                     </div>
@@ -1328,7 +2022,16 @@
     </div>
 
     <script>
-        // Global Website Data
+        // منع التخزين المؤقت وإضافة timestamp
+        const addTimestamp = () => {
+            const timestamp = Date.now();
+            const currentUrl = window.location.href.split('?')[0];
+            if (window.history.replaceState) {
+                window.history.replaceState(null, null, `${currentUrl}?t=${timestamp}`);
+            }
+        };
+
+        // Global Website Data محسن
         let siteData = {
             info: {
                 name: "مزرعة ريف عبس السياحية",
@@ -1362,7 +2065,7 @@
                 description: "شاهد جولة شاملة في أجمل المناطق الطبيعية والأكواخ السياحية المجهزة بأحدث المرافق",
                 url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
                 youtubeChannel: "https://www.youtube.com/@YourChannel",
-                buttonText: "شاهد المزيد من الفيديوهات على اليوتيوب",
+                buttonText: "شاهد قناة المزرعة على اليوتيوب - فيديوهات حصرية",
                 thumbnail: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 563'><defs><linearGradient id='bg' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%234CAF50;stop-opacity:1' /><stop offset='100%' style='stop-color:%232E7D32;stop-opacity:1' /></linearGradient></defs><rect fill='url(%23bg)' width='1000' height='563'/><polygon fill='%23795548' points='0,400 150,250 300,300 450,200 600,280 750,220 900,300 1000,250 1000,563 0,563'/><circle fill='%23FFD700' cx='800' cy='120' r='60'/><rect fill='%23654321' x='200' y='300' width='60' height='100'/><polygon fill='%23228B22' points='200,300 230,250 260,300'/><rect fill='%23A1887F' x='400' y='280' width='120' height='80'/><polygon fill='%23D32F2F' points='400,280 460,240 520,280'/><rect fill='%236D4C41' x='450' y='320' width='20' height='40'/><circle fill='%234FC3F7' cx='700' cy='400' r='80'/><ellipse fill='%234FC3F7' cx='700' cy='420' rx='100' ry='30'/><text x='500' y='500' text-anchor='middle' fill='white' font-size='32' font-weight='bold'>مزرعة ريف عبس السياحية</text></svg>"
             },
             design: {
@@ -1377,7 +2080,7 @@
             }
         };
 
-        // Hero Images Data
+        // Hero Images Data محسن
         let heroImages = [
             {
                 type: 'image',
@@ -1396,7 +2099,7 @@
             }
         ];
 
-        // Features Cards Data
+        // Features Cards Data محسن
         let featuresCards = [
             {
                 id: 1,
@@ -1428,7 +2131,7 @@
             }
         ];
 
-        // Gallery Items Data
+        // Gallery Items Data محسن
         let galleryItems = [
             {
                 type: 'image',
@@ -1442,90 +2145,289 @@
             }
         ];
 
-        // Admin and Booking Data
+        // Admin and Booking Data محسن
         let adminPassword = "admin123";
         let isAdminLoggedIn = false;
         let bookings = [];
         let comments = [];
         let currentSlide = 0;
         let slideInterval;
+        let isLoading = false;
 
-        // Video Play Function
+        // Performance optimization
+        const throttle = (func, limit) => {
+            let inThrottle;
+            return function() {
+                const args = arguments;
+                const context = this;
+                if (!inThrottle) {
+                    func.apply(context, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            }
+        };
+
+        const debounce = (func, wait) => {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        };
+
+        // Video Play Function محسن
         function playVideo() {
             const thumbnail = document.getElementById('videoThumbnail');
             const iframe = document.getElementById('videoIframe');
+            const stopBtn = document.getElementById('stopVideoBtn');
+            const wrapper = document.querySelector('.video-wrapper');
             
             if (thumbnail && iframe) {
+                // تشغيل الفيديو embedded في نفس الصفحة
+                const videoUrl = siteData.video.url;
+                iframe.src = videoUrl + "?autoplay=1&rel=0&modestbranding=1&controls=1";
                 thumbnail.style.display = 'none';
                 iframe.style.display = 'block';
+                stopBtn.style.display = 'block';
+                wrapper.classList.add('playing');
+                
+                // إضافة تأثير تمدد لطيف
+                iframe.style.opacity = '0';
+                iframe.style.transform = 'scale(0.9)';
+                iframe.style.transition = 'all 0.3s ease';
+                
+                setTimeout(() => {
+                    iframe.style.opacity = '1';
+                    iframe.style.transform = 'scale(1)';
+                }, 100);
             }
         }
 
-        // Initialize the page
+        // وظيفة إيقاف الفيديو
+        function stopVideo() {
+            const thumbnail = document.getElementById('videoThumbnail');
+            const iframe = document.getElementById('videoIframe');
+            const stopBtn = document.getElementById('stopVideoBtn');
+            const wrapper = document.querySelector('.video-wrapper');
+            
+            if (thumbnail && iframe) {
+                // إيقاف الفيديو مع تأثير انتقالي
+                iframe.style.opacity = '0';
+                iframe.style.transform = 'scale(0.9)';
+                
+                setTimeout(() => {
+                    iframe.style.display = 'none';
+                    iframe.src = ''; // إيقاف الفيديو تماماً
+                    stopBtn.style.display = 'none';
+                    wrapper.classList.remove('playing');
+                    thumbnail.style.display = 'block';
+                    
+                    // تأثير ظهور للـ thumbnail
+                    thumbnail.style.opacity = '0';
+                    thumbnail.style.transform = 'scale(0.9)';
+                    setTimeout(() => {
+                        thumbnail.style.opacity = '1';
+                        thumbnail.style.transform = 'scale(1)';
+                    }, 50);
+                }, 300);
+            }
+        }
+
+        // Initialize the page محسن
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 تحميل الموقع المحسن...');
+            
+            // إضافة timestamp لمنع التخزين المؤقت
+            addTimestamp();
+            
+            // تحديث محتوى الموقع
             updateSiteContent();
+            
+            // تحميل العناصر
             loadHeroSlideshow();
             loadGallery();
             loadComments();
             loadFeaturesCards();
+            
+            // إعداد الوظائف
             setupSmoothScrolling();
             startSlideshow();
             initializeFontSizeSliders();
+            setupFormValidation();
+            
+            // تحسين الأداء
+            setupPerformanceOptimizations();
+            
+            console.log('✅ تم تحميل الموقع بنجاح!');
         });
 
-        // Update Site Content
+        // Setup Performance Optimizations
+        function setupPerformanceOptimizations() {
+            // Lazy loading للصور
+            const images = document.querySelectorAll('img');
+            const imageOptions = {
+                threshold: 0,
+                rootMargin: "0px 0px 50px 0px"
+            };
+
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.classList.add('fade-in');
+                        observer.unobserve(img);
+                    }
+                });
+            }, imageOptions);
+
+            images.forEach(img => imageObserver.observe(img));
+
+            // تحسين التمرير
+            let ticking = false;
+            function updateScrollEffects() {
+                const scrolled = window.pageYOffset;
+                const parallax = document.querySelector('.hero');
+                if (parallax) {
+                    const speed = scrolled * 0.5;
+                    parallax.style.transform = `translateY(${speed}px)`;
+                }
+                ticking = false;
+            }
+
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateScrollEffects);
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', requestTick);
+        }
+
+        // Form Validation محسن
+        function setupFormValidation() {
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
+                
+                inputs.forEach(input => {
+                    input.addEventListener('blur', validateField);
+                    input.addEventListener('input', debounce(validateField, 300));
+                });
+            });
+        }
+
+        function validateField(event) {
+            const field = event.target;
+            const value = field.value.trim();
+            
+            // إزالة رسائل الخطأ السابقة
+            const existingError = field.parentNode.querySelector('.error-message');
+            if (existingError) {
+                existingError.remove();
+            }
+            
+            field.classList.remove('error', 'success');
+            
+            if (!value && field.hasAttribute('required')) {
+                showFieldError(field, 'هذا الحقل مطلوب');
+                return false;
+            }
+            
+            // التحقق من رقم الجوال
+            if (field.type === 'tel' && value) {
+                const phoneRegex = /^[0-9+\-\s()]{9,}$/;
+                if (!phoneRegex.test(value)) {
+                    showFieldError(field, 'يرجى إدخال رقم جوال صحيح (9 أرقام على الأقل)');
+                    return false;
+                }
+            }
+            
+            // التحقق من التاريخ
+            if (field.type === 'date' && value) {
+                const selectedDate = new Date(value);
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+                
+                if (selectedDate < today) {
+                    showFieldError(field, 'لا يمكن اختيار تاريخ في الماضي');
+                    return false;
+                }
+            }
+            
+            field.classList.add('success');
+            return true;
+        }
+
+        function showFieldError(field, message) {
+            field.classList.add('error');
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            errorDiv.style.cssText = 'color: var(--danger-color); font-size: 0.9rem; margin-top: 0.5rem;';
+            errorDiv.textContent = message;
+            field.parentNode.appendChild(errorDiv);
+        }
+
+        // Update Site Content محسن
         function updateSiteContent() {
-            // Update all text content
-            document.getElementById('logoText').textContent = siteData.text.siteTitle;
-            document.getElementById('heroTitle').textContent = siteData.text.heroTitle;
-            document.getElementById('heroSubtitle').textContent = siteData.text.heroSubtitle;
-            document.getElementById('ctaButton').textContent = siteData.text.ctaButton;
-            document.getElementById('featuresTitle').textContent = siteData.text.featuresTitle;
-            document.getElementById('galleryTitle').textContent = siteData.text.galleryTitle;
-            document.getElementById('bookingTitle').textContent = siteData.text.bookingTitle;
-            document.getElementById('commentsTitle').textContent = siteData.text.commentsTitle;
-            
-            // Update navigation
-            document.getElementById('navHome').textContent = siteData.text.navHome;
-            document.getElementById('navVideo').textContent = siteData.text.navVideo;
-            document.getElementById('navGallery').textContent = siteData.text.navGallery;
-            document.getElementById('navBooking').textContent = siteData.text.navBooking;
-            document.getElementById('navComments').textContent = siteData.text.navComments;
-            
-            // Update video content
-            document.getElementById('videoTitle').textContent = siteData.video.title;
-            document.getElementById('videoDescription').textContent = siteData.video.description;
-            document.getElementById('youtubeBtnText').textContent = siteData.video.buttonText;
-            document.getElementById('youtubeBtn').href = siteData.video.youtubeChannel;
-            document.getElementById('videoIframe').src = siteData.video.url + "?autoplay=1&rel=0";
-            document.getElementById('videoThumbnail').style.backgroundImage = `url('${siteData.video.thumbnail}')`;
-            
-            // Update contact info
-            document.getElementById('whatsappBtn').href = `https://wa.me/966${siteData.info.phone}`;
-            document.getElementById('footerPhone').textContent = `+966 ${siteData.info.phone}`;
-            document.getElementById('footerLocation').textContent = siteData.info.location;
-            document.getElementById('footerHours').textContent = siteData.info.workingHours;
-            document.getElementById('footerWifi').textContent = siteData.info.wifi;
-            
-            // Update footer
-            document.getElementById('footerTitle').textContent = siteData.text.siteTitle;
-            document.getElementById('footerDescription').textContent = siteData.info.description;
-            document.getElementById('footerContactTitle').textContent = siteData.text.footerContactTitle;
-            document.getElementById('footerServicesTitle').textContent = siteData.text.footerServicesTitle;
-            document.getElementById('footerServices').innerHTML = siteData.info.services;
-            document.getElementById('footerCopyright').textContent = siteData.info.copyright;
-            document.getElementById('registeredPhone').textContent = siteData.info.phone;
-            
-            // Update form labels
-            updateFormLabels();
+            try {
+                // Update all text content
+                const textElements = {
+                    'logoText': siteData.text.siteTitle,
+                    'heroTitle': siteData.text.heroTitle,
+                    'heroSubtitle': siteData.text.heroSubtitle,
+                    'ctaButton': siteData.text.ctaButton,
+                    'featuresTitle': siteData.text.featuresTitle,
+                    'galleryTitle': siteData.text.galleryTitle,
+                    'bookingTitle': siteData.text.bookingTitle,
+                    'commentsTitle': siteData.text.commentsTitle,
+                    'navHome': siteData.text.navHome,
+                    'navVideo': siteData.text.navVideo,
+                    'navGallery': siteData.text.navGallery,
+                    'navBooking': siteData.text.navBooking,
+                    'navComments': siteData.text.navComments,
+                    'footerContactTitle': siteData.text.footerContactTitle,
+                    'footerServicesTitle': siteData.text.footerServicesTitle
+                };
+
+                Object.entries(textElements).forEach(([id, text]) => {
+                    const element = document.getElementById(id);
+                    if (element) element.textContent = text;
+                });
+
+                // Update video content
+                document.getElementById('videoTitle').textContent = siteData.video.title;
+                document.getElementById('videoDescription').textContent = siteData.video.description;
+                document.getElementById('youtubeBtnText').textContent = siteData.video.buttonText;
+                document.getElementById('youtubeBtn').href = siteData.video.youtubeChannel;
+                document.getElementById('videoThumbnail').style.backgroundImage = `url('${siteData.video.thumbnail}')`;
+                
+                // Update contact info
+                document.getElementById('whatsappBtn').href = `https://wa.me/966${siteData.info.phone}`;
+                document.getElementById('footerPhone').textContent = `+966 ${siteData.info.phone}`;
+                document.getElementById('footerLocation').textContent = siteData.info.location;
+                document.getElementById('footerHours').textContent = siteData.info.workingHours;
+                document.getElementById('footerWifi').textContent = siteData.info.wifi;
+                
+                // Update footer
+                document.getElementById('footerTitle').textContent = siteData.text.siteTitle;
+                document.getElementById('footerDescription').textContent = siteData.info.description;
+                document.getElementById('footerServices').innerHTML = siteData.info.services;
+                document.getElementById('footerCopyright').textContent = siteData.info.copyright;
+                document.getElementById('registeredPhone').textContent = siteData.info.phone;
+
+                console.log('✅ تم تحديث محتوى الموقع');
+            } catch (error) {
+                console.error('❌ خطأ في تحديث المحتوى:', error);
+            }
         }
 
-        function updateFormLabels() {
-            // Form labels would be updated here if they were in the data structure
-            // For now, they remain static but can be easily added to siteData.text
-        }
-
-        // Admin Tab Management
+        // Admin Tab Management محسن
         function showAdminTab(tabName) {
             // Remove active class from all tabs and contents
             document.querySelectorAll('.admin-tab').forEach(tab => tab.classList.remove('active'));
@@ -1533,52 +2435,73 @@
             
             // Add active class to selected tab and content
             event.target.classList.add('active');
-            document.getElementById(tabName + 'Tab').classList.add('active');
+            const tabContent = document.getElementById(tabName + 'Tab');
+            if (tabContent) {
+                tabContent.classList.add('active');
+            }
             
             // Load specific content if needed
-            if (tabName === 'bookings') {
-                loadAdminBookings();
-                loadAdminComments();
-            } else if (tabName === 'media') {
-                loadAdminHeroImages();
-                loadAdminGalleryImages();
-            } else if (tabName === 'content') {
-                loadAdminFeaturesCards();
-                loadTextEditorValues();
-            } else if (tabName === 'design') {
-                loadDesignValues();
+            switch(tabName) {
+                case 'bookings':
+                    loadAdminBookings();
+                    loadAdminComments();
+                    updateStats();
+                    break;
+                case 'media':
+                    loadAdminHeroImages();
+                    loadAdminGalleryImages();
+                    break;
+                case 'content':
+                    loadAdminFeaturesCards();
+                    loadTextEditorValues();
+                    break;
+                case 'design':
+                    loadDesignValues();
+                    break;
+                case 'settings':
+                    updateStats();
+                    break;
             }
         }
 
+        function updateStats() {
+            document.getElementById('statsBookings').textContent = `${bookings.length} حجز`;
+            document.getElementById('statsComments').textContent = `${comments.length} تعليق`;
+            document.getElementById('statsImages').textContent = `${galleryItems.length} صورة`;
+            document.getElementById('statsFeatures').textContent = `${featuresCards.filter(f => f.active).length} ميزة`;
+        }
+
         function loadTextEditorValues() {
-            // Load current values into text editor inputs
-            document.getElementById('siteTitle').value = siteData.text.siteTitle;
-            document.getElementById('heroTitleInput').value = siteData.text.heroTitle;
-            document.getElementById('heroSubtitleInput').value = siteData.text.heroSubtitle;
-            document.getElementById('ctaButtonInput').value = siteData.text.ctaButton;
-            document.getElementById('featuresTitleInput').value = siteData.text.featuresTitle;
-            document.getElementById('galleryTitleInput').value = siteData.text.galleryTitle;
-            document.getElementById('bookingTitleInput').value = siteData.text.bookingTitle;
-            document.getElementById('commentsTitleInput').value = siteData.text.commentsTitle;
-            
-            // Company info
-            document.getElementById('companyLocationInput').value = siteData.info.location;
-            document.getElementById('workingHoursInput').value = siteData.info.workingHours;
-            document.getElementById('companyDescInput').value = siteData.info.description;
-            document.getElementById('servicesListInput').value = siteData.info.services;
-            document.getElementById('copyrightInput').value = siteData.info.copyright;
-            document.getElementById('phoneNumberInput').value = siteData.info.phone;
+            const inputs = {
+                'siteTitle': siteData.text.siteTitle,
+                'heroTitleInput': siteData.text.heroTitle,
+                'heroSubtitleInput': siteData.text.heroSubtitle,
+                'ctaButtonInput': siteData.text.ctaButton,
+                'featuresTitleInput': siteData.text.featuresTitle,
+                'galleryTitleInput': siteData.text.galleryTitle,
+                'bookingTitleInput': siteData.text.bookingTitle,
+                'commentsTitleInput': siteData.text.commentsTitle,
+                'companyLocationInput': siteData.info.location,
+                'workingHoursInput': siteData.info.workingHours,
+                'companyDescInput': siteData.info.description,
+                'servicesListInput': siteData.info.services,
+                'copyrightInput': siteData.info.copyright,
+                'phoneNumberInput': siteData.info.phone
+            };
+
+            Object.entries(inputs).forEach(([id, value]) => {
+                const element = document.getElementById(id);
+                if (element) element.value = value;
+            });
         }
 
         function loadDesignValues() {
-            // Load design values
             document.getElementById('primaryColor').value = siteData.design.primaryColor;
             document.getElementById('secondaryColor').value = siteData.design.secondaryColor;
             document.getElementById('accentColor').value = siteData.design.accentColor;
             document.getElementById('textColor').value = siteData.design.textColor;
             document.getElementById('backgroundColor').value = siteData.design.backgroundColor;
             
-            // Font sizes
             const mainFontSize = parseInt(siteData.design.mainFontSize);
             const headingFontSize = parseFloat(siteData.design.headingFontSize);
             const subheadingFontSize = parseFloat(siteData.design.subheadingFontSize);
@@ -1590,135 +2513,135 @@
             updateFontSizeDisplay();
         }
 
-        // Text Update Functions
+        // Text Update Functions محسنة
         function updateSiteTitle() {
-            const newTitle = document.getElementById('siteTitle').value;
+            const newTitle = document.getElementById('siteTitle').value.trim();
             if (newTitle) {
                 siteData.text.siteTitle = newTitle;
                 updateSiteContent();
-                alert('✅ تم تحديث عنوان الموقع بنجاح');
+                showNotification('✅ تم تحديث عنوان الموقع بنجاح', 'success');
             }
         }
 
         function updateHeroTitle() {
-            const newTitle = document.getElementById('heroTitleInput').value;
+            const newTitle = document.getElementById('heroTitleInput').value.trim();
             if (newTitle) {
                 siteData.text.heroTitle = newTitle;
                 updateSiteContent();
-                alert('✅ تم تحديث العنوان الرئيسي بنجاح');
+                showNotification('✅ تم تحديث العنوان الرئيسي بنجاح', 'success');
             }
         }
 
         function updateHeroSubtitle() {
-            const newSubtitle = document.getElementById('heroSubtitleInput').value;
+            const newSubtitle = document.getElementById('heroSubtitleInput').value.trim();
             if (newSubtitle) {
                 siteData.text.heroSubtitle = newSubtitle;
                 updateSiteContent();
-                alert('✅ تم تحديث الوصف بنجاح');
+                showNotification('✅ تم تحديث الوصف بنجاح', 'success');
             }
         }
 
         function updateCtaButton() {
-            const newText = document.getElementById('ctaButtonInput').value;
+            const newText = document.getElementById('ctaButtonInput').value.trim();
             if (newText) {
                 siteData.text.ctaButton = newText;
                 updateSiteContent();
-                alert('✅ تم تحديث نص الزر بنجاح');
+                showNotification('✅ تم تحديث نص الزر بنجاح', 'success');
             }
         }
 
         function updateFeaturesTitle() {
-            const newTitle = document.getElementById('featuresTitleInput').value;
+            const newTitle = document.getElementById('featuresTitleInput').value.trim();
             if (newTitle) {
                 siteData.text.featuresTitle = newTitle;
                 updateSiteContent();
-                alert('✅ تم تحديث عنوان المميزات بنجاح');
+                showNotification('✅ تم تحديث عنوان المميزات بنجاح', 'success');
             }
         }
 
         function updateGalleryTitle() {
-            const newTitle = document.getElementById('galleryTitleInput').value;
+            const newTitle = document.getElementById('galleryTitleInput').value.trim();
             if (newTitle) {
                 siteData.text.galleryTitle = newTitle;
                 updateSiteContent();
-                alert('✅ تم تحديث عنوان المعرض بنجاح');
+                showNotification('✅ تم تحديث عنوان المعرض بنجاح', 'success');
             }
         }
 
         function updateBookingTitle() {
-            const newTitle = document.getElementById('bookingTitleInput').value;
+            const newTitle = document.getElementById('bookingTitleInput').value.trim();
             if (newTitle) {
                 siteData.text.bookingTitle = newTitle;
                 updateSiteContent();
-                alert('✅ تم تحديث عنوان الحجز بنجاح');
+                showNotification('✅ تم تحديث عنوان الحجز بنجاح', 'success');
             }
         }
 
         function updateCommentsTitle() {
-            const newTitle = document.getElementById('commentsTitleInput').value;
+            const newTitle = document.getElementById('commentsTitleInput').value.trim();
             if (newTitle) {
                 siteData.text.commentsTitle = newTitle;
                 updateSiteContent();
-                alert('✅ تم تحديث عنوان التعليقات بنجاح');
+                showNotification('✅ تم تحديث عنوان التعليقات بنجاح', 'success');
             }
         }
 
-        // Company Info Update Functions
+        // Company Info Update Functions محسنة
         function updateCompanyLocation() {
-            const newLocation = document.getElementById('companyLocationInput').value;
+            const newLocation = document.getElementById('companyLocationInput').value.trim();
             if (newLocation) {
                 siteData.info.location = newLocation;
                 updateSiteContent();
-                alert('✅ تم تحديث العنوان بنجاح');
+                showNotification('✅ تم تحديث العنوان بنجاح', 'success');
             }
         }
 
         function updateWorkingHours() {
-            const newHours = document.getElementById('workingHoursInput').value;
+            const newHours = document.getElementById('workingHoursInput').value.trim();
             if (newHours) {
                 siteData.info.workingHours = newHours;
                 updateSiteContent();
-                alert('✅ تم تحديث ساعات العمل بنجاح');
+                showNotification('✅ تم تحديث ساعات العمل بنجاح', 'success');
             }
         }
 
         function updateCompanyDescription() {
-            const newDesc = document.getElementById('companyDescInput').value;
+            const newDesc = document.getElementById('companyDescInput').value.trim();
             if (newDesc) {
                 siteData.info.description = newDesc;
                 updateSiteContent();
-                alert('✅ تم تحديث وصف الشركة بنجاح');
+                showNotification('✅ تم تحديث وصف الشركة بنجاح', 'success');
             }
         }
 
         function updateServicesList() {
-            const newServices = document.getElementById('servicesListInput').value;
+            const newServices = document.getElementById('servicesListInput').value.trim();
             if (newServices) {
                 siteData.info.services = newServices;
                 updateSiteContent();
-                alert('✅ تم تحديث قائمة الخدمات بنجاح');
+                showNotification('✅ تم تحديث قائمة الخدمات بنجاح', 'success');
             }
         }
 
         function updateCopyright() {
-            const newCopyright = document.getElementById('copyrightInput').value;
+            const newCopyright = document.getElementById('copyrightInput').value.trim();
             if (newCopyright) {
                 siteData.info.copyright = newCopyright;
                 updateSiteContent();
-                alert('✅ تم تحديث حقوق الطبع بنجاح');
+                showNotification('✅ تم تحديث حقوق الطبع بنجاح', 'success');
             }
         }
 
         function updatePhoneNumber() {
-            const newPhone = document.getElementById('phoneNumberInput').value;
+            const newPhone = document.getElementById('phoneNumberInput').value.trim();
             if (newPhone) {
                 siteData.info.phone = newPhone;
                 updateSiteContent();
-                alert('✅ تم تحديث رقم الجوال بنجاح');
+                showNotification('✅ تم تحديث رقم الجوال بنجاح', 'success');
             }
         }
 
-        // Design Update Functions
+        // Design Update Functions محسنة
         function updateColors() {
             siteData.design.primaryColor = document.getElementById('primaryColor').value;
             siteData.design.secondaryColor = document.getElementById('secondaryColor').value;
@@ -1734,27 +2657,33 @@
             root.style.setProperty('--text-color', siteData.design.textColor);
             root.style.setProperty('--background-color', siteData.design.backgroundColor);
             
-            alert('✅ تم تطبيق الألوان الجديدة بنجاح');
+            showNotification('✅ تم تطبيق الألوان الجديدة بنجاح', 'success');
         }
 
         function initializeFontSizeSliders() {
-            const mainFontSlider = document.getElementById('mainFontSize');
-            const headingFontSlider = document.getElementById('headingFontSize');
-            const subheadingFontSlider = document.getElementById('subheadingFontSize');
-            
-            mainFontSlider.addEventListener('input', updateFontSizeDisplay);
-            headingFontSlider.addEventListener('input', updateFontSizeDisplay);
-            subheadingFontSlider.addEventListener('input', updateFontSizeDisplay);
+            const sliders = ['mainFontSize', 'headingFontSize', 'subheadingFontSize'];
+            sliders.forEach(id => {
+                const slider = document.getElementById(id);
+                if (slider) {
+                    slider.addEventListener('input', updateFontSizeDisplay);
+                }
+            });
         }
 
         function updateFontSizeDisplay() {
-            const mainFontSize = document.getElementById('mainFontSize').value;
-            const headingFontSize = document.getElementById('headingFontSize').value;
-            const subheadingFontSize = document.getElementById('subheadingFontSize').value;
+            const mainFontSize = document.getElementById('mainFontSize')?.value;
+            const headingFontSize = document.getElementById('headingFontSize')?.value;
+            const subheadingFontSize = document.getElementById('subheadingFontSize')?.value;
             
-            document.getElementById('mainFontSizeValue').textContent = mainFontSize + 'px';
-            document.getElementById('headingFontSizeValue').textContent = headingFontSize + 'rem';
-            document.getElementById('subheadingFontSizeValue').textContent = subheadingFontSize + 'rem';
+            if (mainFontSize) {
+                document.getElementById('mainFontSizeValue').textContent = mainFontSize + 'px';
+            }
+            if (headingFontSize) {
+                document.getElementById('headingFontSizeValue').textContent = headingFontSize + 'rem';
+            }
+            if (subheadingFontSize) {
+                document.getElementById('subheadingFontSizeValue').textContent = subheadingFontSize + 'rem';
+            }
         }
 
         function updateFontSizes() {
@@ -1772,7 +2701,7 @@
             root.style.setProperty('--heading-font-size', headingFontSize);
             root.style.setProperty('--subheading-font-size', subheadingFontSize);
             
-            alert('✅ تم تطبيق أحجام الخطوط الجديدة بنجاح');
+            showNotification('✅ تم تطبيق أحجام الخطوط الجديدة بنجاح', 'success');
         }
 
         function resetDesign() {
@@ -1802,14 +2731,64 @@
                 // Update form values
                 loadDesignValues();
                 
-                alert('✅ تم إعادة تعيين التصميم بنجاح');
+                showNotification('✅ تم إعادة تعيين التصميم بنجاح', 'success');
             }
         }
 
-        // Hero Slideshow Functions
+        // Notification System محسن
+        function showNotification(message, type = 'info', duration = 3000) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? 'var(--success-color)' : type === 'error' ? 'var(--danger-color)' : 'var(--info-color)'};
+                color: white;
+                padding: 15px 20px;
+                border-radius: 10px;
+                font-weight: 600;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                z-index: 9999;
+                animation: slideInRight 0.3s ease;
+                max-width: 300px;
+                word-wrap: break-word;
+            `;
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideInRight {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                @keyframes slideOutRight {
+                    from { transform: translateX(0); opacity: 1; }
+                    to { transform: translateX(100%); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOutRight 0.3s ease';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.remove();
+                    }
+                    if (style.parentNode) {
+                        style.remove();
+                    }
+                }, 300);
+            }, duration);
+        }
+
+        // Hero Slideshow Functions محسنة
         function loadHeroSlideshow() {
             const slideshow = document.getElementById('heroSlideshow');
             const indicators = document.getElementById('heroIndicators');
+            
+            if (!slideshow || !indicators) return;
             
             slideshow.innerHTML = '';
             indicators.innerHTML = '';
@@ -1834,7 +2813,8 @@
         }
 
         function startSlideshow() {
-            slideInterval = setInterval(nextSlide, 15000);
+            if (slideInterval) clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 8000);
         }
 
         function nextSlide() {
@@ -1850,6 +2830,8 @@
         function goToSlide(index) {
             currentSlide = index;
             updateSlide();
+            // إعادة تشغيل العداد
+            startSlideshow();
         }
 
         function updateSlide() {
@@ -1865,13 +2847,15 @@
             });
         }
 
-        // Load Features Cards
+        // Load Features Cards محسن
         function loadFeaturesCards() {
             const featuresGrid = document.getElementById('featuresGrid');
+            if (!featuresGrid) return;
+            
             const activeCards = featuresCards.filter(card => card.active);
             
             featuresGrid.innerHTML = activeCards.map(card => `
-                <div class="feature-card">
+                <div class="feature-card hover-lift">
                     <div class="feature-icon">${card.icon}</div>
                     <h3>${card.title}</h3>
                     <p>${card.description}</p>
@@ -1879,60 +2863,107 @@
             `).join('');
         }
 
-        // Load gallery items
+        // Load gallery items محسن
         function loadGallery() {
             const galleryGrid = document.getElementById('galleryGrid');
+            if (!galleryGrid) return;
+            
             galleryGrid.innerHTML = '';
             
-            galleryItems.forEach(item => {
+            galleryItems.forEach((item, index) => {
                 const galleryItem = document.createElement('div');
-                galleryItem.className = 'gallery-item';
+                galleryItem.className = 'gallery-item hover-lift';
                 galleryItem.innerHTML = `
-                    <img src="${item.url}" alt="${item.title}" title="${item.title}">
+                    <img src="${item.url}" alt="${item.title}" title="${item.title}" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>${item.title}</h4>
+                    </div>
                 `;
                 galleryGrid.appendChild(galleryItem);
             });
         }
 
-        // Submit booking
+        // Submit booking محسن
         function submitBooking(event) {
             event.preventDefault();
             
-            const formData = new FormData(event.target);
+            if (isLoading) return;
+            
+            // التحقق من صحة النموذج
+            const form = event.target;
+            const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+            let isValid = true;
+            
+            inputs.forEach(input => {
+                if (!validateField({target: input})) {
+                    isValid = false;
+                }
+            });
+            
+            if (!isValid) {
+                showNotification('يرجى تصحيح الأخطاء في النموذج', 'error');
+                return;
+            }
+            
+            setLoadingState(event.target, true);
+            
+            const formData = new FormData(form);
             const booking = {
                 id: Date.now(),
                 name: formData.get('name'),
                 phone: formData.get('phone'),
-                email: formData.get('email'),
                 date: formData.get('date'),
-                time: formData.get('time'),
                 guests: formData.get('guests'),
                 notes: formData.get('notes'),
                 status: 'pending',
                 timestamp: new Date().toISOString()
             };
             
-            bookings.push(booking);
-            event.target.reset();
-            
-            showSuccessMessage('تم إرسال طلب الحجز بنجاح! سيتم التواصل معكم قريباً لتأكيد الحجز.');
-            
-            const whatsappMessage = `حجز جديد من مزرعة ريف عبس السياحية:
+            // محاكاة إرسال البيانات
+            setTimeout(() => {
+                bookings.push(booking);
+                form.reset();
+                setLoadingState(event.target, false);
+                
+                showSuccessMessage('تم إرسال طلب الحجز بنجاح! سيتم التواصل معكم قريباً لتأكيد الحجز.');
+                
+                const whatsappMessage = `حجز جديد من مزرعة ريف عبس السياحية:
 الاسم: ${booking.name}
 الجوال: ${booking.phone}
 التاريخ: ${booking.date}
-الوقت: ${booking.time}
 عدد الضيوف: ${booking.guests}
 الملاحظات: ${booking.notes || 'لا توجد ملاحظات'}`;
-            
-            window.open(`https://wa.me/966${siteData.info.phone}?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+                
+                setTimeout(() => {
+                    window.open(`https://wa.me/966${siteData.info.phone}?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+                }, 1000);
+            }, 1500);
         }
 
-        // Submit comment
+        // Submit comment محسن
         function submitComment(event) {
             event.preventDefault();
             
-            const formData = new FormData(event.target);
+            if (isLoading) return;
+            
+            const form = event.target;
+            const inputs = form.querySelectorAll('input[required], textarea[required]');
+            let isValid = true;
+            
+            inputs.forEach(input => {
+                if (!validateField({target: input})) {
+                    isValid = false;
+                }
+            });
+            
+            if (!isValid) {
+                showNotification('يرجى تصحيح الأخطاء في النموذج', 'error');
+                return;
+            }
+            
+            setLoadingState(event.target, true);
+            
+            const formData = new FormData(form);
             const comment = {
                 id: Date.now(),
                 name: formData.get('commentName'),
@@ -1941,25 +2972,47 @@
                 approved: false
             };
             
-            comments.push(comment);
-            event.target.reset();
-            
-            showSuccessMessage('تم إرسال تعليقكم بنجاح! سيظهر بعد مراجعة الإدارة.');
-            loadComments();
+            setTimeout(() => {
+                comments.push(comment);
+                form.reset();
+                setLoadingState(event.target, false);
+                
+                showSuccessMessage('تم إرسال تعليقكم بنجاح! سيظهر بعد مراجعة الإدارة.');
+                loadComments();
+            }, 1000);
         }
 
-        // Load comments
+        function setLoadingState(form, loading) {
+            isLoading = loading;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+            
+            if (loading) {
+                btnText.style.display = 'none';
+                btnLoading.style.display = 'flex';
+                submitBtn.disabled = true;
+            } else {
+                btnText.style.display = 'block';
+                btnLoading.style.display = 'none';
+                submitBtn.disabled = false;
+            }
+        }
+
+        // Load comments محسن
         function loadComments() {
             const commentsContainer = document.getElementById('commentsContainer');
+            if (!commentsContainer) return;
+            
             const approvedComments = comments.filter(comment => comment.approved);
             
             if (approvedComments.length === 0) {
-                commentsContainer.innerHTML = '<p style="text-align: center; color: #666;">لا توجد تعليقات معتمدة حالياً</p>';
+                commentsContainer.innerHTML = '<p style="text-align: center; color: #666; padding: 2rem;">لا توجد تعليقات معتمدة حالياً</p>';
                 return;
             }
             
             commentsContainer.innerHTML = approvedComments.map(comment => `
-                <div class="comment">
+                <div class="comment hover-lift">
                     <div class="comment-author">${comment.name}</div>
                     <div class="comment-date">${new Date(comment.timestamp).toLocaleDateString('ar-SA')}</div>
                     <div class="comment-text">${comment.text}</div>
@@ -1967,48 +3020,49 @@
             `).join('');
         }
 
-        // Show success message
+        // Show success message محسن
         function showSuccessMessage(message) {
-            const successModal = document.createElement('div');
-            successModal.innerHTML = `
-                <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 3000; display: flex; align-items: center; justify-content: center;">
-                    <div style="background: white; padding: 2rem; border-radius: 15px; text-align: center; max-width: 400px; margin: 20px;">
-                        <div style="font-size: 4rem; margin-bottom: 1rem;">✅</div>
-                        <h2 style="color: #28a745; margin-bottom: 1rem;">نجح!</h2>
-                        <p style="color: #666; margin-bottom: 1.5rem;">${message}</p>
-                        <button onclick="this.parentElement.parentElement.remove()" 
-                                style="background: #2c5530; color: white; border: none; padding: 10px 20px; border-radius: 25px; cursor: pointer;">
-                            إغلاق
-                        </button>
-                    </div>
+            const successOverlay = document.createElement('div');
+            successOverlay.className = 'success-overlay';
+            successOverlay.innerHTML = `
+                <div class="success-content">
+                    <div class="success-icon">✅</div>
+                    <h2 class="success-title">نجح!</h2>
+                    <p class="success-message">${message}</p>
+                    <button onclick="this.closest('.success-overlay').remove()" class="success-close-btn">
+                        إغلاق
+                    </button>
                 </div>
             `;
-            document.body.appendChild(successModal);
+            document.body.appendChild(successOverlay);
             
             setTimeout(() => {
-                if (successModal.parentElement) {
-                    successModal.remove();
+                if (successOverlay.parentElement) {
+                    successOverlay.remove();
                 }
             }, 5000);
         }
 
-        // Smooth scrolling
+        // Smooth scrolling محسن
         function setupSmoothScrolling() {
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     const target = document.querySelector(this.getAttribute('href'));
                     if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = target.offsetTop - headerHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
                         });
                     }
                 });
             });
         }
 
-        // Admin Functions
+        // Admin Functions محسنة
         function requestAdminAccess() {
             const password = prompt('🔐 أدخل كلمة مرور لوحة الإدارة:');
             
@@ -2018,19 +3072,20 @@
                 isAdminLoggedIn = true;
                 openAdminPanel();
             } else {
-                alert('❌ كلمة المرور غير صحيحة!');
+                showNotification('❌ كلمة المرور غير صحيحة!', 'error');
             }
         }
 
         function openAdminPanel() {
             if (!isAdminLoggedIn) {
-                alert('❌ غير مصرح لك بالوصول');
+                showNotification('❌ غير مصرح لك بالوصول', 'error');
                 return;
             }
             
             document.getElementById('adminModal').style.display = 'block';
             loadTextEditorValues();
             loadAdminFeaturesCards();
+            updateStats();
         }
 
         function closeAdminPanel() {
@@ -2040,18 +3095,20 @@
         function logout() {
             isAdminLoggedIn = false;
             closeAdminPanel();
-            alert('✅ تم تسجيل الخروج بنجاح');
+            showNotification('✅ تم تسجيل الخروج بنجاح', 'success');
         }
 
         function changeAdminPassword() {
             const newPassword = prompt('أدخل كلمة المرور الجديدة:');
             if (newPassword && newPassword.length >= 4) {
                 adminPassword = newPassword;
-                alert('✅ تم تغيير كلمة المرور بنجاح!');
+                showNotification('✅ تم تغيير كلمة المرور بنجاح!', 'success');
+            } else if (newPassword) {
+                showNotification('❌ كلمة المرور يجب أن تكون 4 أحرف على الأقل', 'error');
             }
         }
 
-        // Edit Video Content
+        // Edit Video Content محسن
         function editVideoContent() {
             const newTitle = prompt('تعديل عنوان الفيديو:', siteData.video.title);
             if (newTitle) siteData.video.title = newTitle;
@@ -2063,7 +3120,7 @@
             if (newButtonText) siteData.video.buttonText = newButtonText;
             
             updateSiteContent();
-            alert('✅ تم تحديث محتوى الفيديو بنجاح');
+            showNotification('✅ تم تحديث محتوى الفيديو بنجاح', 'success');
         }
 
         function editVideoLinks() {
@@ -2074,7 +3131,7 @@
             if (newChannelUrl) siteData.video.youtubeChannel = newChannelUrl;
             
             updateSiteContent();
-            alert('✅ تم تحديث روابط الفيديو بنجاح');
+            showNotification('✅ تم تحديث روابط الفيديو بنجاح', 'success');
         }
 
         function uploadHeroMedia() {
@@ -2082,11 +3139,16 @@
             const files = fileInput.files;
             
             if (files.length === 0) {
-                alert('يرجى اختيار ملفات للرفع');
+                showNotification('يرجى اختيار ملفات للرفع', 'error');
                 return;
             }
             
             Array.from(files).forEach(file => {
+                if (file.size > 10 * 1024 * 1024) { // 10MB limit
+                    showNotification(`الملف ${file.name} كبير جداً (الحد الأقصى 10MB)`, 'error');
+                    return;
+                }
+                
                 const url = URL.createObjectURL(file);
                 const isVideo = file.type.startsWith('video/');
                 const title = file.name.replace(/\.[^/.]+$/, "");
@@ -2101,7 +3163,7 @@
             loadHeroSlideshow();
             loadAdminHeroImages();
             fileInput.value = '';
-            alert('تم رفع الملفات بنجاح!');
+            showNotification('تم رفع الملفات بنجاح!', 'success');
         }
 
         function uploadMedia() {
@@ -2109,11 +3171,16 @@
             const files = fileInput.files;
             
             if (files.length === 0) {
-                alert('يرجى اختيار ملفات للرفع');
+                showNotification('يرجى اختيار ملفات للرفع', 'error');
                 return;
             }
             
             Array.from(files).forEach(file => {
+                if (file.size > 10 * 1024 * 1024) { // 10MB limit
+                    showNotification(`الملف ${file.name} كبير جداً (الحد الأقصى 10MB)`, 'error');
+                    return;
+                }
+                
                 const url = URL.createObjectURL(file);
                 galleryItems.push({
                     type: file.type.startsWith('image/') ? 'image' : 'video',
@@ -2125,26 +3192,24 @@
             loadGallery();
             loadAdminGalleryImages();
             fileInput.value = '';
-            alert('تم رفع الملفات بنجاح!');
+            showNotification('تم رفع الملفات بنجاح!', 'success');
         }
 
         function loadAdminHeroImages() {
             const container = document.getElementById('heroImagesContainer');
+            if (!container) return;
             
             container.innerHTML = heroImages.map((item, index) => `
-                <div style="border: 1px solid #ddd; border-radius: 10px; overflow: hidden; position: relative; background: white;">
+                <div class="media-item">
                     ${item.type === 'video' ? 
-                        `<div style="position: relative; height: 150px; background-image: url('${item.url}'); background-size: cover; background-position: center;">
-                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); color: white; padding: 10px; border-radius: 50%; font-size: 24px;">▶</div>
+                        `<div style="position: relative; height: 120px; background-image: url('${item.url}'); background-size: cover; background-position: center;">
+                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); color: white; padding: 8px; border-radius: 50%; font-size: 20px;">▶</div>
                         </div>` :
-                        `<img src="${item.url}" alt="${item.title}" style="width: 100%; height: 150px; object-fit: cover;">`
+                        `<img src="${item.url}" alt="${item.title}">`
                     }
-                    <div style="padding: 15px;">
-                        <p style="margin: 0; font-size: 14px; font-weight: bold;">${item.title}</p>
-                        <button onclick="deleteHeroImage(${index})" 
-                                style="background: #dc3545; color: white; border: none; padding: 5px 10px; border-radius: 5px; font-size: 12px; margin-top: 5px; cursor: pointer;">
-                            حذف
-                        </button>
+                    <div class="media-item-info">
+                        <div class="media-item-title">${item.title}</div>
+                        <button onclick="deleteHeroImage(${index})">حذف</button>
                     </div>
                 </div>
             `).join('');
@@ -2152,16 +3217,14 @@
 
         function loadAdminGalleryImages() {
             const container = document.getElementById('galleryImagesContainer');
+            if (!container) return;
             
             container.innerHTML = galleryItems.map((item, index) => `
-                <div style="border: 1px solid #ddd; border-radius: 10px; overflow: hidden; position: relative; background: white;">
-                    <img src="${item.url}" alt="${item.title}" style="width: 100%; height: 120px; object-fit: cover;">
-                    <div style="padding: 10px;">
-                        <p style="margin: 0; font-size: 12px; font-weight: bold;">${item.title}</p>
-                        <button onclick="deleteGalleryImage(${index})" 
-                                style="background: #dc3545; color: white; border: none; padding: 4px 8px; border-radius: 4px; font-size: 11px; margin-top: 5px; cursor: pointer;">
-                            حذف
-                        </button>
+                <div class="media-item">
+                    <img src="${item.url}" alt="${item.title}">
+                    <div class="media-item-info">
+                        <div class="media-item-title">${item.title}</div>
+                        <button onclick="deleteGalleryImage(${index})">حذف</button>
                     </div>
                 </div>
             `).join('');
@@ -2172,6 +3235,7 @@
                 heroImages.splice(index, 1);
                 loadHeroSlideshow();
                 loadAdminHeroImages();
+                showNotification('تم حذف الصورة بنجاح', 'success');
             }
         }
 
@@ -2180,11 +3244,13 @@
                 galleryItems.splice(index, 1);
                 loadGallery();
                 loadAdminGalleryImages();
+                showNotification('تم حذف الصورة بنجاح', 'success');
             }
         }
 
         function loadAdminFeaturesCards() {
             const container = document.getElementById('featuresCardsContainer');
+            if (!container) return;
             
             container.innerHTML = featuresCards.map((card, index) => `
                 <div class="card-manager">
@@ -2227,7 +3293,7 @@
                 
                 loadFeaturesCards();
                 loadAdminFeaturesCards();
-                alert('تم إضافة الميزة الجديدة بنجاح!');
+                showNotification('تم إضافة الميزة الجديدة بنجاح!', 'success');
             }
         }
 
@@ -2247,7 +3313,7 @@
                 
                 loadFeaturesCards();
                 loadAdminFeaturesCards();
-                alert('تم تحديث الميزة بنجاح!');
+                showNotification('تم تحديث الميزة بنجاح!', 'success');
             }
         }
 
@@ -2256,20 +3322,22 @@
                 featuresCards.splice(index, 1);
                 loadFeaturesCards();
                 loadAdminFeaturesCards();
-                alert('تم حذف الميزة بنجاح!');
+                showNotification('تم حذف الميزة بنجاح!', 'success');
             }
         }
 
         function toggleFeatureCard(index, active) {
             featuresCards[index].active = active;
             loadFeaturesCards();
+            showNotification(`تم ${active ? 'تفعيل' : 'إلغاء تفعيل'} الميزة`, 'success');
         }
 
         function loadAdminBookings() {
             const bookingsContainer = document.getElementById('bookingsContainer');
+            if (!bookingsContainer) return;
             
             if (bookings.length === 0) {
-                bookingsContainer.innerHTML = '<p>لا توجد حجوزات حالياً</p>';
+                bookingsContainer.innerHTML = '<p style="text-align: center; color: #666; padding: 2rem;">لا توجد حجوزات حالياً</p>';
                 return;
             }
             
@@ -2279,6 +3347,7 @@
                     <p><strong>الجوال:</strong> ${booking.phone}</p>
                     <p><strong>التاريخ:</strong> ${booking.date}</p>
                     <p><strong>عدد الضيوف:</strong> ${booking.guests}</p>
+                    ${booking.notes ? `<p><strong>الملاحظات:</strong> ${booking.notes}</p>` : ''}
                     <p><strong>الحالة:</strong> 
                         <select onchange="updateBookingStatus(${booking.id}, this.value)">
                             <option value="pending" ${booking.status === 'pending' ? 'selected' : ''}>قيد المراجعة</option>
@@ -2295,30 +3364,32 @@
             if (booking) {
                 booking.status = status;
                 loadAdminBookings();
+                showNotification('تم تحديث حالة الحجز', 'success');
             }
         }
 
         function loadAdminComments() {
             const adminCommentsContainer = document.getElementById('adminCommentsContainer');
+            if (!adminCommentsContainer) return;
             
             if (comments.length === 0) {
-                adminCommentsContainer.innerHTML = '<p>لا توجد تعليقات حالياً</p>';
+                adminCommentsContainer.innerHTML = '<p style="text-align: center; color: #666; padding: 2rem;">لا توجد تعليقات حالياً</p>';
                 return;
             }
             
             adminCommentsContainer.innerHTML = comments.map(comment => `
                 <div class="comment">
                     <div class="comment-author">${comment.name}</div>
+                    <div class="comment-date">${new Date(comment.timestamp).toLocaleDateString('ar-SA')}</div>
                     <div class="comment-text">${comment.text}</div>
-                    <div style="margin-top: 1rem;">
+                    <div style="margin-top: 1rem; display: flex; gap: 10px;">
                         <button onclick="approveComment(${comment.id})" 
                                 ${comment.approved ? 'disabled' : ''} 
-                                style="background: #28a745; color: white; border: none; padding: 5px 15px; border-radius: 5px; margin-left: 10px;">
-                            ${comment.approved ? 'معتمد' : 'اعتماد'}
+                                class="card-btn ${comment.approved ? 'success' : 'primary'}">
+                            ${comment.approved ? '✅ معتمد' : '👍 اعتماد'}
                         </button>
-                        <button onclick="deleteComment(${comment.id})" 
-                                style="background: #dc3545; color: white; border: none; padding: 5px 15px; border-radius: 5px;">
-                            حذف
+                        <button onclick="deleteComment(${comment.id})" class="card-btn danger">
+                            🗑️ حذف
                         </button>
                     </div>
                 </div>
@@ -2331,6 +3402,7 @@
                 comment.approved = true;
                 loadComments();
                 loadAdminComments();
+                showNotification('تم اعتماد التعليق', 'success');
             }
         }
 
@@ -2339,27 +3411,44 @@
                 comments = comments.filter(c => c.id !== commentId);
                 loadComments();
                 loadAdminComments();
+                showNotification('تم حذف التعليق', 'success');
             }
         }
 
-        // Export Website Function
+        // Export Website Function محسن
         function exportWebsite() {
-            const htmlContent = document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], { type: 'text/html' });
-            const url = URL.createObjectURL(blob);
-            
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'مزرعة-ريف-عبس-السياحية.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-            
-            alert('✅ تم تحميل الموقع بنجاح! يمكنك الآن فتح الملف في أي متصفح.');
+            try {
+                // إنشاء نسخة من HTML مع إضافة timestamp
+                const timestamp = new Date().toISOString().slice(0, 19).replace(/:/g, '-');
+                let htmlContent = document.documentElement.outerHTML;
+                
+                // إضافة معلومات التصدير
+                const exportInfo = `
+<!-- تم تصدير الموقع في: ${new Date().toLocaleString('ar-SA')} -->
+<!-- نسخة محسنة من مزرعة ريف عبس السياحية -->
+<!-- جميع المميزات والتحديثات مدمجة -->
+`;
+                htmlContent = htmlContent.replace('<head>', '<head>' + exportInfo);
+                
+                const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `مزرعة-ريف-عبس-السياحية-محسن-${timestamp}.html`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                
+                showNotification('✅ تم تحميل الموقع المحسن بنجاح!', 'success');
+            } catch (error) {
+                console.error('Error exporting website:', error);
+                showNotification('❌ حدث خطأ في تصدير الموقع', 'error');
+            }
         }
 
-        // Add sample comments
+        // Add sample comments محسن
         comments.push(
             {
                 id: 1,
@@ -2374,19 +3463,73 @@
                 text: 'تجربة مميزة مع العائلة في مزرعة ريف عبس. المسابح نظيفة والخدمة ممتازة.',
                 timestamp: new Date('2024-06-20').toISOString(),
                 approved: true
+            },
+            {
+                id: 3,
+                name: 'أحمد المالكي',
+                text: 'إطلالة رائعة على الجبال وهواء منعش. ننصح بالزيارة خاصة في فصل الشتاء.',
+                timestamp: new Date('2024-06-25').toISOString(),
+                approved: true
             }
         );
 
         // Load initial comments
         loadComments();
 
-        // Close modal when clicking outside
+        // Close modal when clicking outside محسن
         window.onclick = function(event) {
             const modal = document.getElementById('adminModal');
             if (event.target === modal) {
                 modal.style.display = 'none';
             }
         }
+
+        // إضافة CSS للأخطاء
+        const errorStyle = document.createElement('style');
+        errorStyle.textContent = `
+            .form-group input.error,
+            .form-group select.error,
+            .form-group textarea.error {
+                border-color: var(--danger-color);
+                box-shadow: 0 0 10px rgba(220, 53, 69, 0.3);
+            }
+            
+            .form-group input.success,
+            .form-group select.success,
+            .form-group textarea.success {
+                border-color: var(--success-color);
+                box-shadow: 0 0 10px rgba(40, 167, 69, 0.3);
+            }
+            
+            .error-message {
+                color: var(--danger-color);
+                font-size: 0.9rem;
+                margin-top: 0.5rem;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+            
+            .error-message::before {
+                content: "⚠️";
+                font-size: 0.8rem;
+            }
+        `;
+        document.head.appendChild(errorStyle);
+
+        // منع التخزين المؤقت عند إعادة التحميل
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                window.location.reload();
+            }
+        });
+
+        // إضافة معالج للأخطاء العامة
+        window.addEventListener('error', function(e) {
+            console.error('خطأ في الموقع:', e.error);
+        });
+
+        console.log('🎉 تم تحميل الموقع المحسن بالكامل! النسخة 2.0');
     </script>
 </body>
 </html>
