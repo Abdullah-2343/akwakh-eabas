@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
+<html lang="ar" dir="rtl"><head>
+<!-- آخر تحديث: ٤‏/١‏/١٤٤٧ هـ ٩:٥٢:٢٢ ص -->
+<!-- النسخة المحدثة والمُصلحة من لوحة الإدارة -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مزرعة ريف عبس السياحية - تجربة استثنائية في أحضان الطبيعة</title>
@@ -1313,14 +1314,49 @@
             animation: fadeInUp 0.6s ease-out;
         }
     </style>
-</head>
+<style>
+        @font-face {
+            font-family: 'NotoSans_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-regular.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_medium_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-medium.ttf);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_bold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-bold.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_semibold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
+        }
+</style></head>
 <body>
     <!-- Header -->
     <header>
         <nav class="container">
             <div class="logo-container">
                 <div class="logo-display" id="logoDisplay">
-                    <!-- Logo will be populated by JavaScript -->
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1"></stop>
+                                <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1"></stop>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="48" fill="url(#logoGradient)" stroke="#2E7D32" stroke-width="2"></circle>
+                        <polygon fill="#795548" points="10,70 25,50 40,60 60,45 75,55 90,50 90,70"></polygon>
+                        <circle fill="#FFD700" cx="75" cy="25" r="8"></circle>
+                        <rect fill="#654321" x="30" y="60" width="6" height="10"></rect>
+                        <polygon fill="#228B22" points="30,60 33,55 36,60"></polygon>
+                        <rect fill="#654321" x="60" y="55" width="6" height="15"></rect>
+                        <polygon fill="#228B22" points="60,55 63,48 66,55"></polygon>
+                        <text x="50" y="85" text-anchor="middle" fill="white" font-size="8" font-weight="bold">ريف عبس</text>
+                    </svg>
                 </div>
                 <a href="#" class="logo-text" id="logoText">مزرعة ريف عبس السياحية</a>
             </div>
@@ -1336,9 +1372,11 @@
     </header>
 
     <!-- Social Media Bar -->
-    <div class="social-media-bar" id="socialMediaBar">
-        <!-- Social icons will be populated by JavaScript -->
-    </div>
+    <div class="social-media-bar" id="socialMediaBar" style="display: block;">
+                        <a href="https://wa.me/9660553663992" target="_blank" class="social-icon whatsapp" title="whatsapp">
+                            📱
+                        </a>
+                    </div>
 
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/9660553663992" class="whatsapp-float" id="whatsappBtn" target="_blank">
@@ -1348,18 +1386,14 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-slideshow" id="heroSlideshow">
-            <!-- Slides will be populated by JavaScript -->
-        </div>
+        <div class="hero-slideshow" id="heroSlideshow"><div class="hero-slide" style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=1I0EykfgoApudSRdWmmPEeob2kf3J3Nuy&quot;);"></div><div class="hero-slide " style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=1fcxrtAGjHlnjKtNGRYcWYNdSKLfS70t1&quot;);"></div><div class="hero-slide " style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=1fcxrtAGjHlnjKtNGRYcWYNdSKLfS70t1&quot;);"></div><div class="hero-slide " style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=1vWLMZpIfTECr53IOICteEQTzUHZRnAaI&quot;);"></div><div class="hero-slide " style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=1GXm3vdk4OLVVNFv28MqP-ECuCiMEEEcn&quot;);"></div><div class="hero-slide " style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=13BJorzbshewwEzEqFqzBZmdTg7NEAPCC&quot;);"></div></div>
         <div class="hero-content">
             <div>
                 <h1 id="heroTitle">مرحباً بكم في مزرعة ريف عبس السياحية</h1>
                 <p id="heroSubtitle">تجربة ريفية أصيلة في قلب منطقة عسير الساحرة</p>
             </div>
         </div>
-        <div class="hero-indicators" id="heroIndicators">
-            <!-- Indicators will be populated by JavaScript -->
-        </div>
+        <div class="hero-indicators" id="heroIndicators"><div class="hero-indicator" title="صورة جديدة"></div><div class="hero-indicator " title="صورة جديدة"></div><div class="hero-indicator " title="صورة جديدة"></div><div class="hero-indicator " title="صورة جديدة"></div><div class="hero-indicator " title="صورة جديدة"></div><div class="hero-indicator " title="صورة جديدة"></div></div>
         <button class="hero-nav prev" onclick="prevSlide()">‹</button>
         <button class="hero-nav next" onclick="nextSlide()">›</button>
     </section>
@@ -1369,7 +1403,37 @@
         <div class="container">
             <h2 id="featuresTitle">ما يميز مزرعة ريف عبس</h2>
             <div class="features-grid" id="featuresGrid">
-                <!-- Features cards will be populated by JavaScript -->
+                <div class="feature-card">
+                    <img src="data:image/svg+xml,&lt;svg xmlns=" http:="" www.w3.org="" 2000="" svg"="" viewbox="0 0 400 300"><rect fill="%234CAF50" width="400" height="300"><polygon fill="%23795548" points="50,200 150,100 250,150 350,80 400,120 400,200"><circle fill="%23FFD700" cx="320" cy="60" r="30"><text x="200" y="250" text-anchor="middle" fill="white" font-size="20" font-weight="bold">جبال عسير</text>" alt="جبال عسير الخلابة" class="feature-image" onerror="this.style.display='none'"&gt;
+                    <div class="feature-content">
+                        <div class="feature-title">جبال عسير الخلابة</div>
+                        <div class="feature-description">إطلالات ساحرة على جبال منطقة عسير وطبيعة خلابة على مدار السنة</div>
+                    </div>
+                </circle></polygon></rect></div>
+            
+                <div class="feature-card">
+                    <img src="data:image/svg+xml,&lt;svg xmlns=" http:="" www.w3.org="" 2000="" svg"="" viewbox="0 0 400 300"><rect fill="%232E7D32" width="400" height="300"><rect fill="%23A1887F" x="120" y="120" width="100" height="80"><polygon fill="%23D32F2F" points="120,120 170,80 220,120"><rect fill="%236D4C41" x="165" y="140" width="10" height="60"><text x="200" y="250" text-anchor="middle" fill="white" font-size="18" font-weight="bold">أكواخ مجهزة</text>" alt="أكواخ وشاليهات مميزة" class="feature-image" onerror="this.style.display='none'"&gt;
+                    <div class="feature-content">
+                        <div class="feature-title">أكواخ وشاليهات مميزة</div>
+                        <div class="feature-description">إقامة مريحة في أكواخ مجهزة بالكامل مع مرافق حديثة</div>
+                    </div>
+                </rect></polygon></rect></rect></div>
+            
+                <div class="feature-card">
+                    <img src="data:image/svg+xml,&lt;svg xmlns=" http:="" www.w3.org="" 2000="" svg"="" viewbox="0 0 400 300"><rect fill="%234FC3F7" width="400" height="300"><rect fill="%2387CEEB" x="100" y="120" width="200" height="100" rx="10"><circle fill="%23FFD700" cx="80" cy="50" r="25"><text x="200" y="250" text-anchor="middle" fill="white" font-size="18" font-weight="bold">مسابح وساونا</text>" alt="مسابح وساونا" class="feature-image" onerror="this.style.display='none'"&gt;
+                    <div class="feature-content">
+                        <div class="feature-title">مسابح وساونا</div>
+                        <div class="feature-description">مسابح داخلية وخارجية مع ساونا وحمام ساخن للاسترخاء</div>
+                    </div>
+                </circle></rect></rect></div>
+            
+                <div class="feature-card">
+                    <img src="data:image/svg+xml,&lt;svg xmlns=" http:="" www.w3.org="" 2000="" svg"="" viewbox="0 0 400 300"><rect fill="%23388E3C" width="400" height="300"><circle fill="%23228B22" cx="100" cy="200" r="40"><circle fill="%23228B22" cx="200" cy="180" r="50"><circle fill="%23228B22" cx="300" cy="200" r="45"><text x="200" y="260" text-anchor="middle" fill="white" font-size="16" font-weight="bold">مساحات خضراء</text>" alt="مسطحات خضراء واسعة" class="feature-image" onerror="this.style.display='none'"&gt;
+                    <div class="feature-content">
+                        <div class="feature-title">مسطحات خضراء واسعة</div>
+                        <div class="feature-description">حدائق ومساحات خضراء للتنزه والاستمتاع بالهواء النقي</div>
+                    </div>
+                </circle></circle></circle></rect></div>
             </div>
         </div>
     </section>
@@ -1381,14 +1445,10 @@
             <p class="tiktok-description" id="tiktokDescription">شاهد أحدث الفيديوهات والجولات المصورة في أجمل المناطق الطبيعية</p>
             
             <div class="tiktok-wrapper" onclick="if(!this.classList.contains('playing')) playTikTokVideo()">
-                <div class="tiktok-thumbnail" id="tiktokThumbnail">
+                <div class="tiktok-thumbnail" id="tiktokThumbnail" style="background-image: url(&quot;data:image/svg+xml,&lt;svg xmlns=\&quot;http://www.w3.org/2000/svg\&quot; viewBox=\&quot;0 0 600 700\&quot;&gt;&lt;defs&gt;&lt;linearGradient id=\&quot;tiktokGrad\&quot; x1=\&quot;0%\&quot; y1=\&quot;0%\&quot; x2=\&quot;100%\&quot; y2=\&quot;100%\&quot;&gt;&lt;stop offset=\&quot;0%\&quot; style=\&quot;stop-color:%23ff0050;stop-opacity:1\&quot; /&gt;&lt;stop offset=\&quot;50%\&quot; style=\&quot;stop-color:%23ff0080;stop-opacity:1\&quot; /&gt;&lt;stop offset=\&quot;100%\&quot; style=\&quot;stop-color:%23ff00aa;stop-opacity:1\&quot; /&gt;&lt;/linearGradient&gt;&lt;/defs&gt;&lt;rect fill=\&quot;url(%23tiktokGrad)\&quot; width=\&quot;600\&quot; height=\&quot;700\&quot;/&gt;&lt;text x=\&quot;300\&quot; y=\&quot;350\&quot; text-anchor=\&quot;middle\&quot; fill=\&quot;white\&quot; font-size=\&quot;32\&quot; font-weight=\&quot;bold\&quot;&gt;مزرعة ريف عبس&lt;/text&gt;&lt;text x=\&quot;300\&quot; y=\&quot;400\&quot; text-anchor=\&quot;middle\&quot; fill=\&quot;white\&quot; font-size=\&quot;24\&quot;&gt;على تيك توك&lt;/text&gt;&lt;/svg&gt;&quot;);">
                     <div class="tiktok-play-button"></div>
                 </div>
-                <iframe class="tiktok-iframe" id="tiktokIframe" 
-                        src="" 
-                        allowfullscreen 
-                        allow="autoplay; encrypted-media"
-                        style="display: none;">
+                <iframe class="tiktok-iframe" id="tiktokIframe" src="" allowfullscreen="" allow="autoplay; encrypted-media" style="display: none;">
                 </iframe>
                 <button onclick="event.stopPropagation(); stopTikTokVideo()" id="stopTikTokBtn" style="
                     display: none;
@@ -1408,7 +1468,7 @@
                 " onmouseover="this.style.background='rgba(0,0,0,0.9)'" onmouseout="this.style.background='rgba(0,0,0,0.7)'">✕</button>
             </div>
             
-            <a href="https://www.tiktok.com/@farmreefabs" target="_blank" class="tiktok-button" id="tiktokBtn">
+            <a href="https://www.tiktok.com/@drsugar2?is_from_webapp=1&amp;sender_device=pc" target="_blank" class="tiktok-button" id="tiktokBtn">
                 <span style="font-size: 1.5rem;">🎵</span>
                 <span id="tiktokBtnText">تابعنا على تيك توك</span>
             </a>
@@ -1420,7 +1480,48 @@
         <div class="container">
             <h2 id="galleryTitle">معرض الصور</h2>
             <div class="gallery-slideshow" id="gallerySlideshow">
-                <!-- Gallery slides will be populated by JavaScript -->
+                
+                <div class="gallery-slide active">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1I0EykfgoApudSRdWmmPEeob2kf3J3Nuy" alt="إطلالة خلابة" onerror="this.style.display='none'" style="display: none;">
+                </div>
+            
+                <div class="gallery-slide ">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1fcxrtAGjHlnjKtNGRYcWYNdSKLfS70t1" alt="حيوانات أليفة" onerror="this.style.display='none'" style="display: none;">
+                </div>
+            
+                <div class="gallery-slide ">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1fcxrtAGjHlnjKtNGRYcWYNdSKLfS70t1" alt="صورة جديدة" onerror="this.style.display='none'" style="display: none;">
+                </div>
+            
+                <div class="gallery-slide ">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1vWLMZpIfTECr53IOICteEQTzUHZRnAaI" alt="صورة جديدة" onerror="this.style.display='none'" style="display: none;">
+                </div>
+            
+                <div class="gallery-slide ">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1GXm3vdk4OLVVNFv28MqP-ECuCiMEEEcn" alt="صورة جديدة" onerror="this.style.display='none'" style="display: none;">
+                </div>
+            
+                <div class="gallery-slide ">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=13BJorzbshewwEzEqFqzBZmdTg7NEAPCC" alt="صورة جديدة" onerror="this.style.display='none'" style="display: none;">
+                </div>
+            
+                <button class="gallery-nav prev" onclick="prevGallerySlide()">‹</button>
+                <button class="gallery-nav next" onclick="nextGallerySlide()">›</button>
+                <div class="gallery-indicators">
+                    
+                <span class="gallery-indicator active" onclick="goToGallerySlide(0)"></span>
+            
+                <span class="gallery-indicator " onclick="goToGallerySlide(1)"></span>
+            
+                <span class="gallery-indicator " onclick="goToGallerySlide(2)"></span>
+            
+                <span class="gallery-indicator " onclick="goToGallerySlide(3)"></span>
+            
+                <span class="gallery-indicator " onclick="goToGallerySlide(4)"></span>
+            
+                <span class="gallery-indicator " onclick="goToGallerySlide(5)"></span>
+            
+                </div>
             </div>
         </div>
     </section>
@@ -1430,9 +1531,7 @@
         <div class="container">
             <div class="whatsapp-booking">
                 <h2 id="bookingTitle">احجز زيارتك الآن</h2>
-                <p style="font-size: 1.2rem; color: var(--text-color); margin-bottom: 2rem;" id="bookingDescription">
-                    تواصل معنا مباشرة عبر الواتساب لحجز موعدك وتأكيد الزيارة
-                </p>
+                <p style="font-size: 1.2rem; color: var(--text-color); margin-bottom: 2rem;" id="bookingDescription">تواصل معنا مباشرة عبر الواتساب لحجز موعدك وتأكيد الزيارة</p>
                 <a href="https://wa.me/9660553663992?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF%20%D9%81%D9%8A%20%D9%85%D8%B2%D8%B1%D8%B9%D8%A9%20%D8%B1%D9%8A%D9%81%20%D8%B9%D8%A8%D8%B3%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%AD%D9%8A%D8%A9" class="whatsapp-booking-button" id="whatsappBookingBtn" target="_blank">
                     <span class="icon">📱</span>
                     <span id="whatsappButtonText">احجز عبر الواتساب</span>
@@ -1449,8 +1548,42 @@
             <!-- Comments Display -->
             <div class="comments-display">
                 <div class="comments-slider" id="commentsSlider">
-                    <!-- Comments images will be populated by JavaScript -->
+                <div class="comment-image-card">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1cgdbtKRwigoGlVHk2uH7pSJo9mRix7ov" alt="صورة زائر من المزرعة" class="comment-image" onerror="this.style.display='none'" style="display: none;">
                 </div>
+            
+                <div class="comment-image-card">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=13BJorzbshewwEzEqFqzBZmdTg7NEAPCC" alt="احمد " class="comment-image" onerror="this.style.display='none'" style="display: none;">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1bYLzija8M7ED61RNlDjVSraM2LzmW05b" alt="خالد" class="comment-image" onerror="this.style.display='none'" style="display: none;">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1cgdbtKRwigoGlVHk2uH7pSJo9mRix7ov" alt="صورة زائر من المزرعة" class="comment-image" onerror="this.style.display='none'" style="display: none;">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=13BJorzbshewwEzEqFqzBZmdTg7NEAPCC" alt="احمد " class="comment-image" onerror="this.style.display='none'" style="display: none;">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1bYLzija8M7ED61RNlDjVSraM2LzmW05b" alt="خالد" class="comment-image" onerror="this.style.display='none'" style="display: none;">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1cgdbtKRwigoGlVHk2uH7pSJo9mRix7ov" alt="صورة زائر من المزرعة" class="comment-image" onerror="this.style.display='none'" style="display: none;">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=13BJorzbshewwEzEqFqzBZmdTg7NEAPCC" alt="احمد " class="comment-image" onerror="this.style.display='none'" style="display: none;">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1bYLzija8M7ED61RNlDjVSraM2LzmW05b" alt="خالد" class="comment-image" onerror="this.style.display='none'" style="display: none;">
+                </div>
+            </div>
             </div>
             
             <div class="comments-control">
@@ -1466,8 +1599,21 @@
     <footer>
         <div class="container">
             <div class="footer-content" id="footerContent">
-                <!-- Footer sections will be populated by JavaScript -->
-            </div>
+                        <div class="footer-section">
+                            <h3>🏞️ مزرعة ريف عبس السياحية</h3>
+                            <p>وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة</p>
+                        </div>
+                    
+                        <div class="footer-section">
+                            <h4>📞 تواصل معنا</h4>
+                            <div>📍 منطقة عسير - محافظة المجاردة<br>📱 +966 0553663992<br>⏰ خدمة 24 ساعة<br>🌐 WiFi مجاني</div>
+                        </div>
+                    
+                        <div class="footer-section">
+                            <h4>🎯 خدماتنا</h4>
+                            <div>🏡 أكواخ مجهزة<br>🏊‍♂️ مسابح وساونا<br>🌿 مسطحات خضراء<br>🚗 مواقف مجانية</div>
+                        </div>
+                    </div>
             <div class="footer-bottom">
                 <p id="footerCopyright">© 2024 مزرعة ريف عبس السياحية - جميع الحقوق محفوظة</p>
             </div>
@@ -1477,7 +1623,7 @@
     <!-- Gallery Modal -->
     <div id="galleryModal" class="gallery-modal">
         <div class="gallery-modal-content">
-            <span class="gallery-modal-close" onclick="closeGalleryModal()">&times;</span>
+            <span class="gallery-modal-close" onclick="closeGalleryModal()">×</span>
             <div id="galleryModalContent">
                 <!-- Modal gallery content will be populated by JavaScript -->
             </div>
@@ -1488,7 +1634,7 @@
     <div id="adminModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <span class="close" onclick="closeAdminPanel()">&times;</span>
+                <span class="close" onclick="closeAdminPanel()">×</span>
                 <h2>🔐 لوحة إدارة المزرعة - التحكم الشامل</h2>
             </div>
             
@@ -1601,7 +1747,7 @@
                             </div>
                             <div class="editor-field">
                                 <label>رابط صفحة تيك توك:</label>
-                                <input type="text" id="tiktokChannelInput" placeholder="https://www.tiktok.com/@username">
+                                <input type="text" id="tiktokChannelInput" placeholder="https://www.tiktok.com/@username" autocomplete="off">
                                 <button onclick="updateTikTokChannel()">تحديث</button>
                             </div>
                             <div class="editor-field">
@@ -1626,7 +1772,7 @@
                                 </select>
                                 <button onclick="updateLogoType()">تحديث</button>
                             </div>
-                            <div class="editor-field" id="logoUrlField" style="display: none;">
+                            <div class="editor-field" id="logoUrlField" style="display: block;">
                                 <label>رابط الشعار:</label>
                                 <input type="text" id="logoUrl" placeholder="رابط صورة الشعار">
                                 <button onclick="updateLogoUrl()">تحديث</button>
@@ -1687,8 +1833,110 @@
                             <button class="admin-action-btn" style="background: var(--success-color); color: white; padding: 15px 30px;" onclick="addNewFeature()">+ إضافة ميزة جديدة</button>
                         </div>
                         <div id="featuresContainer">
-                            <!-- Features will be populated by JavaScript -->
+                <div class="admin-section">
+                    <h4>🎯 الميزة 1</h4>
+                    <div class="text-editor">
+                        <div class="editor-field">
+                            <label>العنوان:</label>
+                            <input type="text" value="جبال عسير الخلابة" onchange="updateFeatureTitle(1, this.value)">
                         </div>
+                        <div class="editor-field">
+                            <label>الوصف:</label>
+                            <textarea onchange="updateFeatureDescription(1, this.value)">إطلالات ساحرة على جبال منطقة عسير وطبيعة خلابة على مدار السنة</textarea>
+                        </div>
+                        <div class="editor-field">
+                            <label>رابط الصورة:</label>
+                            <input type="text" value="data:image/svg+xml,&lt;svg xmlns=" http:="" www.w3.org="" 2000="" svg"="" viewbox="0 0 400 300"><rect fill="%234CAF50" width="400" height="300"><polygon fill="%23795548" points="50,200 150,100 250,150 350,80 400,120 400,200"><circle fill="%23FFD700" cx="320" cy="60" r="30"><text x="200" y="250" text-anchor="middle" fill="white" font-size="20" font-weight="bold">جبال عسير</text>" onchange="updateFeatureImage(1, this.value)" placeholder="رابط Google Drive أو أي رابط صورة"&gt;
+                        </circle></polygon></rect></div>
+                        <div class="editor-field">
+                            <label>الحالة:</label>
+                            <select onchange="toggleFeature(1, this.value)">
+                                <option value="true" selected="">مفعل</option>
+                                <option value="false">غير مفعل</option>
+                            </select>
+                            <button onclick="deleteFeature(1)" style="background: var(--danger-color); margin-top: 10px;">حذف الميزة</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="admin-section">
+                    <h4>🎯 الميزة 2</h4>
+                    <div class="text-editor">
+                        <div class="editor-field">
+                            <label>العنوان:</label>
+                            <input type="text" value="أكواخ وشاليهات مميزة" onchange="updateFeatureTitle(2, this.value)">
+                        </div>
+                        <div class="editor-field">
+                            <label>الوصف:</label>
+                            <textarea onchange="updateFeatureDescription(2, this.value)">إقامة مريحة في أكواخ مجهزة بالكامل مع مرافق حديثة</textarea>
+                        </div>
+                        <div class="editor-field">
+                            <label>رابط الصورة:</label>
+                            <input type="text" value="data:image/svg+xml,&lt;svg xmlns=" http:="" www.w3.org="" 2000="" svg"="" viewbox="0 0 400 300"><rect fill="%232E7D32" width="400" height="300"><rect fill="%23A1887F" x="120" y="120" width="100" height="80"><polygon fill="%23D32F2F" points="120,120 170,80 220,120"><rect fill="%236D4C41" x="165" y="140" width="10" height="60"><text x="200" y="250" text-anchor="middle" fill="white" font-size="18" font-weight="bold">أكواخ مجهزة</text>" onchange="updateFeatureImage(2, this.value)" placeholder="رابط Google Drive أو أي رابط صورة"&gt;
+                        </rect></polygon></rect></rect></div>
+                        <div class="editor-field">
+                            <label>الحالة:</label>
+                            <select onchange="toggleFeature(2, this.value)">
+                                <option value="true" selected="">مفعل</option>
+                                <option value="false">غير مفعل</option>
+                            </select>
+                            <button onclick="deleteFeature(2)" style="background: var(--danger-color); margin-top: 10px;">حذف الميزة</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="admin-section">
+                    <h4>🎯 الميزة 3</h4>
+                    <div class="text-editor">
+                        <div class="editor-field">
+                            <label>العنوان:</label>
+                            <input type="text" value="مسابح وساونا" onchange="updateFeatureTitle(3, this.value)">
+                        </div>
+                        <div class="editor-field">
+                            <label>الوصف:</label>
+                            <textarea onchange="updateFeatureDescription(3, this.value)">مسابح داخلية وخارجية مع ساونا وحمام ساخن للاسترخاء</textarea>
+                        </div>
+                        <div class="editor-field">
+                            <label>رابط الصورة:</label>
+                            <input type="text" value="data:image/svg+xml,&lt;svg xmlns=" http:="" www.w3.org="" 2000="" svg"="" viewbox="0 0 400 300"><rect fill="%234FC3F7" width="400" height="300"><rect fill="%2387CEEB" x="100" y="120" width="200" height="100" rx="10"><circle fill="%23FFD700" cx="80" cy="50" r="25"><text x="200" y="250" text-anchor="middle" fill="white" font-size="18" font-weight="bold">مسابح وساونا</text>" onchange="updateFeatureImage(3, this.value)" placeholder="رابط Google Drive أو أي رابط صورة"&gt;
+                        </circle></rect></rect></div>
+                        <div class="editor-field">
+                            <label>الحالة:</label>
+                            <select onchange="toggleFeature(3, this.value)">
+                                <option value="true" selected="">مفعل</option>
+                                <option value="false">غير مفعل</option>
+                            </select>
+                            <button onclick="deleteFeature(3)" style="background: var(--danger-color); margin-top: 10px;">حذف الميزة</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="admin-section">
+                    <h4>🎯 الميزة 4</h4>
+                    <div class="text-editor">
+                        <div class="editor-field">
+                            <label>العنوان:</label>
+                            <input type="text" value="مسطحات خضراء واسعة" onchange="updateFeatureTitle(4, this.value)">
+                        </div>
+                        <div class="editor-field">
+                            <label>الوصف:</label>
+                            <textarea onchange="updateFeatureDescription(4, this.value)">حدائق ومساحات خضراء للتنزه والاستمتاع بالهواء النقي</textarea>
+                        </div>
+                        <div class="editor-field">
+                            <label>رابط الصورة:</label>
+                            <input type="text" value="data:image/svg+xml,&lt;svg xmlns=" http:="" www.w3.org="" 2000="" svg"="" viewbox="0 0 400 300"><rect fill="%23388E3C" width="400" height="300"><circle fill="%23228B22" cx="100" cy="200" r="40"><circle fill="%23228B22" cx="200" cy="180" r="50"><circle fill="%23228B22" cx="300" cy="200" r="45"><text x="200" y="260" text-anchor="middle" fill="white" font-size="16" font-weight="bold">مساحات خضراء</text>" onchange="updateFeatureImage(4, this.value)" placeholder="رابط Google Drive أو أي رابط صورة"&gt;
+                        </circle></circle></circle></rect></div>
+                        <div class="editor-field">
+                            <label>الحالة:</label>
+                            <select onchange="toggleFeature(4, this.value)">
+                                <option value="true" selected="">مفعل</option>
+                                <option value="false">غير مفعل</option>
+                            </select>
+                            <button onclick="deleteFeature(4)" style="background: var(--danger-color); margin-top: 10px;">حذف الميزة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
                     </div>
                 </div>
 
@@ -1703,13 +1951,81 @@
                         
                         <h4>📸 الصور الرئيسية:</h4>
                         <div id="heroImagesContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-                            <!-- Hero images will be populated by JavaScript -->
-                        </div>
+                <div style="border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem;">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1I0EykfgoApudSRdWmmPEeob2kf3J3Nuy" alt="صورة جديدة" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; display: none;" onerror="this.style.display='none'">
+                    <input type="text" value="صورة جديدة" onchange="updateHeroImageTitle(1751179343169, this.value)" style="width: 100%; margin-bottom: 10px;" placeholder="عنوان الصورة">
+                    <button onclick="deleteHeroImage(1751179343169)" style="background: var(--danger-color); color: white; border: none; padding: 5px 10px; border-radius: 5px; width: 100%;">حذف</button>
+                </div>
+            
+                <div style="border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem;">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1fcxrtAGjHlnjKtNGRYcWYNdSKLfS70t1" alt="صورة جديدة" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; display: none;" onerror="this.style.display='none'">
+                    <input type="text" value="صورة جديدة" onchange="updateHeroImageTitle(1751179372662, this.value)" style="width: 100%; margin-bottom: 10px;" placeholder="عنوان الصورة">
+                    <button onclick="deleteHeroImage(1751179372662)" style="background: var(--danger-color); color: white; border: none; padding: 5px 10px; border-radius: 5px; width: 100%;">حذف</button>
+                </div>
+            
+                <div style="border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem;">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1fcxrtAGjHlnjKtNGRYcWYNdSKLfS70t1" alt="صورة جديدة" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; display: none;" onerror="this.style.display='none'">
+                    <input type="text" value="صورة جديدة" onchange="updateHeroImageTitle(1751179393708, this.value)" style="width: 100%; margin-bottom: 10px;" placeholder="عنوان الصورة">
+                    <button onclick="deleteHeroImage(1751179393708)" style="background: var(--danger-color); color: white; border: none; padding: 5px 10px; border-radius: 5px; width: 100%;">حذف</button>
+                </div>
+            
+                <div style="border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem;">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1vWLMZpIfTECr53IOICteEQTzUHZRnAaI" alt="صورة جديدة" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; display: none;" onerror="this.style.display='none'">
+                    <input type="text" value="صورة جديدة" onchange="updateHeroImageTitle(1751179428164, this.value)" style="width: 100%; margin-bottom: 10px;" placeholder="عنوان الصورة">
+                    <button onclick="deleteHeroImage(1751179428164)" style="background: var(--danger-color); color: white; border: none; padding: 5px 10px; border-radius: 5px; width: 100%;">حذف</button>
+                </div>
+            
+                <div style="border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem;">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1GXm3vdk4OLVVNFv28MqP-ECuCiMEEEcn" alt="صورة جديدة" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; display: none;" onerror="this.style.display='none'">
+                    <input type="text" value="صورة جديدة" onchange="updateHeroImageTitle(1751179461578, this.value)" style="width: 100%; margin-bottom: 10px;" placeholder="عنوان الصورة">
+                    <button onclick="deleteHeroImage(1751179461578)" style="background: var(--danger-color); color: white; border: none; padding: 5px 10px; border-radius: 5px; width: 100%;">حذف</button>
+                </div>
+            
+                <div style="border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem;">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=13BJorzbshewwEzEqFqzBZmdTg7NEAPCC" alt="صورة جديدة" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; display: none;" onerror="this.style.display='none'">
+                    <input type="text" value="صورة جديدة" onchange="updateHeroImageTitle(1751179482444, this.value)" style="width: 100%; margin-bottom: 10px;" placeholder="عنوان الصورة">
+                    <button onclick="deleteHeroImage(1751179482444)" style="background: var(--danger-color); color: white; border: none; padding: 5px 10px; border-radius: 5px; width: 100%;">حذف</button>
+                </div>
+            </div>
                         
                         <h4>🖼️ صور المعرض:</h4>
                         <div id="galleryImagesContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-                            <!-- Gallery images will be populated by JavaScript -->
-                        </div>
+                <div style="border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem;">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1I0EykfgoApudSRdWmmPEeob2kf3J3Nuy" alt="صورة جديدة" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; display: none;" onerror="this.style.display='none'">
+                    <input type="text" value="صورة جديدة" onchange="updateGalleryImageTitle(1751179351663, this.value)" style="width: 100%; margin-bottom: 10px;" placeholder="عنوان الصورة">
+                    <button onclick="deleteGalleryImage(1751179351663)" style="background: var(--danger-color); color: white; border: none; padding: 5px 10px; border-radius: 5px; width: 100%;">حذف</button>
+                </div>
+            
+                <div style="border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem;">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1fcxrtAGjHlnjKtNGRYcWYNdSKLfS70t1" alt="صورة جديدة" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; display: none;" onerror="this.style.display='none'">
+                    <input type="text" value="صورة جديدة" onchange="updateGalleryImageTitle(1751179378235, this.value)" style="width: 100%; margin-bottom: 10px;" placeholder="عنوان الصورة">
+                    <button onclick="deleteGalleryImage(1751179378235)" style="background: var(--danger-color); color: white; border: none; padding: 5px 10px; border-radius: 5px; width: 100%;">حذف</button>
+                </div>
+            
+                <div style="border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem;">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1fcxrtAGjHlnjKtNGRYcWYNdSKLfS70t1" alt="صورة جديدة" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; display: none;" onerror="this.style.display='none'">
+                    <input type="text" value="صورة جديدة" onchange="updateGalleryImageTitle(1751179399017, this.value)" style="width: 100%; margin-bottom: 10px;" placeholder="عنوان الصورة">
+                    <button onclick="deleteGalleryImage(1751179399017)" style="background: var(--danger-color); color: white; border: none; padding: 5px 10px; border-radius: 5px; width: 100%;">حذف</button>
+                </div>
+            
+                <div style="border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem;">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1vWLMZpIfTECr53IOICteEQTzUHZRnAaI" alt="صورة جديدة" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; display: none;" onerror="this.style.display='none'">
+                    <input type="text" value="صورة جديدة" onchange="updateGalleryImageTitle(1751179433408, this.value)" style="width: 100%; margin-bottom: 10px;" placeholder="عنوان الصورة">
+                    <button onclick="deleteGalleryImage(1751179433408)" style="background: var(--danger-color); color: white; border: none; padding: 5px 10px; border-radius: 5px; width: 100%;">حذف</button>
+                </div>
+            
+                <div style="border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem;">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1GXm3vdk4OLVVNFv28MqP-ECuCiMEEEcn" alt="صورة جديدة" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; display: none;" onerror="this.style.display='none'">
+                    <input type="text" value="صورة جديدة" onchange="updateGalleryImageTitle(1751179467135, this.value)" style="width: 100%; margin-bottom: 10px;" placeholder="عنوان الصورة">
+                    <button onclick="deleteGalleryImage(1751179467135)" style="background: var(--danger-color); color: white; border: none; padding: 5px 10px; border-radius: 5px; width: 100%;">حذف</button>
+                </div>
+            
+                <div style="border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem;">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=13BJorzbshewwEzEqFqzBZmdTg7NEAPCC" alt="صورة جديدة" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; display: none;" onerror="this.style.display='none'">
+                    <input type="text" value="صورة جديدة" onchange="updateGalleryImageTitle(1751179487978, this.value)" style="width: 100%; margin-bottom: 10px;" placeholder="عنوان الصورة">
+                    <button onclick="deleteGalleryImage(1751179487978)" style="background: var(--danger-color); color: white; border: none; padding: 5px 10px; border-radius: 5px; width: 100%;">حذف</button>
+                </div>
+            </div>
                     </div>
                 </div>
 
@@ -1723,8 +2039,42 @@
                         </div>
                         
                         <div id="adminCommentsContainer">
-                            <!-- Admin comment images will be populated by JavaScript -->
-                        </div>
+                <div class="admin-comment-item">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1cgdbtKRwigoGlVHk2uH7pSJo9mRix7ov" alt="صورة زائر من المزرعة" class="admin-comment-image" onerror="this.style.display='none'" style="display: none;">
+                    <div class="admin-comment-content">
+                        <strong>صورة زائر من المزرعة</strong><br>
+                        <span style="color: #666;">صورة زائر من المزرعة</span>
+                    </div>
+                    <div class="admin-comment-actions">
+                        <button onclick="editCommentImage(1)" style="background: var(--info-color); color: white;">تعديل</button>
+                        <button onclick="deleteCommentImage(1)" style="background: var(--danger-color); color: white;">حذف</button>
+                    </div>
+                </div>
+            
+                <div class="admin-comment-item">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=13BJorzbshewwEzEqFqzBZmdTg7NEAPCC" alt="احمد " class="admin-comment-image" onerror="this.style.display='none'" style="display: none;">
+                    <div class="admin-comment-content">
+                        <strong>احمد </strong><br>
+                        <span style="color: #666;">صورة زائر من المزرعة</span>
+                    </div>
+                    <div class="admin-comment-actions">
+                        <button onclick="editCommentImage(2)" style="background: var(--info-color); color: white;">تعديل</button>
+                        <button onclick="deleteCommentImage(2)" style="background: var(--danger-color); color: white;">حذف</button>
+                    </div>
+                </div>
+            
+                <div class="admin-comment-item">
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1bYLzija8M7ED61RNlDjVSraM2LzmW05b" alt="خالد" class="admin-comment-image" onerror="this.style.display='none'" style="display: none;">
+                    <div class="admin-comment-content">
+                        <strong>خالد</strong><br>
+                        <span style="color: #666;">صورة زائر من المزرعة</span>
+                    </div>
+                    <div class="admin-comment-actions">
+                        <button onclick="editCommentImage(3)" style="background: var(--info-color); color: white;">تعديل</button>
+                        <button onclick="deleteCommentImage(3)" style="background: var(--danger-color); color: white;">حذف</button>
+                    </div>
+                </div>
+            </div>
                     </div>
                 </div>
 
@@ -1737,8 +2087,72 @@
                         </div>
                         
                         <div id="footerSectionsContainer">
-                            <!-- Footer sections will be populated by JavaScript -->
+                <div class="admin-section">
+                    <h4>📄 القسم 1</h4>
+                    <div class="text-editor">
+                        <div class="editor-field">
+                            <label>العنوان:</label>
+                            <input type="text" value="🏞️ مزرعة ريف عبس السياحية" onchange="updateFooterSectionTitle(1, this.value)">
                         </div>
+                        <div class="editor-field">
+                            <label>المحتوى:</label>
+                            <textarea onchange="updateFooterSectionContent(1, this.value)" rows="4">وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة</textarea>
+                        </div>
+                        <div class="editor-field">
+                            <label>نوع المحتوى:</label>
+                            <select onchange="updateFooterSectionType(1, this.value)">
+                                <option value="text" selected="">نص عادي</option>
+                                <option value="html">نص بتنسيق HTML</option>
+                            </select>
+                            <button onclick="deleteFooterSection(1)" style="background: var(--danger-color); margin-top: 10px;">حذف القسم</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="admin-section">
+                    <h4>📄 القسم 2</h4>
+                    <div class="text-editor">
+                        <div class="editor-field">
+                            <label>العنوان:</label>
+                            <input type="text" value="📞 تواصل معنا" onchange="updateFooterSectionTitle(2, this.value)">
+                        </div>
+                        <div class="editor-field">
+                            <label>المحتوى:</label>
+                            <textarea onchange="updateFooterSectionContent(2, this.value)" rows="4">📍 منطقة عسير - محافظة المجاردة&lt;br&gt;📱 +966 0553663992&lt;br&gt;⏰ خدمة 24 ساعة&lt;br&gt;🌐 WiFi مجاني</textarea>
+                        </div>
+                        <div class="editor-field">
+                            <label>نوع المحتوى:</label>
+                            <select onchange="updateFooterSectionType(2, this.value)">
+                                <option value="text">نص عادي</option>
+                                <option value="html" selected="">نص بتنسيق HTML</option>
+                            </select>
+                            <button onclick="deleteFooterSection(2)" style="background: var(--danger-color); margin-top: 10px;">حذف القسم</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="admin-section">
+                    <h4>📄 القسم 3</h4>
+                    <div class="text-editor">
+                        <div class="editor-field">
+                            <label>العنوان:</label>
+                            <input type="text" value="🎯 خدماتنا" onchange="updateFooterSectionTitle(3, this.value)">
+                        </div>
+                        <div class="editor-field">
+                            <label>المحتوى:</label>
+                            <textarea onchange="updateFooterSectionContent(3, this.value)" rows="4">🏡 أكواخ مجهزة&lt;br&gt;🏊‍♂️ مسابح وساونا&lt;br&gt;🌿 مسطحات خضراء&lt;br&gt;🚗 مواقف مجانية</textarea>
+                        </div>
+                        <div class="editor-field">
+                            <label>نوع المحتوى:</label>
+                            <select onchange="updateFooterSectionType(3, this.value)">
+                                <option value="text">نص عادي</option>
+                                <option value="html" selected="">نص بتنسيق HTML</option>
+                            </select>
+                            <button onclick="deleteFooterSection(3)" style="background: var(--danger-color); margin-top: 10px;">حذف القسم</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
                         <div class="admin-section">
                             <h4>📞 نص حقوق الطبع والنشر</h4>
@@ -1755,157 +2169,190 @@
     </div>
 
     <script>
-        // Global Website Data - Enhanced with new features
+        
+        // Global Website Data - Updated ٤‏/١‏/١٤٤٧ هـ ٩:٥٢:٢٢ ص
         let siteData = {
-            info: {
-                name: "مزرعة ريف عبس السياحية",
-                phone: "0553663992",
-                location: "منطقة عسير - محافظة المجاردة",
-                description: "وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة",
-                workingHours: "خدمة 24 ساعة",
-                wifi: "WiFi مجاني",
-                copyright: "© 2024 مزرعة ريف عبس السياحية - جميع الحقوق محفوظة"
-            },
-            text: {
-                siteTitle: "مزرعة ريف عبس السياحية",
-                heroTitle: "مرحباً بكم في مزرعة ريف عبس السياحية",
-                heroSubtitle: "تجربة ريفية أصيلة في قلب منطقة عسير الساحرة",
-                featuresTitle: "ما يميز مزرعة ريف عبس",
-                galleryTitle: "معرض الصور",
-                bookingTitle: "احجز زيارتك الآن",
-                bookingDescription: "تواصل معنا مباشرة عبر الواتساب لحجز موعدك وتأكيد الزيارة",
-                whatsappButtonText: "احجز عبر الواتساب",
-                commentsTitle: "صور زوار المزرعة",
-                navHome: "الرئيسية",
-                navTiktok: "الفيديو",
-                navGallery: "المعرض",
-                navBooking: "احجز الآن",
-                navComments: "الصور"
-            },
-            tiktok: {
-                title: "استكشف مزرعة ريف عبس",
-                description: "شاهد أحدث الفيديوهات والجولات المصورة في أجمل المناطق الطبيعية",
-                videoUrl: "https://www.tiktok.com/embed/v2/7234567890123456789",
-                channelUrl: "https://www.tiktok.com/@farmreefabs",
-                buttonText: "تابعنا على تيك توك"
-            },
-            logo: {
-                type: "default", // default or image
-                url: "",
-                text: "مزرعة ريف عبس السياحية"
-            },
-            socialMedia: {
-                instagram: "",
-                tiktok: "",
-                snapchat: "",
-                twitter: "",
-                youtube: "",
-                whatsapp: "https://wa.me/9660553663992"
-            },
-            footer: {
-                sections: [
-                    {
-                        id: 1,
-                        title: "🏞️ مزرعة ريف عبس السياحية",
-                        content: "وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة",
-                        type: "text"
-                    },
-                    {
-                        id: 2,
-                        title: "📞 تواصل معنا",
-                        content: "📍 منطقة عسير - محافظة المجاردة<br>📱 +966 0553663992<br>⏰ خدمة 24 ساعة<br>🌐 WiFi مجاني",
-                        type: "html"
-                    },
-                    {
-                        id: 3,
-                        title: "🎯 خدماتنا",
-                        content: "🏡 أكواخ مجهزة<br>🏊‍♂️ مسابح وساونا<br>🌿 مسطحات خضراء<br>🚗 مواقف مجانية",
-                        type: "html"
-                    }
+        "info": {
+                "name": "مزرعة ريف عبس السياحية",
+                "phone": "0553663992",
+                "location": "منطقة عسير - محافظة المجاردة",
+                "description": "وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة",
+                "workingHours": "خدمة 24 ساعة",
+                "wifi": "WiFi مجاني",
+                "copyright": "© 2024 مزرعة ريف عبس السياحية - جميع الحقوق محفوظة"
+        },
+        "text": {
+                "siteTitle": "مزرعة ريف عبس السياحية",
+                "heroTitle": "مرحباً بكم في مزرعة ريف عبس السياحية",
+                "heroSubtitle": "تجربة ريفية أصيلة في قلب منطقة عسير الساحرة",
+                "featuresTitle": "ما يميز مزرعة ريف عبس",
+                "galleryTitle": "معرض الصور",
+                "bookingTitle": "احجز زيارتك الآن",
+                "bookingDescription": "تواصل معنا مباشرة عبر الواتساب لحجز موعدك وتأكيد الزيارة",
+                "whatsappButtonText": "احجز عبر الواتساب",
+                "commentsTitle": "صور زوار المزرعة",
+                "navHome": "الرئيسية",
+                "navTiktok": "الفيديو",
+                "navGallery": "المعرض",
+                "navBooking": "احجز الآن",
+                "navComments": "الصور"
+        },
+        "tiktok": {
+                "title": "استكشف مزرعة ريف عبس",
+                "description": "شاهد أحدث الفيديوهات والجولات المصورة في أجمل المناطق الطبيعية",
+                "videoUrl": "https://www.tiktok.com/embed/v2/7234567890123456789",
+                "channelUrl": "https://www.tiktok.com/@drsugar2?is_from_webapp=1&sender_device=pc",
+                "buttonText": "تابعنا على تيك توك"
+        },
+        "logo": {
+                "type": "default",
+                "url": "https://drive.google.com/file/d/1NNk5JPabJx8VgkHQeiJoiRvvfRm0cppj/view?usp=drive_link",
+                "text": "مزرعة ريف عبس السياحية"
+        },
+        "socialMedia": {
+                "instagram": "",
+                "tiktok": "",
+                "snapchat": "",
+                "twitter": "",
+                "youtube": "",
+                "whatsapp": "https://wa.me/9660553663992"
+        },
+        "footer": {
+                "sections": [
+                        {
+                                "id": 1,
+                                "title": "🏞️ مزرعة ريف عبس السياحية",
+                                "content": "وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة",
+                                "type": "text"
+                        },
+                        {
+                                "id": 2,
+                                "title": "📞 تواصل معنا",
+                                "content": "📍 منطقة عسير - محافظة المجاردة<br>📱 +966 0553663992<br>⏰ خدمة 24 ساعة<br>🌐 WiFi مجاني",
+                                "type": "html"
+                        },
+                        {
+                                "id": 3,
+                                "title": "🎯 خدماتنا",
+                                "content": "🏡 أكواخ مجهزة<br>🏊‍♂️ مسابح وساونا<br>🌿 مسطحات خضراء<br>🚗 مواقف مجانية",
+                                "type": "html"
+                        }
                 ]
-            }
-        };
+        }
+};
 
-        // Data Arrays - Enhanced with proper image URLs
+        // Data Arrays - Updated ٤‏/١‏/١٤٤٧ هـ ٩:٥٢:٢٢ ص
         let heroImages = [
-            {
-                id: 1,
-                url: 'https://drive.google.com/uc?export=view&id=1VU5NIVnk8h15k1bbQXuZ5Lv8JhyjH3tS',
-                title: 'جبال عسير الخلابة'
-            },
-            {
-                id: 2,
-                url: 'https://drive.google.com/uc?export=view&id=1I0EykfgoApudSRdWmmPEeob2kf3J3Nuy',
-                title: 'الأكواخ والمرافق السياحية'
-            },
-            {
-                id: 3,
-                url: 'https://drive.google.com/uc?export=view&id=1fcxrtAGjHlnjKtNGRYcWYNdSKLfS70t1',
-                title: 'المسابح والساونا'
-            }
-        ];
-
+        {
+                "id": 1751179343169,
+                "url": "https://drive.google.com/file/d/1I0EykfgoApudSRdWmmPEeob2kf3J3Nuy/view?usp=drive_link",
+                "title": "صورة جديدة"
+        },
+        {
+                "id": 1751179372662,
+                "url": "https://drive.google.com/file/d/1fcxrtAGjHlnjKtNGRYcWYNdSKLfS70t1/view?usp=drive_link",
+                "title": "صورة جديدة"
+        },
+        {
+                "id": 1751179393708,
+                "url": "https://drive.google.com/file/d/1fcxrtAGjHlnjKtNGRYcWYNdSKLfS70t1/view?usp=drive_link",
+                "title": "صورة جديدة"
+        },
+        {
+                "id": 1751179428164,
+                "url": "https://drive.google.com/file/d/1vWLMZpIfTECr53IOICteEQTzUHZRnAaI/view?usp=drive_link",
+                "title": "صورة جديدة"
+        },
+        {
+                "id": 1751179461578,
+                "url": "https://drive.google.com/file/d/1GXm3vdk4OLVVNFv28MqP-ECuCiMEEEcn/view?usp=drive_link",
+                "title": "صورة جديدة"
+        },
+        {
+                "id": 1751179482444,
+                "url": "https://drive.google.com/file/d/13BJorzbshewwEzEqFqzBZmdTg7NEAPCC/view?usp=drive_link",
+                "title": "صورة جديدة"
+        }
+];
         let featuresCards = [
-            {
-                id: 1,
-                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%234CAF50" width="400" height="300"/><polygon fill="%23795548" points="50,200 150,100 250,150 350,80 400,120 400,200"/><circle fill="%23FFD700" cx="320" cy="60" r="30"/><text x="200" y="250" text-anchor="middle" fill="white" font-size="20" font-weight="bold">جبال عسير</text></svg>',
-                title: 'جبال عسير الخلابة',
-                description: 'إطلالات ساحرة على جبال منطقة عسير وطبيعة خلابة على مدار السنة',
-                active: true
-            },
-            {
-                id: 2,
-                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%232E7D32" width="400" height="300"/><rect fill="%23A1887F" x="120" y="120" width="100" height="80"/><polygon fill="%23D32F2F" points="120,120 170,80 220,120"/><rect fill="%236D4C41" x="165" y="140" width="10" height="60"/><text x="200" y="250" text-anchor="middle" fill="white" font-size="18" font-weight="bold">أكواخ مجهزة</text></svg>',
-                title: 'أكواخ وشاليهات مميزة',
-                description: 'إقامة مريحة في أكواخ مجهزة بالكامل مع مرافق حديثة',
-                active: true
-            },
-            {
-                id: 3,
-                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%234FC3F7" width="400" height="300"/><rect fill="%2387CEEB" x="100" y="120" width="200" height="100" rx="10"/><circle fill="%23FFD700" cx="80" cy="50" r="25"/><text x="200" y="250" text-anchor="middle" fill="white" font-size="18" font-weight="bold">مسابح وساونا</text></svg>',
-                title: 'مسابح وساونا',
-                description: 'مسابح داخلية وخارجية مع ساونا وحمام ساخن للاسترخاء',
-                active: true
-            },
-            {
-                id: 4,
-                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23388E3C" width="400" height="300"/><circle fill="%23228B22" cx="100" cy="200" r="40"/><circle fill="%23228B22" cx="200" cy="180" r="50"/><circle fill="%23228B22" cx="300" cy="200" r="45"/><text x="200" y="260" text-anchor="middle" fill="white" font-size="16" font-weight="bold">مساحات خضراء</text></svg>',
-                title: 'مسطحات خضراء واسعة',
-                description: 'حدائق ومساحات خضراء للتنزه والاستمتاع بالهواء النقي',
-                active: true
-            }
-        ];
-
+        {
+                "id": 1,
+                "image": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 300\"><rect fill=\"%234CAF50\" width=\"400\" height=\"300\"/><polygon fill=\"%23795548\" points=\"50,200 150,100 250,150 350,80 400,120 400,200\"/><circle fill=\"%23FFD700\" cx=\"320\" cy=\"60\" r=\"30\"/><text x=\"200\" y=\"250\" text-anchor=\"middle\" fill=\"white\" font-size=\"20\" font-weight=\"bold\">جبال عسير</text></svg>",
+                "title": "جبال عسير الخلابة",
+                "description": "إطلالات ساحرة على جبال منطقة عسير وطبيعة خلابة على مدار السنة",
+                "active": true
+        },
+        {
+                "id": 2,
+                "image": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 300\"><rect fill=\"%232E7D32\" width=\"400\" height=\"300\"/><rect fill=\"%23A1887F\" x=\"120\" y=\"120\" width=\"100\" height=\"80\"/><polygon fill=\"%23D32F2F\" points=\"120,120 170,80 220,120\"/><rect fill=\"%236D4C41\" x=\"165\" y=\"140\" width=\"10\" height=\"60\"/><text x=\"200\" y=\"250\" text-anchor=\"middle\" fill=\"white\" font-size=\"18\" font-weight=\"bold\">أكواخ مجهزة</text></svg>",
+                "title": "أكواخ وشاليهات مميزة",
+                "description": "إقامة مريحة في أكواخ مجهزة بالكامل مع مرافق حديثة",
+                "active": true
+        },
+        {
+                "id": 3,
+                "image": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 300\"><rect fill=\"%234FC3F7\" width=\"400\" height=\"300\"/><rect fill=\"%2387CEEB\" x=\"100\" y=\"120\" width=\"200\" height=\"100\" rx=\"10\"/><circle fill=\"%23FFD700\" cx=\"80\" cy=\"50\" r=\"25\"/><text x=\"200\" y=\"250\" text-anchor=\"middle\" fill=\"white\" font-size=\"18\" font-weight=\"bold\">مسابح وساونا</text></svg>",
+                "title": "مسابح وساونا",
+                "description": "مسابح داخلية وخارجية مع ساونا وحمام ساخن للاسترخاء",
+                "active": true
+        },
+        {
+                "id": 4,
+                "image": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 300\"><rect fill=\"%23388E3C\" width=\"400\" height=\"300\"/><circle fill=\"%23228B22\" cx=\"100\" cy=\"200\" r=\"40\"/><circle fill=\"%23228B22\" cx=\"200\" cy=\"180\" r=\"50\"/><circle fill=\"%23228B22\" cx=\"300\" cy=\"200\" r=\"45\"/><text x=\"200\" y=\"260\" text-anchor=\"middle\" fill=\"white\" font-size=\"16\" font-weight=\"bold\">مساحات خضراء</text></svg>",
+                "title": "مسطحات خضراء واسعة",
+                "description": "حدائق ومساحات خضراء للتنزه والاستمتاع بالهواء النقي",
+                "active": true
+        }
+];
         let galleryItems = [
-            {
-                id: 1,
-                url: 'https://drive.google.com/uc?export=view&id=1I0EykfgoApudSRdWmmPEeob2kf3J3Nuy',
-                title: 'مناظر طبيعية خلابة'
-            },
-            {
-                id: 2,
-                url: 'https://drive.google.com/uc?export=view&id=1fcxrtAGjHlnjKtNGRYcWYNdSKLfS70t1',
-                title: 'مرافق وخدمات متميزة'
-            }
-        ];
-
+        {
+                "id": 1751179351663,
+                "url": "https://drive.google.com/file/d/1I0EykfgoApudSRdWmmPEeob2kf3J3Nuy/view?usp=drive_link",
+                "title": "إطلالة خلابة"
+        },
+        {
+                "id": 1751179378235,
+                "url": "https://drive.google.com/file/d/1fcxrtAGjHlnjKtNGRYcWYNdSKLfS70t1/view?usp=drive_link",
+                "title": "حيوانات أليفة"
+        },
+        {
+                "id": 1751179399017,
+                "url": "https://drive.google.com/file/d/1fcxrtAGjHlnjKtNGRYcWYNdSKLfS70t1/view?usp=drive_link",
+                "title": "صورة جديدة"
+        },
+        {
+                "id": 1751179433408,
+                "url": "https://drive.google.com/file/d/1vWLMZpIfTECr53IOICteEQTzUHZRnAaI/view?usp=drive_link",
+                "title": "صورة جديدة"
+        },
+        {
+                "id": 1751179467135,
+                "url": "https://drive.google.com/file/d/1GXm3vdk4OLVVNFv28MqP-ECuCiMEEEcn/view?usp=drive_link",
+                "title": "صورة جديدة"
+        },
+        {
+                "id": 1751179487978,
+                "url": "https://drive.google.com/file/d/13BJorzbshewwEzEqFqzBZmdTg7NEAPCC/view?usp=drive_link",
+                "title": "صورة جديدة"
+        }
+];
         let commentImages = [
-            {
-                id: 1,
-                url: 'https://drive.google.com/uc?export=view&id=1cgdbtKRwigoGlVHk2uH7pSJo9mRix7ov',
-                title: 'صورة زائر من المزرعة'
-            },
-            {
-                id: 2,
-                url: 'https://drive.google.com/uc?export=view&id=1WnylWn6E0ZOZUu3ZgFz2QAlLl1q0OOQh',
-                title: 'صورة زائر من المزرعة'
-            },
-            {
-                id: 3,
-                url: 'https://drive.google.com/uc?export=view&id=1xqfMqH-X9HoOqG57ILHpqffnqReXak0E',
-                title: 'صورة زائر من المزرعة'
-            }
-        ];
+        {
+                "id": 1,
+                "url": "https://drive.google.com/file/d/1cgdbtKRwigoGlVHk2uH7pSJo9mRix7ov/view?usp=drive_link",
+                "title": "صورة زائر من المزرعة"
+        },
+        {
+                "id": 2,
+                "url": "https://drive.google.com/file/d/13BJorzbshewwEzEqFqzBZmdTg7NEAPCC/view?usp=drive_link",
+                "title": "احمد "
+        },
+        {
+                "id": 3,
+                "url": "https://drive.google.com/file/d/1bYLzija8M7ED61RNlDjVSraM2LzmW05b/view?usp=drive_link",
+                "title": "خالد"
+        }
+];
 
         // Admin Data
         let adminPassword = "admin123";
@@ -3212,5 +3659,6 @@
         console.log('   Escape: إغلاق النوافذ المنبثقة');
         console.log('🔐 كلمة مرور الإدارة الافتراضية: admin123');
     </script>
-</body>
-</html>
+
+
+<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}" style="display: none;"></div><div id="claude-ai"></div><div class="notification info" style="animation: 0.3s ease 0s 1 normal none running slideOutRight;">🔄 جاري تحضير الملف المحدث...</div><div class="notification success">✅ تم تحميل الموقع المحدث بنجاح!</div><div class="notification info">🔄 جاري تحضير الكود الكامل مع جميع التحديثات...</div></body></html>
