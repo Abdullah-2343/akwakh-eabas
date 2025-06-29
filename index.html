@@ -333,7 +333,7 @@
             border-radius: 2px;
         }
 
-        /* Features Grid */
+        /* Features Grid - التصميم الجديد */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -350,6 +350,7 @@
             border: 1px solid var(--border-color);
             position: relative;
             overflow: hidden;
+            padding: 0;
         }
 
         .feature-card::before {
@@ -369,28 +370,30 @@
 
         .feature-image {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
-            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            border-radius: 0;
         }
 
         .feature-content {
             padding: 2rem;
         }
 
-        .feature-card h3 {
+        .feature-title {
             color: var(--secondary-color);
             margin-bottom: 1rem;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
+            font-weight: 700;
         }
 
-        .feature-card p {
+        .feature-description {
             color: var(--text-color);
             line-height: 1.6;
+            font-size: 1rem;
         }
 
-        /* Video Section */
-        .video-hero-section {
+        /* TikTok Video Section */
+        .tiktok-hero-section {
             min-height: 100vh;
             background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
             display: flex;
@@ -400,7 +403,7 @@
             padding: 3rem 0;
         }
 
-        .video-container {
+        .tiktok-container {
             text-align: center;
             width: 100%;
             max-width: 1200px;
@@ -408,10 +411,10 @@
             padding: var(--container-padding);
         }
 
-        .video-wrapper {
+        .tiktok-wrapper {
             position: relative;
             width: 100%;
-            max-width: 1000px;
+            max-width: 800px;
             margin: 0 auto 3rem;
             border-radius: 25px;
             overflow: hidden;
@@ -421,20 +424,20 @@
             transition: var(--transition);
         }
 
-        .video-wrapper:hover {
+        .tiktok-wrapper:hover {
             transform: translateY(-10px);
             box-shadow: 0 40px 100px rgba(0,0,0,0.4);
         }
 
-        .video-wrapper.playing {
+        .tiktok-wrapper.playing {
             cursor: default;
         }
 
-        .video-wrapper.playing:hover {
+        .tiktok-wrapper.playing:hover {
             transform: none;
         }
 
-        .video-thumbnail {
+        .tiktok-thumbnail {
             position: relative;
             width: 100%;
             height: 0;
@@ -446,36 +449,36 @@
             transform: scale(1);
         }
 
-        .video-play-button {
+        .tiktok-play-button {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 120px;
             height: 120px;
-            background: linear-gradient(45deg, rgba(255, 107, 107, 0.9), rgba(255, 82, 82, 0.9));
+            background: linear-gradient(45deg, rgba(255, 0, 80, 0.9), rgba(255, 0, 150, 0.9));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: var(--transition);
             backdrop-filter: blur(10px);
-            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.5);
-            animation: playButtonPulse 2s infinite;
+            box-shadow: 0 15px 40px rgba(255, 0, 80, 0.5);
+            animation: tiktokPulse 2s infinite;
         }
 
-        @keyframes playButtonPulse {
+        @keyframes tiktokPulse {
             0% { transform: translate(-50%, -50%) scale(1); }
             50% { transform: translate(-50%, -50%) scale(1.1); }
             100% { transform: translate(-50%, -50%) scale(1); }
         }
 
-        .video-play-button:hover {
+        .tiktok-play-button:hover {
             transform: translate(-50%, -50%) scale(1.2);
-            box-shadow: 0 20px 50px rgba(255, 107, 107, 0.7);
+            box-shadow: 0 20px 50px rgba(255, 0, 80, 0.7);
         }
 
-        .video-play-button::after {
+        .tiktok-play-button::after {
             content: '';
             width: 0;
             height: 0;
@@ -485,7 +488,7 @@
             margin-left: 10px;
         }
 
-        .video-iframe {
+        .tiktok-iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -495,7 +498,7 @@
             display: none;
         }
 
-        .video-title {
+        .tiktok-title {
             font-size: 3.5rem;
             color: white;
             margin-bottom: 2rem;
@@ -503,7 +506,7 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
-        .video-description {
+        .tiktok-description {
             font-size: 1.4rem;
             color: rgba(255,255,255,0.9);
             margin-bottom: 3rem;
@@ -511,8 +514,8 @@
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
-        .youtube-button {
-            background: linear-gradient(45deg, #ff0000, #cc0000);
+        .tiktok-button {
+            background: linear-gradient(45deg, #ff0050, #ff0080);
             color: white;
             padding: 20px 45px;
             border: none;
@@ -525,13 +528,13 @@
             display: inline-flex;
             align-items: center;
             gap: 15px;
-            box-shadow: 0 15px 40px rgba(255, 0, 0, 0.4);
+            box-shadow: 0 15px 40px rgba(255, 0, 80, 0.4);
         }
 
-        .youtube-button:hover {
-            background: linear-gradient(45deg, #cc0000, #990000);
+        .tiktok-button:hover {
+            background: linear-gradient(45deg, #e6004d, #cc0066);
             transform: translateY(-5px);
-            box-shadow: 0 20px 50px rgba(255, 0, 0, 0.5);
+            box-shadow: 0 20px 50px rgba(255, 0, 80, 0.5);
         }
 
         /* Gallery - Slideshow */
@@ -609,108 +612,13 @@
             background: var(--primary-color);
         }
 
-        /* Comments Section - تعديل جديد مع الصور المتحركة */
+        /* Comments Section - نظام التعليقات الجديد مع الصور فقط */
         .comments-section {
             padding: 4rem 0;
             background: var(--background-color);
             overflow: hidden;
         }
 
-        .comment-form-container {
-            max-width: 600px;
-            margin: 0 auto 4rem;
-            background: var(--light-bg);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-        }
-
-        .comment-form h3 {
-            color: var(--secondary-color);
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--secondary-color);
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid var(--border-color);
-            border-radius: 10px;
-            font-size: 1rem;
-            transition: var(--transition);
-            resize: vertical;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
-        }
-
-        .form-group.image-upload {
-            position: relative;
-        }
-
-        .image-upload-area {
-            border: 2px dashed var(--border-color);
-            border-radius: 10px;
-            padding: 2rem;
-            text-align: center;
-            cursor: pointer;
-            transition: var(--transition);
-            background: var(--light-bg);
-        }
-
-        .image-upload-area:hover {
-            border-color: var(--primary-color);
-            background: rgba(76, 175, 80, 0.05);
-        }
-
-        .image-upload-area.dragover {
-            border-color: var(--primary-color);
-            background: rgba(76, 175, 80, 0.1);
-        }
-
-        .image-preview {
-            max-width: 200px;
-            max-height: 150px;
-            margin: 10px auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .submit-btn {
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            width: 100%;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.3);
-        }
-
-        /* Comments Display - تصميم جديد مع الحركة التلقائية */
         .comments-display {
             position: relative;
             overflow: hidden;
@@ -721,7 +629,7 @@
 
         .comments-slider {
             display: flex;
-            animation: slideComments 30s linear infinite;
+            animation: slideComments 25s linear infinite;
             gap: 2rem;
             height: 100%;
         }
@@ -739,20 +647,19 @@
             }
         }
 
-        .comment-card {
+        .comment-image-card {
             min-width: 350px;
             max-width: 350px;
-            background: var(--background-color);
+            height: 280px;
             border-radius: var(--border-radius);
+            overflow: hidden;
             box-shadow: var(--shadow);
             border: 1px solid var(--border-color);
             position: relative;
-            overflow: hidden;
             transition: var(--transition);
-            height: 280px;
         }
 
-        .comment-card::before {
+        .comment-image-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -760,50 +667,18 @@
             width: 100%;
             height: 4px;
             background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            z-index: 2;
         }
 
-        .comment-card:hover {
+        .comment-image-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(0,0,0,0.15);
         }
 
         .comment-image {
             width: 100%;
-            height: 150px;
+            height: 100%;
             object-fit: cover;
-            border-radius: var(--border-radius) var(--border-radius) 0 0;
-        }
-
-        .comment-content {
-            padding: 1.5rem;
-            height: 130px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .comment-author {
-            font-weight: 700;
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .comment-text {
-            color: var(--text-color);
-            line-height: 1.5;
-            margin-bottom: 0.5rem;
-            flex: 1;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-        }
-
-        .comment-date {
-            font-size: 0.85rem;
-            color: #666;
-            text-align: left;
         }
 
         .comments-control {
@@ -1137,8 +1012,8 @@
         }
 
         .admin-comment-image {
-            width: 80px;
-            height: 60px;
+            width: 120px;
+            height: 80px;
             object-fit: cover;
             border-radius: 8px;
             flex-shrink: 0;
@@ -1152,6 +1027,7 @@
             display: flex;
             gap: 10px;
             flex-shrink: 0;
+            flex-direction: column;
         }
 
         .admin-comment-actions button {
@@ -1267,11 +1143,11 @@
                 padding: 12px 15px;
             }
 
-            .video-title {
+            .tiktok-title {
                 font-size: 2.5rem;
             }
 
-            .video-description {
+            .tiktok-description {
                 font-size: 1.2rem;
                 margin-bottom: 2rem;
             }
@@ -1308,7 +1184,7 @@
                 height: 250px;
             }
 
-            .comment-card {
+            .comment-image-card {
                 min-width: 280px;
                 max-width: 280px;
             }
@@ -1369,7 +1245,7 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#home" id="navHome">الرئيسية</a></li>
-                <li><a href="#video" id="navVideo">الفيديو</a></li>
+                <li><a href="#tiktok" id="navTiktok">الفيديو</a></li>
                 <li><a href="#gallery" id="navGallery">المعرض</a></li>
                 <li><a href="#booking" id="navBooking">احجز الآن</a></li>
                 <li><a href="#comments" id="navComments">التعليقات</a></li>
@@ -1412,23 +1288,23 @@
         </div>
     </section>
 
-    <!-- Video Section -->
-    <section id="video" class="video-hero-section">
-        <div class="video-container">
-            <h2 class="video-title" id="videoTitle">استكشف مزرعة ريف عبس السياحية</h2>
-            <p class="video-description" id="videoDescription">شاهد جولة شاملة في أجمل المناطق الطبيعية والأكواخ السياحية المجهزة بأحدث المرافق</p>
+    <!-- TikTok Video Section -->
+    <section id="tiktok" class="tiktok-hero-section">
+        <div class="tiktok-container">
+            <h2 class="tiktok-title" id="tiktokTitle">استكشف مزرعة ريف عبس على تيك توك</h2>
+            <p class="tiktok-description" id="tiktokDescription">شاهد أحدث الفيديوهات والجولات المصورة في أجمل المناطق الطبيعية</p>
             
-            <div class="video-wrapper" onclick="if(!this.classList.contains('playing')) playVideo()">
-                <div class="video-thumbnail" id="videoThumbnail">
-                    <div class="video-play-button"></div>
+            <div class="tiktok-wrapper" onclick="if(!this.classList.contains('playing')) playTikTokVideo()">
+                <div class="tiktok-thumbnail" id="tiktokThumbnail">
+                    <div class="tiktok-play-button"></div>
                 </div>
-                <iframe class="video-iframe" id="videoIframe" 
+                <iframe class="tiktok-iframe" id="tiktokIframe" 
                         src="" 
                         allowfullscreen 
                         allow="autoplay; encrypted-media"
                         style="display: none;">
                 </iframe>
-                <button onclick="event.stopPropagation(); stopVideo()" id="stopVideoBtn" style="
+                <button onclick="event.stopPropagation(); stopTikTokVideo()" id="stopTikTokBtn" style="
                     display: none;
                     position: absolute;
                     top: 10px;
@@ -1446,9 +1322,9 @@
                 " onmouseover="this.style.background='rgba(0,0,0,0.9)'" onmouseout="this.style.background='rgba(0,0,0,0.7)'">✕</button>
             </div>
             
-            <a href="https://www.youtube.com/@YourChannel" target="_blank" class="youtube-button" id="youtubeBtn">
-                <span style="font-size: 1.5rem;">🎥</span>
-                <span id="youtubeBtnText">شاهد قناة المزرعة على اليوتيوب</span>
+            <a href="https://www.tiktok.com/@farmreefabs" target="_blank" class="tiktok-button" id="tiktokBtn">
+                <span style="font-size: 1.5rem;">🎵</span>
+                <span id="tiktokBtnText">تابعنا على تيك توك</span>
             </a>
         </div>
     </section>
@@ -1479,42 +1355,15 @@
         </div>
     </section>
 
-    <!-- Comments Section - تصميم جديد مع الصور المتحركة -->
+    <!-- Comments Section - نظام التعليقات الجديد مع الصور فقط -->
     <section id="comments" class="comments-section">
         <div class="container">
-            <h2>آراء وتعليقات الزوار 📸</h2>
+            <h2>صور زوار المزرعة 📸</h2>
             
-            <!-- Comment Form -->
-            <div class="comment-form-container">
-                <div class="comment-form">
-                    <h3>شاركنا رأيك مع صورة 💬📷</h3>
-                    <form id="commentForm">
-                        <div class="form-group">
-                            <label for="commentName">الاسم *</label>
-                            <input type="text" id="commentName" name="name" required placeholder="أدخل اسمك الكريم">
-                        </div>
-                        <div class="form-group">
-                            <label for="commentText">التعليق *</label>
-                            <textarea id="commentText" name="comment" required rows="3" placeholder="شاركنا تجربتك في مزرعة ريف عبس..."></textarea>
-                        </div>
-                        <div class="form-group image-upload">
-                            <label>إضافة صورة (اختياري) 📷</label>
-                            <div class="image-upload-area" onclick="document.getElementById('commentImage').click()" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
-                                <p>👆 اضغط هنا لرفع صورة أو اسحب الصورة هنا</p>
-                                <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">JPG, PNG - حد أقصى 2MB</p>
-                                <img id="imagePreview" class="image-preview" style="display: none;">
-                            </div>
-                            <input type="file" id="commentImage" accept="image/*" style="display: none;" onchange="previewImage(this)">
-                        </div>
-                        <button type="submit" class="submit-btn">إرسال التعليق</button>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Comments Display - عرض متحرك جديد -->
+            <!-- Comments Display - عرض متحرك للصور فقط -->
             <div class="comments-display">
                 <div class="comments-slider" id="commentsSlider">
-                    <!-- Comments will be populated by JavaScript -->
+                    <!-- Comments images will be populated by JavaScript -->
                 </div>
             </div>
             
@@ -1590,7 +1439,7 @@
                     <button class="admin-tab active" onclick="showAdminTab('content')">📝 النصوص</button>
                     <button class="admin-tab" onclick="showAdminTab('features')">🎯 المميزات</button>
                     <button class="admin-tab" onclick="showAdminTab('media')">🎬 الوسائط</button>
-                    <button class="admin-tab" onclick="showAdminTab('comments')">💬 التعليقات</button>
+                    <button class="admin-tab" onclick="showAdminTab('comments')">📸 الصور</button>
                 </div>
                 
                 <!-- Content Tab -->
@@ -1622,22 +1471,27 @@
                     </div>
 
                     <div class="admin-section">
-                        <h3>🎬 إدارة الفيديو</h3>
+                        <h3>🎵 إدارة تيك توك</h3>
                         <div class="text-editor">
                             <div class="editor-field">
-                                <label>عنوان الفيديو:</label>
-                                <input type="text" id="videoTitleInput" placeholder="عنوان الفيديو">
-                                <button onclick="updateVideoTitle()">تحديث</button>
+                                <label>عنوان قسم تيك توك:</label>
+                                <input type="text" id="tiktokTitleInput" placeholder="عنوان تيك توك">
+                                <button onclick="updateTikTokTitle()">تحديث</button>
                             </div>
                             <div class="editor-field">
-                                <label>وصف الفيديو:</label>
-                                <textarea id="videoDescInput" placeholder="وصف الفيديو" rows="3"></textarea>
-                                <button onclick="updateVideoDescription()">تحديث</button>
+                                <label>وصف قسم تيك توك:</label>
+                                <textarea id="tiktokDescInput" placeholder="وصف تيك توك" rows="3"></textarea>
+                                <button onclick="updateTikTokDescription()">تحديث</button>
                             </div>
                             <div class="editor-field">
-                                <label>رابط الفيديو (يوتيوب):</label>
-                                <input type="text" id="videoUrlInput" placeholder="https://www.youtube.com/embed/VIDEO_ID">
-                                <button onclick="updateVideoUrl()">تحديث</button>
+                                <label>رابط فيديو تيك توك:</label>
+                                <input type="text" id="tiktokUrlInput" placeholder="https://www.tiktok.com/embed/v2/VIDEO_ID">
+                                <button onclick="updateTikTokUrl()">تحديث</button>
+                            </div>
+                            <div class="editor-field">
+                                <label>رابط صفحة تيك توك:</label>
+                                <input type="text" id="tiktokChannelInput" placeholder="https://www.tiktok.com/@username">
+                                <button onclick="updateTikTokChannel()">تحديث</button>
                             </div>
                         </div>
                     </div>
@@ -1680,14 +1534,15 @@
                 <!-- Comments Tab -->
                 <div id="commentsTab" class="admin-tab-content">
                     <div class="admin-section">
-                        <h3>💬 إدارة التعليقات مع الصور</h3>
+                        <h3>📸 إدارة صور الزوار</h3>
                         <div style="margin-bottom: 2rem;">
-                            <button class="admin-action-btn" style="background: var(--danger-color); color: white;" onclick="clearAllComments()">🗑️ مسح جميع التعليقات</button>
+                            <button class="admin-action-btn" style="background: var(--success-color); color: white; padding: 15px 30px;" onclick="addCommentImage()">+ إضافة صورة زائر</button>
+                            <button class="admin-action-btn" style="background: var(--danger-color); color: white;" onclick="clearAllComments()">🗑️ مسح جميع الصور</button>
                             <button class="admin-action-btn" style="background: var(--warning-color); color: white;" onclick="toggleCommentsAnimation()">⏸️ إيقاف/تشغيل الحركة</button>
                         </div>
                         
                         <div id="adminCommentsContainer">
-                            <!-- Admin comments will be populated by JavaScript -->
+                            <!-- Admin comment images will be populated by JavaScript -->
                         </div>
                     </div>
                 </div>
@@ -1716,19 +1571,19 @@
                 galleryTitle: "معرض الصور",
                 bookingTitle: "احجز زيارتك الآن",
                 navHome: "الرئيسية",
-                navVideo: "الفيديو",
+                navTiktok: "الفيديو",
                 navGallery: "المعرض",
                 navBooking: "احجز الآن",
                 navComments: "التعليقات",
                 footerContactTitle: "📞 تواصل معنا",
                 footerServicesTitle: "🎯 خدماتنا"
             },
-            video: {
-                title: "استكشف مزرعة ريف عبس السياحية",
-                description: "شاهد جولة شاملة في أجمل المناطق الطبيعية والأكواخ السياحية المجهزة بأحدث المرافق",
-                url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-                youtubeChannel: "https://www.youtube.com/@YourChannel",
-                buttonText: "شاهد قناة المزرعة على اليوتيوب"
+            tiktok: {
+                title: "استكشف مزرعة ريف عبس على تيك توك",
+                description: "شاهد أحدث الفيديوهات والجولات المصورة في أجمل المناطق الطبيعية",
+                videoUrl: "https://www.tiktok.com/embed/v2/7234567890123456789",
+                channelUrl: "https://www.tiktok.com/@farmreefabs",
+                buttonText: "تابعنا على تيك توك"
             }
         };
 
@@ -1754,28 +1609,28 @@
         let featuresCards = [
             {
                 id: 1,
-                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%234CAF50" width="400" height="300"/><text x="200" y="150" text-anchor="middle" fill="white" font-size="20" font-weight="bold">جبال عسير</text></svg>',
+                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%234CAF50" width="400" height="300"/><polygon fill="%23795548" points="50,200 150,100 250,150 350,80 400,120 400,200"/><circle fill="%23FFD700" cx="320" cy="60" r="30"/><text x="200" y="250" text-anchor="middle" fill="white" font-size="20" font-weight="bold">جبال عسير</text></svg>',
                 title: 'جبال عسير الخلابة',
                 description: 'إطلالات ساحرة على جبال منطقة عسير وطبيعة خلابة على مدار السنة',
                 active: true
             },
             {
                 id: 2,
-                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%232E7D32" width="400" height="300"/><text x="200" y="150" text-anchor="middle" fill="white" font-size="18" font-weight="bold">أكواخ مجهزة</text></svg>',
+                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%232E7D32" width="400" height="300"/><rect fill="%23A1887F" x="120" y="120" width="100" height="80"/><polygon fill="%23D32F2F" points="120,120 170,80 220,120"/><rect fill="%236D4C41" x="165" y="140" width="10" height="60"/><text x="200" y="250" text-anchor="middle" fill="white" font-size="18" font-weight="bold">أكواخ مجهزة</text></svg>',
                 title: 'أكواخ وشاليهات مميزة',
                 description: 'إقامة مريحة في أكواخ مجهزة بالكامل مع مرافق حديثة',
                 active: true
             },
             {
                 id: 3,
-                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%234FC3F7" width="400" height="300"/><text x="200" y="150" text-anchor="middle" fill="white" font-size="18" font-weight="bold">مسابح وساونا</text></svg>',
+                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%234FC3F7" width="400" height="300"/><rect fill="%2387CEEB" x="100" y="120" width="200" height="100" rx="10"/><circle fill="%23FFD700" cx="80" cy="50" r="25"/><text x="200" y="250" text-anchor="middle" fill="white" font-size="18" font-weight="bold">مسابح وساونا</text></svg>',
                 title: 'مسابح وساونا',
                 description: 'مسابح داخلية وخارجية مع ساونا وحمام ساخن للاسترخاء',
                 active: true
             },
             {
                 id: 4,
-                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23388E3C" width="400" height="300"/><text x="200" y="150" text-anchor="middle" fill="white" font-size="16" font-weight="bold">مساحات خضراء</text></svg>',
+                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23388E3C" width="400" height="300"/><circle fill="%23228B22" cx="100" cy="200" r="40"/><circle fill="%23228B22" cx="200" cy="180" r="50"/><circle fill="%23228B22" cx="300" cy="200" r="45"/><text x="200" y="260" text-anchor="middle" fill="white" font-size="16" font-weight="bold">مساحات خضراء</text></svg>',
                 title: 'مسطحات خضراء واسعة',
                 description: 'حدائق ومساحات خضراء للتنزه والاستمتاع بالهواء النقي',
                 active: true
@@ -1785,44 +1640,41 @@
         let galleryItems = [
             {
                 id: 1,
-                url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"><rect fill="%234CAF50" width="800" height="450"/><text x="400" y="225" text-anchor="middle" fill="white" font-size="28" font-weight="bold">مناظر طبيعية خلابة</text></svg>',
+                url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"><rect fill="%234CAF50" width="800" height="450"/><polygon fill="%23795548" points="0,300 200,150 400,200 600,100 800,180 800,300"/><circle fill="%23FFD700" cx="700" cy="80" r="40"/><text x="400" y="380" text-anchor="middle" fill="white" font-size="28" font-weight="bold">مناظر طبيعية خلابة</text></svg>',
                 title: 'مناظر طبيعية خلابة'
             },
             {
                 id: 2,
-                url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"><rect fill="%232E7D32" width="800" height="450"/><text x="400" y="225" text-anchor="middle" fill="white" font-size="28" font-weight="bold">مرافق وخدمات متميزة</text></svg>',
+                url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"><rect fill="%232E7D32" width="800" height="450"/><rect fill="%23A1887F" x="200" y="150" width="120" height="100"/><polygon fill="%23D32F2F" points="200,150 260,100 320,150"/><rect fill="%236D4C41" x="255" y="180" width="10" height="70"/><rect fill="%234FC3F7" x="450" y="200" width="150" height="80" rx="10"/><text x="400" y="380" text-anchor="middle" fill="white" font-size="28" font-weight="bold">مرافق وخدمات متميزة</text></svg>',
                 title: 'مرافق وخدمات متميزة'
             }
         ];
 
-        let userComments = [
+        let commentImages = [
             {
                 id: 1,
-                name: 'محمد العسيري',
-                comment: 'مزرعة ريف عبس مكان رائع للاسترخاء! الأكواخ مريحة والإطلالة على جبال عسير خلابة ⭐⭐⭐⭐⭐',
-                date: '2024-01-15',
-                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 200"><rect fill="%234CAF50" width="350" height="200"/><text x="175" y="100" text-anchor="middle" fill="white" font-size="16" font-weight="bold">صورة محمد العسيري</text></svg>'
+                url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 280"><rect fill="%234CAF50" width="350" height="280"/><text x="175" y="140" text-anchor="middle" fill="white" font-size="18" font-weight="bold">صورة زائر 1</text></svg>',
+                title: 'صورة زائر من المزرعة'
             },
             {
                 id: 2,
-                name: 'فاطمة السعيد',
-                comment: 'تجربة مميزة مع العائلة في المزرعة. المسابح نظيفة والخدمة ممتازة. ننصح بالزيارة بقوة! 👍',
-                date: '2024-01-20',
-                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 200"><rect fill="%232E7D32" width="350" height="200"/><text x="175" y="100" text-anchor="middle" fill="white" font-size="16" font-weight="bold">صورة فاطمة السعيد</text></svg>'
+                url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 280"><rect fill="%232E7D32" width="350" height="280"/><text x="175" y="140" text-anchor="middle" fill="white" font-size="18" font-weight="bold">صورة زائر 2</text></svg>',
+                title: 'صورة زائر من المزرعة'
             },
             {
                 id: 3,
-                name: 'أحمد المالكي',
-                comment: 'إطلالة رائعة على الجبال وهواء منعش. ننصح بالزيارة خاصة في فصل الشتاء. مكان مثالي للعائلات 🏔️❄️',
-                date: '2024-01-25',
-                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 200"><rect fill="%23388E3C" width="350" height="200"/><text x="175" y="100" text-anchor="middle" fill="white" font-size="16" font-weight="bold">صورة أحمد المالكي</text></svg>'
+                url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 280"><rect fill="%23388E3C" width="350" height="280"/><text x="175" y="140" text-anchor="middle" fill="white" font-size="18" font-weight="bold">صورة زائر 3</text></svg>',
+                title: 'صورة زائر من المزرعة'
             },
             {
                 id: 4,
-                name: 'سارة الزهراني',
-                comment: 'مكان هادئ ومريح جداً. الطبيعة رائعة والخدمات ممتازة. سنعود مرة أخرى بإذن الله 🌿',
-                date: '2024-02-01',
-                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 200"><rect fill="%23FF6B6B" width="350" height="200"/><text x="175" y="100" text-anchor="middle" fill="white" font-size="16" font-weight="bold">صورة سارة الزهراني</text></svg>'
+                url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 280"><rect fill="%23FF6B6B" width="350" height="280"/><text x="175" y="140" text-anchor="middle" fill="white" font-size="18" font-weight="bold">صورة زائر 4</text></svg>',
+                title: 'صورة زائر من المزرعة'
+            },
+            {
+                id: 5,
+                url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 280"><rect fill="%234FC3F7" width="350" height="280"/><text x="175" y="140" text-anchor="middle" fill="white" font-size="18" font-weight="bold">صورة زائر 5</text></svg>',
+                title: 'صورة زائر من المزرعة'
             }
         ];
 
@@ -1836,16 +1688,15 @@
 
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('🚀 تحميل الموقع مع نظام النسخ الكامل والتعليقات المتحركة...');
+            console.log('🚀 بسم الله - تحميل الموقع مع النظام المحدث...');
             updateSiteContent();
             loadHeroSlideshow();
             loadFeaturesCards();
             loadGallerySlideshow();
-            loadUserComments();
+            loadCommentImages();
             setupSmoothScrolling();
             startSlideshow();
-            setupCommentForm();
-            setupVideoThumbnail();
+            setupTikTokThumbnail();
             console.log('✅ تم تحميل الموقع بنجاح!');
         });
 
@@ -1855,15 +1706,22 @@
                 // Update text content
                 const elements = [
                     'logoText', 'heroTitle', 'heroSubtitle', 'featuresTitle',
-                    'galleryTitle', 'bookingTitle', 'navHome', 'navVideo', 
-                    'navGallery', 'navBooking', 'navComments', 'videoTitle', 
-                    'videoDescription', 'youtubeBtnText'
+                    'galleryTitle', 'bookingTitle', 'navHome', 'navTiktok', 
+                    'navGallery', 'navBooking', 'navComments', 'tiktokTitle', 
+                    'tiktokDescription', 'tiktokBtnText'
                 ];
 
                 elements.forEach(id => {
                     const element = document.getElementById(id);
-                    if (element && siteData.text[id]) {
-                        element.textContent = siteData.text[id];
+                    if (element && (siteData.text[id] || siteData.tiktok[id.replace('tiktok', '').toLowerCase()])) {
+                        if (id.includes('tiktok')) {
+                            const tiktokKey = id.replace('tiktok', '').toLowerCase();
+                            if (tiktokKey === 'title') element.textContent = siteData.tiktok.title;
+                            else if (tiktokKey === 'description') element.textContent = siteData.tiktok.description;
+                            else if (tiktokKey === 'btntext') element.textContent = siteData.tiktok.buttonText;
+                        } else {
+                            element.textContent = siteData.text[id];
+                        }
                     }
                 });
 
@@ -1883,7 +1741,7 @@
                 
                 document.getElementById('whatsappBtn').href = whatsappUrl;
                 document.getElementById('whatsappBookingBtn').href = bookingUrl;
-                document.getElementById('youtubeBtn').href = siteData.video.youtubeChannel;
+                document.getElementById('tiktokBtn').href = siteData.tiktok.channelUrl;
                 
                 console.log('✅ تم تحديث محتوى الموقع');
             } catch (error) {
@@ -1891,14 +1749,13 @@
             }
         }
 
-        // Setup Video Thumbnail
-        function setupVideoThumbnail() {
-            const thumbnail = document.getElementById('videoThumbnail');
-            if (thumbnail && siteData.video.url) {
-                // Extract video ID from YouTube URL
-                const videoId = siteData.video.url.split('/').pop().split('?')[0];
-                const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
-                thumbnail.style.backgroundImage = `url('${thumbnailUrl}')`;
+        // Setup TikTok Thumbnail
+        function setupTikTokThumbnail() {
+            const thumbnail = document.getElementById('tiktokThumbnail');
+            if (thumbnail && siteData.tiktok.videoUrl) {
+                // Use TikTok default thumbnail style
+                const tiktokThumbnailUrl = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"><defs><linearGradient id="tiktokGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23ff0050;stop-opacity:1" /><stop offset="100%" style="stop-color:%23ff0080;stop-opacity:1" /></linearGradient></defs><rect fill="url(%23tiktokGrad)" width="800" height="450"/><text x="400" y="225" text-anchor="middle" fill="white" font-size="32" font-weight="bold">مزرعة ريف عبس على تيك توك</text></svg>';
+                thumbnail.style.backgroundImage = `url('${tiktokThumbnailUrl}')`;
             }
         }
 
@@ -1973,8 +1830,8 @@
                 <div class="feature-card">
                     <img src="${card.image}" alt="${card.title}" class="feature-image" onerror="this.style.display='none'">
                     <div class="feature-content">
-                        <h3>${card.title}</h3>
-                        <p>${card.description}</p>
+                        <div class="feature-title">${card.title}</div>
+                        <div class="feature-description">${card.description}</div>
                     </div>
                 </div>
             `).join('');
@@ -2033,27 +1890,22 @@
             });
         }
 
-        // Comments Functions - NEW: مع الصور والحركة التلقائية
-        function loadUserComments() {
+        // Comment Images Functions - النظام الجديد مع الصور فقط
+        function loadCommentImages() {
             const slider = document.getElementById('commentsSlider');
             if (!slider) return;
             
-            if (userComments.length === 0) {
-                slider.innerHTML = '<div class="comment-card"><div class="comment-content" style="height: 280px; display: flex; align-items: center; justify-content: center;"><div class="comment-text" style="text-align: center; color: #666;">لا توجد تعليقات بعد. كن أول من يشارك تجربته!</div></div></div>';
+            if (commentImages.length === 0) {
+                slider.innerHTML = '<div class="comment-image-card"><div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666; text-align: center;">لا توجد صور بعد</div></div>';
                 return;
             }
             
-            // تكرار التعليقات لضمان الحركة المستمرة
-            const repeatedComments = [...userComments, ...userComments, ...userComments];
+            // تكرار الصور لضمان الحركة المستمرة
+            const repeatedImages = [...commentImages, ...commentImages, ...commentImages];
             
-            slider.innerHTML = repeatedComments.map(comment => `
-                <div class="comment-card">
-                    <img src="${comment.image}" alt="${comment.name}" class="comment-image" onerror="this.style.display='none'">
-                    <div class="comment-content">
-                        <div class="comment-author">${comment.name}</div>
-                        <div class="comment-text">${comment.comment}</div>
-                        <div class="comment-date">${formatDate(comment.date)}</div>
-                    </div>
+            slider.innerHTML = repeatedImages.map(image => `
+                <div class="comment-image-card">
+                    <img src="${image.url}" alt="${image.title}" class="comment-image" onerror="this.style.display='none'">
                 </div>
             `).join('');
         }
@@ -2073,96 +1925,16 @@
             }
         }
 
-        // Image Upload Functions
-        function handleDragOver(e) {
-            e.preventDefault();
-            e.currentTarget.classList.add('dragover');
-        }
-
-        function handleDrop(e) {
-            e.preventDefault();
-            e.currentTarget.classList.remove('dragover');
-            
-            const files = e.dataTransfer.files;
-            if (files.length > 0) {
-                const file = files[0];
-                if (file.type.startsWith('image/')) {
-                    document.getElementById('commentImage').files = files;
-                    previewImage(document.getElementById('commentImage'));
-                }
-            }
-        }
-
-        function previewImage(input) {
-            const preview = document.getElementById('imagePreview');
-            
-            if (input.files && input.files[0]) {
-                const reader = new FileReader();
-                
-                reader.onload = function(e) {
-                    preview.src = e.target.result;
-                    preview.style.display = 'block';
-                }
-                
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-
-        function setupCommentForm() {
-            const form = document.getElementById('commentForm');
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const name = document.getElementById('commentName').value.trim();
-                const comment = document.getElementById('commentText').value.trim();
-                const imageFile = document.getElementById('commentImage').files[0];
-                
-                if (!name || !comment) {
-                    showNotification('يرجى ملء الاسم والتعليق', 'error');
-                    return;
-                }
-                
-                let imageUrl = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 200"><rect fill="%23E0E0E0" width="350" height="200"/><text x="175" y="100" text-anchor="middle" fill="%23666" font-size="16" font-weight="bold">لا توجد صورة</text></svg>';
-                
-                if (imageFile) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        imageUrl = e.target.result;
-                        addComment();
-                    };
-                    reader.readAsDataURL(imageFile);
-                } else {
-                    addComment();
-                }
-                
-                function addComment() {
-                    const newComment = {
-                        id: Date.now(),
-                        name: name,
-                        comment: comment,
-                        date: new Date().toISOString().split('T')[0],
-                        image: imageUrl
-                    };
-                    
-                    userComments.unshift(newComment);
-                    loadUserComments();
-                    form.reset();
-                    document.getElementById('imagePreview').style.display = 'none';
-                    showNotification('✅ تم إضافة تعليقك بنجاح!', 'success');
-                }
-            });
-        }
-
-        // Video Functions
-        function playVideo() {
-            const thumbnail = document.getElementById('videoThumbnail');
-            const iframe = document.getElementById('videoIframe');
-            const stopBtn = document.getElementById('stopVideoBtn');
-            const wrapper = document.querySelector('.video-wrapper');
+        // TikTok Video Functions
+        function playTikTokVideo() {
+            const thumbnail = document.getElementById('tiktokThumbnail');
+            const iframe = document.getElementById('tiktokIframe');
+            const stopBtn = document.getElementById('stopTikTokBtn');
+            const wrapper = document.querySelector('.tiktok-wrapper');
             
             if (thumbnail && iframe) {
-                const videoUrl = siteData.video.url;
-                iframe.src = videoUrl + "?autoplay=1&rel=0&modestbranding=1&controls=1";
+                const videoUrl = siteData.tiktok.videoUrl;
+                iframe.src = videoUrl + "?autoplay=1";
                 thumbnail.style.display = 'none';
                 iframe.style.display = 'block';
                 stopBtn.style.display = 'block';
@@ -2170,11 +1942,11 @@
             }
         }
 
-        function stopVideo() {
-            const thumbnail = document.getElementById('videoThumbnail');
-            const iframe = document.getElementById('videoIframe');
-            const stopBtn = document.getElementById('stopVideoBtn');
-            const wrapper = document.querySelector('.video-wrapper');
+        function stopTikTokVideo() {
+            const thumbnail = document.getElementById('tiktokThumbnail');
+            const iframe = document.getElementById('tiktokIframe');
+            const stopBtn = document.getElementById('stopTikTokBtn');
+            const wrapper = document.querySelector('.tiktok-wrapper');
             
             if (thumbnail && iframe) {
                 iframe.style.display = 'none';
@@ -2239,6 +2011,7 @@
             if (password === adminPassword) {
                 isAdminLoggedIn = true;
                 openAdminPanel();
+                showNotification('✅ تم تسجيل الدخول بنجاح', 'success');
             } else {
                 showNotification('❌ كلمة المرور غير صحيحة!', 'error');
             }
@@ -2277,23 +2050,13 @@
             }
         }
 
-        // THE MAIN FEATURE - Copy Full Website Code with Updated Comments
+        // THE MAIN FEATURE - Copy Full Website Code
         function copyFullWebsiteCode() {
             try {
-                showNotification('🔄 جاري تحضير الكود الكامل مع التعليقات المحدثة...', 'info');
+                showNotification('🔄 جاري تحضير الكود الكامل مع جميع التحديثات...', 'info');
                 
                 // Get current HTML
                 let fullHTML = document.documentElement.outerHTML;
-                
-                // Update data in the code
-                const updatedData = {
-                    siteData: siteData,
-                    heroImages: heroImages,
-                    featuresCards: featuresCards,
-                    galleryItems: galleryItems,
-                    userComments: userComments,
-                    adminPassword: adminPassword
-                };
                 
                 // Replace the data in the script section
                 const dataScript = `
@@ -2304,7 +2067,7 @@
         let heroImages = ${JSON.stringify(heroImages, null, 8)};
         let featuresCards = ${JSON.stringify(featuresCards, null, 8)};
         let galleryItems = ${JSON.stringify(galleryItems, null, 8)};
-        let userComments = ${JSON.stringify(userComments, null, 8)};
+        let commentImages = ${JSON.stringify(commentImages, null, 8)};
 
         // Admin Data
         let adminPassword = "${adminPassword}";`;
@@ -2328,12 +2091,12 @@
                 );
                 
                 // Add update timestamp comment
-                const updateComment = `\n<!-- آخر تحديث: ${new Date().toLocaleString('ar-SA')} -->\n<!-- تم النسخ من لوحة الإدارة - جميع التعديلات والتعليقات محفوظة -->\n`;
+                const updateComment = `\n<!-- آخر تحديث: ${new Date().toLocaleString('ar-SA')} -->\n<!-- تم النسخ من لوحة الإدارة - النظام المحدث مع تيك توك والصور المتحركة -->\n`;
                 fullHTML = fullHTML.replace('<head>', '<head>' + updateComment);
                 
                 // Copy to clipboard
                 navigator.clipboard.writeText(fullHTML).then(() => {
-                    showNotification('✅ تم نسخ كود الموقع الكامل مع جميع التعديلات! الصق في ملف جديد وارفعه للاستضافة', 'success', 5000);
+                    showNotification('✅ تم نسخ كود الموقع الكامل! الصق في ملف جديد وارفعه للاستضافة', 'success', 5000);
                 }).catch(err => {
                     console.error('Copy failed:', err);
                     // Fallback - create textarea and select
@@ -2371,7 +2134,7 @@
         let heroImages = ${JSON.stringify(heroImages, null, 8)};
         let featuresCards = ${JSON.stringify(featuresCards, null, 8)};
         let galleryItems = ${JSON.stringify(galleryItems, null, 8)};
-        let userComments = ${JSON.stringify(userComments, null, 8)};
+        let commentImages = ${JSON.stringify(commentImages, null, 8)};
 
         // Admin Data
         let adminPassword = "${adminPassword}";`;
@@ -2395,7 +2158,7 @@
                 );
                 
                 // Add update timestamp comment
-                const updateComment = `\n<!-- آخر تحديث: ${new Date().toLocaleString('ar-SA')} -->\n<!-- تم التحميل من لوحة الإدارة - جميع التعديلات محفوظة -->\n`;
+                const updateComment = `\n<!-- آخر تحديث: ${new Date().toLocaleString('ar-SA')} -->\n<!-- تم التحميل من لوحة الإدارة - النظام المحدث -->\n`;
                 updatedHTML = updatedHTML.replace('<head>', '<head>' + updateComment);
                 
                 // Create and download the file
@@ -2448,9 +2211,10 @@
                 'heroTitleInput': siteData.text.heroTitle,
                 'heroSubtitleInput': siteData.text.heroSubtitle,
                 'phoneNumberInput': siteData.info.phone,
-                'videoTitleInput': siteData.video.title,
-                'videoDescInput': siteData.video.description,
-                'videoUrlInput': siteData.video.url
+                'tiktokTitleInput': siteData.tiktok.title,
+                'tiktokDescInput': siteData.tiktok.description,
+                'tiktokUrlInput': siteData.tiktok.videoUrl,
+                'tiktokChannelInput': siteData.tiktok.channelUrl
             };
 
             Object.entries(inputs).forEach(([id, value]) => {
@@ -2496,30 +2260,39 @@
             }
         }
 
-        function updateVideoTitle() {
-            const newTitle = document.getElementById('videoTitleInput').value.trim();
+        function updateTikTokTitle() {
+            const newTitle = document.getElementById('tiktokTitleInput').value.trim();
             if (newTitle) {
-                siteData.video.title = newTitle;
+                siteData.tiktok.title = newTitle;
                 updateSiteContent();
-                showNotification('✅ تم تحديث عنوان الفيديو');
+                showNotification('✅ تم تحديث عنوان تيك توك');
             }
         }
 
-        function updateVideoDescription() {
-            const newDesc = document.getElementById('videoDescInput').value.trim();
+        function updateTikTokDescription() {
+            const newDesc = document.getElementById('tiktokDescInput').value.trim();
             if (newDesc) {
-                siteData.video.description = newDesc;
+                siteData.tiktok.description = newDesc;
                 updateSiteContent();
-                showNotification('✅ تم تحديث وصف الفيديو');
+                showNotification('✅ تم تحديث وصف تيك توك');
             }
         }
 
-        function updateVideoUrl() {
-            const newUrl = document.getElementById('videoUrlInput').value.trim();
+        function updateTikTokUrl() {
+            const newUrl = document.getElementById('tiktokUrlInput').value.trim();
             if (newUrl) {
-                siteData.video.url = newUrl;
-                setupVideoThumbnail();
-                showNotification('✅ تم تحديث رابط الفيديو');
+                siteData.tiktok.videoUrl = newUrl;
+                setupTikTokThumbnail();
+                showNotification('✅ تم تحديث رابط فيديو تيك توك');
+            }
+        }
+
+        function updateTikTokChannel() {
+            const newChannel = document.getElementById('tiktokChannelInput').value.trim();
+            if (newChannel) {
+                siteData.tiktok.channelUrl = newChannel;
+                updateSiteContent();
+                showNotification('✅ تم تحديث رابط قناة تيك توك');
             }
         }
 
@@ -2730,65 +2503,83 @@
             }
         }
 
-        // Comments Management Functions
+        // Comment Images Management Functions
         function loadAdminComments() {
             const container = document.getElementById('adminCommentsContainer');
             if (!container) return;
             
-            container.innerHTML = userComments.map(comment => `
+            container.innerHTML = commentImages.map(image => `
                 <div class="admin-comment-item">
-                    <img src="${comment.image}" alt="${comment.name}" class="admin-comment-image">
+                    <img src="${image.url}" alt="${image.title}" class="admin-comment-image">
                     <div class="admin-comment-content">
-                        <strong>${comment.name}</strong> - ${formatDate(comment.date)}<br>
-                        <span style="color: #666;">${comment.comment}</span>
+                        <strong>${image.title}</strong><br>
+                        <span style="color: #666;">صورة زائر من المزرعة</span>
                     </div>
                     <div class="admin-comment-actions">
-                        <button onclick="editComment(${comment.id})" style="background: var(--info-color); color: white;">تعديل</button>
-                        <button onclick="deleteComment(${comment.id})" style="background: var(--danger-color); color: white;">حذف</button>
+                        <button onclick="editCommentImage(${image.id})" style="background: var(--info-color); color: white;">تعديل</button>
+                        <button onclick="deleteCommentImage(${image.id})" style="background: var(--danger-color); color: white;">حذف</button>
                     </div>
                 </div>
             `).join('');
         }
 
-        function editComment(id) {
-            const comment = userComments.find(c => c.id === id);
-            if (!comment) return;
+        function addCommentImage() {
+            const imageUrl = prompt('رابط صورة الزائر:');
+            if (!imageUrl) return;
             
-            const newName = prompt('اسم جديد:', comment.name);
-            if (newName === null) return;
+            const title = prompt('عنوان الصورة:') || 'صورة زائر جديدة';
             
-            const newText = prompt('تعليق جديد:', comment.comment);
-            if (newText === null) return;
+            const newImage = {
+                id: Date.now(),
+                url: imageUrl,
+                title: title
+            };
             
-            comment.name = newName;
-            comment.comment = newText;
-            
-            loadUserComments();
+            commentImages.push(newImage);
+            loadCommentImages();
             loadAdminComments();
-            showNotification('✅ تم تحديث التعليق');
+            showNotification('✅ تم إضافة صورة الزائر');
         }
 
-        function deleteComment(id) {
-            if (confirm('هل أنت متأكد من حذف هذا التعليق؟')) {
-                userComments = userComments.filter(c => c.id !== id);
-                loadUserComments();
+        function editCommentImage(id) {
+            const image = commentImages.find(img => img.id === id);
+            if (!image) return;
+            
+            const newTitle = prompt('عنوان جديد:', image.title);
+            if (newTitle === null) return;
+            
+            const newUrl = prompt('رابط جديد:', image.url);
+            if (newUrl === null) return;
+            
+            image.title = newTitle;
+            image.url = newUrl;
+            
+            loadCommentImages();
+            loadAdminComments();
+            showNotification('✅ تم تحديث صورة الزائر');
+        }
+
+        function deleteCommentImage(id) {
+            if (confirm('هل أنت متأكد من حذف هذه الصورة؟')) {
+                commentImages = commentImages.filter(img => img.id !== id);
+                loadCommentImages();
                 loadAdminComments();
-                showNotification('✅ تم حذف التعليق');
+                showNotification('✅ تم حذف صورة الزائر');
             }
         }
 
         function clearAllComments() {
-            if (confirm('هل أنت متأكد من حذف جميع التعليقات؟ هذا الإجراء لا يمكن التراجع عنه!')) {
-                userComments = [];
-                loadUserComments();
+            if (confirm('هل أنت متأكد من حذف جميع صور الزوار؟ هذا الإجراء لا يمكن التراجع عنه!')) {
+                commentImages = [];
+                loadCommentImages();
                 loadAdminComments();
-                showNotification('✅ تم حذف جميع التعليقات');
+                showNotification('✅ تم حذف جميع صور الزوار');
             }
         }
 
         function toggleCommentsAnimation() {
             toggleAnimation();
-            showNotification('✅ تم تغيير حالة حركة التعليقات');
+            showNotification('✅ تم تغيير حالة حركة الصور');
         }
 
         // Window click handler for modal
@@ -2818,3 +2609,7 @@
         console.log('   Alt + A: فتح لوحة الإدارة');
         console.log('   Escape: إغلاق لوحة الإدارة');
         console.log('🔐 كلمة مرور الإدارة الافتراضية: admin123');
+        console.log('🎵 تم تحديث الموقع: تيك توك + صور الزوار المتحركة + نظام النسخ الكامل');
+    </script>
+</body>
+</html>
