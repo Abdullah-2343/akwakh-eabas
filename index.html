@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مزرعة ريف عبس السياحية - تجربة استثنائية في أحضان الطبيعة</title>
     
-    <!-- منع التخزين المؤقت -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    
     <!-- SEO Meta Tags -->
     <meta name="description" content="مزرعة ريف عبس السياحية - وجهتك المثلى للاسترخاء في منطقة عسير مع أكواخ مجهزة ومرافق حديثة">
     <meta name="keywords" content="مزرعة سياحية, عسير, أكواخ, استراحة, سياحة داخلية, طبيعة">
@@ -614,10 +609,11 @@
             background: var(--primary-color);
         }
 
-        /* Comments Section */
+        /* Comments Section - تعديل جديد مع الصور المتحركة */
         .comments-section {
             padding: 4rem 0;
             background: var(--background-color);
+            overflow: hidden;
         }
 
         .comment-form-container {
@@ -664,6 +660,38 @@
             box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
         }
 
+        .form-group.image-upload {
+            position: relative;
+        }
+
+        .image-upload-area {
+            border: 2px dashed var(--border-color);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            background: var(--light-bg);
+        }
+
+        .image-upload-area:hover {
+            border-color: var(--primary-color);
+            background: rgba(76, 175, 80, 0.05);
+        }
+
+        .image-upload-area.dragover {
+            border-color: var(--primary-color);
+            background: rgba(76, 175, 80, 0.1);
+        }
+
+        .image-preview {
+            max-width: 200px;
+            max-height: 150px;
+            margin: 10px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
         .submit-btn {
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             color: white;
@@ -682,32 +710,49 @@
             box-shadow: 0 10px 25px rgba(76, 175, 80, 0.3);
         }
 
-        /* Comments Display */
-        .comments-container {
+        /* Comments Display - تصميم جديد مع الحركة التلقائية */
+        .comments-display {
             position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
             overflow: hidden;
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 320px;
         }
 
-        .comments-wrapper {
+        .comments-slider {
             display: flex;
-            transition: transform 0.5s ease;
+            animation: slideComments 30s linear infinite;
             gap: 2rem;
+            height: 100%;
         }
 
-        .comment-item {
+        .comments-slider:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes slideComments {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .comment-card {
             min-width: 350px;
+            max-width: 350px;
             background: var(--background-color);
             border-radius: var(--border-radius);
-            padding: 1.5rem;
             box-shadow: var(--shadow);
             border: 1px solid var(--border-color);
             position: relative;
-            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: var(--transition);
+            height: 280px;
         }
 
-        .comment-item::before {
+        .comment-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -715,7 +760,26 @@
             width: 100%;
             height: 4px;
             background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+        }
+
+        .comment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .comment-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
             border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        .comment-content {
+            padding: 1.5rem;
+            height: 130px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .comment-author {
@@ -727,8 +791,13 @@
 
         .comment-text {
             color: var(--text-color);
-            line-height: 1.6;
-            margin-bottom: 1rem;
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
+            flex: 1;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
         }
 
         .comment-date {
@@ -737,34 +806,25 @@
             text-align: left;
         }
 
-        .comments-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(46, 125, 50, 0.8);
+        .comments-control {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .pause-btn {
+            background: var(--info-color);
             color: white;
             border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            padding: 10px 25px;
+            border-radius: 25px;
             cursor: pointer;
-            font-size: 20px;
-            font-weight: bold;
+            font-weight: 600;
             transition: var(--transition);
-            z-index: 10;
         }
 
-        .comments-nav:hover {
-            background: rgba(46, 125, 50, 1);
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .comments-nav.prev {
-            right: -25px;
-        }
-
-        .comments-nav.next {
-            left: -25px;
+        .pause-btn:hover {
+            background: #138496;
+            transform: translateY(-2px);
         }
 
         /* WhatsApp Booking Section */
@@ -928,8 +988,8 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        .export-btn {
-            background: var(--success-color);
+        .copy-code-btn {
+            background: linear-gradient(45deg, var(--info-color), #138496);
             color: white;
             padding: 20px 40px;
             font-size: 1.2rem;
@@ -938,10 +998,10 @@
             gap: 15px;
         }
 
-        .export-btn:hover {
-            background: #218838;
+        .copy-code-btn:hover {
+            background: linear-gradient(45deg, #138496, #117a8b);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 15px 30px rgba(40, 167, 69, 0.4);
+            box-shadow: 0 15px 30px rgba(23, 162, 184, 0.4);
         }
 
         .admin-tabs {
@@ -1063,6 +1123,44 @@
         .editor-field button:hover {
             background: #218838;
             transform: translateY(-1px);
+        }
+
+        .admin-comment-item {
+            background: var(--light-bg);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .admin-comment-image {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .admin-comment-content {
+            flex: 1;
+        }
+
+        .admin-comment-actions {
+            display: flex;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .admin-comment-actions button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: var(--transition);
         }
 
         /* Footer */
@@ -1210,12 +1308,22 @@
                 height: 250px;
             }
 
-            .comment-item {
+            .comment-card {
                 min-width: 280px;
+                max-width: 280px;
             }
 
-            .comments-nav {
-                display: none;
+            .comments-display {
+                height: 280px;
+            }
+
+            @keyframes slideComments {
+                0% {
+                    transform: translateX(100%);
+                }
+                100% {
+                    transform: translateX(-120%);
+                }
             }
         }
 
@@ -1371,15 +1479,15 @@
         </div>
     </section>
 
-    <!-- Comments Section -->
+    <!-- Comments Section - تصميم جديد مع الصور المتحركة -->
     <section id="comments" class="comments-section">
         <div class="container">
-            <h2>آراء وتعليقات الزوار</h2>
+            <h2>آراء وتعليقات الزوار 📸</h2>
             
             <!-- Comment Form -->
             <div class="comment-form-container">
                 <div class="comment-form">
-                    <h3>شاركنا رأيك 💬</h3>
+                    <h3>شاركنا رأيك مع صورة 💬📷</h3>
                     <form id="commentForm">
                         <div class="form-group">
                             <label for="commentName">الاسم *</label>
@@ -1387,20 +1495,31 @@
                         </div>
                         <div class="form-group">
                             <label for="commentText">التعليق *</label>
-                            <textarea id="commentText" name="comment" required rows="4" placeholder="شاركنا تجربتك في مزرعة ريف عبس..."></textarea>
+                            <textarea id="commentText" name="comment" required rows="3" placeholder="شاركنا تجربتك في مزرعة ريف عبس..."></textarea>
+                        </div>
+                        <div class="form-group image-upload">
+                            <label>إضافة صورة (اختياري) 📷</label>
+                            <div class="image-upload-area" onclick="document.getElementById('commentImage').click()" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
+                                <p>👆 اضغط هنا لرفع صورة أو اسحب الصورة هنا</p>
+                                <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">JPG, PNG - حد أقصى 2MB</p>
+                                <img id="imagePreview" class="image-preview" style="display: none;">
+                            </div>
+                            <input type="file" id="commentImage" accept="image/*" style="display: none;" onchange="previewImage(this)">
                         </div>
                         <button type="submit" class="submit-btn">إرسال التعليق</button>
                     </form>
                 </div>
             </div>
 
-            <!-- Comments Display -->
-            <div class="comments-container">
-                <div class="comments-wrapper" id="commentsWrapper">
+            <!-- Comments Display - عرض متحرك جديد -->
+            <div class="comments-display">
+                <div class="comments-slider" id="commentsSlider">
                     <!-- Comments will be populated by JavaScript -->
                 </div>
-                <button class="comments-nav prev" onclick="prevComments()" id="commentsPrev">‹</button>
-                <button class="comments-nav next" onclick="nextComments()" id="commentsNext">›</button>
+            </div>
+            
+            <div class="comments-control">
+                <button class="pause-btn" id="pauseBtn" onclick="toggleAnimation()">⏸️ إيقاف الحركة</button>
             </div>
         </div>
     </section>
@@ -1443,16 +1562,19 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close" onclick="closeAdminPanel()">&times;</span>
-                <h2>🔐 لوحة إدارة المزرعة - نظام التصدير</h2>
+                <h2>🔐 لوحة إدارة المزرعة - نظام النسخ الكامل</h2>
             </div>
             
             <div class="modal-body">
                 <div class="admin-status">
-                    <p style="margin: 0 0 1rem 0; color: var(--secondary-color); font-weight: 600; font-size: 1.1rem;">✅ نظام التصدير جاهز - عدل واحفظ الملف</p>
+                    <p style="margin: 0 0 1rem 0; color: var(--secondary-color); font-weight: 600; font-size: 1.1rem;">✅ نظام النسخ الكامل جاهز - عدل واحفظ الموقع</p>
                     <div class="admin-buttons">
-                        <button onclick="exportUpdatedWebsite()" class="admin-action-btn export-btn">
-                            <span>📥</span>
-                            <span>تصدير الموقع المحدث</span>
+                        <button onclick="copyFullWebsiteCode()" class="admin-action-btn copy-code-btn">
+                            <span>📋</span>
+                            <span>نسخ كود الموقع الكامل</span>
+                        </button>
+                        <button onclick="downloadUpdatedWebsite()" class="admin-action-btn" style="background: var(--success-color); color: white; padding: 20px 40px; font-size: 1.2rem;">
+                            📥 تحميل الموقع المحدث
                         </button>
                         <button onclick="changeAdminPassword()" class="admin-action-btn" style="background: var(--accent-color); color: white;">
                             🔑 تغيير كلمة المرور
@@ -1558,9 +1680,10 @@
                 <!-- Comments Tab -->
                 <div id="commentsTab" class="admin-tab-content">
                     <div class="admin-section">
-                        <h3>💬 إدارة التعليقات</h3>
+                        <h3>💬 إدارة التعليقات مع الصور</h3>
                         <div style="margin-bottom: 2rem;">
                             <button class="admin-action-btn" style="background: var(--danger-color); color: white;" onclick="clearAllComments()">🗑️ مسح جميع التعليقات</button>
+                            <button class="admin-action-btn" style="background: var(--warning-color); color: white;" onclick="toggleCommentsAnimation()">⏸️ إيقاف/تشغيل الحركة</button>
                         </div>
                         
                         <div id="adminCommentsContainer">
@@ -1573,7 +1696,7 @@
     </div>
 
     <script>
-        // Global Website Data
+        // Global Website Data - Updated by Admin Panel
         let siteData = {
             info: {
                 name: "مزرعة ريف عبس السياحية",
@@ -1609,7 +1732,7 @@
             }
         };
 
-        // Data Arrays
+        // Data Arrays - Updated by Admin Panel
         let heroImages = [
             {
                 id: 1,
@@ -1677,19 +1800,29 @@
                 id: 1,
                 name: 'محمد العسيري',
                 comment: 'مزرعة ريف عبس مكان رائع للاسترخاء! الأكواخ مريحة والإطلالة على جبال عسير خلابة ⭐⭐⭐⭐⭐',
-                date: '2024-01-15'
+                date: '2024-01-15',
+                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 200"><rect fill="%234CAF50" width="350" height="200"/><text x="175" y="100" text-anchor="middle" fill="white" font-size="16" font-weight="bold">صورة محمد العسيري</text></svg>'
             },
             {
                 id: 2,
                 name: 'فاطمة السعيد',
                 comment: 'تجربة مميزة مع العائلة في المزرعة. المسابح نظيفة والخدمة ممتازة. ننصح بالزيارة بقوة! 👍',
-                date: '2024-01-20'
+                date: '2024-01-20',
+                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 200"><rect fill="%232E7D32" width="350" height="200"/><text x="175" y="100" text-anchor="middle" fill="white" font-size="16" font-weight="bold">صورة فاطمة السعيد</text></svg>'
             },
             {
                 id: 3,
                 name: 'أحمد المالكي',
                 comment: 'إطلالة رائعة على الجبال وهواء منعش. ننصح بالزيارة خاصة في فصل الشتاء. مكان مثالي للعائلات 🏔️❄️',
-                date: '2024-01-25'
+                date: '2024-01-25',
+                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 200"><rect fill="%23388E3C" width="350" height="200"/><text x="175" y="100" text-anchor="middle" fill="white" font-size="16" font-weight="bold">صورة أحمد المالكي</text></svg>'
+            },
+            {
+                id: 4,
+                name: 'سارة الزهراني',
+                comment: 'مكان هادئ ومريح جداً. الطبيعة رائعة والخدمات ممتازة. سنعود مرة أخرى بإذن الله 🌿',
+                date: '2024-02-01',
+                image: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 200"><rect fill="%23FF6B6B" width="350" height="200"/><text x="175" y="100" text-anchor="middle" fill="white" font-size="16" font-weight="bold">صورة سارة الزهراني</text></svg>'
             }
         ];
 
@@ -1698,12 +1831,12 @@
         let isAdminLoggedIn = false;
         let currentSlide = 0;
         let currentGallerySlide = 0;
-        let currentCommentsSlide = 0;
         let slideInterval;
+        let commentsAnimationPaused = false;
 
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('🚀 تحميل الموقع مع نظام التصدير...');
+            console.log('🚀 تحميل الموقع مع نظام النسخ الكامل والتعليقات المتحركة...');
             updateSiteContent();
             loadHeroSlideshow();
             loadFeaturesCards();
@@ -1712,6 +1845,7 @@
             setupSmoothScrolling();
             startSlideshow();
             setupCommentForm();
+            setupVideoThumbnail();
             console.log('✅ تم تحميل الموقع بنجاح!');
         });
 
@@ -1754,6 +1888,17 @@
                 console.log('✅ تم تحديث محتوى الموقع');
             } catch (error) {
                 console.error('❌ خطأ في تحديث المحتوى:', error);
+            }
+        }
+
+        // Setup Video Thumbnail
+        function setupVideoThumbnail() {
+            const thumbnail = document.getElementById('videoThumbnail');
+            if (thumbnail && siteData.video.url) {
+                // Extract video ID from YouTube URL
+                const videoId = siteData.video.url.split('/').pop().split('?')[0];
+                const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+                thumbnail.style.backgroundImage = `url('${thumbnailUrl}')`;
             }
         }
 
@@ -1888,47 +2033,79 @@
             });
         }
 
-        // Comments Functions
+        // Comments Functions - NEW: مع الصور والحركة التلقائية
         function loadUserComments() {
-            const wrapper = document.getElementById('commentsWrapper');
-            if (!wrapper) return;
+            const slider = document.getElementById('commentsSlider');
+            if (!slider) return;
             
             if (userComments.length === 0) {
-                wrapper.innerHTML = '<div class="comment-item"><div class="comment-text" style="text-align: center; color: #666;">لا توجد تعليقات بعد. كن أول من يشارك تجربته!</div></div>';
-                document.getElementById('commentsPrev').style.display = 'none';
-                document.getElementById('commentsNext').style.display = 'none';
+                slider.innerHTML = '<div class="comment-card"><div class="comment-content" style="height: 280px; display: flex; align-items: center; justify-content: center;"><div class="comment-text" style="text-align: center; color: #666;">لا توجد تعليقات بعد. كن أول من يشارك تجربته!</div></div></div>';
                 return;
             }
             
-            wrapper.innerHTML = userComments.map(comment => `
-                <div class="comment-item">
-                    <div class="comment-author">${comment.name}</div>
-                    <div class="comment-text">${comment.comment}</div>
-                    <div class="comment-date">${formatDate(comment.date)}</div>
+            // تكرار التعليقات لضمان الحركة المستمرة
+            const repeatedComments = [...userComments, ...userComments, ...userComments];
+            
+            slider.innerHTML = repeatedComments.map(comment => `
+                <div class="comment-card">
+                    <img src="${comment.image}" alt="${comment.name}" class="comment-image" onerror="this.style.display='none'">
+                    <div class="comment-content">
+                        <div class="comment-author">${comment.name}</div>
+                        <div class="comment-text">${comment.comment}</div>
+                        <div class="comment-date">${formatDate(comment.date)}</div>
+                    </div>
                 </div>
             `).join('');
-            
-            // Show/hide navigation buttons
-            const showNav = userComments.length > 3;
-            document.getElementById('commentsPrev').style.display = showNav ? 'block' : 'none';
-            document.getElementById('commentsNext').style.display = showNav ? 'block' : 'none';
         }
 
-        function nextComments() {
-            const wrapper = document.getElementById('commentsWrapper');
-            const itemWidth = 350 + 32; // comment width + gap
-            const maxSlide = Math.max(0, userComments.length - 3);
+        function toggleAnimation() {
+            const slider = document.getElementById('commentsSlider');
+            const btn = document.getElementById('pauseBtn');
             
-            currentCommentsSlide = Math.min(currentCommentsSlide + 1, maxSlide);
-            wrapper.style.transform = `translateX(-${currentCommentsSlide * itemWidth}px)`;
+            if (commentsAnimationPaused) {
+                slider.style.animationPlayState = 'running';
+                btn.innerHTML = '⏸️ إيقاف الحركة';
+                commentsAnimationPaused = false;
+            } else {
+                slider.style.animationPlayState = 'paused';
+                btn.innerHTML = '▶️ تشغيل الحركة';
+                commentsAnimationPaused = true;
+            }
         }
 
-        function prevComments() {
-            const wrapper = document.getElementById('commentsWrapper');
-            const itemWidth = 350 + 32; // comment width + gap
+        // Image Upload Functions
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.currentTarget.classList.add('dragover');
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            e.currentTarget.classList.remove('dragover');
             
-            currentCommentsSlide = Math.max(currentCommentsSlide - 1, 0);
-            wrapper.style.transform = `translateX(-${currentCommentsSlide * itemWidth}px)`;
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                const file = files[0];
+                if (file.type.startsWith('image/')) {
+                    document.getElementById('commentImage').files = files;
+                    previewImage(document.getElementById('commentImage'));
+                }
+            }
+        }
+
+        function previewImage(input) {
+            const preview = document.getElementById('imagePreview');
+            
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+                
+                reader.readAsDataURL(input.files[0]);
+            }
         }
 
         function setupCommentForm() {
@@ -1938,23 +2115,41 @@
                 
                 const name = document.getElementById('commentName').value.trim();
                 const comment = document.getElementById('commentText').value.trim();
+                const imageFile = document.getElementById('commentImage').files[0];
                 
                 if (!name || !comment) {
-                    showNotification('يرجى ملء جميع الحقول', 'error');
+                    showNotification('يرجى ملء الاسم والتعليق', 'error');
                     return;
                 }
                 
-                const newComment = {
-                    id: Date.now(),
-                    name: name,
-                    comment: comment,
-                    date: new Date().toISOString().split('T')[0]
-                };
+                let imageUrl = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 200"><rect fill="%23E0E0E0" width="350" height="200"/><text x="175" y="100" text-anchor="middle" fill="%23666" font-size="16" font-weight="bold">لا توجد صورة</text></svg>';
                 
-                userComments.unshift(newComment);
-                loadUserComments();
-                form.reset();
-                showNotification('✅ تم إضافة تعليقك بنجاح!', 'success');
+                if (imageFile) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        imageUrl = e.target.result;
+                        addComment();
+                    };
+                    reader.readAsDataURL(imageFile);
+                } else {
+                    addComment();
+                }
+                
+                function addComment() {
+                    const newComment = {
+                        id: Date.now(),
+                        name: name,
+                        comment: comment,
+                        date: new Date().toISOString().split('T')[0],
+                        image: imageUrl
+                    };
+                    
+                    userComments.unshift(newComment);
+                    loadUserComments();
+                    form.reset();
+                    document.getElementById('imagePreview').style.display = 'none';
+                    showNotification('✅ تم إضافة تعليقك بنجاح!', 'success');
+                }
             });
         }
 
@@ -2082,15 +2277,15 @@
             }
         }
 
-        // Export Function - THE MAIN FEATURE
-        function exportUpdatedWebsite() {
-            showNotification('🔄 جاري تحضير الملف المحدث...', 'info');
-            
+        // THE MAIN FEATURE - Copy Full Website Code with Updated Comments
+        function copyFullWebsiteCode() {
             try {
-                // Create updated HTML content
-                let updatedHTML = document.documentElement.outerHTML;
+                showNotification('🔄 جاري تحضير الكود الكامل مع التعليقات المحدثة...', 'info');
                 
-                // Update data in the exported file
+                // Get current HTML
+                let fullHTML = document.documentElement.outerHTML;
+                
+                // Update data in the code
                 const updatedData = {
                     siteData: siteData,
                     heroImages: heroImages,
@@ -2099,6 +2294,73 @@
                     userComments: userComments,
                     adminPassword: adminPassword
                 };
+                
+                // Replace the data in the script section
+                const dataScript = `
+        // Global Website Data - Updated ${new Date().toLocaleString('ar-SA')}
+        let siteData = ${JSON.stringify(siteData, null, 8)};
+
+        // Data Arrays - Updated ${new Date().toLocaleString('ar-SA')}
+        let heroImages = ${JSON.stringify(heroImages, null, 8)};
+        let featuresCards = ${JSON.stringify(featuresCards, null, 8)};
+        let galleryItems = ${JSON.stringify(galleryItems, null, 8)};
+        let userComments = ${JSON.stringify(userComments, null, 8)};
+
+        // Admin Data
+        let adminPassword = "${adminPassword}";`;
+                
+                // Replace the old data with new data
+                fullHTML = fullHTML.replace(
+                    /\/\/ Global Website Data[\s\S]*?let adminPassword = "[^"]*";/,
+                    dataScript
+                );
+                
+                // Ensure admin modal is closed in the copied code
+                fullHTML = fullHTML.replace(
+                    'display: block',
+                    'display: none'
+                );
+                
+                // Reset admin login state
+                fullHTML = fullHTML.replace(
+                    'let isAdminLoggedIn = true;',
+                    'let isAdminLoggedIn = false;'
+                );
+                
+                // Add update timestamp comment
+                const updateComment = `\n<!-- آخر تحديث: ${new Date().toLocaleString('ar-SA')} -->\n<!-- تم النسخ من لوحة الإدارة - جميع التعديلات والتعليقات محفوظة -->\n`;
+                fullHTML = fullHTML.replace('<head>', '<head>' + updateComment);
+                
+                // Copy to clipboard
+                navigator.clipboard.writeText(fullHTML).then(() => {
+                    showNotification('✅ تم نسخ كود الموقع الكامل مع جميع التعديلات! الصق في ملف جديد وارفعه للاستضافة', 'success', 5000);
+                }).catch(err => {
+                    console.error('Copy failed:', err);
+                    // Fallback - create textarea and select
+                    const textarea = document.createElement('textarea');
+                    textarea.value = fullHTML;
+                    textarea.style.position = 'fixed';
+                    textarea.style.opacity = '0';
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                    showNotification('✅ تم نسخ كود الموقع الكامل!', 'success', 5000);
+                });
+                
+            } catch (error) {
+                console.error('Copy error:', error);
+                showNotification('❌ حدث خطأ في النسخ', 'error');
+            }
+        }
+
+        // Download Function as Backup
+        function downloadUpdatedWebsite() {
+            showNotification('🔄 جاري تحضير الملف المحدث...', 'info');
+            
+            try {
+                // Create updated HTML content
+                let updatedHTML = document.documentElement.outerHTML;
                 
                 // Replace the data in the script section
                 const dataScript = `
@@ -2133,7 +2395,7 @@
                 );
                 
                 // Add update timestamp comment
-                const updateComment = `\n<!-- آخر تحديث: ${new Date().toLocaleString('ar-SA')} -->\n<!-- تم التصدير من لوحة الإدارة - جميع التعديلات محفوظة -->\n`;
+                const updateComment = `\n<!-- آخر تحديث: ${new Date().toLocaleString('ar-SA')} -->\n<!-- تم التحميل من لوحة الإدارة - جميع التعديلات محفوظة -->\n`;
                 updatedHTML = updatedHTML.replace('<head>', '<head>' + updateComment);
                 
                 // Create and download the file
@@ -2148,11 +2410,11 @@
                 document.body.removeChild(a);
                 URL.revokeObjectURL(url);
                 
-                showNotification('✅ تم تصدير الموقع المحدث بنجاح! ارفعه للاستضافة', 'success', 5000);
+                showNotification('✅ تم تحميل الموقع المحدث بنجاح! ارفعه للاستضافة', 'success', 5000);
                 
             } catch (error) {
-                console.error('Export error:', error);
-                showNotification('❌ حدث خطأ في التصدير', 'error');
+                console.error('Download error:', error);
+                showNotification('❌ حدث خطأ في التحميل', 'error');
             }
         }
 
@@ -2238,4 +2500,321 @@
             const newTitle = document.getElementById('videoTitleInput').value.trim();
             if (newTitle) {
                 siteData.video.title = newTitle;
-                updateSite
+                updateSiteContent();
+                showNotification('✅ تم تحديث عنوان الفيديو');
+            }
+        }
+
+        function updateVideoDescription() {
+            const newDesc = document.getElementById('videoDescInput').value.trim();
+            if (newDesc) {
+                siteData.video.description = newDesc;
+                updateSiteContent();
+                showNotification('✅ تم تحديث وصف الفيديو');
+            }
+        }
+
+        function updateVideoUrl() {
+            const newUrl = document.getElementById('videoUrlInput').value.trim();
+            if (newUrl) {
+                siteData.video.url = newUrl;
+                setupVideoThumbnail();
+                showNotification('✅ تم تحديث رابط الفيديو');
+            }
+        }
+
+        // Features Management Functions
+        function loadAdminFeatures() {
+            const container = document.getElementById('featuresContainer');
+            if (!container) return;
+            
+            container.innerHTML = featuresCards.map((feature, index) => `
+                <div class="admin-section">
+                    <h4>🎯 الميزة ${index + 1}</h4>
+                    <div class="text-editor">
+                        <div class="editor-field">
+                            <label>العنوان:</label>
+                            <input type="text" value="${feature.title}" onchange="updateFeatureTitle(${feature.id}, this.value)">
+                        </div>
+                        <div class="editor-field">
+                            <label>الوصف:</label>
+                            <textarea onchange="updateFeatureDescription(${feature.id}, this.value)">${feature.description}</textarea>
+                        </div>
+                        <div class="editor-field">
+                            <label>رابط الصورة:</label>
+                            <input type="text" value="${feature.image}" onchange="updateFeatureImage(${feature.id}, this.value)">
+                        </div>
+                        <div class="editor-field">
+                            <label>الحالة:</label>
+                            <select onchange="toggleFeature(${feature.id}, this.value)">
+                                <option value="true" ${feature.active ? 'selected' : ''}>مفعل</option>
+                                <option value="false" ${!feature.active ? 'selected' : ''}>غير مفعل</option>
+                            </select>
+                            <button onclick="deleteFeature(${feature.id})" style="background: var(--danger-color); margin-top: 10px;">حذف الميزة</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function addNewFeature() {
+            const title = prompt('عنوان الميزة الجديدة:');
+            if (!title) return;
+            
+            const description = prompt('وصف الميزة:');
+            if (!description) return;
+            
+            const imageUrl = prompt('رابط الصورة (اتركه فارغاً للصورة الافتراضية):') || 
+                'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%234CAF50" width="400" height="300"/><text x="200" y="150" text-anchor="middle" fill="white" font-size="16" font-weight="bold">ميزة جديدة</text></svg>';
+            
+            const newFeature = {
+                id: Date.now(),
+                title: title,
+                description: description,
+                image: imageUrl,
+                active: true
+            };
+            
+            featuresCards.push(newFeature);
+            loadFeaturesCards();
+            loadAdminFeatures();
+            showNotification('✅ تم إضافة الميزة الجديدة');
+        }
+
+        function updateFeatureTitle(id, newTitle) {
+            const feature = featuresCards.find(f => f.id === id);
+            if (feature) {
+                feature.title = newTitle;
+                loadFeaturesCards();
+                showNotification('✅ تم تحديث عنوان الميزة');
+            }
+        }
+
+        function updateFeatureDescription(id, newDescription) {
+            const feature = featuresCards.find(f => f.id === id);
+            if (feature) {
+                feature.description = newDescription;
+                loadFeaturesCards();
+                showNotification('✅ تم تحديث وصف الميزة');
+            }
+        }
+
+        function updateFeatureImage(id, newImage) {
+            const feature = featuresCards.find(f => f.id === id);
+            if (feature) {
+                feature.image = newImage;
+                loadFeaturesCards();
+                showNotification('✅ تم تحديث صورة الميزة');
+            }
+        }
+
+        function toggleFeature(id, active) {
+            const feature = featuresCards.find(f => f.id === id);
+            if (feature) {
+                feature.active = active === 'true';
+                loadFeaturesCards();
+                showNotification(`✅ تم ${feature.active ? 'تفعيل' : 'إلغاء'} الميزة`);
+            }
+        }
+
+        function deleteFeature(id) {
+            if (confirm('هل أنت متأكد من حذف هذه الميزة؟')) {
+                featuresCards = featuresCards.filter(f => f.id !== id);
+                loadFeaturesCards();
+                loadAdminFeatures();
+                showNotification('✅ تم حذف الميزة');
+            }
+        }
+
+        // Media Management Functions
+        function loadAdminMedia() {
+            loadHeroImagesAdmin();
+            loadGalleryImagesAdmin();
+        }
+
+        function loadHeroImagesAdmin() {
+            const container = document.getElementById('heroImagesContainer');
+            if (!container) return;
+            
+            container.innerHTML = heroImages.map(image => `
+                <div style="border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem;">
+                    <img src="${image.url}" alt="${image.title}" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;">
+                    <input type="text" value="${image.title}" onchange="updateHeroImageTitle(${image.id}, this.value)" style="width: 100%; margin-bottom: 10px;" placeholder="عنوان الصورة">
+                    <button onclick="deleteHeroImage(${image.id})" style="background: var(--danger-color); color: white; border: none; padding: 5px 10px; border-radius: 5px; width: 100%;">حذف</button>
+                </div>
+            `).join('');
+        }
+
+        function loadGalleryImagesAdmin() {
+            const container = document.getElementById('galleryImagesContainer');
+            if (!container) return;
+            
+            container.innerHTML = galleryItems.map(image => `
+                <div style="border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem;">
+                    <img src="${image.url}" alt="${image.title}" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;">
+                    <input type="text" value="${image.title}" onchange="updateGalleryImageTitle(${image.id}, this.value)" style="width: 100%; margin-bottom: 10px;" placeholder="عنوان الصورة">
+                    <button onclick="deleteGalleryImage(${image.id})" style="background: var(--danger-color); color: white; border: none; padding: 5px 10px; border-radius: 5px; width: 100%;">حذف</button>
+                </div>
+            `).join('');
+        }
+
+        function addHeroImage() {
+            const imageUrl = prompt('رابط الصورة الرئيسية:');
+            if (!imageUrl) return;
+            
+            const title = prompt('عنوان الصورة:') || 'صورة جديدة';
+            
+            const newImage = {
+                id: Date.now(),
+                url: imageUrl,
+                title: title
+            };
+            
+            heroImages.push(newImage);
+            loadHeroSlideshow();
+            loadHeroImagesAdmin();
+            showNotification('✅ تم إضافة الصورة الرئيسية');
+        }
+
+        function addGalleryImage() {
+            const imageUrl = prompt('رابط صورة المعرض:');
+            if (!imageUrl) return;
+            
+            const title = prompt('عنوان الصورة:') || 'صورة جديدة';
+            
+            const newImage = {
+                id: Date.now(),
+                url: imageUrl,
+                title: title
+            };
+            
+            galleryItems.push(newImage);
+            loadGallerySlideshow();
+            loadGalleryImagesAdmin();
+            showNotification('✅ تم إضافة صورة للمعرض');
+        }
+
+        function updateHeroImageTitle(id, newTitle) {
+            const image = heroImages.find(img => img.id === id);
+            if (image) {
+                image.title = newTitle;
+                loadHeroSlideshow();
+                showNotification('✅ تم تحديث عنوان الصورة');
+            }
+        }
+
+        function updateGalleryImageTitle(id, newTitle) {
+            const image = galleryItems.find(img => img.id === id);
+            if (image) {
+                image.title = newTitle;
+                loadGallerySlideshow();
+                showNotification('✅ تم تحديث عنوان الصورة');
+            }
+        }
+
+        function deleteHeroImage(id) {
+            if (confirm('هل أنت متأكد من حذف هذه الصورة؟')) {
+                heroImages = heroImages.filter(img => img.id !== id);
+                loadHeroSlideshow();
+                loadHeroImagesAdmin();
+                showNotification('✅ تم حذف الصورة');
+            }
+        }
+
+        function deleteGalleryImage(id) {
+            if (confirm('هل أنت متأكد من حذف هذه الصورة؟')) {
+                galleryItems = galleryItems.filter(img => img.id !== id);
+                loadGallerySlideshow();
+                loadGalleryImagesAdmin();
+                showNotification('✅ تم حذف الصورة');
+            }
+        }
+
+        // Comments Management Functions
+        function loadAdminComments() {
+            const container = document.getElementById('adminCommentsContainer');
+            if (!container) return;
+            
+            container.innerHTML = userComments.map(comment => `
+                <div class="admin-comment-item">
+                    <img src="${comment.image}" alt="${comment.name}" class="admin-comment-image">
+                    <div class="admin-comment-content">
+                        <strong>${comment.name}</strong> - ${formatDate(comment.date)}<br>
+                        <span style="color: #666;">${comment.comment}</span>
+                    </div>
+                    <div class="admin-comment-actions">
+                        <button onclick="editComment(${comment.id})" style="background: var(--info-color); color: white;">تعديل</button>
+                        <button onclick="deleteComment(${comment.id})" style="background: var(--danger-color); color: white;">حذف</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function editComment(id) {
+            const comment = userComments.find(c => c.id === id);
+            if (!comment) return;
+            
+            const newName = prompt('اسم جديد:', comment.name);
+            if (newName === null) return;
+            
+            const newText = prompt('تعليق جديد:', comment.comment);
+            if (newText === null) return;
+            
+            comment.name = newName;
+            comment.comment = newText;
+            
+            loadUserComments();
+            loadAdminComments();
+            showNotification('✅ تم تحديث التعليق');
+        }
+
+        function deleteComment(id) {
+            if (confirm('هل أنت متأكد من حذف هذا التعليق؟')) {
+                userComments = userComments.filter(c => c.id !== id);
+                loadUserComments();
+                loadAdminComments();
+                showNotification('✅ تم حذف التعليق');
+            }
+        }
+
+        function clearAllComments() {
+            if (confirm('هل أنت متأكد من حذف جميع التعليقات؟ هذا الإجراء لا يمكن التراجع عنه!')) {
+                userComments = [];
+                loadUserComments();
+                loadAdminComments();
+                showNotification('✅ تم حذف جميع التعليقات');
+            }
+        }
+
+        function toggleCommentsAnimation() {
+            toggleAnimation();
+            showNotification('✅ تم تغيير حالة حركة التعليقات');
+        }
+
+        // Window click handler for modal
+        window.onclick = function(event) {
+            const modal = document.getElementById('adminModal');
+            if (event.target === modal) {
+                closeAdminPanel();
+            }
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(event) {
+            // Alt + A to open admin panel
+            if (event.altKey && event.key === 'a') {
+                event.preventDefault();
+                requestAdminAccess();
+            }
+            
+            // Escape to close admin panel
+            if (event.key === 'Escape') {
+                closeAdminPanel();
+            }
+        });
+
+        console.log('✅ جميع وظائف الموقع جاهزة!');
+        console.log('💡 اختصارات لوحة المفاتيح:');
+        console.log('   Alt + A: فتح لوحة الإدارة');
+        console.log('   Escape: إغلاق لوحة الإدارة');
+        console.log('🔐 كلمة مرور الإدارة الافتراضية: admin123');
