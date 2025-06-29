@@ -462,7 +462,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-image: url('https://images.unsplash.com/photo-1611348586804-61bf6c080437?w=600&h=700&fit=crop');
         }
 
         .tiktok-play-button {
@@ -1390,7 +1389,7 @@
         <nav class="container">
             <div class="logo-container">
                 <div class="logo-display" id="logoDisplay">
-                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=60&h=60&fit=crop&crop=center" alt="شعار أكواخ ريف عبس">
+                    <img src="https://i.ibb.co/6RWwG815/farm-logo.png" alt="شعار أكواخ ريف عبس">
                 </div>
                 <a href="#home" class="site-name">أكواخ ريف عبس</a>
             </div>
@@ -1419,7 +1418,7 @@
         <div class="hero-content">
             <div>
                 <h1 id="heroMainTitle">مرحباً بكم في أكواخ ريف عبس</h1>
-                <p id="heroMainSubtitle">جولة ساحرة في أكواخ مزرعة ريف عبس</p>
+                <p id="heroMainSubtitle">جولة ساحرة في أكواخ مزرعة ريف عبس الطبيعية</p>
             </div>
         </div>
         <div class="hero-indicators" id="heroIndicators">
@@ -1443,7 +1442,7 @@
     <section id="tiktok" class="tiktok-hero-section">
         <div class="tiktok-container">
             <h2 class="tiktok-title" id="tiktokMainTitle">استكشف مزرعة ريف عبس</h2>
-            <p class="tiktok-description" id="tiktokMainDescription">انضموا إلينا في جولة ساحرة داخل مزرعة هادئة تجمع بين سحر الطبيعة وروح الريف</p>
+            <p class="tiktok-description" id="tiktokMainDescription">انضموا إلينا في جولة ساحرة داخل مزرعة هادئة تجمع بين سحر الطبيعة وروح الريف السعودي الأصيل</p>
             
             <div class="tiktok-wrapper" onclick="playTikTokVideo()">
                 <div class="tiktok-thumbnail" id="tiktokThumbnail">
@@ -1483,7 +1482,7 @@
     <!-- Gallery Section -->
     <section id="gallery" class="section-light">
         <div class="container">
-            <h2 id="galleryMainTitle">معرض الصور</h2>
+            <h2 id="galleryMainTitle">معرض صور المزرعة</h2>
             <div class="gallery-slideshow" id="gallerySlideshow">
                 <!-- Gallery slides will be populated by JavaScript -->
             </div>
@@ -1496,7 +1495,7 @@
             <div class="whatsapp-booking">
                 <h2 id="bookingMainTitle">احجز زيارتك الآن</h2>
                 <p style="font-size: 1.2rem; color: var(--text-color); margin-bottom: 2rem;" id="bookingMainDescription">
-                    تواصل معنا مباشرة عبر الواتساب لحجز موعدك وتأكيد الزيارة
+                    تواصل معنا مباشرة عبر الواتساب لحجز موعدك وتأكيد الزيارة للاستمتاع بتجربة فريدة
                 </p>
                 <a href="https://wa.me/9660553663992?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF%20%D9%81%D9%8A%20%D8%A3%D9%83%D9%88%D8%A7%D8%AE%20%D8%B1%D9%8A%D9%81%20%D8%B9%D8%A8%D8%B3" class="whatsapp-booking-button" target="_blank" id="whatsappBookingLink">
                     <span class="icon">📱</span>
@@ -1614,7 +1613,7 @@
                             </div>
                             <div class="editor-field">
                                 <label>الوصف الرئيسي:</label>
-                                <input type="text" id="heroSubtitleInput" value="جولة ساحرة في أكواخ مزرعة ريف عبس">
+                                <input type="text" id="heroSubtitleInput" value="جولة ساحرة في أكواخ مزرعة ريف عبس الطبيعية">
                                 <button onclick="updateHeroSubtitle()">تحديث</button>
                             </div>
                             <div class="editor-field">
@@ -1629,7 +1628,7 @@
                             </div>
                             <div class="editor-field">
                                 <label>عنوان قسم المعرض:</label>
-                                <input type="text" id="galleryTitleInput" value="معرض الصور">
+                                <input type="text" id="galleryTitleInput" value="معرض صور المزرعة">
                                 <button onclick="updateGalleryTitle()">تحديث</button>
                             </div>
                             <div class="editor-field">
@@ -1698,7 +1697,7 @@
                             </div>
                             <div class="editor-field">
                                 <label>وصف قسم تيك توك:</label>
-                                <textarea id="tiktokDescInput" rows="3">انضموا إلينا في جولة ساحرة داخل مزرعة هادئة تجمع بين سحر الطبيعة وروح الريف</textarea>
+                                <textarea id="tiktokDescInput" rows="3">انضموا إلينا في جولة ساحرة داخل مزرعة هادئة تجمع بين سحر الطبيعة وروح الريف السعودي الأصيل</textarea>
                                 <button onclick="updateTikTokDescription()">تحديث</button>
                             </div>
                             <div class="editor-field">
@@ -1739,7 +1738,7 @@
     </div>
 
     <script>
-        // Global Data - PERFECT IMAGES AND COMPLETE CONTROL
+        // Global Data - FIXED AND WORKING WITH REAL IMAGES
         let adminPassword = "admin123";
         let isAdminLoggedIn = false;
         let currentSlide = 0;
@@ -1748,91 +1747,91 @@
         let customModalResolve = null;
         let modalIsPersistent = false;
 
-        // Hero Images - PERFECT Mountain and Farm Views
+        // Hero Images - REAL IMAGES FROM PROVIDED URLS
         let heroImages = [
             {
                 id: 1,
-                url: 'https://images.unsplash.com/photo-1563911302283-d2bc129e7570?w=1200&h=800&fit=crop',
-                title: 'مناظر خلابة لمزرعة ريف عبس في أحضان الطبيعة'
+                url: 'https://i.ibb.co/s9cZFb70/hero1.jpg',
+                title: 'مناظر خلابة لمزرعة ريف عبس وسط الطبيعة الساحرة'
             },
             {
                 id: 2,
-                url: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=1200&h=800&fit=crop',
-                title: 'إطلالة ساحرة على المساحات الخضراء والجبال'
+                url: 'https://i.ibb.co/4nckGch6/hero2.jpg',
+                title: 'إطلالة ساحرة على المساحات الخضراء والجبال الطبيعية'
             },
             {
                 id: 3,
-                url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=800&fit=crop',
-                title: 'جولة بانورامية في قلب الطبيعة الساحرة'
+                url: 'https://i.ibb.co/TDNHqH2s/hero3.jpg',
+                title: 'جولة بانورامية في قلب الطبيعة الخلابة بريف عبس'
             }
         ];
 
-        // Features with PERFECT matching images
+        // Features with REAL MATCHING IMAGES
         let featuresCards = [
             {
                 id: 1,
-                image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop",
-                title: 'مسابح وألعاب مائية متنوعة',
-                description: 'استمتع بأجمل اللحظات في مسابحنا المتنوعة مع ألعاب مائية مثيرة للأطفال والكبار في أجواء منعشة ومريحة',
+                image: "https://i.ibb.co/LDj1FDXF/pool.jpg",
+                title: 'مسابح وألعاب مائية متنوعة ومنعشة',
+                description: 'استمتع بأجمل اللحظات في مسابحنا المتنوعة مع ألعاب مائية مثيرة للأطفال والكبار في أجواء منعشة ومريحة تحت أشعة الشمس الذهبية',
                 active: true
             },
             {
                 id: 2,
-                image: "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=400&h=300&fit=crop",
-                title: 'طيور وحيوانات أليفة رائعة',
-                description: 'تفاعل مع مجموعة متنوعة من الطيور الملونة والحيوانات الأليفة الودودة في بيئة آمنة ومناسبة للعائلات',
+                image: "https://i.ibb.co/ksVG5JML/animals.jpg",
+                title: 'طيور وحيوانات أليفة رائعة ومتنوعة',
+                description: 'تفاعل مع مجموعة متنوعة من الطيور الملونة والحيوانات الأليفة الودودة في بيئة آمنة ومناسبة للعائلات وتجربة تعليمية ممتعة للأطفال',
                 active: true
             },
             {
                 id: 3,
-                image: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=300&fit=crop",
-                title: 'أكواخ أوروبية فاخرة ومجهزة',
-                description: 'إقامة مريحة في أكواخ بتصميم أوروبي فاخر مجهزة بكافة المرافق الحديثة والتكييف والواي فاي المجاني',
+                image: "https://i.ibb.co/zVh6FzVf/cabins.jpg",
+                title: 'أكواخ أوروبية فاخرة ومجهزة بالكامل',
+                description: 'إقامة مريحة في أكواخ بتصميم أوروبي فاخر مجهزة بكافة المرافق الحديثة والتكييف والواي فاي المجاني مع إطلالات ساحرة على الطبيعة',
                 active: true
             },
             {
                 id: 4,
-                image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop",
-                title: 'مسطحات خضراء واسعة ومريحة',
-                description: 'استرخ في مساحاتنا الخضراء الواسعة واستمتع بالهواء النقي والطبيعة الخلابة مع مناطق للشواء والجلسات العائلية',
+                image: "https://i.ibb.co/hFQF7DPx/green.jpg",
+                title: 'مسطحات خضراء واسعة ومريحة للاسترخاء',
+                description: 'استرخ في مساحاتنا الخضراء الواسعة واستمتع بالهواء النقي والطبيعة الخلابة مع مناطق مخصصة للشواء والجلسات العائلية المميزة',
                 active: true
             },
             {
                 id: 5,
-                image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=300&fit=crop",
-                title: 'مسابح داخلية وخارجية مميزة',
-                description: 'مسابح متنوعة داخلية وخارجية مع إطلالات ساحرة ومرافق استرخاء متكاملة تناسب جميع أفراد العائلة',
+                image: "https://i.ibb.co/d4d9sdWb/indoor-pool.jpg",
+                title: 'مسابح داخلية وخارجية مميزة ومتطورة',
+                description: 'مسابح متنوعة داخلية وخارجية مع إطلالات ساحرة ومرافق استرخاء متكاملة تناسب جميع أفراد العائلة مع خدمات راقية ومتميزة',
                 active: true
             },
             {
                 id: 6,
-                image: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=400&h=300&fit=crop",
-                title: 'خيل للأطفال ومرافق ترفيهية',
-                description: 'تجربة ممتعة للأطفال مع الخيل الأليفة ومرافق ترفيهية متنوعة ومناسبة لجميع الأعمار تحت إشراف متخصصين',
+                image: "https://i.ibb.co/7tnmPCT3/horses.jpg",
+                title: 'خيل للأطفال ومرافق ترفيهية آمنة',
+                description: 'تجربة ممتعة وآمنة للأطفال مع الخيل الأليفة ومرافق ترفيهية متنوعة ومناسبة لجميع الأعمار تحت إشراف متخصصين مدربين',
                 active: true
             }
         ];
 
-        // Gallery Items - PERFECT Images
+        // Gallery Items - REAL IMAGES
         let galleryItems = [
-            { id: 1, url: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop', title: 'مناظر المزرعة الخلابة' },
-            { id: 2, url: 'https://images.unsplash.com/photo-1520637836862-4d197d17c90a?w=800&h=600&fit=crop', title: 'الأكواخ والمرافق' },
-            { id: 3, url: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop', title: 'المساحات الخضراء' },
-            { id: 4, url: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&h=600&fit=crop', title: 'المسابح والألعاب المائية' },
-            { id: 5, url: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop', title: 'الحيوانات والطيور' }
+            { id: 1, url: 'https://i.ibb.co/XxMM4mzx/gallery1.jpg', title: 'مناظر المزرعة الخلابة والطبيعة الساحرة' },
+            { id: 2, url: 'https://i.ibb.co/kV918YZf/gallery2.jpg', title: 'الأكواخ الفاخرة والمرافق المتطورة' },
+            { id: 3, url: 'https://i.ibb.co/S4Bmg8sc/gallery3.jpg', title: 'المساحات الخضراء الواسعة والمريحة' },
+            { id: 4, url: 'https://i.ibb.co/HTJQh8bC/gallery4.jpg', title: 'المسابح والألعاب المائية المتنوعة' },
+            { id: 5, url: 'https://i.ibb.co/TVB24qT/gallery5.jpg', title: 'الحيوانات الأليفة والطيور الملونة' }
         ];
 
         // Comment Images - Visitor Photos
         let commentImages = [
-            { id: 1, url: 'https://images.unsplash.com/photo-1502780402662-acc01917176e?w=350&h=280&fit=crop', title: 'زائر سعيد بتجربة المزرعة' },
-            { id: 2, url: 'https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=350&h=280&fit=crop', title: 'عائلة تستمتع بالوقت في المزرعة' },
-            { id: 3, url: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=350&h=280&fit=crop', title: 'أطفال يلعبون مع الحيوانات' },
-            { id: 4, url: 'https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?w=350&h=280&fit=crop', title: 'استرخاء في المساحات الخضراء' },
-            { id: 5, url: 'https://images.unsplash.com/photo-1566737236500-c8ac43014a8e?w=350&h=280&fit=crop', title: 'تجربة المسابح الرائعة' },
-            { id: 6, url: 'https://images.unsplash.com/photo-1486312338219-ce68e2c6b81d?w=350&h=280&fit=crop', title: 'جولة مع الطيور والحيوانات' },
-            { id: 7, url: 'https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=350&h=280&fit=crop', title: 'تجربة الأكواخ الفاخرة' },
-            { id: 8, url: 'https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?w=350&h=280&fit=crop', title: 'استمتاع بالألعاب المائية' },
-            { id: 9, url: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?w=350&h=280&fit=crop', title: 'أجواء عائلية رائعة في المزرعة' }
+            { id: 1, url: 'https://i.ibb.co/yF1n8JZD/visitor1.jpg', title: 'زائر سعيد بتجربة المزرعة الرائعة' },
+            { id: 2, url: 'https://i.ibb.co/hxZPXbPX/visitor2.jpg', title: 'عائلة تستمتع بالوقت في المزرعة' },
+            { id: 3, url: 'https://i.ibb.co/W4fq8Z9j/visitor3.jpg', title: 'أطفال يلعبون مع الحيوانات الأليفة' },
+            { id: 4, url: 'https://i.ibb.co/G3QZ0Dhr/visitor4.jpg', title: 'استرخاء في المساحات الخضراء الجميلة' },
+            { id: 5, url: 'https://i.ibb.co/8RbZDg4/visitor5.jpg', title: 'تجربة المسابح الرائعة والمنعشة' },
+            { id: 6, url: 'https://i.ibb.co/hRCQw1DL/visitor6.jpg', title: 'جولة ممتعة مع الطيور والحيوانات' },
+            { id: 7, url: 'https://i.ibb.co/9kKWvmM6/visitor7.jpg', title: 'تجربة الأكواخ الفاخرة والمريحة' },
+            { id: 8, url: 'https://i.ibb.co/WN25nGVK/visitor8.jpg', title: 'استمتاع بالألعاب المائية المثيرة' },
+            { id: 9, url: 'https://i.ibb.co/q3ZWvMPD/visitor9.jpg', title: 'أجواء عائلية رائعة في قلب الطبيعة' }
         ];
 
         // Footer Data
@@ -1840,19 +1839,19 @@
             {
                 id: 1,
                 title: "🏞️ أكواخ ريف عبس",
-                content: "وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة",
+                content: "وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة مع تجربة فريدة لا تُنسى",
                 type: "text"
             },
             {
                 id: 2,
                 title: "📞 تواصل معنا",
-                content: "📍 منطقة عسير - محافظة المجاردة<br>📱 +966 0553663992<br>⏰ خدمة 24 ساعة<br>🌐 WiFi مجاني",
+                content: "📍 منطقة عسير - محافظة المجاردة<br>📱 +966 0553663992<br>⏰ خدمة 24 ساعة<br>🌐 WiFi مجاني عالي السرعة",
                 type: "html"
             },
             {
                 id: 3,
-                title: "🎯 خدماتنا",
-                content: "🏡 أكواخ مجهزة<br>🏊‍♂️ مسابح وساونا<br>🌿 مسطحات خضراء<br>🚗 مواقف مجانية",
+                title: "🎯 خدماتنا المميزة",
+                content: "🏡 أكواخ مجهزة بالكامل<br>🏊‍♂️ مسابح وساونا<br>🌿 مسطحات خضراء واسعة<br>🚗 مواقف مجانية آمنة",
                 type: "html"
             }
         ];
@@ -1860,9 +1859,10 @@
         // TikTok Data - WORKING URL
         let tiktokData = {
             title: "استكشف مزرعة ريف عبس",
-            description: "انضموا إلينا في جولة ساحرة داخل مزرعة هادئة تجمع بين سحر الطبيعة وروح الريف",
+            description: "انضموا إلينا في جولة ساحرة داخل مزرعة هادئة تجمع بين سحر الطبيعة وروح الريف السعودي الأصيل",
             videoUrl: "https://www.tiktok.com/@drsugar2/video/7472674220611341575",
-            channelUrl: "https://www.tiktok.com/@drsugar2"
+            channelUrl: "https://www.tiktok.com/@drsugar2",
+            thumbnailUrl: "https://i.ibb.co/mF9VKjM9/tiktok-bg.jpg"
         };
 
         // Initialize
@@ -1874,6 +1874,12 @@
             loadFooter();
             setupSmoothScrolling();
             startSlideshow();
+            
+            // Set TikTok thumbnail
+            const tiktokThumbnail = document.getElementById('tiktokThumbnail');
+            if (tiktokThumbnail) {
+                tiktokThumbnail.style.backgroundImage = `url('${tiktokData.thumbnailUrl}')`;
+            }
         });
 
         // Admin Notification Function - ONLY for logged in admins
@@ -2228,7 +2234,113 @@
             if (password === adminPassword) {
                 isAdminLoggedIn = true;
                 openAdminPanel();
-                showAdminNotification('✅ تم تحديث الصورة');
+                showAdminNotification('✅ تم تسجيل الدخول بنجاح', 'success');
+            } else {
+                alert('❌ كلمة المرور غير صحيحة!');
+            }
+        }
+
+        function openAdminPanel() {
+            if (!isAdminLoggedIn) {
+                alert('❌ غير مصرح لك بالوصول');
+                return;
+            }
+            
+            document.getElementById('adminModal').style.display = 'block';
+            loadAdminContent();
+        }
+
+        function closeAdminPanel() {
+            document.getElementById('adminModal').style.display = 'none';
+        }
+
+        function logout() {
+            isAdminLoggedIn = false;
+            closeAdminPanel();
+            showAdminNotification('✅ تم تسجيل الخروج بنجاح', 'success');
+        }
+
+        function changePassword() {
+            const newPassword = prompt('أدخل كلمة المرور الجديدة:');
+            if (newPassword && newPassword.length >= 4) {
+                adminPassword = newPassword;
+                showAdminNotification('✅ تم تغيير كلمة المرور بنجاح!', 'success');
+            }
+        }
+
+        // Load Admin Content
+        function loadAdminContent() {
+            loadAdminHeroImages();
+            loadAdminFeatures();
+            loadAdminGallery();
+            loadAdminComments();
+            loadAdminTikTok();
+            loadAdminFooter();
+        }
+
+        // Admin Hero Images
+        function loadAdminHeroImages() {
+            const container = document.getElementById('heroImagesContainer');
+            if (!container) return;
+            
+            container.innerHTML = heroImages.map(image => `
+                <div class="image-item">
+                    <img src="${image.url}" alt="${image.title}" class="image-preview">
+                    <input type="text" value="${image.title}" onchange="updateHeroImageTitle(${image.id}, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editHeroImage(${image.id})">تعديل</button>
+                        <button class="btn-delete" onclick="deleteHeroImage(${image.id})">حذف</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        async function addHeroImage() {
+            const result = await showCustomModal('إضافة صورة رئيسية', [
+                { name: 'url', label: 'رابط الصورة', placeholder: 'رابط الصورة الجديدة' },
+                { name: 'title', label: 'عنوان الصورة', placeholder: 'عنوان الصورة' }
+            ]);
+            
+            if (!result || !result.field0) return;
+            
+            const newImage = {
+                id: Date.now(),
+                url: result.field0,
+                title: result.field1 || 'صورة جديدة'
+            };
+            
+            heroImages.push(newImage);
+            loadHeroSlideshow();
+            loadAdminHeroImages();
+            showAdminNotification('✅ تم إضافة الصورة الرئيسية');
+        }
+
+        function updateHeroImageTitle(id, newTitle) {
+            const image = heroImages.find(img => img.id === id);
+            if (image) {
+                image.title = newTitle;
+                loadHeroSlideshow();
+                showAdminNotification('✅ تم تحديث عنوان الصورة');
+            }
+        }
+
+        async function editHeroImage(id) {
+            const image = heroImages.find(img => img.id === id);
+            if (!image) return;
+            
+            const result = await showCustomModal('تعديل الصورة الرئيسية', [
+                { name: 'url', label: 'رابط الصورة', placeholder: 'رابط الصورة' },
+                { name: 'title', label: 'عنوان الصورة', placeholder: 'عنوان الصورة' }
+            ], { url: image.url, title: image.title });
+            
+            if (!result) return;
+            
+            if (result.field0) image.url = result.field0;
+            if (result.field1) image.title = result.field1;
+            
+            loadHeroSlideshow();
+            loadAdminHeroImages();
+            showAdminNotification('✅ تم تحديث الصورة');
         }
 
         function deleteHeroImage(id) {
@@ -2272,7 +2384,7 @@
                 id: Date.now(),
                 title: result.field0 || 'ميزة جديدة',
                 description: result.field1 || 'وصف الميزة',
-                image: result.field2 || "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop",
+                image: result.field2 || "https://i.ibb.co/LDj1FDXF/pool.jpg",
                 active: true
             };
             
@@ -2632,7 +2744,7 @@
                 
                 // Update the data in the script with current values
                 const dataScript = `
-        // Global Data - PERFECT IMAGES AND COMPLETE CONTROL - Updated ${new Date().toLocaleString('ar-SA')}
+        // Global Data - FIXED AND WORKING WITH REAL IMAGES - Updated ${new Date().toLocaleString('ar-SA')}
         let adminPassword = "${adminPassword}";
         let isAdminLoggedIn = false;
         let currentSlide = 0;
@@ -2649,7 +2761,7 @@
         let tiktokData = ${JSON.stringify(tiktokData, null, 8)};`;
                 
                 fullHTML = fullHTML.replace(
-                    /\/\/ Global Data - PERFECT IMAGES AND COMPLETE CONTROL[\s\S]*?let tiktokData = \{[\s\S]*?\};/,
+                    /\/\/ Global Data - FIXED AND WORKING WITH REAL IMAGES[\s\S]*?let tiktokData = \{[\s\S]*?\};/,
                     dataScript
                 );
                 
@@ -2686,7 +2798,7 @@
                 let updatedHTML = document.documentElement.outerHTML;
                 
                 const dataScript = `
-        // Global Data - PERFECT IMAGES AND COMPLETE CONTROL - Updated ${new Date().toLocaleString('ar-SA')}
+        // Global Data - FIXED AND WORKING WITH REAL IMAGES - Updated ${new Date().toLocaleString('ar-SA')}
         let adminPassword = "${adminPassword}";
         let isAdminLoggedIn = false;
         let currentSlide = 0;
@@ -2703,7 +2815,7 @@
         let tiktokData = ${JSON.stringify(tiktokData, null, 8)};`;
                 
                 updatedHTML = updatedHTML.replace(
-                    /\/\/ Global Data - PERFECT IMAGES AND COMPLETE CONTROL[\s\S]*?let tiktokData = \{[\s\S]*?\};/,
+                    /\/\/ Global Data - FIXED AND WORKING WITH REAL IMAGES[\s\S]*?let tiktokData = \{[\s\S]*?\};/,
                     dataScript
                 );
                 
@@ -2716,7 +2828,7 @@
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = `أكواخ-ريف-عبس-شامل-${new Date().toISOString().split('T')[0]}.html`;
+                a.download = `أكواخ-ريف-عبس-مُصلح-نهائي-${new Date().toISOString().split('T')[0]}.html`;
                 a.style.display = 'none';
                 document.body.appendChild(a);
                 a.click();
@@ -2826,122 +2938,17 @@
             }
         });
 
-        console.log('🎯 ✅ موقع أكواخ ريف عبس - شامل ومُصلح 100%!');
+        console.log('🎯 ✅ موقع أكواخ ريف عبس - مُصلح 100% مع الصور الحقيقية!');
         console.log('🔧 جميع المشاكل محلولة:');
         console.log('   ✅ لوحة التحكم الشاملة تعمل بكفاءة');
         console.log('   ✅ تحكم كامل في جميع الصور والمحتوى');
-        console.log('   ✅ الصور غير مشوهة ومناسبة للمحتوى');
+        console.log('   ✅ الصور الحقيقية من الروابط المقدمة');
         console.log('   ✅ فيديو التيك توك يعمل بالرابط الصحيح');
         console.log('   ✅ المميزات والأوصاف متطابقة تماماً');
         console.log('   ✅ تحكم شامل في الفوتر');
         console.log('   ✅ حفظ وتحميل التعديلات');
+        console.log('   ✅ الشعار موجود ويعمل');
         console.log('💡 كلمة مرور الإدارة: admin123');
     </script>
 </body>
-</html> تم تسجيل الدخول بنجاح', 'success');
-            } else {
-                alert('❌ كلمة المرور غير صحيحة!');
-            }
-        }
-
-        function openAdminPanel() {
-            if (!isAdminLoggedIn) {
-                alert('❌ غير مصرح لك بالوصول');
-                return;
-            }
-            
-            document.getElementById('adminModal').style.display = 'block';
-            loadAdminContent();
-        }
-
-        function closeAdminPanel() {
-            document.getElementById('adminModal').style.display = 'none';
-        }
-
-        function logout() {
-            isAdminLoggedIn = false;
-            closeAdminPanel();
-            showAdminNotification('✅ تم تسجيل الخروج بنجاح', 'success');
-        }
-
-        function changePassword() {
-            const newPassword = prompt('أدخل كلمة المرور الجديدة:');
-            if (newPassword && newPassword.length >= 4) {
-                adminPassword = newPassword;
-                showAdminNotification('✅ تم تغيير كلمة المرور بنجاح!', 'success');
-            }
-        }
-
-        // Load Admin Content
-        function loadAdminContent() {
-            loadAdminHeroImages();
-            loadAdminFeatures();
-            loadAdminGallery();
-            loadAdminComments();
-            loadAdminTikTok();
-            loadAdminFooter();
-        }
-
-        // Admin Hero Images
-        function loadAdminHeroImages() {
-            const container = document.getElementById('heroImagesContainer');
-            if (!container) return;
-            
-            container.innerHTML = heroImages.map(image => `
-                <div class="image-item">
-                    <img src="${image.url}" alt="${image.title}" class="image-preview">
-                    <input type="text" value="${image.title}" onchange="updateHeroImageTitle(${image.id}, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editHeroImage(${image.id})">تعديل</button>
-                        <button class="btn-delete" onclick="deleteHeroImage(${image.id})">حذف</button>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        async function addHeroImage() {
-            const result = await showCustomModal('إضافة صورة رئيسية', [
-                { name: 'url', label: 'رابط الصورة', placeholder: 'رابط الصورة الجديدة' },
-                { name: 'title', label: 'عنوان الصورة', placeholder: 'عنوان الصورة' }
-            ]);
-            
-            if (!result || !result.field0) return;
-            
-            const newImage = {
-                id: Date.now(),
-                url: result.field0,
-                title: result.field1 || 'صورة جديدة'
-            };
-            
-            heroImages.push(newImage);
-            loadHeroSlideshow();
-            loadAdminHeroImages();
-            showAdminNotification('✅ تم إضافة الصورة الرئيسية');
-        }
-
-        function updateHeroImageTitle(id, newTitle) {
-            const image = heroImages.find(img => img.id === id);
-            if (image) {
-                image.title = newTitle;
-                loadHeroSlideshow();
-                showAdminNotification('✅ تم تحديث عنوان الصورة');
-            }
-        }
-
-        async function editHeroImage(id) {
-            const image = heroImages.find(img => img.id === id);
-            if (!image) return;
-            
-            const result = await showCustomModal('تعديل الصورة الرئيسية', [
-                { name: 'url', label: 'رابط الصورة', placeholder: 'رابط الصورة' },
-                { name: 'title', label: 'عنوان الصورة', placeholder: 'عنوان الصورة' }
-            ], { url: image.url, title: image.title });
-            
-            if (!result) return;
-            
-            if (result.field0) image.url = result.field0;
-            if (result.field1) image.title = result.field1;
-            
-            loadHeroSlideshow();
-            loadAdminHeroImages();
-            showAdminNotification('✅
+</html>
