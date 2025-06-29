@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
+<html lang="ar" dir="rtl"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أكواخ ريف عبس - مزرعة سياحية في عسير</title>
@@ -1364,7 +1362,27 @@
             animation: fadeInUp 0.6s ease-out;
         }
     </style>
-</head>
+<style>
+        @font-face {
+            font-family: 'NotoSans_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-regular.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_medium_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-medium.ttf);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_bold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-bold.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_semibold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
+        }
+</style></head>
 <body>
     <!-- Header -->
     <header>
@@ -1394,18 +1412,14 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-slideshow" id="heroSlideshow">
-            <!-- Slides will be populated by JavaScript -->
-        </div>
+        <div class="hero-slideshow" id="heroSlideshow"><div class="hero-slide active" style="background-image: url(&quot;./2.webp&quot;);"></div><div class="hero-slide" style="background-image: url(&quot;./3.jpeg&quot;);"></div><div class="hero-slide" style="background-image: url(&quot;./4.webp&quot;);"></div></div>
         <div class="hero-content">
             <div>
                 <h1 id="heroMainTitle">مرحباً بكم في أكواخ ريف عبس</h1>
                 <p id="heroMainSubtitle">جولة ساحرة في أكواخ مزرعة ريف عبس الطبيعية</p>
             </div>
         </div>
-        <div class="hero-indicators" id="heroIndicators">
-            <!-- Indicators will be populated by JavaScript -->
-        </div>
+        <div class="hero-indicators" id="heroIndicators"><div class="hero-indicator active" title="مناظر خلابة لمزرعة ريف عبس وسط الطبيعة الساحرة"></div><div class="hero-indicator" title="إطلالة ساحرة على المساحات الخضراء والجبال الطبيعية"></div><div class="hero-indicator" title="جولة بانورامية في قلب الطبيعة الخلابة بريف عبس"></div></div>
         <button class="hero-nav prev" onclick="prevSlide()">‹</button>
         <button class="hero-nav next" onclick="nextSlide()">›</button>
     </section>
@@ -1415,7 +1429,53 @@
         <div class="container">
             <h2 id="featuresMainTitle">ما يميز مزرعة ريف عبس</h2>
             <div class="features-grid" id="featuresGrid">
-                <!-- Features cards will be populated by JavaScript -->
+                <div class="feature-card">
+                    <img src="./5.jpeg" alt="مسابح وألعاب مائية متنوعة ومنعشة" class="feature-image" loading="lazy">
+                    <div class="feature-content">
+                        <div class="feature-title">مسابح وألعاب مائية متنوعة ومنعشة</div>
+                        <div class="feature-description">استمتع بأجمل اللحظات في مسابحنا المتنوعة مع ألعاب مائية مثيرة للأطفال والكبار في أجواء منعشة ومريحة تحت أشعة الشمس الذهبية</div>
+                    </div>
+                </div>
+            
+                <div class="feature-card">
+                    <img src="./3.webp" alt="طيور وحيوانات أليفة رائعة ومتنوعة" class="feature-image" loading="lazy">
+                    <div class="feature-content">
+                        <div class="feature-title">طيور وحيوانات أليفة رائعة ومتنوعة</div>
+                        <div class="feature-description">تفاعل مع مجموعة متنوعة من الطيور الملونة والحيوانات الأليفة الودودة في بيئة آمنة ومناسبة للعائلات وتجربة تعليمية ممتعة للأطفال</div>
+                    </div>
+                </div>
+            
+                <div class="feature-card">
+                    <img src="./4.jpeg" alt="أكواخ أوروبية فاخرة ومجهزة بالكامل" class="feature-image" loading="lazy">
+                    <div class="feature-content">
+                        <div class="feature-title">أكواخ أوروبية فاخرة ومجهزة بالكامل</div>
+                        <div class="feature-description">إقامة مريحة في أكواخ بتصميم أوروبي فاخر مجهزة بكافة المرافق الحديثة والتكييف والواي فاي المجاني مع إطلالات ساحرة على الطبيعة</div>
+                    </div>
+                </div>
+            
+                <div class="feature-card">
+                    <img src="./5.webp" alt="مسطحات خضراء واسعة ومريحة للاسترخاء" class="feature-image" loading="lazy">
+                    <div class="feature-content">
+                        <div class="feature-title">مسطحات خضراء واسعة ومريحة للاسترخاء</div>
+                        <div class="feature-description">استرخ في مساحاتنا الخضراء الواسعة واستمتع بالهواء النقي والطبيعة الخلابة مع مناطق مخصصة للشواء والجلسات العائلية المميزة</div>
+                    </div>
+                </div>
+            
+                <div class="feature-card">
+                    <img src="./08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp" alt="مسابح داخلية وخارجية مميزة ومتطورة" class="feature-image" loading="lazy">
+                    <div class="feature-content">
+                        <div class="feature-title">مسابح داخلية وخارجية مميزة ومتطورة</div>
+                        <div class="feature-description">مسابح متنوعة داخلية وخارجية مع إطلالات ساحرة ومرافق استرخاء متكاملة تناسب جميع أفراد العائلة مع خدمات راقية ومتميزة</div>
+                    </div>
+                </div>
+            
+                <div class="feature-card">
+                    <img src="./12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp" alt="خيل للأطفال ومرافق ترفيهية آمنة" class="feature-image" loading="lazy">
+                    <div class="feature-content">
+                        <div class="feature-title">خيل للأطفال ومرافق ترفيهية آمنة</div>
+                        <div class="feature-description">تجربة ممتعة وآمنة للأطفال مع الخيل الأليفة ومرافق ترفيهية متنوعة ومناسبة لجميع الأعمار تحت إشراف متخصصين مدربين</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1427,7 +1487,7 @@
             <p class="tiktok-description" id="tiktokMainDescription">انضموا إلينا في جولة ساحرة داخل مزرعة هادئة تجمع بين سحر الطبيعة وروح الريف السعودي الأصيل</p>
             
             <div class="tiktok-wrapper" onclick="playTikTokVideo()">
-                <div class="tiktok-thumbnail" id="tiktokThumbnail">
+                <div class="tiktok-thumbnail" id="tiktokThumbnail" style="background-image: url(&quot;./2.webp&quot;);">
                     <div class="tiktok-play-button"></div>
                 </div>
             </div>
@@ -1444,7 +1504,42 @@
         <div class="container">
             <h2 id="galleryMainTitle">معرض صور المزرعة</h2>
             <div class="gallery-slideshow" id="gallerySlideshow">
-                <!-- Gallery slides will be populated by JavaScript -->
+                
+                <div class="gallery-slide active">
+                    <img src="./248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp" alt="مناظر المزرعة الخلابة والطبيعة الساحرة" loading="lazy">
+                </div>
+            
+                <div class="gallery-slide ">
+                    <img src="./4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp" alt="الأكواخ الفاخرة والمرافق المتطورة" loading="lazy">
+                </div>
+            
+                <div class="gallery-slide ">
+                    <img src="./6168779-اختيار الصور-f-8f05-484c-be45-d4a2b23b0ce7.webp" alt="المساحات الخضراء الواسعة والمريحة" loading="lazy">
+                </div>
+            
+                <div class="gallery-slide ">
+                    <img src="./2.webp" alt="المسابح والألعاب المائية المتنوعة" loading="lazy">
+                </div>
+            
+                <div class="gallery-slide ">
+                    <img src="./3.jpeg" alt="الحيوانات الأليفة والطيور الملونة" loading="lazy">
+                </div>
+            
+                <button class="gallery-nav prev" onclick="prevGallerySlide()">‹</button>
+                <button class="gallery-nav next" onclick="nextGallerySlide()">›</button>
+                <div class="gallery-indicators">
+                    
+                <span class="gallery-indicator active" onclick="goToGallerySlide(0)"></span>
+            
+                <span class="gallery-indicator " onclick="goToGallerySlide(1)"></span>
+            
+                <span class="gallery-indicator " onclick="goToGallerySlide(2)"></span>
+            
+                <span class="gallery-indicator " onclick="goToGallerySlide(3)"></span>
+            
+                <span class="gallery-indicator " onclick="goToGallerySlide(4)"></span>
+            
+                </div>
             </div>
         </div>
     </section>
@@ -1473,8 +1568,114 @@
             <!-- Comments Display -->
             <div class="comments-display">
                 <div class="comments-slider" id="commentsSlider">
-                    <!-- Comments images will be populated by JavaScript -->
+                <div class="comment-image-card">
+                    <img src="./4.webp" alt="زائر سعيد بتجربة المزرعة الرائعة" class="comment-image" loading="lazy">
                 </div>
+            
+                <div class="comment-image-card">
+                    <img src="./5.jpeg" alt="عائلة تستمتع بالوقت في المزرعة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./3.webp" alt="أطفال يلعبون مع الحيوانات الأليفة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./4.jpeg" alt="استرخاء في المساحات الخضراء الجميلة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./5.webp" alt="تجربة المسابح الرائعة والمنعشة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp" alt="جولة ممتعة مع الطيور والحيوانات" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp" alt="تجربة الأكواخ الفاخرة والمريحة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp" alt="استمتاع بالألعاب المائية المثيرة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp" alt="أجواء عائلية رائعة في قلب الطبيعة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./4.webp" alt="زائر سعيد بتجربة المزرعة الرائعة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./5.jpeg" alt="عائلة تستمتع بالوقت في المزرعة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./3.webp" alt="أطفال يلعبون مع الحيوانات الأليفة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./4.jpeg" alt="استرخاء في المساحات الخضراء الجميلة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./5.webp" alt="تجربة المسابح الرائعة والمنعشة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp" alt="جولة ممتعة مع الطيور والحيوانات" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp" alt="تجربة الأكواخ الفاخرة والمريحة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp" alt="استمتاع بالألعاب المائية المثيرة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp" alt="أجواء عائلية رائعة في قلب الطبيعة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./4.webp" alt="زائر سعيد بتجربة المزرعة الرائعة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./5.jpeg" alt="عائلة تستمتع بالوقت في المزرعة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./3.webp" alt="أطفال يلعبون مع الحيوانات الأليفة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./4.jpeg" alt="استرخاء في المساحات الخضراء الجميلة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./5.webp" alt="تجربة المسابح الرائعة والمنعشة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp" alt="جولة ممتعة مع الطيور والحيوانات" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp" alt="تجربة الأكواخ الفاخرة والمريحة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp" alt="استمتاع بالألعاب المائية المثيرة" class="comment-image" loading="lazy">
+                </div>
+            
+                <div class="comment-image-card">
+                    <img src="./4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp" alt="أجواء عائلية رائعة في قلب الطبيعة" class="comment-image" loading="lazy">
+                </div>
+            </div>
             </div>
             
             <div class="comments-control">
@@ -1490,8 +1691,21 @@
     <footer id="footer">
         <div class="container">
             <div class="footer-content" id="footerContent">
-                <!-- Footer sections will be populated by JavaScript -->
-            </div>
+                        <div class="footer-section">
+                            <h3>🏞️ أكواخ ريف عبس</h3>
+                            <p>وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة مع تجربة فريدة لا تُنسى</p>
+                        </div>
+                    
+                        <div class="footer-section">
+                            <h4>📞 تواصل معنا</h4>
+                            <div>📍 منطقة عسير - محافظة المجاردة<br>📱 +966 0553663992<br>⏰ خدمة 24 ساعة<br>🌐 WiFi مجاني عالي السرعة</div>
+                        </div>
+                    
+                        <div class="footer-section">
+                            <h4>🎯 خدماتنا المميزة</h4>
+                            <div>🏡 أكواخ مجهزة بالكامل<br>🏊‍♂️ مسابح وساونا<br>🌿 مسطحات خضراء واسعة<br>🚗 مواقف مجانية آمنة</div>
+                        </div>
+                    </div>
             <div class="footer-bottom">
                 <p id="footerCopyright">© 2024 أكواخ ريف عبس - جميع الحقوق محفوظة</p>
             </div>
@@ -1501,7 +1715,7 @@
     <!-- Gallery Modal -->
     <div id="galleryModal" class="gallery-modal">
         <div class="gallery-modal-content">
-            <span class="gallery-modal-close" onclick="closeGalleryModal()">&times;</span>
+            <span class="gallery-modal-close" onclick="closeGalleryModal()">×</span>
             <div id="galleryModalContent">
                 <!-- Modal gallery content will be populated by JavaScript -->
             </div>
@@ -1509,12 +1723,16 @@
     </div>
 
     <!-- Custom Modal -->
-    <div id="customModal" class="custom-modal">
+    <div id="customModal" class="custom-modal" style="display: none;">
         <div class="custom-modal-content">
-            <h3 id="customModalTitle">إدخال البيانات</h3>
+            <h3 id="customModalTitle">تعديل الصورة الرئيسية</h3>
             <div id="customModalBody">
-                <!-- Modal content will be populated by JavaScript -->
-            </div>
+                            <label>رابط الصورة:</label>
+                            <input type="text" id="customField0" placeholder="رابط الصورة" value="./3.jpeg" autocomplete="off">
+                        
+                            <label>عنوان الصورة:</label>
+                            <input type="text" id="customField1" placeholder="عنوان الصورة" value="إطلالة ساحرة على المساحات الخضراء والجبال الطبيعية">
+                        </div>
             <div class="custom-modal-buttons">
                 <button class="btn-primary" onclick="confirmCustomModal()">موافق</button>
                 <button class="btn-secondary" onclick="closeCustomModal()">إلغاء</button>
@@ -1526,7 +1744,7 @@
     <div id="adminModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <span class="close" onclick="closeAdminPanel()">&times;</span>
+                <span class="close" onclick="closeAdminPanel()">×</span>
                 <h2>🔐 لوحة التحكم الشاملة - أكواخ ريف عبس</h2>
             </div>
             
@@ -1552,8 +1770,8 @@
 
                 <!-- Admin Tabs -->
                 <div class="admin-tabs">
-                    <button class="admin-tab active" onclick="showAdminTab('content')">📝 النصوص</button>
-                    <button class="admin-tab" onclick="showAdminTab('hero')">🏞️ الصور الرئيسية</button>
+                    <button class="admin-tab" onclick="showAdminTab('content')">📝 النصوص</button>
+                    <button class="admin-tab active" onclick="showAdminTab('hero')">🏞️ الصور الرئيسية</button>
                     <button class="admin-tab" onclick="showAdminTab('features')">🎯 المميزات</button>
                     <button class="admin-tab" onclick="showAdminTab('gallery')">🖼️ المعرض</button>
                     <button class="admin-tab" onclick="showAdminTab('comments')">📸 صور الزوار</button>
@@ -1562,7 +1780,7 @@
                 </div>
                 
                 <!-- Content Tab -->
-                <div id="contentTab" class="admin-tab-content active">
+                <div id="contentTab" class="admin-tab-content">
                     <div class="admin-section">
                         <h3>📝 تحرير النصوص الرئيسية</h3>
                         <div class="text-editor">
@@ -1601,13 +1819,38 @@
                 </div>
 
                 <!-- Hero Images Tab -->
-                <div id="heroTab" class="admin-tab-content">
+                <div id="heroTab" class="admin-tab-content active">
                     <div class="admin-section">
                         <h3>🏞️ إدارة الصور الرئيسية</h3>
                         <button class="btn-add" onclick="addHeroImage()">+ إضافة صورة رئيسية</button>
                         <div id="heroImagesContainer">
-                            <!-- Hero images will be populated by JavaScript -->
-                        </div>
+                <div class="image-item">
+                    <img src="./2.webp" alt="مناظر خلابة لمزرعة ريف عبس وسط الطبيعة الساحرة" class="image-preview">
+                    <input type="text" value="مناظر خلابة لمزرعة ريف عبس وسط الطبيعة الساحرة" onchange="updateHeroImageTitle(1, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editHeroImage(1)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteHeroImage(1)">حذف</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./3.jpeg" alt="إطلالة ساحرة على المساحات الخضراء والجبال الطبيعية" class="image-preview">
+                    <input type="text" value="إطلالة ساحرة على المساحات الخضراء والجبال الطبيعية" onchange="updateHeroImageTitle(2, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editHeroImage(2)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteHeroImage(2)">حذف</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./4.webp" alt="جولة بانورامية في قلب الطبيعة الخلابة بريف عبس" class="image-preview">
+                    <input type="text" value="جولة بانورامية في قلب الطبيعة الخلابة بريف عبس" onchange="updateHeroImageTitle(3, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editHeroImage(3)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteHeroImage(3)">حذف</button>
+                    </div>
+                </div>
+            </div>
                     </div>
                 </div>
 
@@ -1617,8 +1860,72 @@
                         <h3>🎯 إدارة المميزات</h3>
                         <button class="btn-add" onclick="addFeature()">+ إضافة ميزة جديدة</button>
                         <div id="featuresContainer">
-                            <!-- Features will be populated by JavaScript -->
-                        </div>
+                <div class="image-item">
+                    <img src="./5.jpeg" alt="مسابح وألعاب مائية متنوعة ومنعشة" class="image-preview">
+                    <input type="text" value="مسابح وألعاب مائية متنوعة ومنعشة" onchange="updateFeatureTitle(1, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الميزة">
+                    <textarea onchange="updateFeatureDescription(1, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" rows="3" placeholder="وصف الميزة">استمتع بأجمل اللحظات في مسابحنا المتنوعة مع ألعاب مائية مثيرة للأطفال والكبار في أجواء منعشة ومريحة تحت أشعة الشمس الذهبية</textarea>
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editFeature(1)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteFeature(1)">حذف</button>
+                        <button onclick="toggleFeature(1)" style="background: orange; color: white; padding: 4px 8px; border: none; border-radius: 4px; font-size: 0.75rem;">إلغاء تفعيل</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./3.webp" alt="طيور وحيوانات أليفة رائعة ومتنوعة" class="image-preview">
+                    <input type="text" value="طيور وحيوانات أليفة رائعة ومتنوعة" onchange="updateFeatureTitle(2, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الميزة">
+                    <textarea onchange="updateFeatureDescription(2, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" rows="3" placeholder="وصف الميزة">تفاعل مع مجموعة متنوعة من الطيور الملونة والحيوانات الأليفة الودودة في بيئة آمنة ومناسبة للعائلات وتجربة تعليمية ممتعة للأطفال</textarea>
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editFeature(2)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteFeature(2)">حذف</button>
+                        <button onclick="toggleFeature(2)" style="background: orange; color: white; padding: 4px 8px; border: none; border-radius: 4px; font-size: 0.75rem;">إلغاء تفعيل</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./4.jpeg" alt="أكواخ أوروبية فاخرة ومجهزة بالكامل" class="image-preview">
+                    <input type="text" value="أكواخ أوروبية فاخرة ومجهزة بالكامل" onchange="updateFeatureTitle(3, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الميزة">
+                    <textarea onchange="updateFeatureDescription(3, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" rows="3" placeholder="وصف الميزة">إقامة مريحة في أكواخ بتصميم أوروبي فاخر مجهزة بكافة المرافق الحديثة والتكييف والواي فاي المجاني مع إطلالات ساحرة على الطبيعة</textarea>
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editFeature(3)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteFeature(3)">حذف</button>
+                        <button onclick="toggleFeature(3)" style="background: orange; color: white; padding: 4px 8px; border: none; border-radius: 4px; font-size: 0.75rem;">إلغاء تفعيل</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./5.webp" alt="مسطحات خضراء واسعة ومريحة للاسترخاء" class="image-preview">
+                    <input type="text" value="مسطحات خضراء واسعة ومريحة للاسترخاء" onchange="updateFeatureTitle(4, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الميزة">
+                    <textarea onchange="updateFeatureDescription(4, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" rows="3" placeholder="وصف الميزة">استرخ في مساحاتنا الخضراء الواسعة واستمتع بالهواء النقي والطبيعة الخلابة مع مناطق مخصصة للشواء والجلسات العائلية المميزة</textarea>
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editFeature(4)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteFeature(4)">حذف</button>
+                        <button onclick="toggleFeature(4)" style="background: orange; color: white; padding: 4px 8px; border: none; border-radius: 4px; font-size: 0.75rem;">إلغاء تفعيل</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp" alt="مسابح داخلية وخارجية مميزة ومتطورة" class="image-preview">
+                    <input type="text" value="مسابح داخلية وخارجية مميزة ومتطورة" onchange="updateFeatureTitle(5, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الميزة">
+                    <textarea onchange="updateFeatureDescription(5, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" rows="3" placeholder="وصف الميزة">مسابح متنوعة داخلية وخارجية مع إطلالات ساحرة ومرافق استرخاء متكاملة تناسب جميع أفراد العائلة مع خدمات راقية ومتميزة</textarea>
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editFeature(5)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteFeature(5)">حذف</button>
+                        <button onclick="toggleFeature(5)" style="background: orange; color: white; padding: 4px 8px; border: none; border-radius: 4px; font-size: 0.75rem;">إلغاء تفعيل</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp" alt="خيل للأطفال ومرافق ترفيهية آمنة" class="image-preview">
+                    <input type="text" value="خيل للأطفال ومرافق ترفيهية آمنة" onchange="updateFeatureTitle(6, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الميزة">
+                    <textarea onchange="updateFeatureDescription(6, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" rows="3" placeholder="وصف الميزة">تجربة ممتعة وآمنة للأطفال مع الخيل الأليفة ومرافق ترفيهية متنوعة ومناسبة لجميع الأعمار تحت إشراف متخصصين مدربين</textarea>
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editFeature(6)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteFeature(6)">حذف</button>
+                        <button onclick="toggleFeature(6)" style="background: orange; color: white; padding: 4px 8px; border: none; border-radius: 4px; font-size: 0.75rem;">إلغاء تفعيل</button>
+                    </div>
+                </div>
+            </div>
                     </div>
                 </div>
 
@@ -1628,8 +1935,51 @@
                         <h3>🖼️ إدارة معرض الصور</h3>
                         <button class="btn-add" onclick="addGalleryImage()">+ إضافة صورة للمعرض</button>
                         <div id="galleryImagesContainer">
-                            <!-- Gallery images will be populated by JavaScript -->
-                        </div>
+                <div class="image-item">
+                    <img src="./248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp" alt="مناظر المزرعة الخلابة والطبيعة الساحرة" class="image-preview">
+                    <input type="text" value="مناظر المزرعة الخلابة والطبيعة الساحرة" onchange="updateGalleryImageTitle(1, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editGalleryImage(1)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteGalleryImage(1)">حذف</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp" alt="الأكواخ الفاخرة والمرافق المتطورة" class="image-preview">
+                    <input type="text" value="الأكواخ الفاخرة والمرافق المتطورة" onchange="updateGalleryImageTitle(2, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editGalleryImage(2)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteGalleryImage(2)">حذف</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./6168779-اختيار الصور-f-8f05-484c-be45-d4a2b23b0ce7.webp" alt="المساحات الخضراء الواسعة والمريحة" class="image-preview">
+                    <input type="text" value="المساحات الخضراء الواسعة والمريحة" onchange="updateGalleryImageTitle(3, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editGalleryImage(3)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteGalleryImage(3)">حذف</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./2.webp" alt="المسابح والألعاب المائية المتنوعة" class="image-preview">
+                    <input type="text" value="المسابح والألعاب المائية المتنوعة" onchange="updateGalleryImageTitle(4, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editGalleryImage(4)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteGalleryImage(4)">حذف</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./3.jpeg" alt="الحيوانات الأليفة والطيور الملونة" class="image-preview">
+                    <input type="text" value="الحيوانات الأليفة والطيور الملونة" onchange="updateGalleryImageTitle(5, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editGalleryImage(5)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteGalleryImage(5)">حذف</button>
+                    </div>
+                </div>
+            </div>
                     </div>
                 </div>
 
@@ -1640,8 +1990,87 @@
                         <button class="btn-add" onclick="addCommentImage()">+ إضافة صورة زائر</button>
                         <button class="admin-action-btn" style="background: var(--danger-color); color: white; margin-left: 10px;" onclick="clearAllComments()">🗑️ مسح جميع الصور</button>
                         <div id="commentsContainer">
-                            <!-- Comments images will be populated by JavaScript -->
-                        </div>
+                <div class="image-item">
+                    <img src="./4.webp" alt="زائر سعيد بتجربة المزرعة الرائعة" class="image-preview">
+                    <input type="text" value="زائر سعيد بتجربة المزرعة الرائعة" onchange="updateCommentImageTitle(1, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editCommentImage(1)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteCommentImage(1)">حذف</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./5.jpeg" alt="عائلة تستمتع بالوقت في المزرعة" class="image-preview">
+                    <input type="text" value="عائلة تستمتع بالوقت في المزرعة" onchange="updateCommentImageTitle(2, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editCommentImage(2)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteCommentImage(2)">حذف</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./3.webp" alt="أطفال يلعبون مع الحيوانات الأليفة" class="image-preview">
+                    <input type="text" value="أطفال يلعبون مع الحيوانات الأليفة" onchange="updateCommentImageTitle(3, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editCommentImage(3)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteCommentImage(3)">حذف</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./4.jpeg" alt="استرخاء في المساحات الخضراء الجميلة" class="image-preview">
+                    <input type="text" value="استرخاء في المساحات الخضراء الجميلة" onchange="updateCommentImageTitle(4, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editCommentImage(4)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteCommentImage(4)">حذف</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./5.webp" alt="تجربة المسابح الرائعة والمنعشة" class="image-preview">
+                    <input type="text" value="تجربة المسابح الرائعة والمنعشة" onchange="updateCommentImageTitle(5, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editCommentImage(5)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteCommentImage(5)">حذف</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp" alt="جولة ممتعة مع الطيور والحيوانات" class="image-preview">
+                    <input type="text" value="جولة ممتعة مع الطيور والحيوانات" onchange="updateCommentImageTitle(6, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editCommentImage(6)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteCommentImage(6)">حذف</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp" alt="تجربة الأكواخ الفاخرة والمريحة" class="image-preview">
+                    <input type="text" value="تجربة الأكواخ الفاخرة والمريحة" onchange="updateCommentImageTitle(7, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editCommentImage(7)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteCommentImage(7)">حذف</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp" alt="استمتاع بالألعاب المائية المثيرة" class="image-preview">
+                    <input type="text" value="استمتاع بالألعاب المائية المثيرة" onchange="updateCommentImageTitle(8, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editCommentImage(8)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteCommentImage(8)">حذف</button>
+                    </div>
+                </div>
+            
+                <div class="image-item">
+                    <img src="./4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp" alt="أجواء عائلية رائعة في قلب الطبيعة" class="image-preview">
+                    <input type="text" value="أجواء عائلية رائعة في قلب الطبيعة" onchange="updateCommentImageTitle(9, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <div class="image-actions">
+                        <button class="btn-edit" onclick="editCommentImage(9)">تعديل</button>
+                        <button class="btn-delete" onclick="deleteCommentImage(9)">حذف</button>
+                    </div>
+                </div>
+            </div>
                     </div>
                 </div>
 
@@ -1680,8 +2109,57 @@
                         <h3>🦶 إدارة الفوتر</h3>
                         <button class="btn-add" onclick="addFooterSection()">+ إضافة قسم جديد</button>
                         <div id="footerSectionsContainer">
-                            <!-- Footer sections will be populated by JavaScript -->
+                <div class="admin-section">
+                    <h4>📄 🏞️ أكواخ ريف عبس</h4>
+                    <div class="text-editor">
+                        <div class="editor-field">
+                            <label>العنوان:</label>
+                            <input type="text" value="🏞️ أكواخ ريف عبس" onchange="updateFooterSectionTitle(1, this.value)">
                         </div>
+                        <div class="editor-field">
+                            <label>المحتوى:</label>
+                            <textarea onchange="updateFooterSectionContent(1, this.value)" rows="4">وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة مع تجربة فريدة لا تُنسى</textarea>
+                        </div>
+                        <div class="editor-field">
+                            <button onclick="deleteFooterSection(1)" style="background: var(--danger-color); margin-top: 10px;">حذف القسم</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="admin-section">
+                    <h4>📄 📞 تواصل معنا</h4>
+                    <div class="text-editor">
+                        <div class="editor-field">
+                            <label>العنوان:</label>
+                            <input type="text" value="📞 تواصل معنا" onchange="updateFooterSectionTitle(2, this.value)">
+                        </div>
+                        <div class="editor-field">
+                            <label>المحتوى:</label>
+                            <textarea onchange="updateFooterSectionContent(2, this.value)" rows="4">📍 منطقة عسير - محافظة المجاردة&lt;br&gt;📱 +966 0553663992&lt;br&gt;⏰ خدمة 24 ساعة&lt;br&gt;🌐 WiFi مجاني عالي السرعة</textarea>
+                        </div>
+                        <div class="editor-field">
+                            <button onclick="deleteFooterSection(2)" style="background: var(--danger-color); margin-top: 10px;">حذف القسم</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="admin-section">
+                    <h4>📄 🎯 خدماتنا المميزة</h4>
+                    <div class="text-editor">
+                        <div class="editor-field">
+                            <label>العنوان:</label>
+                            <input type="text" value="🎯 خدماتنا المميزة" onchange="updateFooterSectionTitle(3, this.value)">
+                        </div>
+                        <div class="editor-field">
+                            <label>المحتوى:</label>
+                            <textarea onchange="updateFooterSectionContent(3, this.value)" rows="4">🏡 أكواخ مجهزة بالكامل&lt;br&gt;🏊‍♂️ مسابح وساونا&lt;br&gt;🌿 مسطحات خضراء واسعة&lt;br&gt;🚗 مواقف مجانية آمنة</textarea>
+                        </div>
+                        <div class="editor-field">
+                            <button onclick="deleteFooterSection(3)" style="background: var(--danger-color); margin-top: 10px;">حذف القسم</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         
                         <div class="admin-section">
                             <h4>📞 نص حقوق الطبع والنشر</h4>
@@ -1698,7 +2176,8 @@
     </div>
 
     <script>
-        // Global Data - الصور الحقيقية المرفوعة في GitHub
+        
+        // Global Data - Updated ٤‏/١‏/١٤٤٧ هـ ١١:٢٧:٥٠ م
         let adminPassword = "admin123";
         let isAdminLoggedIn = false;
         let currentSlide = 0;
@@ -1707,123 +2186,168 @@
         let customModalResolve = null;
         let modalIsPersistent = false;
 
-        // Hero Images - الصور الحقيقية المرفوعة في GitHub
         let heroImages = [
-            {
-                id: 1,
-                url: './2.webp',
-                title: 'مناظر خلابة لمزرعة ريف عبس وسط الطبيعة الساحرة'
-            },
-            {
-                id: 2,
-                url: './3.jpeg',
-                title: 'إطلالة ساحرة على المساحات الخضراء والجبال الطبيعية'
-            },
-            {
-                id: 3,
-                url: './4.webp',
-                title: 'جولة بانورامية في قلب الطبيعة الخلابة بريف عبس'
-            }
-        ];
-
-        // Features with الصور الحقيقية المرفوعة في GitHub
+        {
+                "id": 1,
+                "url": "./2.webp",
+                "title": "مناظر خلابة لمزرعة ريف عبس وسط الطبيعة الساحرة"
+        },
+        {
+                "id": 2,
+                "url": "./3.jpeg",
+                "title": "إطلالة ساحرة على المساحات الخضراء والجبال الطبيعية"
+        },
+        {
+                "id": 3,
+                "url": "./4.webp",
+                "title": "جولة بانورامية في قلب الطبيعة الخلابة بريف عبس"
+        }
+];
         let featuresCards = [
-            {
-                id: 1,
-                image: "./5.jpeg",
-                title: 'مسابح وألعاب مائية متنوعة ومنعشة',
-                description: 'استمتع بأجمل اللحظات في مسابحنا المتنوعة مع ألعاب مائية مثيرة للأطفال والكبار في أجواء منعشة ومريحة تحت أشعة الشمس الذهبية',
-                active: true
-            },
-            {
-                id: 2,
-                image: "./3.webp",
-                title: 'طيور وحيوانات أليفة رائعة ومتنوعة',
-                description: 'تفاعل مع مجموعة متنوعة من الطيور الملونة والحيوانات الأليفة الودودة في بيئة آمنة ومناسبة للعائلات وتجربة تعليمية ممتعة للأطفال',
-                active: true
-            },
-            {
-                id: 3,
-                image: "./4.jpeg",
-                title: 'أكواخ أوروبية فاخرة ومجهزة بالكامل',
-                description: 'إقامة مريحة في أكواخ بتصميم أوروبي فاخر مجهزة بكافة المرافق الحديثة والتكييف والواي فاي المجاني مع إطلالات ساحرة على الطبيعة',
-                active: true
-            },
-            {
-                id: 4,
-                image: "./5.webp",
-                title: 'مسطحات خضراء واسعة ومريحة للاسترخاء',
-                description: 'استرخ في مساحاتنا الخضراء الواسعة واستمتع بالهواء النقي والطبيعة الخلابة مع مناطق مخصصة للشواء والجلسات العائلية المميزة',
-                active: true
-            },
-            {
-                id: 5,
-                image: "./08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp",
-                title: 'مسابح داخلية وخارجية مميزة ومتطورة',
-                description: 'مسابح متنوعة داخلية وخارجية مع إطلالات ساحرة ومرافق استرخاء متكاملة تناسب جميع أفراد العائلة مع خدمات راقية ومتميزة',
-                active: true
-            },
-            {
-                id: 6,
-                image: "./12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp",
-                title: 'خيل للأطفال ومرافق ترفيهية آمنة',
-                description: 'تجربة ممتعة وآمنة للأطفال مع الخيل الأليفة ومرافق ترفيهية متنوعة ومناسبة لجميع الأعمار تحت إشراف متخصصين مدربين',
-                active: true
-            }
-        ];
-
-        // Gallery Items - الصور الحقيقية المرفوعة
+        {
+                "id": 1,
+                "image": "./5.jpeg",
+                "title": "مسابح وألعاب مائية متنوعة ومنعشة",
+                "description": "استمتع بأجمل اللحظات في مسابحنا المتنوعة مع ألعاب مائية مثيرة للأطفال والكبار في أجواء منعشة ومريحة تحت أشعة الشمس الذهبية",
+                "active": true
+        },
+        {
+                "id": 2,
+                "image": "./3.webp",
+                "title": "طيور وحيوانات أليفة رائعة ومتنوعة",
+                "description": "تفاعل مع مجموعة متنوعة من الطيور الملونة والحيوانات الأليفة الودودة في بيئة آمنة ومناسبة للعائلات وتجربة تعليمية ممتعة للأطفال",
+                "active": true
+        },
+        {
+                "id": 3,
+                "image": "./4.jpeg",
+                "title": "أكواخ أوروبية فاخرة ومجهزة بالكامل",
+                "description": "إقامة مريحة في أكواخ بتصميم أوروبي فاخر مجهزة بكافة المرافق الحديثة والتكييف والواي فاي المجاني مع إطلالات ساحرة على الطبيعة",
+                "active": true
+        },
+        {
+                "id": 4,
+                "image": "./5.webp",
+                "title": "مسطحات خضراء واسعة ومريحة للاسترخاء",
+                "description": "استرخ في مساحاتنا الخضراء الواسعة واستمتع بالهواء النقي والطبيعة الخلابة مع مناطق مخصصة للشواء والجلسات العائلية المميزة",
+                "active": true
+        },
+        {
+                "id": 5,
+                "image": "./08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp",
+                "title": "مسابح داخلية وخارجية مميزة ومتطورة",
+                "description": "مسابح متنوعة داخلية وخارجية مع إطلالات ساحرة ومرافق استرخاء متكاملة تناسب جميع أفراد العائلة مع خدمات راقية ومتميزة",
+                "active": true
+        },
+        {
+                "id": 6,
+                "image": "./12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp",
+                "title": "خيل للأطفال ومرافق ترفيهية آمنة",
+                "description": "تجربة ممتعة وآمنة للأطفال مع الخيل الأليفة ومرافق ترفيهية متنوعة ومناسبة لجميع الأعمار تحت إشراف متخصصين مدربين",
+                "active": true
+        }
+];
         let galleryItems = [
-            { id: 1, url: './248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp', title: 'مناظر المزرعة الخلابة والطبيعة الساحرة' },
-            { id: 2, url: './4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp', title: 'الأكواخ الفاخرة والمرافق المتطورة' },
-            { id: 3, url: './6168779-اختيار الصور-f-8f05-484c-be45-d4a2b23b0ce7.webp', title: 'المساحات الخضراء الواسعة والمريحة' },
-            { id: 4, url: './2.webp', title: 'المسابح والألعاب المائية المتنوعة' },
-            { id: 5, url: './3.jpeg', title: 'الحيوانات الأليفة والطيور الملونة' }
-        ];
-
-        // Comment Images - صور الزوار الحقيقية
+        {
+                "id": 1,
+                "url": "./248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp",
+                "title": "مناظر المزرعة الخلابة والطبيعة الساحرة"
+        },
+        {
+                "id": 2,
+                "url": "./4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp",
+                "title": "الأكواخ الفاخرة والمرافق المتطورة"
+        },
+        {
+                "id": 3,
+                "url": "./6168779-اختيار الصور-f-8f05-484c-be45-d4a2b23b0ce7.webp",
+                "title": "المساحات الخضراء الواسعة والمريحة"
+        },
+        {
+                "id": 4,
+                "url": "./2.webp",
+                "title": "المسابح والألعاب المائية المتنوعة"
+        },
+        {
+                "id": 5,
+                "url": "./3.jpeg",
+                "title": "الحيوانات الأليفة والطيور الملونة"
+        }
+];
         let commentImages = [
-            { id: 1, url: './4.webp', title: 'زائر سعيد بتجربة المزرعة الرائعة' },
-            { id: 2, url: './5.jpeg', title: 'عائلة تستمتع بالوقت في المزرعة' },
-            { id: 3, url: './3.webp', title: 'أطفال يلعبون مع الحيوانات الأليفة' },
-            { id: 4, url: './4.jpeg', title: 'استرخاء في المساحات الخضراء الجميلة' },
-            { id: 5, url: './5.webp', title: 'تجربة المسابح الرائعة والمنعشة' },
-            { id: 6, url: './08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp', title: 'جولة ممتعة مع الطيور والحيوانات' },
-            { id: 7, url: './12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp', title: 'تجربة الأكواخ الفاخرة والمريحة' },
-            { id: 8, url: './248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp', title: 'استمتاع بالألعاب المائية المثيرة' },
-            { id: 9, url: './4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp', title: 'أجواء عائلية رائعة في قلب الطبيعة' }
-        ];
-
-        // Footer Data
+        {
+                "id": 1,
+                "url": "./4.webp",
+                "title": "زائر سعيد بتجربة المزرعة الرائعة"
+        },
+        {
+                "id": 2,
+                "url": "./5.jpeg",
+                "title": "عائلة تستمتع بالوقت في المزرعة"
+        },
+        {
+                "id": 3,
+                "url": "./3.webp",
+                "title": "أطفال يلعبون مع الحيوانات الأليفة"
+        },
+        {
+                "id": 4,
+                "url": "./4.jpeg",
+                "title": "استرخاء في المساحات الخضراء الجميلة"
+        },
+        {
+                "id": 5,
+                "url": "./5.webp",
+                "title": "تجربة المسابح الرائعة والمنعشة"
+        },
+        {
+                "id": 6,
+                "url": "./08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp",
+                "title": "جولة ممتعة مع الطيور والحيوانات"
+        },
+        {
+                "id": 7,
+                "url": "./12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp",
+                "title": "تجربة الأكواخ الفاخرة والمريحة"
+        },
+        {
+                "id": 8,
+                "url": "./248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp",
+                "title": "استمتاع بالألعاب المائية المثيرة"
+        },
+        {
+                "id": 9,
+                "url": "./4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp",
+                "title": "أجواء عائلية رائعة في قلب الطبيعة"
+        }
+];
         let footerSections = [
-            {
-                id: 1,
-                title: "🏞️ أكواخ ريف عبس",
-                content: "وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة مع تجربة فريدة لا تُنسى",
-                type: "text"
-            },
-            {
-                id: 2,
-                title: "📞 تواصل معنا",
-                content: "📍 منطقة عسير - محافظة المجاردة<br>📱 +966 0553663992<br>⏰ خدمة 24 ساعة<br>🌐 WiFi مجاني عالي السرعة",
-                type: "html"
-            },
-            {
-                id: 3,
-                title: "🎯 خدماتنا المميزة",
-                content: "🏡 أكواخ مجهزة بالكامل<br>🏊‍♂️ مسابح وساونا<br>🌿 مسطحات خضراء واسعة<br>🚗 مواقف مجانية آمنة",
-                type: "html"
-            }
-        ];
-
-        // TikTok Data - مع صورة مصغرة من الصور المرفوعة
+        {
+                "id": 1,
+                "title": "🏞️ أكواخ ريف عبس",
+                "content": "وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة مع تجربة فريدة لا تُنسى",
+                "type": "text"
+        },
+        {
+                "id": 2,
+                "title": "📞 تواصل معنا",
+                "content": "📍 منطقة عسير - محافظة المجاردة<br>📱 +966 0553663992<br>⏰ خدمة 24 ساعة<br>🌐 WiFi مجاني عالي السرعة",
+                "type": "html"
+        },
+        {
+                "id": 3,
+                "title": "🎯 خدماتنا المميزة",
+                "content": "🏡 أكواخ مجهزة بالكامل<br>🏊‍♂️ مسابح وساونا<br>🌿 مسطحات خضراء واسعة<br>🚗 مواقف مجانية آمنة",
+                "type": "html"
+        }
+];
         let tiktokData = {
-            title: "استكشف مزرعة ريف عبس",
-            description: "انضموا إلينا في جولة ساحرة داخل مزرعة هادئة تجمع بين سحر الطبيعة وروح الريف السعودي الأصيل",
-            videoUrl: "https://www.tiktok.com/@drsugar2/video/7472674220611341575",
-            channelUrl: "https://www.tiktok.com/@drsugar2",
-            thumbnailUrl: "./2.webp"
-        };
+        "title": "استكشف مزرعة ريف عبس",
+        "description": "انضموا إلينا في جولة ساحرة داخل مزرعة هادئة تجمع بين سحر الطبيعة وروح الريف السعودي الأصيل",
+        "videoUrl": "https://www.tiktok.com/@drsugar2/video/7472674220611341575",
+        "channelUrl": "https://www.tiktok.com/@drsugar2",
+        "thumbnailUrl": "./2.webp"
+};
 
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
@@ -2897,5 +3421,6 @@
         console.log('💡 كلمة مرور الإدارة: admin123');
         console.log('🚀 الموقع جاهز للاستخدام!');
     </script>
-</body>
-</html>
+
+
+<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}" style="display: none;"></div><div id="claude-ai"></div><div class="admin-notification info" style="display: block;">🔄 جاري نسخ الكود...</div></body></html>
