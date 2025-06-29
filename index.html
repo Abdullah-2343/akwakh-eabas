@@ -1,4 +1,6 @@
 <html lang="ar" dir="rtl"><head>
+<!-- مُصلح نهائياً ٤‏/١‏/١٤٤٧ هـ ١:٣١:٣٦ م -->
+
 <!-- مُصلح نهائياً ٤‏/١‏/١٤٤٧ هـ ١:٢٧:٤٩ م -->
 
 <!-- مُصلح نهائياً ٤‏/١‏/١٤٤٧ هـ ١٢:٤٤:٥٢ م -->
@@ -1400,6 +1402,26 @@
             font-family: 'NotoSans_semibold_online_security'; 
             src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
         }
+</style><style>
+        @font-face {
+            font-family: 'NotoSans_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-regular.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_medium_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-medium.ttf);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_bold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-bold.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_semibold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
+        }
 </style></head>
 <body>
     <!-- Header -->
@@ -1646,13 +1668,13 @@
     <!-- Custom Modal for Admin Input - مُحسن لمنع الإغلاق -->
     <div id="customModal" class="custom-modal" style="display: none;">
         <div class="custom-modal-content">
-            <h3 id="customModalTitle">إضافة صورة زائر</h3>
+            <h3 id="customModalTitle">تعديل صورة الزائر</h3>
             <div id="customModalBody">
-                            <label>رابط الصورة:</label>
-                            <input type="text" id="customField0" placeholder="رابط Google Drive أو أي رابط صورة" value="">
-                        
                             <label>عنوان الصورة:</label>
-                            <input type="text" id="customField1" placeholder="عنوان الصورة" value="" autocomplete="off">
+                            <input type="text" id="customField0" placeholder="عنوان الصورة" value="صورة زائر من المزرعة">
+                        
+                            <label>رابط الصورة:</label>
+                            <input type="text" id="customField1" placeholder="رابط Google Drive أو أي رابط صورة" value="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&amp;w=350&amp;h=280&amp;fit=crop" autocomplete="off">
                         </div>
             <div class="custom-modal-buttons">
                 <button class="btn-primary" onclick="confirmCustomModal()">موافق</button>
@@ -1858,7 +1880,7 @@
                         </div>
                         <div class="editor-field">
                             <label>رابط الصورة:</label>
-                            <input type="text" value="https://drive.google.com/file/d/1S90qKOHhe9HsULBh3Us5rf6JhcWHbJeE/view?usp=drive_link" onchange="updateFeatureImage(2, this.value)" placeholder="رابط Google Drive أو أي رابط صورة">
+                            <input type="text" value="https://ibb.co/S4Bmg8sc" onchange="updateFeatureImage(2, this.value)" placeholder="رابط Google Drive أو أي رابط صورة">
                         </div>
                         <div class="editor-field">
                             <label>الحالة:</label>
@@ -2085,7 +2107,8 @@
     <script>
         
         
-        // Global Website Data - Fixed ٤‏/١‏/١٤٤٧ هـ ١:٢٧:٤٩ م
+        
+        // Global Website Data - Fixed ٤‏/١‏/١٤٤٧ هـ ١:٣١:٣٦ م
         let siteData = {
         "info": {
                 "name": "مزرعة ريف عبس السياحية",
@@ -3472,4 +3495,5 @@
 
 
 <iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}" style="display: none;"></div><div id="claude-ai"></div><div class="notification info">🔄 جاري تحضير الكود المُصلح...</div>
-<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="claude-ai"></div><div class="notification info">🔄 جاري تحضير الكود المُصلح...</div></body></html>
+<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="claude-ai"></div><div class="notification info">🔄 جاري تحضير الكود المُصلح...</div>
+<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="claude-ai"></div><div class="notification info">🔄 جاري تحضير الملف...</div><div class="notification success">✅ تم تحميل الموقع المُصلح!</div><div class="notification info">🔄 جاري تحضير الكود المُصلح...</div></body></html>
