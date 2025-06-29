@@ -1,4 +1,6 @@
 <html lang="ar" dir="rtl"><head>
+<!-- مُصلح نهائياً ٤‏/١‏/١٤٤٧ هـ ١:٢٧:٤٩ م -->
+
 <!-- مُصلح نهائياً ٤‏/١‏/١٤٤٧ هـ ١٢:٤٤:٥٢ م -->
 
     <meta charset="UTF-8">
@@ -1378,13 +1380,33 @@
             font-family: 'NotoSans_semibold_online_security'; 
             src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
         }
+</style><style>
+        @font-face {
+            font-family: 'NotoSans_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-regular.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_medium_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-medium.ttf);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_bold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-bold.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_semibold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
+        }
 </style></head>
 <body>
     <!-- Header -->
     <header>
         <nav class="container">
             <div class="logo-container">
-                <div class="logo-display" id="logoDisplay"><img src="https://drive.google.com/file/d/1weVlH-mSUlkHvYa8j8YjV0KMc76ycvX4/view?usp=drive_link" alt="شعار المزرعة"></div>
+                <div class="logo-display" id="logoDisplay"><img src="https://ibb.co/s9cZFb70" alt="شعار المزرعة"></div>
             </div>
             <ul class="nav-links">
                 <li><a href="#home" id="navHome">الرئيسية</a></li>
@@ -1433,7 +1455,7 @@
                 </div>
             
                 <div class="feature-card">
-                    <img src="https://drive.google.com/file/d/1S90qKOHhe9HsULBh3Us5rf6JhcWHbJeE/view?usp=drive_link" alt="أكواخ أوربية مميزة" class="feature-image" onerror="this.style.display='none'" style="display: none;">
+                    <img src="https://ibb.co/S4Bmg8sc" alt="أكواخ أوربية مميزة" class="feature-image" onerror="this.style.display='none'" style="display: none;">
                     <div class="feature-content">
                         <div class="feature-title">أكواخ أوربية مميزة</div>
                         <div class="feature-description">إقامة مريحة في أكواخ مجهزة بالكامل مع مرافق حديثة</div>
@@ -1630,7 +1652,7 @@
                             <input type="text" id="customField0" placeholder="رابط Google Drive أو أي رابط صورة" value="">
                         
                             <label>عنوان الصورة:</label>
-                            <input type="text" id="customField1" placeholder="عنوان الصورة" value="">
+                            <input type="text" id="customField1" placeholder="عنوان الصورة" value="" autocomplete="off">
                         </div>
             <div class="custom-modal-buttons">
                 <button class="btn-primary" onclick="confirmCustomModal()">موافق</button>
@@ -1673,8 +1695,8 @@
                     <button class="admin-tab" onclick="showAdminTab('branding')">🎨 الشعار والهوية</button>
                     <button class="admin-tab" onclick="showAdminTab('features')">🎯 المميزات</button>
                     <button class="admin-tab" onclick="showAdminTab('media')">🎬 الوسائط</button>
-                    <button class="admin-tab" onclick="showAdminTab('comments')">📸 الصور</button>
-                    <button class="admin-tab active" onclick="showAdminTab('footer')">🦶 الفوتر</button>
+                    <button class="admin-tab active" onclick="showAdminTab('comments')">📸 الصور</button>
+                    <button class="admin-tab" onclick="showAdminTab('footer')">🦶 الفوتر</button>
                 </div>
                 
                 <!-- Content Tab -->
@@ -1828,7 +1850,7 @@
                     <div class="text-editor">
                         <div class="editor-field">
                             <label>العنوان:</label>
-                            <input type="text" value="أكواخ وشاليهات مميزة" onchange="updateFeatureTitle(2, this.value)">
+                            <input type="text" value="أكواخ أوربية مميزة" onchange="updateFeatureTitle(2, this.value)">
                         </div>
                         <div class="editor-field">
                             <label>الوصف:</label>
@@ -1836,7 +1858,7 @@
                         </div>
                         <div class="editor-field">
                             <label>رابط الصورة:</label>
-                            <input type="text" value="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&amp;w=400&amp;h=300&amp;fit=crop" onchange="updateFeatureImage(2, this.value)" placeholder="رابط Google Drive أو أي رابط صورة">
+                            <input type="text" value="https://drive.google.com/file/d/1S90qKOHhe9HsULBh3Us5rf6JhcWHbJeE/view?usp=drive_link" onchange="updateFeatureImage(2, this.value)" placeholder="رابط Google Drive أو أي رابط صورة">
                         </div>
                         <div class="editor-field">
                             <label>الحالة:</label>
@@ -1922,7 +1944,7 @@
                 </div>
 
                 <!-- Comments Tab -->
-                <div id="commentsTab" class="admin-tab-content">
+                <div id="commentsTab" class="admin-tab-content active">
                     <div class="admin-section">
                         <h3>📸 إدارة صور الزوار</h3>
                         <div style="margin-bottom: 2rem;">
@@ -1971,7 +1993,7 @@
                 </div>
 
                 <!-- Footer Tab -->
-                <div id="footerTab" class="admin-tab-content active">
+                <div id="footerTab" class="admin-tab-content">
                     <div class="admin-section">
                         <h3>🦶 إدارة الفوتر</h3>
                         <div style="margin-bottom: 2rem;">
@@ -2062,7 +2084,8 @@
 
     <script>
         
-        // Global Website Data - Fixed ٤‏/١‏/١٤٤٧ هـ ١٢:٤٤:٥٢ م
+        
+        // Global Website Data - Fixed ٤‏/١‏/١٤٤٧ هـ ١:٢٧:٤٩ م
         let siteData = {
         "info": {
                 "name": "مزرعة ريف عبس السياحية",
@@ -2098,7 +2121,7 @@
         },
         "logo": {
                 "type": "image",
-                "url": "https://drive.google.com/file/d/1weVlH-mSUlkHvYa8j8YjV0KMc76ycvX4/view?usp=drive_link",
+                "url": "https://ibb.co/s9cZFb70",
                 "text": "مزرعة أكواخ ريف عبس السياحية"
         },
         "footer": {
@@ -2135,7 +2158,7 @@
         },
         {
                 "id": 2,
-                "image": "https://drive.google.com/file/d/1S90qKOHhe9HsULBh3Us5rf6JhcWHbJeE/view?usp=drive_link",
+                "image": "https://ibb.co/S4Bmg8sc",
                 "title": "أكواخ أوربية مميزة",
                 "description": "إقامة مريحة في أكواخ مجهزة بالكامل مع مرافق حديثة",
                 "active": true
@@ -3448,4 +3471,5 @@
     </script>
 
 
-<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}" style="display: none;"></div><div id="claude-ai"></div><div class="notification info">🔄 جاري تحضير الكود المُصلح...</div></body></html>
+<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}" style="display: none;"></div><div id="claude-ai"></div><div class="notification info">🔄 جاري تحضير الكود المُصلح...</div>
+<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="claude-ai"></div><div class="notification info">🔄 جاري تحضير الكود المُصلح...</div></body></html>
