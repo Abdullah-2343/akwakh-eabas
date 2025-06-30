@@ -1422,6 +1422,26 @@
             font-family: 'NotoSans_semibold_online_security'; 
             src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
         }
+</style><style>
+        @font-face {
+            font-family: 'NotoSans_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-regular.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_medium_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-medium.ttf);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_bold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-bold.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_semibold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
+        }
 </style></head>
 <body>
     <!-- Header -->
@@ -1452,7 +1472,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-slideshow" id="heroSlideshow"><div class="hero-slide" style="background-image: url(&quot;https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/a1.jpg&quot;);"></div><div class="hero-slide" style="background-image: url(&quot;https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/a2.jpg&quot;);"></div><div class="hero-slide active" style="background-image: url(&quot;https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/a3.jpg&quot;);"></div><div class="hero-slide" style="background-image: url(&quot;https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/a4.jpg&quot;);"></div><div class="hero-slide" style="background-image: url(&quot;https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/a5.jpg&quot;);"></div></div>
+        <div class="hero-slideshow" id="heroSlideshow"><div class="hero-slide" style="background-image: url(&quot;https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/a1.jpg&quot;);"></div><div class="hero-slide active" style="background-image: url(&quot;https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/a2.jpg&quot;);"></div><div class="hero-slide" style="background-image: url(&quot;https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/a3.jpg&quot;);"></div><div class="hero-slide" style="background-image: url(&quot;https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/a4.jpg&quot;);"></div><div class="hero-slide" style="background-image: url(&quot;https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/a5.jpg&quot;);"></div></div>
         <div class="hero-content">
             <div>
                 <h1 id="heroMainTitle">مرحباً بكم في أكواخ ريف عبس</h1>
@@ -1460,7 +1480,7 @@
             </div>
         </div>
         <div class="hero-caption" id="heroCaption" style="display: none;"></div>
-        <div class="hero-indicators" id="heroIndicators"><div class="hero-indicator" title="مناظر خلابة لمزرعة ريف عبس"></div><div class="hero-indicator" title="إطلالة ساحرة على المساحات الخضراء"></div><div class="hero-indicator active" title="جولة بانورامية في قلب الطبيعة"></div><div class="hero-indicator" title="مناظر طبيعية ساحرة"></div><div class="hero-indicator" title="أجواء ريفية هادئة ومريحة"></div></div>
+        <div class="hero-indicators" id="heroIndicators"><div class="hero-indicator" title="مناظر خلابة لمزرعة ريف عبس"></div><div class="hero-indicator active" title="إطلالة ساحرة على المساحات الخضراء"></div><div class="hero-indicator" title="جولة بانورامية في قلب الطبيعة"></div><div class="hero-indicator" title="مناظر طبيعية ساحرة"></div><div class="hero-indicator" title="أجواء ريفية هادئة ومريحة"></div></div>
         <button class="hero-nav prev" onclick="prevSlide()">‹</button>
         <button class="hero-nav next" onclick="nextSlide()">›</button>
     </section>
@@ -1777,19 +1797,19 @@
     <!-- Custom Modal -->
     <div id="customModal" class="custom-modal" style="display: none;">
         <div class="custom-modal-content">
-            <h3 id="customModalTitle">تعديل الميزة</h3>
+            <h3 id="customModalTitle">إضافة ميزة جديدة</h3>
             <div id="customModalBody">
-                            <label>اسم الملف:</label>
-                            <input type="text" id="customField0" placeholder="اسم الملف" value="b1.jpg">
+                            <label>اسم الملف (مثل: b6.jpg):</label>
+                            <input type="text" id="customField0" placeholder="b6.jpg" value="">
                         
                             <label>عنوان الميزة:</label>
-                            <input type="text" id="customField1" placeholder="عنوان الميزة" value="أكواخ أوروبية فاخرة ومجهزة بالكامل">
+                            <input type="text" id="customField1" placeholder="أدخل عنوان الميزة" value="">
                         
                             <label>وصف الميزة:</label>
-                            <textarea id="customField2" placeholder="وصف الميزة" rows="3">إقامة مريحة في أكواخ بتصميم أوروبي فاخر مجهزة بكافة المرافق الحديثة والتكييف والواي فاي المجاني</textarea>
+                            <textarea id="customField2" placeholder="أدخل وصف الميزة" rows="3" autocomplete="off"></textarea>
                         
                             <label>تعليق اختياري:</label>
-                            <input type="text" id="customField3" placeholder="تعليق تحت الصورة" value="" autocomplete="off">
+                            <input type="text" id="customField3" placeholder="تعليق تحت الصورة (اختياري)" value="">
                         </div>
             <div class="custom-modal-buttons">
                 <button class="btn-primary" onclick="confirmCustomModal()">موافق</button>
@@ -2268,7 +2288,8 @@
         
         
         
-        // Global Data - Updated ٥‏/١‏/١٤٤٧ هـ ٨:١١:٣٣ ص
+        
+        // Global Data - Updated ٥‏/١‏/١٤٤٧ هـ ٨:٥٦:٤٨ ص
         let adminPassword = "admin123";
         let isAdminLoggedIn = false;
         let currentSlide = 0;
@@ -3638,5 +3659,6 @@
 
 
 <iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}" style="display: none;"></div><div id="claude-ai"></div><div class="admin-notification info" style="display: block;">🔄 جاري نسخ الكود...</div>
+<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="claude-ai"></div><div class="admin-notification info" style="display: block;">🔄 جاري نسخ الكود...</div>
 <iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="claude-ai"></div><div class="admin-notification info" style="display: block;">🔄 جاري نسخ الكود...</div>
 <iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="claude-ai"></div><div class="admin-notification info" style="display: block;">🔄 جاري نسخ الكود...</div></body></html>
