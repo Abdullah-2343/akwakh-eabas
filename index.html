@@ -1,4 +1,6 @@
-<html lang="ar" dir="rtl"><head>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أكواخ ريف عبس - مزرعة سياحية في عسير</title>
@@ -101,6 +103,7 @@
             font-weight: bold;
             color: var(--secondary-color);
             text-decoration: none;
+            transition: var(--transition);
         }
 
         .nav-links {
@@ -248,6 +251,22 @@
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
             animation: fadeInUp 1s ease-out 0.3s both;
             max-width: 600px;
+        }
+
+        .hero-caption {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            text-align: center;
+            max-width: 80%;
+            z-index: 15;
+            backdrop-filter: blur(10px);
         }
 
         .hero-indicators {
@@ -402,10 +421,18 @@
             color: var(--text-color);
             line-height: 1.6;
             font-size: 1rem;
+            margin-bottom: 0.5rem;
         }
 
-        /* TikTok Video Section */
-        .tiktok-hero-section {
+        .feature-caption {
+            color: #666;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+
+        /* YouTube Video Section */
+        .youtube-hero-section {
             min-height: 100vh;
             background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
             display: flex;
@@ -415,7 +442,7 @@
             padding: 3rem 0;
         }
 
-        .tiktok-container {
+        .youtube-container {
             text-align: center;
             width: 100%;
             max-width: 1200px;
@@ -423,78 +450,26 @@
             padding: var(--container-padding);
         }
 
-        .tiktok-wrapper {
+        .youtube-wrapper {
             position: relative;
             width: 100%;
-            max-width: 600px;
-            height: 700px;
+            max-width: 800px;
+            height: 450px;
             margin: 0 auto 3rem;
             border-radius: 25px;
             overflow: hidden;
             box-shadow: 0 30px 80px rgba(0,0,0,0.3);
             background: #000;
-            cursor: pointer;
-            transition: var(--transition);
         }
 
-        .tiktok-wrapper:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 40px 100px rgba(0,0,0,0.4);
-        }
-
-        .tiktok-thumbnail {
-            position: relative;
+        .youtube-wrapper iframe {
             width: 100%;
             height: 100%;
-            background-size: cover;
-            background-position: center;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border: none;
+            border-radius: 25px;
         }
 
-        .tiktok-play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(45deg, rgba(255, 0, 80, 0.9), rgba(255, 0, 150, 0.9));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 15px 40px rgba(255, 0, 80, 0.5);
-            animation: tiktokPulse 2s infinite;
-            z-index: 10;
-        }
-
-        @keyframes tiktokPulse {
-            0% { transform: translate(-50%, -50%) scale(1); }
-            50% { transform: translate(-50%, -50%) scale(1.1); }
-            100% { transform: translate(-50%, -50%) scale(1); }
-        }
-
-        .tiktok-play-button:hover {
-            transform: translate(-50%, -50%) scale(1.2);
-            box-shadow: 0 20px 50px rgba(255, 0, 80, 0.7);
-        }
-
-        .tiktok-play-button::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 35px solid white;
-            border-top: 20px solid transparent;
-            border-bottom: 20px solid transparent;
-            margin-left: 10px;
-        }
-
-        .tiktok-title {
+        .youtube-title {
             font-size: 2.5rem;
             color: white;
             margin-bottom: 2rem;
@@ -503,7 +478,7 @@
             line-height: 1.3;
         }
 
-        .tiktok-description {
+        .youtube-description {
             font-size: 1.3rem;
             color: rgba(255,255,255,0.9);
             margin-bottom: 3rem;
@@ -511,8 +486,8 @@
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
-        .tiktok-button {
-            background: linear-gradient(45deg, #ff0050, #ff0080);
+        .youtube-button {
+            background: linear-gradient(45deg, #ff0000, #cc0000);
             color: white;
             padding: 20px 45px;
             border: none;
@@ -525,24 +500,23 @@
             display: inline-flex;
             align-items: center;
             gap: 15px;
-            box-shadow: 0 15px 40px rgba(255, 0, 80, 0.4);
+            box-shadow: 0 15px 40px rgba(255, 0, 0, 0.4);
         }
 
-        .tiktok-button:hover {
-            background: linear-gradient(45deg, #e6004d, #cc0066);
+        .youtube-button:hover {
+            background: linear-gradient(45deg, #e60000, #b30000);
             transform: translateY(-5px);
-            box-shadow: 0 20px 50px rgba(255, 0, 80, 0.5);
+            box-shadow: 0 20px 50px rgba(255, 0, 0, 0.5);
         }
 
-        /* Gallery - Slideshow */
-        .gallery-slideshow {
+        /* Gallery & Comments - Same Size */
+        .gallery-slideshow, .comments-display {
             position: relative;
-            max-width: 1000px;
+            max-width: 1400px;
             margin: 2rem auto;
             border-radius: var(--border-radius);
             overflow: hidden;
-            box-shadow: var(--shadow);
-            background: var(--background-color);
+            height: 320px;
         }
 
         .gallery-slide {
@@ -609,19 +583,26 @@
             background: var(--primary-color);
         }
 
-        /* Comments Section */
+        .gallery-caption {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            text-align: center;
+            max-width: 80%;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Comments Section - Same as Gallery */
         .comments-section {
             padding: 4rem 0;
             background: var(--background-color);
             overflow: hidden;
-        }
-
-        .comments-display {
-            position: relative;
-            overflow: hidden;
-            max-width: 1400px;
-            margin: 0 auto;
-            height: 320px;
         }
 
         .comments-slider {
@@ -645,9 +626,9 @@
         }
 
         .comment-image-card {
-            min-width: 350px;
-            max-width: 350px;
-            height: 280px;
+            min-width: 400px;
+            max-width: 400px;
+            height: 320px;
             border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--shadow);
@@ -676,6 +657,21 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        .comment-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-align: center;
+            max-width: 90%;
+            backdrop-filter: blur(10px);
         }
 
         .comments-control {
@@ -1249,6 +1245,11 @@
                 font-size: 1.1rem;
             }
 
+            .logo-display {
+                width: 45px;
+                height: 45px;
+            }
+
             .hero {
                 height: 70vh;
             }
@@ -1269,18 +1270,18 @@
                 font-size: 0.9rem;
             }
 
-            .tiktok-title {
+            .youtube-title {
                 font-size: 1.8rem;
             }
 
-            .tiktok-description {
+            .youtube-description {
                 font-size: 1rem;
                 margin-bottom: 2rem;
             }
 
-            .tiktok-wrapper {
-                max-width: 350px;
-                height: 450px;
+            .youtube-wrapper {
+                max-width: 100%;
+                height: 250px;
             }
 
             .text-editor {
@@ -1316,12 +1317,13 @@
             }
 
             .comment-image-card {
-                min-width: 250px;
-                max-width: 250px;
+                min-width: 300px;
+                max-width: 300px;
+                height: 240px;
             }
 
             .comments-display {
-                height: 250px;
+                height: 260px;
             }
 
             .features-grid {
@@ -1362,40 +1364,20 @@
             animation: fadeInUp 0.6s ease-out;
         }
     </style>
-<style>
-        @font-face {
-            font-family: 'NotoSans_online_security'; 
-            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-regular.woff);
-        }
-
-        @font-face {
-            font-family: 'NotoSans_medium_online_security'; 
-            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-medium.ttf);
-        }
-
-        @font-face {
-            font-family: 'NotoSans_bold_online_security'; 
-            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-bold.woff);
-        }
-
-        @font-face {
-            font-family: 'NotoSans_semibold_online_security'; 
-            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
-        }
-</style></head>
+</head>
 <body>
     <!-- Header -->
     <header>
         <nav class="container">
             <div class="logo-container">
                 <div class="logo-display" id="logoDisplay">
-                    <img src="./3.jpeg" alt="شعار أكواخ ريف عبس">
+                    <img src="https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/sh.png" alt="شعار أكواخ ريف عبس">
                 </div>
                 <a href="#home" class="site-name">أكواخ ريف عبس</a>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#tiktok">الفيديو</a></li>
+                <li><a href="#youtube">الفيديو</a></li>
                 <li><a href="#gallery">المعرض</a></li>
                 <li><a href="#booking">احجز الآن</a></li>
                 <li><a href="#comments">الصور</a></li>
@@ -1412,14 +1394,19 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-slideshow" id="heroSlideshow"><div class="hero-slide active" style="background-image: url(&quot;./2.webp&quot;);"></div><div class="hero-slide" style="background-image: url(&quot;./3.jpeg&quot;);"></div><div class="hero-slide" style="background-image: url(&quot;./4.webp&quot;);"></div></div>
+        <div class="hero-slideshow" id="heroSlideshow">
+            <!-- Slides will be populated by JavaScript -->
+        </div>
         <div class="hero-content">
             <div>
                 <h1 id="heroMainTitle">مرحباً بكم في أكواخ ريف عبس</h1>
                 <p id="heroMainSubtitle">جولة ساحرة في أكواخ مزرعة ريف عبس الطبيعية</p>
             </div>
         </div>
-        <div class="hero-indicators" id="heroIndicators"><div class="hero-indicator active" title="مناظر خلابة لمزرعة ريف عبس وسط الطبيعة الساحرة"></div><div class="hero-indicator" title="إطلالة ساحرة على المساحات الخضراء والجبال الطبيعية"></div><div class="hero-indicator" title="جولة بانورامية في قلب الطبيعة الخلابة بريف عبس"></div></div>
+        <div class="hero-caption" id="heroCaption" style="display: none;"></div>
+        <div class="hero-indicators" id="heroIndicators">
+            <!-- Indicators will be populated by JavaScript -->
+        </div>
         <button class="hero-nav prev" onclick="prevSlide()">‹</button>
         <button class="hero-nav next" onclick="nextSlide()">›</button>
     </section>
@@ -1429,72 +1416,24 @@
         <div class="container">
             <h2 id="featuresMainTitle">ما يميز مزرعة ريف عبس</h2>
             <div class="features-grid" id="featuresGrid">
-                <div class="feature-card">
-                    <img src="./5.jpeg" alt="مسابح وألعاب مائية متنوعة ومنعشة" class="feature-image" loading="lazy">
-                    <div class="feature-content">
-                        <div class="feature-title">مسابح وألعاب مائية متنوعة ومنعشة</div>
-                        <div class="feature-description">استمتع بأجمل اللحظات في مسابحنا المتنوعة مع ألعاب مائية مثيرة للأطفال والكبار في أجواء منعشة ومريحة تحت أشعة الشمس الذهبية</div>
-                    </div>
-                </div>
-            
-                <div class="feature-card">
-                    <img src="./3.webp" alt="طيور وحيوانات أليفة رائعة ومتنوعة" class="feature-image" loading="lazy">
-                    <div class="feature-content">
-                        <div class="feature-title">طيور وحيوانات أليفة رائعة ومتنوعة</div>
-                        <div class="feature-description">تفاعل مع مجموعة متنوعة من الطيور الملونة والحيوانات الأليفة الودودة في بيئة آمنة ومناسبة للعائلات وتجربة تعليمية ممتعة للأطفال</div>
-                    </div>
-                </div>
-            
-                <div class="feature-card">
-                    <img src="./4.jpeg" alt="أكواخ أوروبية فاخرة ومجهزة بالكامل" class="feature-image" loading="lazy">
-                    <div class="feature-content">
-                        <div class="feature-title">أكواخ أوروبية فاخرة ومجهزة بالكامل</div>
-                        <div class="feature-description">إقامة مريحة في أكواخ بتصميم أوروبي فاخر مجهزة بكافة المرافق الحديثة والتكييف والواي فاي المجاني مع إطلالات ساحرة على الطبيعة</div>
-                    </div>
-                </div>
-            
-                <div class="feature-card">
-                    <img src="./5.webp" alt="مسطحات خضراء واسعة ومريحة للاسترخاء" class="feature-image" loading="lazy">
-                    <div class="feature-content">
-                        <div class="feature-title">مسطحات خضراء واسعة ومريحة للاسترخاء</div>
-                        <div class="feature-description">استرخ في مساحاتنا الخضراء الواسعة واستمتع بالهواء النقي والطبيعة الخلابة مع مناطق مخصصة للشواء والجلسات العائلية المميزة</div>
-                    </div>
-                </div>
-            
-                <div class="feature-card">
-                    <img src="./08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp" alt="مسابح داخلية وخارجية مميزة ومتطورة" class="feature-image" loading="lazy">
-                    <div class="feature-content">
-                        <div class="feature-title">مسابح داخلية وخارجية مميزة ومتطورة</div>
-                        <div class="feature-description">مسابح متنوعة داخلية وخارجية مع إطلالات ساحرة ومرافق استرخاء متكاملة تناسب جميع أفراد العائلة مع خدمات راقية ومتميزة</div>
-                    </div>
-                </div>
-            
-                <div class="feature-card">
-                    <img src="./12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp" alt="خيل للأطفال ومرافق ترفيهية آمنة" class="feature-image" loading="lazy">
-                    <div class="feature-content">
-                        <div class="feature-title">خيل للأطفال ومرافق ترفيهية آمنة</div>
-                        <div class="feature-description">تجربة ممتعة وآمنة للأطفال مع الخيل الأليفة ومرافق ترفيهية متنوعة ومناسبة لجميع الأعمار تحت إشراف متخصصين مدربين</div>
-                    </div>
-                </div>
+                <!-- Features cards will be populated by JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- TikTok Video Section -->
-    <section id="tiktok" class="tiktok-hero-section">
-        <div class="tiktok-container">
-            <h2 class="tiktok-title" id="tiktokMainTitle">استكشف مزرعة ريف عبس</h2>
-            <p class="tiktok-description" id="tiktokMainDescription">انضموا إلينا في جولة ساحرة داخل مزرعة هادئة تجمع بين سحر الطبيعة وروح الريف السعودي الأصيل</p>
+    <!-- YouTube Video Section -->
+    <section id="youtube" class="youtube-hero-section">
+        <div class="youtube-container">
+            <h2 class="youtube-title" id="youtubeMainTitle">استكشف مزرعة ريف عبس</h2>
+            <p class="youtube-description" id="youtubeMainDescription">انضموا إلينا في جولة ساحرة داخل مزرعة هادئة تجمع بين سحر الطبيعة وروح الريف السعودي الأصيل</p>
             
-            <div class="tiktok-wrapper" onclick="playTikTokVideo()">
-                <div class="tiktok-thumbnail" id="tiktokThumbnail" style="background-image: url(&quot;./2.webp&quot;);">
-                    <div class="tiktok-play-button"></div>
-                </div>
+            <div class="youtube-wrapper">
+                <iframe id="youtubeVideo" src="https://www.youtube.com/embed/kpXVLoz4w3E" allowfullscreen></iframe>
             </div>
             
-            <a href="https://www.tiktok.com/@drsugar2" target="_blank" class="tiktok-button" id="tiktokChannelLink">
-                <span style="font-size: 1.5rem;">🎵</span>
-                <span>تابعنا على تيك توك</span>
+            <a href="https://www.youtube.com/@username" target="_blank" class="youtube-button" id="youtubeChannelLink">
+                <span style="font-size: 1.5rem;">📺</span>
+                <span>شاهد المزيد من الفيديوهات</span>
             </a>
         </div>
     </section>
@@ -1504,42 +1443,7 @@
         <div class="container">
             <h2 id="galleryMainTitle">معرض صور المزرعة</h2>
             <div class="gallery-slideshow" id="gallerySlideshow">
-                
-                <div class="gallery-slide active">
-                    <img src="./248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp" alt="مناظر المزرعة الخلابة والطبيعة الساحرة" loading="lazy">
-                </div>
-            
-                <div class="gallery-slide ">
-                    <img src="./4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp" alt="الأكواخ الفاخرة والمرافق المتطورة" loading="lazy">
-                </div>
-            
-                <div class="gallery-slide ">
-                    <img src="./6168779-اختيار الصور-f-8f05-484c-be45-d4a2b23b0ce7.webp" alt="المساحات الخضراء الواسعة والمريحة" loading="lazy">
-                </div>
-            
-                <div class="gallery-slide ">
-                    <img src="./2.webp" alt="المسابح والألعاب المائية المتنوعة" loading="lazy">
-                </div>
-            
-                <div class="gallery-slide ">
-                    <img src="./3.jpeg" alt="الحيوانات الأليفة والطيور الملونة" loading="lazy">
-                </div>
-            
-                <button class="gallery-nav prev" onclick="prevGallerySlide()">‹</button>
-                <button class="gallery-nav next" onclick="nextGallerySlide()">›</button>
-                <div class="gallery-indicators">
-                    
-                <span class="gallery-indicator active" onclick="goToGallerySlide(0)"></span>
-            
-                <span class="gallery-indicator " onclick="goToGallerySlide(1)"></span>
-            
-                <span class="gallery-indicator " onclick="goToGallerySlide(2)"></span>
-            
-                <span class="gallery-indicator " onclick="goToGallerySlide(3)"></span>
-            
-                <span class="gallery-indicator " onclick="goToGallerySlide(4)"></span>
-            
-                </div>
+                <!-- Gallery slides will be populated by JavaScript -->
             </div>
         </div>
     </section>
@@ -1568,114 +1472,8 @@
             <!-- Comments Display -->
             <div class="comments-display">
                 <div class="comments-slider" id="commentsSlider">
-                <div class="comment-image-card">
-                    <img src="./4.webp" alt="زائر سعيد بتجربة المزرعة الرائعة" class="comment-image" loading="lazy">
+                    <!-- Comments images will be populated by JavaScript -->
                 </div>
-            
-                <div class="comment-image-card">
-                    <img src="./5.jpeg" alt="عائلة تستمتع بالوقت في المزرعة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./3.webp" alt="أطفال يلعبون مع الحيوانات الأليفة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./4.jpeg" alt="استرخاء في المساحات الخضراء الجميلة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./5.webp" alt="تجربة المسابح الرائعة والمنعشة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp" alt="جولة ممتعة مع الطيور والحيوانات" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp" alt="تجربة الأكواخ الفاخرة والمريحة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp" alt="استمتاع بالألعاب المائية المثيرة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp" alt="أجواء عائلية رائعة في قلب الطبيعة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./4.webp" alt="زائر سعيد بتجربة المزرعة الرائعة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./5.jpeg" alt="عائلة تستمتع بالوقت في المزرعة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./3.webp" alt="أطفال يلعبون مع الحيوانات الأليفة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./4.jpeg" alt="استرخاء في المساحات الخضراء الجميلة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./5.webp" alt="تجربة المسابح الرائعة والمنعشة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp" alt="جولة ممتعة مع الطيور والحيوانات" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp" alt="تجربة الأكواخ الفاخرة والمريحة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp" alt="استمتاع بالألعاب المائية المثيرة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp" alt="أجواء عائلية رائعة في قلب الطبيعة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./4.webp" alt="زائر سعيد بتجربة المزرعة الرائعة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./5.jpeg" alt="عائلة تستمتع بالوقت في المزرعة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./3.webp" alt="أطفال يلعبون مع الحيوانات الأليفة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./4.jpeg" alt="استرخاء في المساحات الخضراء الجميلة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./5.webp" alt="تجربة المسابح الرائعة والمنعشة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp" alt="جولة ممتعة مع الطيور والحيوانات" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp" alt="تجربة الأكواخ الفاخرة والمريحة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp" alt="استمتاع بالألعاب المائية المثيرة" class="comment-image" loading="lazy">
-                </div>
-            
-                <div class="comment-image-card">
-                    <img src="./4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp" alt="أجواء عائلية رائعة في قلب الطبيعة" class="comment-image" loading="lazy">
-                </div>
-            </div>
             </div>
             
             <div class="comments-control">
@@ -1691,21 +1489,8 @@
     <footer id="footer">
         <div class="container">
             <div class="footer-content" id="footerContent">
-                        <div class="footer-section">
-                            <h3>🏞️ أكواخ ريف عبس</h3>
-                            <p>وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة مع تجربة فريدة لا تُنسى</p>
-                        </div>
-                    
-                        <div class="footer-section">
-                            <h4>📞 تواصل معنا</h4>
-                            <div>📍 منطقة عسير - محافظة المجاردة<br>📱 +966 0553663992<br>⏰ خدمة 24 ساعة<br>🌐 WiFi مجاني عالي السرعة</div>
-                        </div>
-                    
-                        <div class="footer-section">
-                            <h4>🎯 خدماتنا المميزة</h4>
-                            <div>🏡 أكواخ مجهزة بالكامل<br>🏊‍♂️ مسابح وساونا<br>🌿 مسطحات خضراء واسعة<br>🚗 مواقف مجانية آمنة</div>
-                        </div>
-                    </div>
+                <!-- Footer sections will be populated by JavaScript -->
+            </div>
             <div class="footer-bottom">
                 <p id="footerCopyright">© 2024 أكواخ ريف عبس - جميع الحقوق محفوظة</p>
             </div>
@@ -1715,7 +1500,7 @@
     <!-- Gallery Modal -->
     <div id="galleryModal" class="gallery-modal">
         <div class="gallery-modal-content">
-            <span class="gallery-modal-close" onclick="closeGalleryModal()">×</span>
+            <span class="gallery-modal-close" onclick="closeGalleryModal()">&times;</span>
             <div id="galleryModalContent">
                 <!-- Modal gallery content will be populated by JavaScript -->
             </div>
@@ -1723,16 +1508,12 @@
     </div>
 
     <!-- Custom Modal -->
-    <div id="customModal" class="custom-modal" style="display: none;">
+    <div id="customModal" class="custom-modal">
         <div class="custom-modal-content">
-            <h3 id="customModalTitle">تعديل الصورة الرئيسية</h3>
+            <h3 id="customModalTitle">إدخال البيانات</h3>
             <div id="customModalBody">
-                            <label>رابط الصورة:</label>
-                            <input type="text" id="customField0" placeholder="رابط الصورة" value="./3.jpeg" autocomplete="off">
-                        
-                            <label>عنوان الصورة:</label>
-                            <input type="text" id="customField1" placeholder="عنوان الصورة" value="إطلالة ساحرة على المساحات الخضراء والجبال الطبيعية">
-                        </div>
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
             <div class="custom-modal-buttons">
                 <button class="btn-primary" onclick="confirmCustomModal()">موافق</button>
                 <button class="btn-secondary" onclick="closeCustomModal()">إلغاء</button>
@@ -1744,7 +1525,7 @@
     <div id="adminModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <span class="close" onclick="closeAdminPanel()">×</span>
+                <span class="close" onclick="closeAdminPanel()">&times;</span>
                 <h2>🔐 لوحة التحكم الشاملة - أكواخ ريف عبس</h2>
             </div>
             
@@ -1770,17 +1551,17 @@
 
                 <!-- Admin Tabs -->
                 <div class="admin-tabs">
-                    <button class="admin-tab" onclick="showAdminTab('content')">📝 النصوص</button>
-                    <button class="admin-tab active" onclick="showAdminTab('hero')">🏞️ الصور الرئيسية</button>
+                    <button class="admin-tab active" onclick="showAdminTab('content')">📝 النصوص</button>
+                    <button class="admin-tab" onclick="showAdminTab('hero')">🏞️ الصور الرئيسية</button>
                     <button class="admin-tab" onclick="showAdminTab('features')">🎯 المميزات</button>
                     <button class="admin-tab" onclick="showAdminTab('gallery')">🖼️ المعرض</button>
                     <button class="admin-tab" onclick="showAdminTab('comments')">📸 صور الزوار</button>
-                    <button class="admin-tab" onclick="showAdminTab('tiktok')">🎵 تيك توك</button>
+                    <button class="admin-tab" onclick="showAdminTab('youtube')">📺 يوتيوب</button>
                     <button class="admin-tab" onclick="showAdminTab('footer')">🦶 الفوتر</button>
                 </div>
                 
                 <!-- Content Tab -->
-                <div id="contentTab" class="admin-tab-content">
+                <div id="contentTab" class="admin-tab-content active">
                     <div class="admin-section">
                         <h3>📝 تحرير النصوص الرئيسية</h3>
                         <div class="text-editor">
@@ -1819,38 +1600,13 @@
                 </div>
 
                 <!-- Hero Images Tab -->
-                <div id="heroTab" class="admin-tab-content active">
+                <div id="heroTab" class="admin-tab-content">
                     <div class="admin-section">
                         <h3>🏞️ إدارة الصور الرئيسية</h3>
                         <button class="btn-add" onclick="addHeroImage()">+ إضافة صورة رئيسية</button>
                         <div id="heroImagesContainer">
-                <div class="image-item">
-                    <img src="./2.webp" alt="مناظر خلابة لمزرعة ريف عبس وسط الطبيعة الساحرة" class="image-preview">
-                    <input type="text" value="مناظر خلابة لمزرعة ريف عبس وسط الطبيعة الساحرة" onchange="updateHeroImageTitle(1, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editHeroImage(1)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteHeroImage(1)">حذف</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./3.jpeg" alt="إطلالة ساحرة على المساحات الخضراء والجبال الطبيعية" class="image-preview">
-                    <input type="text" value="إطلالة ساحرة على المساحات الخضراء والجبال الطبيعية" onchange="updateHeroImageTitle(2, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editHeroImage(2)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteHeroImage(2)">حذف</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./4.webp" alt="جولة بانورامية في قلب الطبيعة الخلابة بريف عبس" class="image-preview">
-                    <input type="text" value="جولة بانورامية في قلب الطبيعة الخلابة بريف عبس" onchange="updateHeroImageTitle(3, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editHeroImage(3)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteHeroImage(3)">حذف</button>
-                    </div>
-                </div>
-            </div>
+                            <!-- Hero images will be populated by JavaScript -->
+                        </div>
                     </div>
                 </div>
 
@@ -1860,72 +1616,8 @@
                         <h3>🎯 إدارة المميزات</h3>
                         <button class="btn-add" onclick="addFeature()">+ إضافة ميزة جديدة</button>
                         <div id="featuresContainer">
-                <div class="image-item">
-                    <img src="./5.jpeg" alt="مسابح وألعاب مائية متنوعة ومنعشة" class="image-preview">
-                    <input type="text" value="مسابح وألعاب مائية متنوعة ومنعشة" onchange="updateFeatureTitle(1, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الميزة">
-                    <textarea onchange="updateFeatureDescription(1, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" rows="3" placeholder="وصف الميزة">استمتع بأجمل اللحظات في مسابحنا المتنوعة مع ألعاب مائية مثيرة للأطفال والكبار في أجواء منعشة ومريحة تحت أشعة الشمس الذهبية</textarea>
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editFeature(1)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteFeature(1)">حذف</button>
-                        <button onclick="toggleFeature(1)" style="background: orange; color: white; padding: 4px 8px; border: none; border-radius: 4px; font-size: 0.75rem;">إلغاء تفعيل</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./3.webp" alt="طيور وحيوانات أليفة رائعة ومتنوعة" class="image-preview">
-                    <input type="text" value="طيور وحيوانات أليفة رائعة ومتنوعة" onchange="updateFeatureTitle(2, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الميزة">
-                    <textarea onchange="updateFeatureDescription(2, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" rows="3" placeholder="وصف الميزة">تفاعل مع مجموعة متنوعة من الطيور الملونة والحيوانات الأليفة الودودة في بيئة آمنة ومناسبة للعائلات وتجربة تعليمية ممتعة للأطفال</textarea>
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editFeature(2)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteFeature(2)">حذف</button>
-                        <button onclick="toggleFeature(2)" style="background: orange; color: white; padding: 4px 8px; border: none; border-radius: 4px; font-size: 0.75rem;">إلغاء تفعيل</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./4.jpeg" alt="أكواخ أوروبية فاخرة ومجهزة بالكامل" class="image-preview">
-                    <input type="text" value="أكواخ أوروبية فاخرة ومجهزة بالكامل" onchange="updateFeatureTitle(3, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الميزة">
-                    <textarea onchange="updateFeatureDescription(3, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" rows="3" placeholder="وصف الميزة">إقامة مريحة في أكواخ بتصميم أوروبي فاخر مجهزة بكافة المرافق الحديثة والتكييف والواي فاي المجاني مع إطلالات ساحرة على الطبيعة</textarea>
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editFeature(3)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteFeature(3)">حذف</button>
-                        <button onclick="toggleFeature(3)" style="background: orange; color: white; padding: 4px 8px; border: none; border-radius: 4px; font-size: 0.75rem;">إلغاء تفعيل</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./5.webp" alt="مسطحات خضراء واسعة ومريحة للاسترخاء" class="image-preview">
-                    <input type="text" value="مسطحات خضراء واسعة ومريحة للاسترخاء" onchange="updateFeatureTitle(4, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الميزة">
-                    <textarea onchange="updateFeatureDescription(4, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" rows="3" placeholder="وصف الميزة">استرخ في مساحاتنا الخضراء الواسعة واستمتع بالهواء النقي والطبيعة الخلابة مع مناطق مخصصة للشواء والجلسات العائلية المميزة</textarea>
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editFeature(4)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteFeature(4)">حذف</button>
-                        <button onclick="toggleFeature(4)" style="background: orange; color: white; padding: 4px 8px; border: none; border-radius: 4px; font-size: 0.75rem;">إلغاء تفعيل</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp" alt="مسابح داخلية وخارجية مميزة ومتطورة" class="image-preview">
-                    <input type="text" value="مسابح داخلية وخارجية مميزة ومتطورة" onchange="updateFeatureTitle(5, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الميزة">
-                    <textarea onchange="updateFeatureDescription(5, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" rows="3" placeholder="وصف الميزة">مسابح متنوعة داخلية وخارجية مع إطلالات ساحرة ومرافق استرخاء متكاملة تناسب جميع أفراد العائلة مع خدمات راقية ومتميزة</textarea>
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editFeature(5)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteFeature(5)">حذف</button>
-                        <button onclick="toggleFeature(5)" style="background: orange; color: white; padding: 4px 8px; border: none; border-radius: 4px; font-size: 0.75rem;">إلغاء تفعيل</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp" alt="خيل للأطفال ومرافق ترفيهية آمنة" class="image-preview">
-                    <input type="text" value="خيل للأطفال ومرافق ترفيهية آمنة" onchange="updateFeatureTitle(6, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الميزة">
-                    <textarea onchange="updateFeatureDescription(6, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" rows="3" placeholder="وصف الميزة">تجربة ممتعة وآمنة للأطفال مع الخيل الأليفة ومرافق ترفيهية متنوعة ومناسبة لجميع الأعمار تحت إشراف متخصصين مدربين</textarea>
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editFeature(6)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteFeature(6)">حذف</button>
-                        <button onclick="toggleFeature(6)" style="background: orange; color: white; padding: 4px 8px; border: none; border-radius: 4px; font-size: 0.75rem;">إلغاء تفعيل</button>
-                    </div>
-                </div>
-            </div>
+                            <!-- Features will be populated by JavaScript -->
+                        </div>
                     </div>
                 </div>
 
@@ -1935,51 +1627,8 @@
                         <h3>🖼️ إدارة معرض الصور</h3>
                         <button class="btn-add" onclick="addGalleryImage()">+ إضافة صورة للمعرض</button>
                         <div id="galleryImagesContainer">
-                <div class="image-item">
-                    <img src="./248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp" alt="مناظر المزرعة الخلابة والطبيعة الساحرة" class="image-preview">
-                    <input type="text" value="مناظر المزرعة الخلابة والطبيعة الساحرة" onchange="updateGalleryImageTitle(1, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editGalleryImage(1)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteGalleryImage(1)">حذف</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp" alt="الأكواخ الفاخرة والمرافق المتطورة" class="image-preview">
-                    <input type="text" value="الأكواخ الفاخرة والمرافق المتطورة" onchange="updateGalleryImageTitle(2, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editGalleryImage(2)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteGalleryImage(2)">حذف</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./6168779-اختيار الصور-f-8f05-484c-be45-d4a2b23b0ce7.webp" alt="المساحات الخضراء الواسعة والمريحة" class="image-preview">
-                    <input type="text" value="المساحات الخضراء الواسعة والمريحة" onchange="updateGalleryImageTitle(3, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editGalleryImage(3)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteGalleryImage(3)">حذف</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./2.webp" alt="المسابح والألعاب المائية المتنوعة" class="image-preview">
-                    <input type="text" value="المسابح والألعاب المائية المتنوعة" onchange="updateGalleryImageTitle(4, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editGalleryImage(4)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteGalleryImage(4)">حذف</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./3.jpeg" alt="الحيوانات الأليفة والطيور الملونة" class="image-preview">
-                    <input type="text" value="الحيوانات الأليفة والطيور الملونة" onchange="updateGalleryImageTitle(5, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editGalleryImage(5)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteGalleryImage(5)">حذف</button>
-                    </div>
-                </div>
-            </div>
+                            <!-- Gallery images will be populated by JavaScript -->
+                        </div>
                     </div>
                 </div>
 
@@ -1990,114 +1639,35 @@
                         <button class="btn-add" onclick="addCommentImage()">+ إضافة صورة زائر</button>
                         <button class="admin-action-btn" style="background: var(--danger-color); color: white; margin-left: 10px;" onclick="clearAllComments()">🗑️ مسح جميع الصور</button>
                         <div id="commentsContainer">
-                <div class="image-item">
-                    <img src="./4.webp" alt="زائر سعيد بتجربة المزرعة الرائعة" class="image-preview">
-                    <input type="text" value="زائر سعيد بتجربة المزرعة الرائعة" onchange="updateCommentImageTitle(1, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editCommentImage(1)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteCommentImage(1)">حذف</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./5.jpeg" alt="عائلة تستمتع بالوقت في المزرعة" class="image-preview">
-                    <input type="text" value="عائلة تستمتع بالوقت في المزرعة" onchange="updateCommentImageTitle(2, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editCommentImage(2)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteCommentImage(2)">حذف</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./3.webp" alt="أطفال يلعبون مع الحيوانات الأليفة" class="image-preview">
-                    <input type="text" value="أطفال يلعبون مع الحيوانات الأليفة" onchange="updateCommentImageTitle(3, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editCommentImage(3)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteCommentImage(3)">حذف</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./4.jpeg" alt="استرخاء في المساحات الخضراء الجميلة" class="image-preview">
-                    <input type="text" value="استرخاء في المساحات الخضراء الجميلة" onchange="updateCommentImageTitle(4, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editCommentImage(4)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteCommentImage(4)">حذف</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./5.webp" alt="تجربة المسابح الرائعة والمنعشة" class="image-preview">
-                    <input type="text" value="تجربة المسابح الرائعة والمنعشة" onchange="updateCommentImageTitle(5, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editCommentImage(5)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteCommentImage(5)">حذف</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp" alt="جولة ممتعة مع الطيور والحيوانات" class="image-preview">
-                    <input type="text" value="جولة ممتعة مع الطيور والحيوانات" onchange="updateCommentImageTitle(6, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editCommentImage(6)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteCommentImage(6)">حذف</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp" alt="تجربة الأكواخ الفاخرة والمريحة" class="image-preview">
-                    <input type="text" value="تجربة الأكواخ الفاخرة والمريحة" onchange="updateCommentImageTitle(7, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editCommentImage(7)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteCommentImage(7)">حذف</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp" alt="استمتاع بالألعاب المائية المثيرة" class="image-preview">
-                    <input type="text" value="استمتاع بالألعاب المائية المثيرة" onchange="updateCommentImageTitle(8, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editCommentImage(8)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteCommentImage(8)">حذف</button>
-                    </div>
-                </div>
-            
-                <div class="image-item">
-                    <img src="./4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp" alt="أجواء عائلية رائعة في قلب الطبيعة" class="image-preview">
-                    <input type="text" value="أجواء عائلية رائعة في قلب الطبيعة" onchange="updateCommentImageTitle(9, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
-                    <div class="image-actions">
-                        <button class="btn-edit" onclick="editCommentImage(9)">تعديل</button>
-                        <button class="btn-delete" onclick="deleteCommentImage(9)">حذف</button>
-                    </div>
-                </div>
-            </div>
+                            <!-- Comments images will be populated by JavaScript -->
+                        </div>
                     </div>
                 </div>
 
-                <!-- TikTok Tab -->
-                <div id="tiktokTab" class="admin-tab-content">
+                <!-- YouTube Tab -->
+                <div id="youtubeTab" class="admin-tab-content">
                     <div class="admin-section">
-                        <h3>🎵 إدارة تيك توك</h3>
+                        <h3>📺 إدارة يوتيوب</h3>
                         <div class="text-editor">
                             <div class="editor-field">
-                                <label>عنوان قسم تيك توك:</label>
-                                <input type="text" id="tiktokTitleInput" value="استكشف مزرعة ريف عبس">
-                                <button onclick="updateTikTokTitle()">تحديث</button>
+                                <label>عنوان قسم يوتيوب:</label>
+                                <input type="text" id="youtubeTitleInput" value="استكشف مزرعة ريف عبس">
+                                <button onclick="updateYouTubeTitle()">تحديث</button>
                             </div>
                             <div class="editor-field">
-                                <label>وصف قسم تيك توك:</label>
-                                <textarea id="tiktokDescInput" rows="3">انضموا إلينا في جولة ساحرة داخل مزرعة هادئة تجمع بين سحر الطبيعة وروح الريف السعودي الأصيل</textarea>
-                                <button onclick="updateTikTokDescription()">تحديث</button>
+                                <label>وصف قسم يوتيوب:</label>
+                                <textarea id="youtubeDescInput" rows="3">انضموا إلينا في جولة ساحرة داخل مزرعة هادئة تجمع بين سحر الطبيعة وروح الريف السعودي الأصيل</textarea>
+                                <button onclick="updateYouTubeDescription()">تحديث</button>
                             </div>
                             <div class="editor-field">
-                                <label>رابط فيديو تيك توك:</label>
-                                <input type="text" id="tiktokVideoUrl" value="https://www.tiktok.com/@drsugar2/video/7472674220611341575">
-                                <button onclick="updateTikTokUrl()">تحديث</button>
+                                <label>رابط فيديو يوتيوب:</label>
+                                <input type="text" id="youtubeVideoUrl" value="https://www.youtube.com/watch?v=kpXVLoz4w3E">
+                                <button onclick="updateYouTubeUrl()">تحديث</button>
                             </div>
                             <div class="editor-field">
-                                <label>رابط حساب تيك توك:</label>
-                                <input type="text" id="tiktokChannelUrl" value="https://www.tiktok.com/@drsugar2">
-                                <button onclick="updateTikTokChannel()">تحديث</button>
+                                <label>رابط قناة يوتيوب:</label>
+                                <input type="text" id="youtubeChannelUrl" value="https://www.youtube.com/@username">
+                                <button onclick="updateYouTubeChannel()">تحديث</button>
                             </div>
                         </div>
                     </div>
@@ -2109,57 +1679,8 @@
                         <h3>🦶 إدارة الفوتر</h3>
                         <button class="btn-add" onclick="addFooterSection()">+ إضافة قسم جديد</button>
                         <div id="footerSectionsContainer">
-                <div class="admin-section">
-                    <h4>📄 🏞️ أكواخ ريف عبس</h4>
-                    <div class="text-editor">
-                        <div class="editor-field">
-                            <label>العنوان:</label>
-                            <input type="text" value="🏞️ أكواخ ريف عبس" onchange="updateFooterSectionTitle(1, this.value)">
+                            <!-- Footer sections will be populated by JavaScript -->
                         </div>
-                        <div class="editor-field">
-                            <label>المحتوى:</label>
-                            <textarea onchange="updateFooterSectionContent(1, this.value)" rows="4">وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة مع تجربة فريدة لا تُنسى</textarea>
-                        </div>
-                        <div class="editor-field">
-                            <button onclick="deleteFooterSection(1)" style="background: var(--danger-color); margin-top: 10px;">حذف القسم</button>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="admin-section">
-                    <h4>📄 📞 تواصل معنا</h4>
-                    <div class="text-editor">
-                        <div class="editor-field">
-                            <label>العنوان:</label>
-                            <input type="text" value="📞 تواصل معنا" onchange="updateFooterSectionTitle(2, this.value)">
-                        </div>
-                        <div class="editor-field">
-                            <label>المحتوى:</label>
-                            <textarea onchange="updateFooterSectionContent(2, this.value)" rows="4">📍 منطقة عسير - محافظة المجاردة&lt;br&gt;📱 +966 0553663992&lt;br&gt;⏰ خدمة 24 ساعة&lt;br&gt;🌐 WiFi مجاني عالي السرعة</textarea>
-                        </div>
-                        <div class="editor-field">
-                            <button onclick="deleteFooterSection(2)" style="background: var(--danger-color); margin-top: 10px;">حذف القسم</button>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="admin-section">
-                    <h4>📄 🎯 خدماتنا المميزة</h4>
-                    <div class="text-editor">
-                        <div class="editor-field">
-                            <label>العنوان:</label>
-                            <input type="text" value="🎯 خدماتنا المميزة" onchange="updateFooterSectionTitle(3, this.value)">
-                        </div>
-                        <div class="editor-field">
-                            <label>المحتوى:</label>
-                            <textarea onchange="updateFooterSectionContent(3, this.value)" rows="4">🏡 أكواخ مجهزة بالكامل&lt;br&gt;🏊‍♂️ مسابح وساونا&lt;br&gt;🌿 مسطحات خضراء واسعة&lt;br&gt;🚗 مواقف مجانية آمنة</textarea>
-                        </div>
-                        <div class="editor-field">
-                            <button onclick="deleteFooterSection(3)" style="background: var(--danger-color); margin-top: 10px;">حذف القسم</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
                         
                         <div class="admin-section">
                             <h4>📞 نص حقوق الطبع والنشر</h4>
@@ -2176,8 +1697,7 @@
     </div>
 
     <script>
-        
-        // Global Data - Updated ٤‏/١‏/١٤٤٧ هـ ١١:٢٧:٥٠ م
+        // Global Data - Updated with GitHub Images
         let adminPassword = "admin123";
         let isAdminLoggedIn = false;
         let currentSlide = 0;
@@ -2186,168 +1706,138 @@
         let customModalResolve = null;
         let modalIsPersistent = false;
 
+        // GitHub Repository Base URL
+        const GITHUB_BASE_URL = "https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/";
+
+        // Hero Images - Real GitHub Images
         let heroImages = [
-        {
-                "id": 1,
-                "url": "./2.webp",
-                "title": "مناظر خلابة لمزرعة ريف عبس وسط الطبيعة الساحرة"
-        },
-        {
-                "id": 2,
-                "url": "./3.jpeg",
-                "title": "إطلالة ساحرة على المساحات الخضراء والجبال الطبيعية"
-        },
-        {
-                "id": 3,
-                "url": "./4.webp",
-                "title": "جولة بانورامية في قلب الطبيعة الخلابة بريف عبس"
-        }
-];
+            {
+                id: 1,
+                url: GITHUB_BASE_URL + 'a1.jpg',
+                title: 'مناظر خلابة لمزرعة ريف عبس',
+                caption: ''
+            },
+            {
+                id: 2,
+                url: GITHUB_BASE_URL + 'a2.jpg',
+                title: 'إطلالة ساحرة على المساحات الخضراء',
+                caption: ''
+            },
+            {
+                id: 3,
+                url: GITHUB_BASE_URL + 'a3.jpg',
+                title: 'جولة بانورامية في قلب الطبيعة',
+                caption: ''
+            },
+            {
+                id: 4,
+                url: GITHUB_BASE_URL + 'a4.jpg',
+                title: 'مناظر طبيعية ساحرة',
+                caption: ''
+            },
+            {
+                id: 5,
+                url: GITHUB_BASE_URL + 'a5.jpg',
+                title: 'أجواء ريفية هادئة ومريحة',
+                caption: ''
+            }
+        ];
+
+        // Features with Real GitHub Images
         let featuresCards = [
-        {
-                "id": 1,
-                "image": "./5.jpeg",
-                "title": "مسابح وألعاب مائية متنوعة ومنعشة",
-                "description": "استمتع بأجمل اللحظات في مسابحنا المتنوعة مع ألعاب مائية مثيرة للأطفال والكبار في أجواء منعشة ومريحة تحت أشعة الشمس الذهبية",
-                "active": true
-        },
-        {
-                "id": 2,
-                "image": "./3.webp",
-                "title": "طيور وحيوانات أليفة رائعة ومتنوعة",
-                "description": "تفاعل مع مجموعة متنوعة من الطيور الملونة والحيوانات الأليفة الودودة في بيئة آمنة ومناسبة للعائلات وتجربة تعليمية ممتعة للأطفال",
-                "active": true
-        },
-        {
-                "id": 3,
-                "image": "./4.jpeg",
-                "title": "أكواخ أوروبية فاخرة ومجهزة بالكامل",
-                "description": "إقامة مريحة في أكواخ بتصميم أوروبي فاخر مجهزة بكافة المرافق الحديثة والتكييف والواي فاي المجاني مع إطلالات ساحرة على الطبيعة",
-                "active": true
-        },
-        {
-                "id": 4,
-                "image": "./5.webp",
-                "title": "مسطحات خضراء واسعة ومريحة للاسترخاء",
-                "description": "استرخ في مساحاتنا الخضراء الواسعة واستمتع بالهواء النقي والطبيعة الخلابة مع مناطق مخصصة للشواء والجلسات العائلية المميزة",
-                "active": true
-        },
-        {
-                "id": 5,
-                "image": "./08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp",
-                "title": "مسابح داخلية وخارجية مميزة ومتطورة",
-                "description": "مسابح متنوعة داخلية وخارجية مع إطلالات ساحرة ومرافق استرخاء متكاملة تناسب جميع أفراد العائلة مع خدمات راقية ومتميزة",
-                "active": true
-        },
-        {
-                "id": 6,
-                "image": "./12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp",
-                "title": "خيل للأطفال ومرافق ترفيهية آمنة",
-                "description": "تجربة ممتعة وآمنة للأطفال مع الخيل الأليفة ومرافق ترفيهية متنوعة ومناسبة لجميع الأعمار تحت إشراف متخصصين مدربين",
-                "active": true
-        }
-];
+            {
+                id: 1,
+                image: GITHUB_BASE_URL + "b1.jpg",
+                title: 'مسابح وألعاب مائية متنوعة ومنعشة',
+                description: 'استمتع بأجمل اللحظات في مسابحنا المتنوعة مع ألعاب مائية مثيرة للأطفال والكبار في أجواء منعشة ومريحة',
+                caption: '',
+                active: true
+            },
+            {
+                id: 2,
+                image: GITHUB_BASE_URL + "b2.jpg",
+                title: 'طيور وحيوانات أليفة رائعة ومتنوعة',
+                description: 'تفاعل مع مجموعة متنوعة من الطيور الملونة والحيوانات الأليفة الودودة في بيئة آمنة ومناسبة للعائلات',
+                caption: '',
+                active: true
+            },
+            {
+                id: 3,
+                image: GITHUB_BASE_URL + "b3.jpg",
+                title: 'أكواخ أوروبية فاخرة ومجهزة بالكامل',
+                description: 'إقامة مريحة في أكواخ بتصميم أوروبي فاخر مجهزة بكافة المرافق الحديثة والتكييف والواي فاي المجاني',
+                caption: '',
+                active: true
+            },
+            {
+                id: 4,
+                image: GITHUB_BASE_URL + "b4.jpg",
+                title: 'مسطحات خضراء واسعة ومريحة للاسترخاء',
+                description: 'استرخ في مساحاتنا الخضراء الواسعة واستمتع بالهواء النقي والطبيعة الخلابة مع مناطق مخصصة للشواء',
+                caption: '',
+                active: true
+            },
+            {
+                id: 5,
+                image: GITHUB_BASE_URL + "b5.jpg",
+                title: 'مرافق ترفيهية متنوعة وآمنة للأطفال',
+                description: 'تجربة ممتعة وآمنة للأطفال مع مرافق ترفيهية متنوعة ومناسبة لجميع الأعمار تحت إشراف متخصصين مدربين',
+                caption: '',
+                active: true
+            }
+        ];
+
+        // Gallery Items - Real GitHub Images
         let galleryItems = [
-        {
-                "id": 1,
-                "url": "./248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp",
-                "title": "مناظر المزرعة الخلابة والطبيعة الساحرة"
-        },
-        {
-                "id": 2,
-                "url": "./4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp",
-                "title": "الأكواخ الفاخرة والمرافق المتطورة"
-        },
-        {
-                "id": 3,
-                "url": "./6168779-اختيار الصور-f-8f05-484c-be45-d4a2b23b0ce7.webp",
-                "title": "المساحات الخضراء الواسعة والمريحة"
-        },
-        {
-                "id": 4,
-                "url": "./2.webp",
-                "title": "المسابح والألعاب المائية المتنوعة"
-        },
-        {
-                "id": 5,
-                "url": "./3.jpeg",
-                "title": "الحيوانات الأليفة والطيور الملونة"
-        }
-];
+            { id: 1, url: GITHUB_BASE_URL + 'c1.jpg', title: 'مناظر المزرعة الخلابة', description: '' },
+            { id: 2, url: GITHUB_BASE_URL + 'c2.jpg', title: 'الأكواخ الفاخرة والمرافق المتطورة', description: '' },
+            { id: 3, url: GITHUB_BASE_URL + 'c3.jpg', title: 'المساحات الخضراء الواسعة', description: '' },
+            { id: 4, url: GITHUB_BASE_URL + 'c4.jpg', title: 'المسابح والألعاب المائية', description: '' },
+            { id: 5, url: GITHUB_BASE_URL + 'c5.jpg', title: 'الحيوانات الأليفة والطيور', description: '' },
+            { id: 6, url: GITHUB_BASE_URL + 'c6.jpg', title: 'مرافق ترفيهية متنوعة', description: '' },
+            { id: 7, url: GITHUB_BASE_URL + 'c7.jpg', title: 'أجواء طبيعية ساحرة', description: '' }
+        ];
+
+        // Comment Images - Real GitHub Images (Same size as gallery)
         let commentImages = [
-        {
-                "id": 1,
-                "url": "./4.webp",
-                "title": "زائر سعيد بتجربة المزرعة الرائعة"
-        },
-        {
-                "id": 2,
-                "url": "./5.jpeg",
-                "title": "عائلة تستمتع بالوقت في المزرعة"
-        },
-        {
-                "id": 3,
-                "url": "./3.webp",
-                "title": "أطفال يلعبون مع الحيوانات الأليفة"
-        },
-        {
-                "id": 4,
-                "url": "./4.jpeg",
-                "title": "استرخاء في المساحات الخضراء الجميلة"
-        },
-        {
-                "id": 5,
-                "url": "./5.webp",
-                "title": "تجربة المسابح الرائعة والمنعشة"
-        },
-        {
-                "id": 6,
-                "url": "./08849-اختيار الصور-c7a9a8-4927-b0c8-f3333d67e85a.webp",
-                "title": "جولة ممتعة مع الطيور والحيوانات"
-        },
-        {
-                "id": 7,
-                "url": "./12-اختيار الصور-e880a5-3f68-4329-9def-1b39a26c2e62.webp",
-                "title": "تجربة الأكواخ الفاخرة والمريحة"
-        },
-        {
-                "id": 8,
-                "url": "./248-اختيار الصور-8aa7-56cb-4d77-a8a0-bd79c4c68ab4.webp",
-                "title": "استمتاع بالألعاب المائية المثيرة"
-        },
-        {
-                "id": 9,
-                "url": "./4-اختيار الصور-b02b932-5ac0-4b19-ac2f-379b7b41fb83.webp",
-                "title": "أجواء عائلية رائعة في قلب الطبيعة"
-        }
-];
+            { id: 1, url: GITHUB_BASE_URL + 'd1.jpg', title: 'زائر سعيد بتجربة المزرعة', visitorName: '' },
+            { id: 2, url: GITHUB_BASE_URL + 'd2.jpg', title: 'عائلة تستمتع بالوقت', visitorName: '' },
+            { id: 3, url: GITHUB_BASE_URL + 'd3.jpg', title: 'أطفال يلعبون مع الحيوانات', visitorName: '' },
+            { id: 4, url: GITHUB_BASE_URL + 'd4.jpg', title: 'استرخاء في المساحات الخضراء', visitorName: '' },
+            { id: 5, url: GITHUB_BASE_URL + 'd5.jpg', title: 'تجربة المسابح الرائعة', visitorName: '' },
+            { id: 6, url: GITHUB_BASE_URL + 'd6.jpg', title: 'جولة ممتعة مع الطيور', visitorName: '' },
+            { id: 7, url: GITHUB_BASE_URL + 'd7.jpg', title: 'تجربة الأكواخ الفاخرة', visitorName: '' }
+        ];
+
+        // Footer Data
         let footerSections = [
-        {
-                "id": 1,
-                "title": "🏞️ أكواخ ريف عبس",
-                "content": "وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة مع تجربة فريدة لا تُنسى",
-                "type": "text"
-        },
-        {
-                "id": 2,
-                "title": "📞 تواصل معنا",
-                "content": "📍 منطقة عسير - محافظة المجاردة<br>📱 +966 0553663992<br>⏰ خدمة 24 ساعة<br>🌐 WiFi مجاني عالي السرعة",
-                "type": "html"
-        },
-        {
-                "id": 3,
-                "title": "🎯 خدماتنا المميزة",
-                "content": "🏡 أكواخ مجهزة بالكامل<br>🏊‍♂️ مسابح وساونا<br>🌿 مسطحات خضراء واسعة<br>🚗 مواقف مجانية آمنة",
-                "type": "html"
-        }
-];
-        let tiktokData = {
-        "title": "استكشف مزرعة ريف عبس",
-        "description": "انضموا إلينا في جولة ساحرة داخل مزرعة هادئة تجمع بين سحر الطبيعة وروح الريف السعودي الأصيل",
-        "videoUrl": "https://www.tiktok.com/@drsugar2/video/7472674220611341575",
-        "channelUrl": "https://www.tiktok.com/@drsugar2",
-        "thumbnailUrl": "./2.webp"
-};
+            {
+                id: 1,
+                title: "🏞️ أكواخ ريف عبس",
+                content: "وجهتك المثلى للاسترخاء والاستمتاع بجمال الطبيعة في منطقة عسير الساحرة مع تجربة فريدة لا تُنسى",
+                type: "text"
+            },
+            {
+                id: 2,
+                title: "📞 تواصل معنا",
+                content: "📍 منطقة عسير - محافظة المجاردة<br>📱 +966 0553663992<br>⏰ خدمة 24 ساعة<br>🌐 WiFi مجاني عالي السرعة",
+                type: "html"
+            },
+            {
+                id: 3,
+                title: "🎯 خدماتنا المميزة",
+                content: "🏡 أكواخ مجهزة بالكامل<br>🏊‍♂️ مسابح وساونا<br>🌿 مسطحات خضراء واسعة<br>🚗 مواقف مجانية آمنة",
+                type: "html"
+            }
+        ];
+
+        // YouTube Data
+        let youtubeData = {
+            title: "استكشف مزرعة ريف عبس",
+            description: "انضموا إلينا في جولة ساحرة داخل مزرعة هادئة تجمع بين سحر الطبيعة وروح الريف السعودي الأصيل",
+            videoUrl: "https://www.youtube.com/watch?v=kpXVLoz4w3E",
+            channelUrl: "https://www.youtube.com/@username"
+        };
 
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
@@ -2356,22 +1846,16 @@
             loadGallerySlideshow();
             loadCommentImages();
             loadFooter();
+            loadYouTubeVideo();
             setupSmoothScrolling();
             startSlideshow();
-            
-            // Set TikTok thumbnail
-            const tiktokThumbnail = document.getElementById('tiktokThumbnail');
-            if (tiktokThumbnail) {
-                tiktokThumbnail.style.backgroundImage = `url('${tiktokData.thumbnailUrl}')`;
-            }
         });
 
         // Admin Notification Function - ONLY for logged in admins
         function showAdminNotification(message, type = 'success', duration = 3000) {
             // CRITICAL: Only show notifications if admin is actually logged in
             if (!isAdminLoggedIn) {
-                console.log('Admin notification blocked for regular user:', message);
-                return; 
+                return; // Block all notifications for regular users
             }
             
             const notification = document.createElement('div');
@@ -2442,6 +1926,22 @@
             }
         }
 
+        // YouTube Functions
+        function loadYouTubeVideo() {
+            const videoId = extractYouTubeId(youtubeData.videoUrl);
+            if (videoId) {
+                document.getElementById('youtubeVideo').src = `https://www.youtube.com/embed/${videoId}`;
+            }
+            document.getElementById('youtubeMainTitle').textContent = youtubeData.title;
+            document.getElementById('youtubeMainDescription').textContent = youtubeData.description;
+            document.getElementById('youtubeChannelLink').href = youtubeData.channelUrl;
+        }
+
+        function extractYouTubeId(url) {
+            const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/);
+            return match ? match[1] : null;
+        }
+
         // Hero Slideshow Functions
         function loadHeroSlideshow() {
             const slideshow = document.getElementById('heroSlideshow');
@@ -2464,6 +1964,20 @@
                 indicator.onclick = () => goToSlide(index);
                 indicators.appendChild(indicator);
             });
+            
+            updateHeroCaption();
+        }
+
+        function updateHeroCaption() {
+            const caption = document.getElementById('heroCaption');
+            const currentItem = heroImages[currentSlide];
+            
+            if (currentItem && currentItem.caption) {
+                caption.textContent = currentItem.caption;
+                caption.style.display = 'block';
+            } else {
+                caption.style.display = 'none';
+            }
         }
 
         function startSlideshow() {
@@ -2500,6 +2014,8 @@
             indicators.forEach((indicator, index) => {
                 indicator.classList.toggle('active', index === currentSlide);
             });
+            
+            updateHeroCaption();
         }
 
         // Features Functions
@@ -2515,6 +2031,7 @@
                     <div class="feature-content">
                         <div class="feature-title">${card.title}</div>
                         <div class="feature-description">${card.description}</div>
+                        ${card.caption ? `<div class="feature-caption">${card.caption}</div>` : ''}
                     </div>
                 </div>
             `).join('');
@@ -2528,6 +2045,7 @@
             const slidesHTML = galleryItems.map((item, index) => `
                 <div class="gallery-slide ${index === 0 ? 'active' : ''}">
                     <img src="${item.url}" alt="${item.title}" loading="lazy">
+                    ${item.description ? `<div class="gallery-caption">${item.description}</div>` : ''}
                 </div>
             `).join('');
             
@@ -2583,6 +2101,7 @@
             slider.innerHTML = repeatedImages.map(image => `
                 <div class="comment-image-card">
                     <img src="${image.url}" alt="${image.title}" class="comment-image" loading="lazy">
+                    ${image.visitorName ? `<div class="comment-caption">${image.visitorName}</div>` : ''}
                 </div>
             `).join('');
         }
@@ -2614,12 +2133,6 @@
             footerContent.innerHTML = footerHTML;
         }
 
-        // TikTok Video Functions - محسن للعمل بشكل أفضل
-        function playTikTokVideo() {
-            // للأسف، TikTok لا يسمح بالتشغيل المدمج، لذا سنفتح في نافذة جديدة
-            window.open(tiktokData.videoUrl, '_blank');
-        }
-
         // Gallery Modal Functions
         function openGalleryModal() {
             const modal = document.getElementById('galleryModal');
@@ -2636,6 +2149,8 @@
                              loading="lazy">
                         <div style="padding: 15px; background: white;">
                             <h4 style="margin: 0; color: #2E7D32;">${image.title}</h4>
+                            ${image.description ? `<p style="margin: 5px 0 0 0; color: #666; font-size: 0.9rem;">${image.description}</p>` : ''}
+                            ${image.visitorName ? `<p style="margin: 5px 0 0 0; color: #666; font-size: 0.9rem;">بواسطة: ${image.visitorName}</p>` : ''}
                         </div>
                     </div>
                 `;
@@ -2732,8 +2247,7 @@
         // Copy & Download Functions - ADMIN ONLY
         function copyFullWebsiteCode() {
             if (!isAdminLoggedIn) {
-                console.log('Copy function blocked for regular user');
-                return;
+                return; // Block for regular users
             }
             
             showAdminNotification('🔄 جاري نسخ الكود...', 'info');
@@ -2752,15 +2266,17 @@
         let customModalResolve = null;
         let modalIsPersistent = false;
 
+        const GITHUB_BASE_URL = "https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/";
+
         let heroImages = ${JSON.stringify(heroImages, null, 8)};
         let featuresCards = ${JSON.stringify(featuresCards, null, 8)};
         let galleryItems = ${JSON.stringify(galleryItems, null, 8)};
         let commentImages = ${JSON.stringify(commentImages, null, 8)};
         let footerSections = ${JSON.stringify(footerSections, null, 8)};
-        let tiktokData = ${JSON.stringify(tiktokData, null, 8)};`;
+        let youtubeData = ${JSON.stringify(youtubeData, null, 8)};`;
                 
                 fullHTML = fullHTML.replace(
-                    /\/\/ Global Data[\s\S]*?let tiktokData = \{[\s\S]*?\};/,
+                    /\/\/ Global Data[\s\S]*?let youtubeData = \{[\s\S]*?\};/,
                     dataScript
                 );
                 
@@ -2790,8 +2306,7 @@
 
         function downloadWebsiteHTML() {
             if (!isAdminLoggedIn) {
-                console.log('Download function blocked for regular user');
-                return;
+                return; // Block for regular users
             }
             
             showAdminNotification('🔄 جاري تحضير التحميل...', 'info');
@@ -2809,15 +2324,17 @@
         let customModalResolve = null;
         let modalIsPersistent = false;
 
+        const GITHUB_BASE_URL = "https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/";
+
         let heroImages = ${JSON.stringify(heroImages, null, 8)};
         let featuresCards = ${JSON.stringify(featuresCards, null, 8)};
         let galleryItems = ${JSON.stringify(galleryItems, null, 8)};
         let commentImages = ${JSON.stringify(commentImages, null, 8)};
         let footerSections = ${JSON.stringify(footerSections, null, 8)};
-        let tiktokData = ${JSON.stringify(tiktokData, null, 8)};`;
+        let youtubeData = ${JSON.stringify(youtubeData, null, 8)};`;
                 
                 updatedHTML = updatedHTML.replace(
-                    /\/\/ Global Data[\s\S]*?let tiktokData = \{[\s\S]*?\};/,
+                    /\/\/ Global Data[\s\S]*?let youtubeData = \{[\s\S]*?\};/,
                     dataScript
                 );
                 
@@ -2849,7 +2366,7 @@
             loadAdminFeatures();
             loadAdminGallery();
             loadAdminComments();
-            loadAdminTikTok();
+            loadAdminYouTube();
             loadAdminFooter();
         }
 
@@ -2862,6 +2379,7 @@
                 <div class="image-item">
                     <img src="${image.url}" alt="${image.title}" class="image-preview">
                     <input type="text" value="${image.title}" onchange="updateHeroImageTitle(${image.id}, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <input type="text" value="${image.caption || ''}" onchange="updateHeroImageCaption(${image.id}, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="تعليق اختياري">
                     <div class="image-actions">
                         <button class="btn-edit" onclick="editHeroImage(${image.id})">تعديل</button>
                         <button class="btn-delete" onclick="deleteHeroImage(${image.id})">حذف</button>
@@ -2872,16 +2390,18 @@
 
         async function addHeroImage() {
             const result = await showCustomModal('إضافة صورة رئيسية', [
-                { name: 'url', label: 'رابط الصورة', placeholder: 'رابط الصورة الجديدة' },
-                { name: 'title', label: 'عنوان الصورة', placeholder: 'عنوان الصورة' }
+                { name: 'filename', label: 'اسم الملف (مثل: a6.jpg)', placeholder: 'a6.jpg' },
+                { name: 'title', label: 'عنوان الصورة', placeholder: 'عنوان الصورة' },
+                { name: 'caption', label: 'تعليق اختياري', placeholder: 'تعليق تحت الصورة (اختياري)' }
             ]);
             
             if (!result || !result.field0) return;
             
             const newImage = {
                 id: Date.now(),
-                url: result.field0,
-                title: result.field1 || 'صورة جديدة'
+                url: GITHUB_BASE_URL + result.field0,
+                title: result.field1 || 'صورة جديدة',
+                caption: result.field2 || ''
             };
             
             heroImages.push(newImage);
@@ -2899,19 +2419,31 @@
             }
         }
 
+        function updateHeroImageCaption(id, newCaption) {
+            const image = heroImages.find(img => img.id === id);
+            if (image) {
+                image.caption = newCaption;
+                updateHeroCaption();
+                showAdminNotification('✅ تم تحديث تعليق الصورة');
+            }
+        }
+
         async function editHeroImage(id) {
             const image = heroImages.find(img => img.id === id);
             if (!image) return;
             
+            const filename = image.url.replace(GITHUB_BASE_URL, '');
             const result = await showCustomModal('تعديل الصورة الرئيسية', [
-                { name: 'url', label: 'رابط الصورة', placeholder: 'رابط الصورة' },
-                { name: 'title', label: 'عنوان الصورة', placeholder: 'عنوان الصورة' }
-            ], { url: image.url, title: image.title });
+                { name: 'filename', label: 'اسم الملف', placeholder: 'اسم الملف' },
+                { name: 'title', label: 'عنوان الصورة', placeholder: 'عنوان الصورة' },
+                { name: 'caption', label: 'تعليق اختياري', placeholder: 'تعليق تحت الصورة' }
+            ], { filename: filename, title: image.title, caption: image.caption });
             
             if (!result) return;
             
-            if (result.field0) image.url = result.field0;
+            if (result.field0) image.url = GITHUB_BASE_URL + result.field0;
             if (result.field1) image.title = result.field1;
+            image.caption = result.field2 || '';
             
             loadHeroSlideshow();
             loadAdminHeroImages();
@@ -2937,6 +2469,7 @@
                     <img src="${feature.image}" alt="${feature.title}" class="image-preview">
                     <input type="text" value="${feature.title}" onchange="updateFeatureTitle(${feature.id}, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الميزة">
                     <textarea onchange="updateFeatureDescription(${feature.id}, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" rows="3" placeholder="وصف الميزة">${feature.description}</textarea>
+                    <input type="text" value="${feature.caption || ''}" onchange="updateFeatureCaption(${feature.id}, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="تعليق اختياري">
                     <div class="image-actions">
                         <button class="btn-edit" onclick="editFeature(${feature.id})">تعديل</button>
                         <button class="btn-delete" onclick="deleteFeature(${feature.id})">حذف</button>
@@ -2948,18 +2481,20 @@
 
         async function addFeature() {
             const result = await showCustomModal('إضافة ميزة جديدة', [
+                { name: 'filename', label: 'اسم الملف (مثل: b6.jpg)', placeholder: 'b6.jpg' },
                 { name: 'title', label: 'عنوان الميزة', placeholder: 'أدخل عنوان الميزة' },
                 { name: 'description', label: 'وصف الميزة', type: 'textarea', placeholder: 'أدخل وصف الميزة', rows: 3 },
-                { name: 'image', label: 'رابط الصورة', placeholder: 'رابط صورة الميزة' }
+                { name: 'caption', label: 'تعليق اختياري', placeholder: 'تعليق تحت الصورة (اختياري)' }
             ]);
             
             if (!result) return;
             
             const newFeature = {
                 id: Date.now(),
-                title: result.field0 || 'ميزة جديدة',
-                description: result.field1 || 'وصف الميزة',
-                image: result.field2 || "./5.jpeg",
+                title: result.field1 || 'ميزة جديدة',
+                description: result.field2 || 'وصف الميزة',
+                image: GITHUB_BASE_URL + (result.field0 || "b1.jpg"),
+                caption: result.field3 || '',
                 active: true
             };
             
@@ -2987,21 +2522,33 @@
             }
         }
 
+        function updateFeatureCaption(id, newCaption) {
+            const feature = featuresCards.find(f => f.id === id);
+            if (feature) {
+                feature.caption = newCaption;
+                loadFeaturesCards();
+                showAdminNotification('✅ تم تحديث تعليق الميزة');
+            }
+        }
+
         async function editFeature(id) {
             const feature = featuresCards.find(f => f.id === id);
             if (!feature) return;
             
+            const filename = feature.image.replace(GITHUB_BASE_URL, '');
             const result = await showCustomModal('تعديل الميزة', [
+                { name: 'filename', label: 'اسم الملف', placeholder: 'اسم الملف' },
                 { name: 'title', label: 'عنوان الميزة', placeholder: 'عنوان الميزة' },
                 { name: 'description', label: 'وصف الميزة', type: 'textarea', placeholder: 'وصف الميزة', rows: 3 },
-                { name: 'image', label: 'رابط الصورة', placeholder: 'رابط الصورة' }
-            ], { title: feature.title, description: feature.description, image: feature.image });
+                { name: 'caption', label: 'تعليق اختياري', placeholder: 'تعليق تحت الصورة' }
+            ], { filename: filename, title: feature.title, description: feature.description, caption: feature.caption });
             
             if (!result) return;
             
-            if (result.field0) feature.title = result.field0;
-            if (result.field1) feature.description = result.field1;
-            if (result.field2) feature.image = result.field2;
+            if (result.field0) feature.image = GITHUB_BASE_URL + result.field0;
+            if (result.field1) feature.title = result.field1;
+            if (result.field2) feature.description = result.field2;
+            feature.caption = result.field3 || '';
             
             loadFeaturesCards();
             loadAdminFeatures();
@@ -3036,6 +2583,7 @@
                 <div class="image-item">
                     <img src="${image.url}" alt="${image.title}" class="image-preview">
                     <input type="text" value="${image.title}" onchange="updateGalleryImageTitle(${image.id}, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <input type="text" value="${image.description || ''}" onchange="updateGalleryImageDescription(${image.id}, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="وصف اختياري">
                     <div class="image-actions">
                         <button class="btn-edit" onclick="editGalleryImage(${image.id})">تعديل</button>
                         <button class="btn-delete" onclick="deleteGalleryImage(${image.id})">حذف</button>
@@ -3046,16 +2594,18 @@
 
         async function addGalleryImage() {
             const result = await showCustomModal('إضافة صورة للمعرض', [
-                { name: 'url', label: 'رابط الصورة', placeholder: 'رابط الصورة الجديدة' },
-                { name: 'title', label: 'عنوان الصورة', placeholder: 'عنوان الصورة' }
+                { name: 'filename', label: 'اسم الملف (مثل: c8.jpg)', placeholder: 'c8.jpg' },
+                { name: 'title', label: 'عنوان الصورة', placeholder: 'عنوان الصورة' },
+                { name: 'description', label: 'وصف اختياري', placeholder: 'وصف الصورة (اختياري)' }
             ]);
             
             if (!result || !result.field0) return;
             
             const newImage = {
                 id: Date.now(),
-                url: result.field0,
-                title: result.field1 || 'صورة جديدة'
+                url: GITHUB_BASE_URL + result.field0,
+                title: result.field1 || 'صورة جديدة',
+                description: result.field2 || ''
             };
             
             galleryItems.push(newImage);
@@ -3073,19 +2623,31 @@
             }
         }
 
+        function updateGalleryImageDescription(id, newDescription) {
+            const image = galleryItems.find(img => img.id === id);
+            if (image) {
+                image.description = newDescription;
+                loadGallerySlideshow();
+                showAdminNotification('✅ تم تحديث وصف الصورة');
+            }
+        }
+
         async function editGalleryImage(id) {
             const image = galleryItems.find(img => img.id === id);
             if (!image) return;
             
+            const filename = image.url.replace(GITHUB_BASE_URL, '');
             const result = await showCustomModal('تعديل صورة المعرض', [
-                { name: 'url', label: 'رابط الصورة', placeholder: 'رابط الصورة' },
-                { name: 'title', label: 'عنوان الصورة', placeholder: 'عنوان الصورة' }
-            ], { url: image.url, title: image.title });
+                { name: 'filename', label: 'اسم الملف', placeholder: 'اسم الملف' },
+                { name: 'title', label: 'عنوان الصورة', placeholder: 'عنوان الصورة' },
+                { name: 'description', label: 'وصف اختياري', placeholder: 'وصف الصورة' }
+            ], { filename: filename, title: image.title, description: image.description });
             
             if (!result) return;
             
-            if (result.field0) image.url = result.field0;
+            if (result.field0) image.url = GITHUB_BASE_URL + result.field0;
             if (result.field1) image.title = result.field1;
+            image.description = result.field2 || '';
             
             loadGallerySlideshow();
             loadAdminGallery();
@@ -3110,6 +2672,7 @@
                 <div class="image-item">
                     <img src="${image.url}" alt="${image.title}" class="image-preview">
                     <input type="text" value="${image.title}" onchange="updateCommentImageTitle(${image.id}, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="عنوان الصورة">
+                    <input type="text" value="${image.visitorName || ''}" onchange="updateCommentImageVisitor(${image.id}, this.value)" style="width: 100%; margin-bottom: 8px; padding: 6px; font-size: 0.85rem;" placeholder="اسم الزائر (اختياري)">
                     <div class="image-actions">
                         <button class="btn-edit" onclick="editCommentImage(${image.id})">تعديل</button>
                         <button class="btn-delete" onclick="deleteCommentImage(${image.id})">حذف</button>
@@ -3120,16 +2683,18 @@
 
         async function addCommentImage() {
             const result = await showCustomModal('إضافة صورة زائر', [
-                { name: 'url', label: 'رابط الصورة', placeholder: 'رابط صورة الزائر' },
-                { name: 'title', label: 'عنوان الصورة', placeholder: 'عنوان الصورة' }
+                { name: 'filename', label: 'اسم الملف (مثل: d8.jpg)', placeholder: 'd8.jpg' },
+                { name: 'title', label: 'عنوان الصورة', placeholder: 'عنوان الصورة' },
+                { name: 'visitorName', label: 'اسم الزائر (اختياري)', placeholder: 'اسم صاحب الصورة' }
             ]);
             
             if (!result || !result.field0) return;
             
             const newImage = {
                 id: Date.now(),
-                url: result.field0,
-                title: result.field1 || 'صورة زائر جديدة'
+                url: GITHUB_BASE_URL + result.field0,
+                title: result.field1 || 'صورة زائر جديدة',
+                visitorName: result.field2 || ''
             };
             
             commentImages.push(newImage);
@@ -3147,19 +2712,31 @@
             }
         }
 
+        function updateCommentImageVisitor(id, newVisitorName) {
+            const image = commentImages.find(img => img.id === id);
+            if (image) {
+                image.visitorName = newVisitorName;
+                loadCommentImages();
+                showAdminNotification('✅ تم تحديث اسم الزائر');
+            }
+        }
+
         async function editCommentImage(id) {
             const image = commentImages.find(img => img.id === id);
             if (!image) return;
             
+            const filename = image.url.replace(GITHUB_BASE_URL, '');
             const result = await showCustomModal('تعديل صورة الزائر', [
-                { name: 'url', label: 'رابط الصورة', placeholder: 'رابط الصورة' },
-                { name: 'title', label: 'عنوان الصورة', placeholder: 'عنوان الصورة' }
-            ], { url: image.url, title: image.title });
+                { name: 'filename', label: 'اسم الملف', placeholder: 'اسم الملف' },
+                { name: 'title', label: 'عنوان الصورة', placeholder: 'عنوان الصورة' },
+                { name: 'visitorName', label: 'اسم الزائر', placeholder: 'اسم الزائر' }
+            ], { filename: filename, title: image.title, visitorName: image.visitorName });
             
             if (!result) return;
             
-            if (result.field0) image.url = result.field0;
+            if (result.field0) image.url = GITHUB_BASE_URL + result.field0;
             if (result.field1) image.title = result.field1;
+            image.visitorName = result.field2 || '';
             
             loadCommentImages();
             loadAdminComments();
@@ -3184,46 +2761,50 @@
             }
         }
 
-        // Admin TikTok
-        function loadAdminTikTok() {
-            document.getElementById('tiktokTitleInput').value = tiktokData.title;
-            document.getElementById('tiktokDescInput').value = tiktokData.description;
-            document.getElementById('tiktokVideoUrl').value = tiktokData.videoUrl;
-            document.getElementById('tiktokChannelUrl').value = tiktokData.channelUrl;
+        // Admin YouTube
+        function loadAdminYouTube() {
+            document.getElementById('youtubeTitleInput').value = youtubeData.title;
+            document.getElementById('youtubeDescInput').value = youtubeData.description;
+            document.getElementById('youtubeVideoUrl').value = youtubeData.videoUrl;
+            document.getElementById('youtubeChannelUrl').value = youtubeData.channelUrl;
         }
 
-        function updateTikTokTitle() {
-            const newTitle = document.getElementById('tiktokTitleInput').value.trim();
+        function updateYouTubeTitle() {
+            const newTitle = document.getElementById('youtubeTitleInput').value.trim();
             if (newTitle) {
-                tiktokData.title = newTitle;
-                document.getElementById('tiktokMainTitle').textContent = newTitle;
-                showAdminNotification('✅ تم تحديث عنوان تيك توك');
+                youtubeData.title = newTitle;
+                document.getElementById('youtubeMainTitle').textContent = newTitle;
+                showAdminNotification('✅ تم تحديث عنوان يوتيوب');
             }
         }
 
-        function updateTikTokDescription() {
-            const newDesc = document.getElementById('tiktokDescInput').value.trim();
+        function updateYouTubeDescription() {
+            const newDesc = document.getElementById('youtubeDescInput').value.trim();
             if (newDesc) {
-                tiktokData.description = newDesc;
-                document.getElementById('tiktokMainDescription').textContent = newDesc;
-                showAdminNotification('✅ تم تحديث وصف تيك توك');
+                youtubeData.description = newDesc;
+                document.getElementById('youtubeMainDescription').textContent = newDesc;
+                showAdminNotification('✅ تم تحديث وصف يوتيوب');
             }
         }
 
-        function updateTikTokUrl() {
-            const newUrl = document.getElementById('tiktokVideoUrl').value.trim();
+        function updateYouTubeUrl() {
+            const newUrl = document.getElementById('youtubeVideoUrl').value.trim();
             if (newUrl) {
-                tiktokData.videoUrl = newUrl;
-                showAdminNotification('✅ تم تحديث رابط فيديو تيك توك');
+                youtubeData.videoUrl = newUrl;
+                const videoId = extractYouTubeId(newUrl);
+                if (videoId) {
+                    document.getElementById('youtubeVideo').src = `https://www.youtube.com/embed/${videoId}`;
+                }
+                showAdminNotification('✅ تم تحديث رابط فيديو يوتيوب');
             }
         }
 
-        function updateTikTokChannel() {
-            const newChannel = document.getElementById('tiktokChannelUrl').value.trim();
+        function updateYouTubeChannel() {
+            const newChannel = document.getElementById('youtubeChannelUrl').value.trim();
             if (newChannel) {
-                tiktokData.channelUrl = newChannel;
-                document.getElementById('tiktokChannelLink').href = newChannel;
-                showAdminNotification('✅ تم تحديث رابط قناة تيك توك');
+                youtubeData.channelUrl = newChannel;
+                document.getElementById('youtubeChannelLink').href = newChannel;
+                showAdminNotification('✅ تم تحديث رابط قناة يوتيوب');
             }
         }
 
@@ -3405,22 +2986,25 @@
             }
         });
 
-        console.log('🎯 ✅ موقع أكواخ ريف عبس - مُصلح نهائياً بالصور الحقيقية!');
-        console.log('🔧 المشاكل المُصلحة:');
-        console.log('   ✅ جميع الصور تستخدم الملفات المرفوعة في GitHub');
-        console.log('   ✅ زر تحميل HTML يعمل بشكل صحيح');
-        console.log('   ✅ زر نسخ الكود يعمل بشكل صحيح');
-        console.log('   ✅ الإشعارات مخفية عن المستخدمين العاديين');
-        console.log('   ✅ لوحة التحكم تعمل للأدمن فقط');
-        console.log('   ✅ فيديو TikTok يفتح في نافذة جديدة');
-        console.log('🗂️ الصور المُحدثة:');
-        console.log('   📸 Hero: 2.webp, 3.jpeg, 4.webp');
-        console.log('   🎯 Features: 5.jpeg, 3.webp, 4.jpeg, 5.webp + أسماء طويلة');
-        console.log('   🖼️ Gallery: 248-اختيار الصور..., 4-اختيار الصور..., إلخ');
-        console.log('   👥 Comments: جميع الصور المرفوعة');
+        console.log('🎯 ✅ موقع أكواخ ريف عبس - محسّن نهائياً بالصور الحقيقية من GitHub!');
+        console.log('🔧 التحسينات المُطبقة:');
+        console.log('   ✅ جميع الصور من المستودع GitHub (a1-a5, b1-b5, c1-c7, d1-d7, sh.png)');
+        console.log('   ✅ نظام التعليقات الاختيارية لجميع الصور');
+        console.log('   ✅ إصلاح مشكلة الإشعارات (مخفية عن المستخدمين العاديين)');
+        console.log('   ✅ تحسين responsive للوغو واسم الموقع');
+        console.log('   ✅ استبدال TikTok بـ YouTube مدمج');
+        console.log('   ✅ توحيد مقاس صور الزوار مع صور المعرض');
+        console.log('   ✅ لوحة تحكم شاملة لكامل الموقع');
+        console.log('   ✅ أزرار تحميل ونسخ الكود تعمل للأدمن فقط');
+        console.log('🗂️ أقسام الصور:');
+        console.log('   🏞️ Hero: a1.jpg → a5.jpg (مع تعليقات اختيارية)');
+        console.log('   🎯 Features: b1.jpg → b5.jpg (مع تعليقات اختيارية)');
+        console.log('   🖼️ Gallery: c1.jpg → c7.jpg (مع أوصاف اختيارية)');
+        console.log('   👥 Comments: d1.jpg → d7.jpg (مع أسماء الزوار اختيارية)');
+        console.log('   🏷️ Logo: sh.png');
+        console.log('📺 YouTube: https://www.youtube.com/watch?v=kpXVLoz4w3E');
         console.log('💡 كلمة مرور الإدارة: admin123');
-        console.log('🚀 الموقع جاهز للاستخدام!');
+        console.log('🚀 الموقع جاهز للاستخدام مع التحكم الكامل!');
     </script>
-
-
-<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}" style="display: none;"></div><div id="claude-ai"></div><div class="admin-notification info" style="display: block;">🔄 جاري نسخ الكود...</div></body></html>
+</body>
+</html>
