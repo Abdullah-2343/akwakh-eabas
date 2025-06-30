@@ -2336,13 +2336,33 @@
             font-family: 'NotoSans_semibold_online_security'; 
             src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
         }
+</style><style>
+        @font-face {
+            font-family: 'NotoSans_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-regular.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_medium_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-medium.ttf);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_bold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-bold.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_semibold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
+        }
 </style></head>
 <body>
     <!-- Header -->
     <header>
         <nav class="container">
             <div class="logo-container">
-                <div class="logo-display sparkle" id="logoDisplay" style="animation: 3s ease-in-out 0s 1 normal none running logoPulseColor, 4s ease-in-out 0s infinite normal none running logoFloat, 2s ease-in-out 0s infinite alternate none running logoGlow;">
+                <div class="logo-display sparkle" id="logoDisplay" style="animation: 2s ease-in-out 0s 1 normal none running logoSpin360, 4s ease-in-out 0s infinite normal none running logoFloat, 2s ease-in-out 0s infinite alternate none running logoGlow;">
                     <img src="https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/sh.png" alt="شعار أكواخ ريف عبس">
                 </div>
                 <a href="#home" class="site-name">أكواخ ريف عبس</a>
@@ -2380,7 +2400,7 @@
     </a>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero fade-in">
         <div class="hero-slideshow" id="heroSlideshow"><div class="hero-slide" style="background-image: url(&quot;https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/a1.jpg&quot;);"></div><div class="hero-slide active" style="background-image: url(&quot;https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/a2.jpg&quot;);"></div><div class="hero-slide" style="background-image: url(&quot;https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/a3.jpg&quot;);"></div><div class="hero-slide" style="background-image: url(&quot;https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/a4.jpg&quot;);"></div><div class="hero-slide" style="background-image: url(&quot;https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/a5.jpg&quot;);"></div></div>
         <div class="hero-content">
             <div>
@@ -2399,7 +2419,7 @@
         <div class="container">
             <h2 id="featuresMainTitle">ما يميز مزرعة ريف عبس</h2>
             <div class="features-grid" id="featuresGrid">
-                <div class="feature-card sparkle fade-in">
+                <div class="feature-card sparkle">
                     <img src="https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/b1.jpg" alt="أكواخ فاخرة بطراز أوروبي أنيق" class="feature-image" loading="lazy">
                     <div class="feature-content">
                         <div class="feature-title">أكواخ فاخرة بطراز أوروبي أنيق</div>
@@ -2408,7 +2428,7 @@
                     </div>
                 </div>
             
-                <div class="feature-card sparkle fade-in">
+                <div class="feature-card sparkle">
                     <img src="https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/b2.jpg" alt="طيور النعام الرائعة وحيوانات أليفة متنوعة" class="feature-image" loading="lazy">
                     <div class="feature-content">
                         <div class="feature-title">طيور النعام الرائعة وحيوانات أليفة متنوعة</div>
@@ -2417,7 +2437,7 @@
                     </div>
                 </div>
             
-                <div class="feature-card sparkle fade-in">
+                <div class="feature-card sparkle">
                     <img src="https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/b3.jpg" alt="مسابح منعشة وألعاب مائية مثيرة" class="feature-image" loading="lazy">
                     <div class="feature-content">
                         <div class="feature-title">مسابح منعشة وألعاب مائية مثيرة</div>
@@ -2426,7 +2446,7 @@
                     </div>
                 </div>
             
-                <div class="feature-card sparkle fade-in">
+                <div class="feature-card sparkle">
                     <img src="https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/b4.jpg" alt="مساحات خضراء واسعة للاسترخاء والشواء" class="feature-image" loading="lazy">
                     <div class="feature-content">
                         <div class="feature-title">مساحات خضراء واسعة للاسترخاء والشواء</div>
@@ -2435,7 +2455,7 @@
                     </div>
                 </div>
             
-                <div class="feature-card sparkle fade-in">
+                <div class="feature-card sparkle">
                     <img src="https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/b5.jpg" alt="ألعاب ومرافق ترفيهية آمنة للأطفال" class="feature-image" loading="lazy">
                     <div class="feature-content">
                         <div class="feature-title">ألعاب ومرافق ترفيهية آمنة للأطفال</div>
@@ -2444,7 +2464,7 @@
                     </div>
                 </div>
             
-                <div class="feature-card sparkle fade-in">
+                <div class="feature-card sparkle">
                     <img src="https://raw.githubusercontent.com/Abdullah-2343/akwakh-eabas/main/b6.jpg" alt="تجربة ركوب الخيل الممتعة للأطفال" class="feature-image" loading="lazy">
                     <div class="feature-content">
                         <div class="feature-title">تجربة ركوب الخيل الممتعة للأطفال</div>
@@ -4422,8 +4442,9 @@
     <script>
         
         
-        // Global Data - Updated ٥‏/١‏/١٤٤٧ هـ ٦:٢٥:٢١ م
-        let adminPassword = "admin123";
+        
+        // Global Data - Updated ٥‏/١‏/١٤٤٧ هـ ٧:٠٠:٢٢ م
+        let adminPassword = "Aba139456@";
         let isAdminLoggedIn = false;
         let currentSlide = 0;
         let currentGallerySlide = 0;
@@ -6597,4 +6618,5 @@
 
 
 <iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}" style="display: none;"></div><div id="claude-ai"></div>
+<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="claude-ai"></div>
 <iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="claude-ai"></div></body></html>
